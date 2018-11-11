@@ -1,7 +1,7 @@
 \documentclass{article}
     %\usepackage[utf8]{inputenc}
     \usepackage{fontspec}
-        \setmainfont{Gentium}
+        \setmainfont{Doulos SIL}
     \usepackage{tipa}
     \usepackage{natbib}
         \bibliographystyle{apalike}
@@ -9,13 +9,24 @@
     \author{Joshua McNeill}
     \date{\today}
 \begin{document}
-    <<load_raw_data, echo=FALSE>>=
+    <<load_raw_data_clean_and_load_clean, echo=FALSE>>=
     read_chunk("data_cleaning.R")
     @
-    <<clean, echo=FALSE>>=
+    <<clean, echo = FALSE>>=
+    @
+    <<adfafs>>=
+    read_chunk("data_analysis.R")
     @
     \maketitle
     \section{Variable}
+        <<niche_niche_table, echo = FALSE>>=
+        @
+        <<niche_niche_table_make>>=
+        @
+        <<table>>=
+        kable(addmargins(nIche_by_niCHE),
+              format = "latex")
+        @
         -Variation in its pronunciation is common enough and recognizable enough that it to shows up on an online publication of words that students pronounce incorrectly (Goren). I 1 l ǀ
         -Not a lexical variable but in fact two phonological variables: 1) the (i) and 2) the (ch).
             (i) can be realized as [\textipa{i}] or [\textipa{I}]
