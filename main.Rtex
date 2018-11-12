@@ -1,5 +1,4 @@
 \documentclass{article}
-    %\usepackage[utf8]{inputenc}
     \usepackage{fontspec}
         \setmainfont{Doulos SIL}
     \usepackage{tipa}
@@ -25,7 +24,19 @@
     @
     \maketitle
     \section{Variable}
-        -Variation in its pronunciation is common enough and recognizable enough that it to shows up on an online publication of words that students pronounce incorrectly (Goren). I 1 l ǀ
+        The University of Georgia (UGA) dining hall The Niche is a popular spot for students to eat. Due to its small space, the menu was designed to be rather specialized, all of which played a role in the name that it was ultimately given \citep{brannen_uga_2018}.
+        
+                -Reading adaptation: when a loanword is phonologically adapted by reading its orthographic representation in the donor language as if it were the recipient language orthography (e.g., the pronunciation of cul-de-sac in English having no apparent relation to the French pronunciation and presumably being derived directly from the written form) (Vendelin \& Peperkamp 2006:997).
+        -Orthography sometimes has a limited influence on phonological adaptation of loanwords.
+            -Paradis \& LaCharité (1997) claimed that only 4.6\% of the 545 loanwords in their French-Fula corpus were influenced by French orthography (382).
+                -They don't explain how they measured this, though.
+                -Fula speakers in Senegal have been shown to be mostly illiterate (80\%) (Perrin 1984, as cited in Paradis \& LaCharité 1997:382).
+                    -This highlights the ways in which social factors can influence phonological adaptations. In the case of The Niche, a social factor such as \emph{bilingual in French} probably has an impact.
+        -As of November 11th, 2018, the only pronunciations of the English word niche as [nɪtʃ] come from people claiming to be American (Forvo).
+            -Only 2 of 13 pronunciations on Forvo are [nɪtʃ] but 5 of the pronunciations were uploaded by Americans.
+                -Not great evidence, but suggests that [nɪtʃ] is relegated to the US but maybe not dominant in the US.
+        
+        -Variation in its pronunciation is common enough and recognizable enough that it to shows up on an online publication of words that students pronounce incorrectly (Goren).
         -Not a lexical variable but in fact two phonological variables: 1) the (i) and 2) the (ch).
             (i) can be realized as [\textipa{i}] or [\textipa{I}]
             (ch) can be realized as [\textipa{S}] or [\textipa{tS}]
@@ -252,14 +263,6 @@
                     -All women do not necessarily know each other or even have the same idea of what it means to be a woman, for instance
             
     \section{Notes}
-        -Reading adaptation: when a loanword is phonologically adapted by reading its orthographic representation in the donor language as if it were the recipient language orthography (e.g., the pronunciation of cul-de-sac in English having no apparent relation to the French pronunciation and presumably being derived directly from the written form) (Vendelin \& Peperkamp 2006:997).
-        -Orthography sometimes has a limited influence on phonological adaptation of loanwords.
-            -Paradis \& LaCharité (1997) claimed that only 4.6\% of the 545 loanwords in their French-Fula corpus were influenced by French orthography (382).
-                -They don't explain how they measured this, though.
-                -Fula speakers in Senegal have been shown to be mostly illiterate (80\%) (Perrin 1984, as cited in Paradis \& LaCharité 1997:382).
-                    -This highlights the ways in which social factors can influence phonological adaptations. In the case of The Niche, a social factor such as \emph{bilingual in French} probably has an impact.
-        -As of November 11th, 2018, the only pronunciations of the English word niche as [nɪtʃ] come from people claiming to be American (Forvo).
-            -Only 2 of 13 pronunciations on Forvo are [nɪtʃ] but 5 of the pronunciations were uploaded by Americans.
-                -Not great evidence, but suggests that [nɪtʃ] is relegated to the US but maybe not dominant in the US.
+
     \bibliography{References.bib}
 \end{document}
