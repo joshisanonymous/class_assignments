@@ -1,0 +1,88 @@
+\documentclass{article}
+    %\usepackage[utf8]{inputenc}
+    \usepackage{fontspec}
+        \setmainfont{Doulos SIL}
+    \usepackage{tipa}
+    \usepackage{natbib}
+        \bibliographystyle{apalike}
+    \title{The Niche}
+    \author{Joshua McNeill}
+    \date{\today}
+\begin{document}
+    <<default_chunk_opts, echo = FALSE>>=
+    opts_chunk$set(echo = FALSE)
+    @
+    <<load_scripts>>=
+    read_chunk("data_cleaning.R")
+    read_chunk("data_analysis.R")
+    @
+    <<clean>>=
+    @
+    <<load_cleaned>>=
+    @
+    \maketitle
+    \section{Variable}
+        -Variation in its pronunciation is common enough and recognizable enough that it to shows up on an online publication of words that students pronounce incorrectly (Goren). I 1 l ǀ
+        -Not a lexical variable but in fact two phonological variables: 1) the (i) and 2) the (ch).
+            (i) can be realized as [\textipa{i}] or [\textipa{I}]
+            (ch) can be realized as [\textipa{S}] or [\textipa{tS}]
+    \section{Method}
+        -Approached people on campus and asked them to name the UGA dining halls under the guise of some sort of survey about dining halls.
+            -What made this rapid
+            -What made this anonymous
+        -Factors recorded: age, gender, ethnicity, location, school year
+            -Age was guessed from appearance
+                -Ranged from ... to ...
+            -Gender was guessed from appearance
+                -Male or female
+            -Ethnicity was guessed from appearance
+                -White, black, Indian, Hispanic
+            -Location was divided up into south campus, north campus, and downtown
+            -School year was determined by asking after the survey question
+                -While this drags out the duration of the survey, making it less rapid, it was seen as worthwhile information to collect that could not be done otherwise
+                    -We expected students of later years to converge on one variant, most likely [nɪtʃ], as they have had time to learn the norms of the community
+    \section{Results}
+        Test of independance between nIche and niCHE.
+        
+        <<niche_niche_table>>=
+        @
+        <<niche_niche_chisq_perform>>=
+        @
+        <<niche_niche_chisq_expected>>=
+        @
+        <<niche_niche_chisq_results>>=
+        @
+        <<niche_niche_chisq_residuals>>=
+        @
+        
+        The overall results for t vs tS
+        
+        <<niche_overall_barplot>>=
+        @
+        
+        Because we tested five hypotheses, we are using the Bonferroni correction to adjust the $\alpha$ of 0.05 down to \Sexpr{0.05/5}.
+        
+        
+        -Issues with the data collected
+            -Some tokens were not independent as some respondents heard other respondents' answers before being asked
+                -This was mostly an issue when approaching people seated in public spaces, such as the library or in restaurants. The mobility of people outside makes it unlikely that anyone who does hear another respondent will still be around the be approached anyway
+        -Overall numbers
+        -Subsets
+    \section{Discussion}
+        -Issues with assigning values for factors
+            -Most almost necessitate that people's identities are minimized to what can be gleamed from looking at them
+                -While it might not be too damaging to find, for instance, that ``such and such looking people pronounce the Niche such and such a way,'' the simple use of these variables does have a danger of reinforcing the idea that the categories used for each also represent cohesive groups, which is not necessarily the case.
+                    -All women do not necessarily know each other or even have the same idea of what it means to be a woman, for instance
+            
+    \section{Notes}
+        -Reading adaptation: when a loanword is phonologically adapted by reading its orthographic representation in the donor language as if it were the recipient language orthography (e.g., the pronunciation of cul-de-sac in English having no apparent relation to the French pronunciation and presumably being derived directly from the written form) (Vendelin \& Peperkamp 2006:997).
+        -Orthography sometimes has a limited influence on phonological adaptation of loanwords.
+            -Paradis \& LaCharité (1997) claimed that only 4.6\% of the 545 loanwords in their French-Fula corpus were influenced by French orthography (382).
+                -They don't explain how they measured this, though.
+                -Fula speakers in Senegal have been shown to be mostly illiterate (80\%) (Perrin 1984, as cited in Paradis \& LaCharité 1997:382).
+                    -This highlights the ways in which social factors can influence phonological adaptations. In the case of The Niche, a social factor such as \emph{bilingual in French} probably has an impact.
+        -As of November 11th, 2018, the only pronunciations of the English word niche as [nɪtʃ] come from people claiming to be American (Forvo).
+            -Only 2 of 13 pronunciations on Forvo are [nɪtʃ] but 5 of the pronunciations were uploaded by Americans.
+                -Not great evidence, but suggests that [nɪtʃ] is relegated to the US but maybe not dominant in the US.
+    \bibliography{References.bib}
+\end{document}
