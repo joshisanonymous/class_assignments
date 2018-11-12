@@ -9,15 +9,16 @@
     \author{Joshua McNeill}
     \date{\today}
 \begin{document}
-    <<load_data_cleaning_script_and_clean, echo = FALSE>>=
+    <<load_scripts, echo = FALSE, cache = TRUE>>=
+    setwd(".")
     read_chunk("data_cleaning.R")
     <<clean, echo = FALSE>>=
-    <<load_analysis_script, echo = FALSE>>=
     read_chunk("data_analysis.R")
+    <<load_cleaned, echo = FALSE>>=
     @
     \maketitle
     \section{Variable}
-        <<table>>=
+        <<niche_niche_table>>=
         nIche_by_niCHE <- table(data_cleaned$nIche,
                                 data_cleaned$niCHE)
         kable(addmargins(nIche_by_niCHE),
