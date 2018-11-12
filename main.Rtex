@@ -49,9 +49,9 @@
             -Some tokens were not independent as some respondents heard other respondents' answers before being asked
                 -This was mostly an issue when approaching people seated in public spaces, such as the library or in restaurants. The mobility of people outside makes it unlikely that anyone who does hear another respondent will still be around the be approached anyway
         
-        Results for nIche by niCHE
+        Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE 
         
-        \begin{table}[tbh]
+        \begin{table}[tbhp]
             \centering
             <<niche_niche_table>>=
             @
@@ -59,47 +59,65 @@
             \label{tab:niche_niche_counts}
         \end{table}
         
-        Test of independance between nIche and niCHE.
+        Test of independence between nIche and niCHE.Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE.  
         
         <<niche_niche_chisq_perform>>=
         @
-        \begin{table}[tbh]
+        \begin{table}[tbhp]
             \centering
             <<niche_niche_chisq_expected>>=
             @
-            \caption{Expected counts for a $\chi^2$ test for independance.}
+            \caption{Expected counts for a $\chi^2$ test for independence between n(i)che and ni(che).}
             \label{tab:niche_niche_expect}
         \end{table}
         
         <<niche_niche_chisq_result>>=
         @
         
-        \begin{table}[tbh]
+        \begin{table}[tbhp]
             \centering
             <<niche_niche_chisq_residuals>>=
             @
-            \caption{Standardized residuals for the $\chi^2$ test for independance.
+            \caption{Standardized residuals for the $\chi^2$ test for independence.}
             \label{tab:niche_niche_resid}
         \end{table}
         
-        The overall results for t vs tS
+        The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS 
         
-        <<niche_overall_barplot>>=
-        @
+        \begin{figure}[tbhp]
+            \centering
+            <<niche_overall_barplot>>=
+            @
+            \caption{Overall counts for each variant of ni(che).}
+            \label{fig:S_vs_tS_overall}
+        \end{figure}
         
         Because we tested five hypotheses, we are using the Bonferroni correction to adjust the $\alpha$ of 0.05 down to \Sexpr{0.05/5}.
         
-        Results for age
+        Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age 
         
-        <<age_niche_table>>=
-        @
+        \begin{table}[htbp]
+            \centering
+            <<age_niche_table>>=
+            @
+            \caption{Counts for ni(che) by age.}
+            \label{tab:age_niche_counts}
+        \end{table}
         
-        Test for independance between age and niCHE
+        Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE
+        
+        Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE 
         
         <<age_niche_chisq_perform>>=
         @
-        <<age_niche_chisq_expected>>=
-        @
+        
+        \begin{table}[htbp]
+            \centering
+            <<age_niche_chisq_expected>>=
+            @
+            \caption{Expected counts for a $\chi^2$ test for independence between age and ni(che).}
+            \label{tab:age_niche_expect}
+        \end{table}
         
         Expected values are too low for chi-square, so we use Fisher's exact
         
@@ -108,31 +126,51 @@
         <<age_niche_fish_result>>=
         @
         
-        Results for gender
+        Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender 
         
-        <<gender_niche_table>>=
-        @
+        \begin{table}[tbhp]
+            \centering
+            <<gender_niche_table>>=
+            @
+            \caption{Counts for ni(che) by gender.}
+            \label{tab:gender_niche_counts}
+        \end{table}
         
-        Test for independance between gender and niCHE
+        Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE 
         
         <<gender_niche_chisq_perform>>=
         @
-        <<gender_niche_chisq_expected>>=
-        @
+        \begin{table}[htbp]
+            \centering
+            <<gender_niche_chisq_expected>>=
+            @
+            \caption{Expected counts for a $\chi^2$ test for independence between gender and ni(che).}
+            \label{tab:gender_niche_expect}
+        \end{table}
         <<gender_niche_chisq_result>>=
         @
         
-        Results for ethnicity
+        Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity 
         
-        <<ethnicity_niche_table>>=
-        @
+        \begin{table}[htbp]
+            \centering
+            <<ethnicity_niche_table>>=
+            @
+            \caption{Counts for ni(che) by ethnicity.}
+            \label{tab:ethnicity_niche_counts}
+        \end{table}
         
-        Test for independance between ethnicity and niCHE
+        Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE 
         
         <<ethnicity_niche_chisq_perform>>=
         @
-        <<ethnicity_niche_chisq_expected>>=
-        @
+        \begin{table}[htbp]
+            \centering
+            <<ethnicity_niche_chisq_expected>>=
+            @
+            \caption{Expected counts for a $\chi^2$ test for independence between ethnicity and ni(che).}
+            \label{tab:ethnicity_niche_expect}
+        \end{table}
         
         Expected values too low, so use Fisher's exact instead
         
@@ -141,31 +179,52 @@
         <<ethnicity_niche_fish_result>>=
         @
         
-        Results for location
+        Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location 
         
-        <<location_niche_table>>=
-        @
+        \begin{table}[htbp]
+            \centering
+            <<location_niche_table>>=
+            @
+            \caption{Counts for ni(che) by location.}
+            \label{tab:location_niche_counts}
+        \end{table}
         
-        Test for independance between location and niCHE
+        Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE 
         
         <<location_niche_chisq_perform>>=
         @
-        <<location_niche_chisq_expected>>=
-        @
+        \begin{table}[htbp]
+            \centering
+            <<location_niche_chisq_expected>>=
+            @
+            \caption{Expected counts for a $\chi^2$ test for independence between location and ni(che).}
+            \label{tab:location_niche_expect}
+        \end{table}
+        
         <<location_niche_chisq_result>>=
         @
         
-        Results for year
+        Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year 
         
-        <<year_niche_table>>=
-        @
+        \begin{table}[htbp]
+            \centering
+            <<year_niche_table>>=
+            @
+            \caption{Counts for ni(che) by school year.}
+            \label{tab:year_niche_counts}
+        \end{table}
         
-        Test for independance between year and niCHE
+        Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE 
         
         <<year_niche_chisq_perform>>=
         @
-        <<year_niche_chisq_expected>>=
-        @
+        \begin{table}[htbp]
+            \centering
+            <<year_niche_chisq_expected>>=
+            @
+            \caption{Expected counts for a $\chi^2$ test for independence between school year and ni(che).}
+            \label{tab:year_niche_expect}
+        \end{table}
         
         Expected values not high enough, so use Fisher's exact
         
@@ -174,10 +233,15 @@
         <<year_niche_fish_result>>=
         @
         
-        Year is not statistically significant, but there does seem to be a pattern:
+        Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: 
         
-        <<year_niche_barplot>>=
-        @
+        \begin{figure}[tbhp]
+            \centering
+            <<year_niche_barplot>>=
+            @
+            \caption{Proportion of each variant of ni(che) by school year.}
+            \label{fig:year_niche_prop}
+        \end{figure}
         
         May not be the right test for this subset as "year" can be viewed as a quantitative variable.
         
