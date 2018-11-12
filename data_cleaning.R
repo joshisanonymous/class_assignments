@@ -19,10 +19,10 @@ colnames(data_raw) <- c("Asker",
                         "Notes")
 
 # Convert weird IPA stuff in "nIche" and "niCHE" into X-SAMPA
-data_raw$nIche <- gsub("ɪ",
+data_raw$nIche <- gsub("\u026A",
                        "I",
                        data_raw$nIche)
-data_raw$niCHE <- gsub("ʃ",
+data_raw$niCHE <- gsub("\u0283",
                        "S",
                        data_raw$niCHE)
 

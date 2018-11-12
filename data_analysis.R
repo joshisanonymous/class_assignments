@@ -1,19 +1,17 @@
 # This script analyzes the cleaned data in data_cleaned.csv from the Niche group project for my sociolinguistics course. Both tables and figures are generated here with ## ---- names for importing into Rtex writeup.
 
-# Load in cleaned data
 ## ---- load_cleaned ----
 data_cleaned <- read.csv("data_cleaned.csv",
                          header = TRUE)
+
+## ---- load_packages ----
+require("knitr")
 
 # Test of independance between nIche and niCHE
 # Summary of counts in a table and in the margins
 ## ---- niche_niche_table ----
 nIche_by_niCHE <- table(data_cleaned$nIche,
                         data_cleaned$niCHE)
-rownames(nIche_by_niCHE) <- c("i",
-                              "I")
-colnames(nIche_by_niCHE) <- c("t",
-                              "tS")
 kable(addmargins(nIche_by_niCHE),
       format = "latex")
 
@@ -22,12 +20,14 @@ kable(addmargins(nIche_by_niCHE),
 nIche_by_niCHE_chisq_result <- chisq.test(nIche_by_niCHE)
 ## ---- niche_niche_chisq_expected ----
 kable(nIche_by_niCHE_chisq_result$expected,
-      format = "latex")
-## ---- niche_niche_chisq_results ----
+      format = "latex",
+      digits = 2)
+## ---- niche_niche_chisq_result ----
 nIche_by_niCHE_chisq_result
 ## ---- niche_niche_chisq_residuals ----
 kable(nIche_by_niCHE_chisq_result$residuals,
-      format = "latex") # Actually sqrt of the residuals
+      format = "latex",
+      digits = 2) # Actually sqrt of the residuals
 # Ultimately shows that these variables are highly dependant, and so we can look at
 # either one with the other factors and expect the same results. We'll use niCHE
 
@@ -37,8 +37,6 @@ niCHE_overall <- table(data_cleaned$niCHE)
 niCHE_overall_barplot <- barplot(niCHE_overall,
                                    ylim = c(0,
                                             1.3*max(niCHE_overall)),
-                                   names.arg = c("S",
-                                                 "tS"),
                                    ylab = "Tokens",
                                    xlab = "Variant of ni(che)")
 text(niCHE_overall_barplot,
@@ -48,15 +46,12 @@ text(niCHE_overall_barplot,
         
 # Test of independance between Age and niCHE
 # Exclude those with unknown ages
-## ---- age_niche_table_make ----
+## ---- age_niche_table ----
 data_cleaned_sans_unknown_ages <- droplevels(data_cleaned[data_cleaned$Age != "Unknown",])
 
 # Summary of counts in a table and in the margins, excluding unknown ages
 niCHE_by_Age <- table(data_cleaned_sans_unknown_ages$niCHE,
                             data_cleaned_sans_unknown_ages$Age)
-## ---- age_niche_table_view
-rownames(niCHE_by_Age) <- c("S",
-                            "tS")
 colnames(niCHE_by_Age) <- c("20 or Younger",
                             "Early 20s",
                             "Mid 20s or Older")
@@ -67,7 +62,9 @@ kable(addmargins(niCHE_by_Age),
 ## --- age_niche_chisq_perform ----
 niCHE_by_Age_chisq_result <- chisq.test(niCHE_by_Age)
 ## --- age_niche_chisq_expected ----
-niCHE_by_Age_chisq_result$expected # Consevatively, chi-square shouldn't be used
+kable(niCHE_by_Age_chisq_result$expected,
+      format = "latex",
+      digits = 2) # Consevatively, chi-square shouldn't be used
 # Perform Fisher's exact test instead
 ## ---- age_niche_fish_perform ----
 niCHE_by_Age_Fish_result <- fisher.test(niCHE_by_Age)
@@ -77,12 +74,9 @@ niCHE_by_Age_Fish_result
         
 # Test of independance between Gender and niCHE
 # Summary of counts in a table and in the margins
-## ---- gender_niche_table_make ----
+## ---- gender_niche_table ----
 niCHE_by_Gender <- table(data_cleaned$niCHE,
                          data_cleaned$Gender)
-## ---- gender_niche_table_view ----
-rownames(niCHE_by_Gender) <- c("S",
-                               "tS")
 kable(addmargins(niCHE_by_Gender),
       format = "latex")
 
@@ -90,19 +84,18 @@ kable(addmargins(niCHE_by_Gender),
 ## ---- gender_niche_chisq_perform ----
 niCHE_by_Gender_chisq_result <- chisq.test(niCHE_by_Gender)
 ## ---- gender_niche_chisq_expected ----
-niCHE_by_Gender_chisq_result$expected
-## ---- gender_niche_chisq_result
+kable(niCHE_by_Gender_chisq_result$expected,
+      format = "latex",
+      digits = 2)
+## ---- gender_niche_chisq_result ----
 niCHE_by_Gender_chisq_result
 # The result is not significant by any likely alpha
     
 # Test of independance between Ethnicity and niCHE
 # Summary of counts in a table and in the margins
-## ---- ethnicity_niche_table_make ----
+## ---- ethnicity_niche_table ----
 niCHE_by_Ethnicity <- table(data_cleaned$niCHE,
                          data_cleaned$Ethnicity)
-## ---- ethnicity_niche_table_view ----
-rownames(niCHE_by_Ethnicity) <- c("S",
-                                  "tS")
 kable(addmargins(niCHE_by_Ethnicity),
       format = "latex")
 
@@ -110,7 +103,9 @@ kable(addmargins(niCHE_by_Ethnicity),
 ## ---- ethnicity_niche_chisq_perform ----
 niCHE_by_Ethnicity_chisq_result <- chisq.test(niCHE_by_Ethnicity)
 ## ---- ethnicity_niche_chisq_expected ----
-niCHE_by_Ethnicity_chisq_result$expected # Definitely not appropriate to use chi-square
+kable(niCHE_by_Ethnicity_chisq_result$expected,
+      format = "latex",
+      digits = 2) # Definitely not appropriate to use chi-square
 # Perform Fisher's exact test instead
 ## ---- ethnicity_niche_fish_perform ----
 niCHE_by_Ethnicity_Fish_result <- fisher.test(niCHE_by_Ethnicity)
@@ -120,12 +115,9 @@ niCHE_by_Ethnicity_Fish_result
 
 # Test of independance between Location and niCHE
 # Summary of counts in a table and in the margins
-## ---- location_niche_table_make ----
+## ---- location_niche_table ----
 niCHE_by_Location <- table(data_cleaned$niCHE,
                          data_cleaned$Location)
-## ---- location_niche_table_view ----
-rownames(niCHE_by_Location) <- c("S",
-                                 "tS")
 colnames(niCHE_by_Location) <- c("Downtown",
                                  "North Campus",
                                  "South Campus")
@@ -136,7 +128,9 @@ kable(addmargins(niCHE_by_Location),
 ## ---- location_niche_chisq_perform ----
 niCHE_by_Location_chisq_result <- chisq.test(niCHE_by_Location)
 ## ---- location_niche_chisq_expected ----
-niCHE_by_Location_chisq_result$expected
+kable(niCHE_by_Location_chisq_result$expected,
+      format = "latex",
+      digits = 2)
 ## ---- location_niche_chisq_result ----
 niCHE_by_Location_chisq_result
 # The result is not significant by any likely alpha
@@ -144,16 +138,13 @@ niCHE_by_Location_chisq_result
 # Test of independance between Year and niCHE
 ## ---- Year_niche_independance
 # Exclude those with unknown ages or who were non-students, the non-students only numbering 2
-## ---- year_niche_table_make ----
+## ---- year_niche_table ----
 data_cleaned_sans_unknown_and_nonstudent_years <- droplevels(data_cleaned[data_cleaned$Year != "Unknown" & data_cleaned$Year != "Not_student",])
 
 # Summary of counts in a table and in the margins
 niCHE_by_Year <- table(data_cleaned_sans_unknown_and_nonstudent_years$niCHE,
                        data_cleaned_sans_unknown_and_nonstudent_years$Year)
-## ---- year_niche_table_view ----
 addmargins(niCHE_by_Year)
-rownames(niCHE_by_Year) <- c("S",
-                             "tS")
 kable(addmargins(niCHE_by_Year),
       format = "latex")
 
@@ -161,7 +152,9 @@ kable(addmargins(niCHE_by_Year),
 ## ---- year_niche_chisq_perform ----
 niCHE_by_Year_chisq_result <- chisq.test(niCHE_by_Year)
 ## ---- year_niche_chisq_expected ----
-niCHE_by_Year_chisq_result$expected # Pretty inappropriate to use chi-square
+kable(niCHE_by_Year_chisq_result$expected,
+      format = "latex",
+      digits = 2) # Pretty inappropriate to use chi-square
 # Perform Fisher's exact test instead
 ## ---- year_niche_fish_perform ----
 niCHE_by_Year_Fish_result <- fisher.test(niCHE_by_Year)
@@ -180,7 +173,7 @@ niCHE_by_Year_barplot <- barplot(niCHE_by_Year_props,
                                           1),
                                  xlab = "Year",
                                  ylab = "Proportion of variant",
-                                 legend = c("\u0283",
-                                            "t\u0283"),
-                                 args.legend = list(x = 4,
-                                                    y = 0.95))
+                                 legend = c("S",
+                                            "tS"),
+                                 args.legend = list(x = 5,
+                                                    y = 1))

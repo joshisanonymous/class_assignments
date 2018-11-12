@@ -10,7 +10,10 @@
     \date{\today}
 \begin{document}
     <<default_chunk_opts, echo = FALSE>>=
-    opts_chunk$set(echo = FALSE)
+    opts_chunk$set(echo = FALSE,
+                   warning = FALSE,
+                   fig.height = 4,
+                   fig.width = 4)
     @
     <<load_scripts>>=
     read_chunk("data_cleaning.R")
@@ -42,18 +45,42 @@
                 -While this drags out the duration of the survey, making it less rapid, it was seen as worthwhile information to collect that could not be done otherwise
                     -We expected students of later years to converge on one variant, most likely [nɪtʃ], as they have had time to learn the norms of the community
     \section{Results}
+        -Issues with the data collected
+            -Some tokens were not independent as some respondents heard other respondents' answers before being asked
+                -This was mostly an issue when approaching people seated in public spaces, such as the library or in restaurants. The mobility of people outside makes it unlikely that anyone who does hear another respondent will still be around the be approached anyway
+        
+        Results for nIche by niCHE
+        
+        \begin{table}[tbh]
+            \centering
+            <<niche_niche_table>>=
+            @
+            \caption{Counts for n(i)che by ni(che).}
+            \label{tab:niche_niche_counts}
+        \end{table}
+        
         Test of independance between nIche and niCHE.
         
-        <<niche_niche_table>>=
-        @
         <<niche_niche_chisq_perform>>=
         @
-        <<niche_niche_chisq_expected>>=
+        \begin{table}[tbh]
+            \centering
+            <<niche_niche_chisq_expected>>=
+            @
+            \caption{Expected counts for a $\chi^2$ test for independance.}
+            \label{tab:niche_niche_expect}
+        \end{table}
+        
+        <<niche_niche_chisq_result>>=
         @
-        <<niche_niche_chisq_results>>=
-        @
-        <<niche_niche_chisq_residuals>>=
-        @
+        
+        \begin{table}[tbh]
+            \centering
+            <<niche_niche_chisq_residuals>>=
+            @
+            \caption{Standardized residuals for the $\chi^2$ test for independance.
+            \label{tab:niche_niche_resid}
+        \end{table}
         
         The overall results for t vs tS
         
@@ -62,12 +89,98 @@
         
         Because we tested five hypotheses, we are using the Bonferroni correction to adjust the $\alpha$ of 0.05 down to \Sexpr{0.05/5}.
         
+        Results for age
         
-        -Issues with the data collected
-            -Some tokens were not independent as some respondents heard other respondents' answers before being asked
-                -This was mostly an issue when approaching people seated in public spaces, such as the library or in restaurants. The mobility of people outside makes it unlikely that anyone who does hear another respondent will still be around the be approached anyway
-        -Overall numbers
-        -Subsets
+        <<age_niche_table>>=
+        @
+        
+        Test for independance between age and niCHE
+        
+        <<age_niche_chisq_perform>>=
+        @
+        <<age_niche_chisq_expected>>=
+        @
+        
+        Expected values are too low for chi-square, so we use Fisher's exact
+        
+        <<age_niche_fish_perform>>=
+        @
+        <<age_niche_fish_result>>=
+        @
+        
+        Results for gender
+        
+        <<gender_niche_table>>=
+        @
+        
+        Test for independance between gender and niCHE
+        
+        <<gender_niche_chisq_perform>>=
+        @
+        <<gender_niche_chisq_expected>>=
+        @
+        <<gender_niche_chisq_result>>=
+        @
+        
+        Results for ethnicity
+        
+        <<ethnicity_niche_table>>=
+        @
+        
+        Test for independance between ethnicity and niCHE
+        
+        <<ethnicity_niche_chisq_perform>>=
+        @
+        <<ethnicity_niche_chisq_expected>>=
+        @
+        
+        Expected values too low, so use Fisher's exact instead
+        
+        <<ethnicity_niche_fish_perform>>=
+        @
+        <<ethnicity_niche_fish_result>>=
+        @
+        
+        Results for location
+        
+        <<location_niche_table>>=
+        @
+        
+        Test for independance between location and niCHE
+        
+        <<location_niche_chisq_perform>>=
+        @
+        <<location_niche_chisq_expected>>=
+        @
+        <<location_niche_chisq_result>>=
+        @
+        
+        Results for year
+        
+        <<year_niche_table>>=
+        @
+        
+        Test for independance between year and niCHE
+        
+        <<year_niche_chisq_perform>>=
+        @
+        <<year_niche_chisq_expected>>=
+        @
+        
+        Expected values not high enough, so use Fisher's exact
+        
+        <<year_niche_fish_perform>>=
+        @
+        <<year_niche_fish_result>>=
+        @
+        
+        Year is not statistically significant, but there does seem to be a pattern:
+        
+        <<year_niche_barplot>>=
+        @
+        
+        May not be the right test for this subset as "year" can be viewed as a quantitative variable.
+        
     \section{Discussion}
         -Issues with assigning values for factors
             -Most almost necessitate that people's identities are minimized to what can be gleamed from looking at them
