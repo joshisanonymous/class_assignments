@@ -1,9 +1,9 @@
 \documentclass{article}
     \usepackage{fontspec}
         \setmainfont{Doulos SIL}
-    \usepackage{tipa}
+    \usepackage{hyperref}
     \usepackage{natbib}
-        \bibliographystyle{apalike}
+        \bibliographystyle{lingua}
     \title{The Niche}
     \author{Joshua McNeill}
     \date{\today}
@@ -23,24 +23,20 @@
     <<load_cleaned>>=
     @
     \maketitle
-    \section{Variable}
-        The University of Georgia (UGA) dining hall The Niche is a popular spot for students to eat. Due to its small space, the menu was designed to be rather specialized, all of which played a role in the name that it was ultimately given \citep{brannen_uga_2018}.
+    \section{Introduction}
+        \label{sec:introduction}
+        The University of Georgia (UGA) dining hall The Niche is a popular spot for students to eat. Due to its small space, the menu was designed to be rather specialized, both of these facts playing a role in the name that it was ultimately given \citep{brannen_uga_2018}. However, the pronunciation of The Niche is generally variable for UGA students. Indeed, this issue is so salient that it has found its way into public discourse, as in being the first item in an article entitled ``UGA Words You've Been Saying Wrong'' on the blog The Black Sheep \citep{goren_uga_2017}.
         
-                -Reading adaptation: when a loanword is phonologically adapted by reading its orthographic representation in the donor language as if it were the recipient language orthography (e.g., the pronunciation of cul-de-sac in English having no apparent relation to the French pronunciation and presumably being derived directly from the written form) (Vendelin \& Peperkamp 2006:997).
-        -Orthography sometimes has a limited influence on phonological adaptation of loanwords.
-            -Paradis \& LaCharité (1997) claimed that only 4.6\% of the 545 loanwords in their French-Fula corpus were influenced by French orthography (382).
-                -They don't explain how they measured this, though.
-                -Fula speakers in Senegal have been shown to be mostly illiterate (80\%) (Perrin 1984, as cited in Paradis \& LaCharité 1997:382).
-                    -This highlights the ways in which social factors can influence phonological adaptations. In the case of The Niche, a social factor such as \emph{bilingual in French} probably has an impact.
-        -As of November 11th, 2018, the only pronunciations of the English word niche as [nɪtʃ] come from people claiming to be American (Forvo).
-            -Only 2 of 13 pronunciations on Forvo are [nɪtʃ] but 5 of the pronunciations were uploaded by Americans.
-                -Not great evidence, but suggests that [nɪtʃ] is relegated to the US but maybe not dominant in the US.
+        There are two phonemes in the name The Niche that are variable. One of those is the vowel represented by the grapheme $\langle$i$\rangle$, pronounced either as the tense [i] or lax [ɪ]. The other is the consonant represented by the graphemes $\langle$ch$\rangle$, pronounced either as the fricative [ʃ] or the affricate [tʃ]. This leads to four possible pronunciations of The Niche: [niʃ], [nɪʃ], [nitʃ], and [nɪtʃ]. The confusion over which of these to use is such that it is not uncommon to hear students rapidly produce some combination of the four, presumably with the expectation that the person with whom they are speaking will be able to tell them which is appropriate.
         
-        -Variation in its pronunciation is common enough and recognizable enough that it to shows up on an online publication of words that students pronounce incorrectly (Goren).
-        -Not a lexical variable but in fact two phonological variables: 1) the (i) and 2) the (ch).
-            (i) can be realized as [\textipa{i}] or [\textipa{I}]
-            (ch) can be realized as [\textipa{S}] or [\textipa{tS}]
+        There are two provenances for this variation in the pronunciation of The Niche. The first, and perhaps more likely, is that this is a case of typical phonetic variation in the English word meaning ``an alcove,'' ``[a] shallow ornamental recess or hollow set into a wall,'' or ``[a] place or position suited to or intended for the character, capabilities, status, etc., of a person or thing,'' according to the Oxford English Dictionary (OED). The OED itself suggests that there is a British English preference for [niːʃ] and American English preference for [nɪtʃ] (niche, \citeyear{noauthor_niche_2018}). This also plays out in the pronunciations that users of the site Forvo have provided for the word \emph{niche}. As of November 11th, 2018, the only pronunciations as [nɪtʃ] come from people claiming to be American, who in total provided five of the thirteen pronunciations \citep{forvo_how_nodate}. This, then, also suggests that there is some variation within the United States as they did not categorical pronounce [nɪtʃ].
+        
+        The second possible provenance of the variation in the pronunciation of The Niche is that this is read as a French word meaning ``alcove'' being used as the name for the dining hall. In this case, before students have had a chance to hear later year students pronounce the name, they are in a position of phonologically adapting a the orthographic representation into their English, what \citet{vendelin_influence_2006} called a reading adaptation (p.~997). Typically, orthographic representation are not expected to have a large influence on how a loanword is phonologically adapted into a recipient language. For example, \citet{paradis_preservation_1997} claimed that only 4.6\% of the 545 French loanwords into Fula were influenced by French orthography in their corpus (p.~382), though they do not explain how this was measured. It is reasonable to believe that the influence of orthographic representations would be much greater, however, if it is the only representation to which a speaker has access, as would be the case for new students encountering The Niche. Of course, it does not seem as though the French word \emph{niche} is the source of the name of the dining hall, nor that students would necessarily read it that way even if it was. Students who happen to also speak French may experience interference leading them to follow the typical French pronunciation of [niʃ], but not others.
+        
+        In sum, The Niche has four possible pronunciations, but students do not categorically converge on any one of them. This is a particularly salient issue among the university populace and may be either a case of phonetic variation or perhaps involve some sort of phonological adaptation of a French loanword. This situation led us to ask why students do not categorically agree on a pronunciation for the Niche.
     \section{Method}
+        \label{sec:method}
+        We approached our research question by employing a rapid and anonymous (R\&A) survey
         -Approached people on campus and asked them to name the UGA dining halls under the guise of some sort of survey about dining halls.
             -What made this rapid
             -What made this anonymous
@@ -261,8 +257,6 @@
             -Most almost necessitate that people's identities are minimized to what can be gleamed from looking at them
                 -While it might not be too damaging to find, for instance, that ``such and such looking people pronounce the Niche such and such a way,'' the simple use of these variables does have a danger of reinforcing the idea that the categories used for each also represent cohesive groups, which is not necessarily the case.
                     -All women do not necessarily know each other or even have the same idea of what it means to be a woman, for instance
-            
-    \section{Notes}
-
-    \bibliography{References.bib}
+        Mention that we couldn't test if French-English bilinguals were the ones mostly producing [niS] using this method.
+        \bibliography{References.bib}
 \end{document}
