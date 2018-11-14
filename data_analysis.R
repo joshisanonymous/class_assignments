@@ -6,6 +6,7 @@ data_cleaned <- read.csv("data_cleaned.csv",
 
 ## ---- load_packages ----
 require("knitr")
+require("plyr")
 
 # Test of independance between nIche and niCHE
 # Summary of counts in a table and in the margins
