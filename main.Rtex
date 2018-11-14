@@ -2,6 +2,7 @@
     \usepackage{fontspec}
         \setmainfont{Doulos SIL}
     \usepackage{hyperref}
+    \usepackage{listings}
     \usepackage{natbib}
         \bibliographystyle{lingua}
     \title{The Niche}
@@ -34,52 +35,38 @@
         The second possible provenance of the variation in the pronunciation of The Niche is that this is read as a French word meaning ``alcove'' being used as the name for the dining hall. In this case, before students have had a chance to hear later year students pronounce the name, they are in a position of phonologically adapting a the orthographic representation into their English, what \citet{vendelin_influence_2006} called a reading adaptation (p.~997). Typically, orthographic representation are not expected to have a large influence on how a loanword is phonologically adapted into a recipient language. For example, \citet{paradis_preservation_1997} claimed that only 4.6\% of the 545 French loanwords into Fula were influenced by French orthography in their corpus (p.~382), though they do not explain how this was measured. It is reasonable to believe that the influence of orthographic representations would be much greater, however, if it is the only representation to which a speaker has access, as would be the case for new students encountering The Niche. Of course, it does not seem as though the French word \emph{niche} is the source of the name of the dining hall, nor that students would necessarily read it that way even if it was. Students who happen to also speak French may experience interference leading them to follow the typical French pronunciation of [niʃ], but not others.
         
         In sum, The Niche has four possible pronunciations, but students do not categorically converge on any one of them. This is a particularly salient issue among the university populace and may be either a case of phonetic variation or perhaps involve some sort of phonological adaptation of a French loanword. This situation led us to ask why students do not categorically agree on a pronunciation for the Niche.
-    \section{Method}
+    \section{Method\protect\footnote{The data and the code used to analyze it can be found at \url{https://github.com/joshisanonymous/socio_class_the_niche}.}}
         \label{sec:method}
-        We approached our research question by employing a rapid and anonymous (R\&A) survey
-        -Approached people on campus and asked them to name the UGA dining halls under the guise of some sort of survey about dining halls.
-            -What made this rapid
-            -What made this anonymous
-        -Factors recorded: age, gender, ethnicity, location, school year
-            -Age was guessed from appearance
-                -Ranged from ... to ...
-            -Gender was guessed from appearance
-                -Male or female
-            -Ethnicity was guessed from appearance
-                -White, black, Indian, Hispanic
-            -Location was divided up into south campus, north campus, and downtown
-            -School year was determined by asking after the survey question
-                -While this drags out the duration of the survey, making it less rapid, it was seen as worthwhile information to collect that could not be done otherwise
-                    -We expected students of later years to converge on one variant, most likely [nɪtʃ], as they have had time to learn the norms of the community
-    \section{Results}
-        -Issues with the data collected
-            -Some tokens were not independent as some respondents heard other respondents' answers before being asked
-                -This was mostly an issue when approaching people seated in public spaces, such as the library or in restaurants. The mobility of people outside makes it unlikely that anyone who does hear another respondent will still be around the be approached anyway
+        We approached our research question by employing a rapid and anonymous (R\&A) survey \citep{labov_social_2006} to collect data. In this sort of survey, potential respondents are approached in public and engaged with in a way that hides from them the fact that the surveyor is gathering information on their speech. The surveyor is, in this sense, anonymous, hence the anonymous half of the survey. The interactions are also very short, hence the rapid half of the survey. Typically, the surveyor aims to elicit just one or two tokens of a specific linguistic variable before moving on.
         
-        Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE Results for nIche by niCHE 
+        In the present study, the variable was the pronunciation of The Niche, and this was elicited by pretending to take an entirely different sort of survey which probably appeared to have something to do with wanting to know how well students are being informed about their dining hall options on campus. During a prototypical interaction, after engagement was established, the surveyor would ask something along the lines of the following:
+        \begin{itemize}
+            \item Can you name all of the dining halls at UGA?
+        \end{itemize}
+        Once they were finished listing dining halls, the surveyor would then ask which school year they were in. After the respondent left, their age, gender, ethnicity, and the location where the survey took place were also recorded along with their pronunciation.
+        
+        Besides school year and location, the values recorded for the variables were necessarily imprecise. Age ranged from 18 to possibly in the 50s, with the vast majority being, naturally, college-aged. Gender was recorded simply as male or female, which may not seem like imprecise values except that they quite possibly simplified the gender identities of respondents and were possibly inaccurate in some cases even when they were simplified. Ethnicity included White, Black, Asian, Hispanic, Indian, and Middle Eastern, with the vast majority being identified as White. Locations were broadly specified as South Campus, North Campus, and Downtown.
+        
+        While asking an additional question about school year at the end of each interaction reduced the rapidity of encounters, this was done because school year was expected to be a very likely associated with students' pronunciations of The Niche. This was expected under the assumption that new students would converge on the same pronunciation as later students as they become more integrated into the university community and learn its norms, but as there was no way to collect this information without directly asking for it, that is simply what was done.
+        
+        As all variables were categorical, save perhaps school year, appropriate statistical tests for categorical data were used to analyze the results. In most cases, this meant using a $\chi^2$ test for independence using the base R function chisq.test(), though Fisher's exact test was used, via the function fisher.test(), when too many expected counts were below 5. Expected counts were calculated by setting the counts for each column to be proportional with the ratio of the marginal counts, as they are calculated when reported by chisq.test(). As a result, our null hypotheses were the expected counts, and our alternative hypotheses were that the data did not follow the pattern of the expected counts to a degree that was within what could be expected from sampling variability alone. Our $\alpha$ was modified down from 0.05 to \Sexpr{0.05/5} using a Bonferroni correction for running five tests.
+    \section{Results}
+        \label{sec:results}
+        Two issues with the data collection must be covered before moving on to the results proper. The first is that some of the tokens were not in fact independent as some respondents were able to hear the answers of previous respondents before being asked themselves. This was mostly an issue when approaching people seated in public spaces, such as the library or in restaurants. The mobility of people outside made it anyone who did hear another respodent's answer would still be around to be engaged with themselves. The second issue is that not all information was recorded for all respondents. This mostly affected gathering their school years as they were sometimes in too much of a rush to wait for a second question, but there were also 31 respondents for whom their ages were not recorded.
+        
+        First of all, two potential phonological variables within the word \emph{niche} were identified in section \ref{sec:introduction}: the vowel represented by the grapheme $\langle$i$\rangle$ and the consonant represented by the grapheme $\langle$ch$\rangle$, which we might represent in linguistic variable notation as n(i)che and ni(ch)e, respectively. However, our intuitions from the data collection experience suggested that these variables were not at all independent. Therefore, a $\chi^2$ test for independence was performed on the counts found in Table \ref{tab:niche_niche_counts}.
         
         \begin{table}[tbhp]
             \centering
             <<niche_niche_table>>=
             @
-            \caption{Counts for n(i)che by ni(che).}
+            \caption{Counts for n(i)che by ni(ch)e.}
             \label{tab:niche_niche_counts}
         \end{table}
         
-        Test of independence between nIche and niCHE.Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE. Test of independence between nIche and niCHE.  
-        
         <<niche_niche_chisq_perform>>=
         @
-        \begin{table}[tbhp]
-            \centering
-            <<niche_niche_chisq_expected>>=
-            @
-            \caption{Expected counts for a $\chi^2$ test for independence between n(i)che and ni(che).}
-            \label{tab:niche_niche_expect}
-        \end{table}
-        
-        <<niche_niche_chisq_result>>=
-        @
+        The result of the $\chi^2$ test was statistically significant ($P<\Sexpr{round(nIche_by_niCHE_chisq_result$p.value, 11)}$, $df=\Sexpr{nIche_by_niCHE_chisq_result$parameter}$). As can be seen in the standardized residuals in Table \ref{tab:niche_niche_resid}, the test showed statistical significance because the vowel [i] greatly favors the consonant [ʃ], whereas the vowel [ɪ] greatly favors the consonant [tʃ]. These two phonological variables are so closely linked that it is reasonable to assume that sociolinguistic analyses for one hold for the other as well, and as such, the rest of the analyses were performed only on ni(ch)e.
         
         \begin{table}[tbhp]
             \centering
@@ -89,31 +76,28 @@
             \label{tab:niche_niche_resid}
         \end{table}
         
-        The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS The overall results for t vs tS 
+        <<
+        Overall, [tʃ] was much more common than [ʃ], as can be seen in Figure \ref{fig:S_vs_tS_overall}. Out of \Sexpr{sum(niCHE_overall)} tokens
         
         \begin{figure}[tbhp]
             \centering
             <<niche_overall_barplot>>=
             @
-            \caption{Overall counts for each variant of ni(che).}
+            \caption{Overall counts for each variant of ni(ch)e.}
             \label{fig:S_vs_tS_overall}
         \end{figure}
         
-        Because we tested five hypotheses, we are using the Bonferroni correction to adjust the $\alpha$ of 0.05 down to \Sexpr{0.05/5}.
-        
-        Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age 
+        Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age
         
         \begin{table}[htbp]
             \centering
             <<age_niche_table>>=
             @
-            \caption{Counts for ni(che) by age.}
+            \caption{Counts for ni(ch)e by age.}
             \label{tab:age_niche_counts}
         \end{table}
         
-        Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE
-        
-        Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE 
+        Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence
         
         <<age_niche_chisq_perform>>=
         @
@@ -122,7 +106,7 @@
             \centering
             <<age_niche_chisq_expected>>=
             @
-            \caption{Expected counts for a $\chi^2$ test for independence between age and ni(che).}
+            \caption{Expected counts for a $\chi^2$ test for independence between age and ni(ch)e.}
             \label{tab:age_niche_expect}
         \end{table}
         
@@ -133,17 +117,17 @@
         <<age_niche_fish_result>>=
         @
         
-        Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender 
+        Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender
         
         \begin{table}[tbhp]
             \centering
             <<gender_niche_table>>=
             @
-            \caption{Counts for ni(che) by gender.}
+            \caption{Counts for ni(ch)e by gender.}
             \label{tab:gender_niche_counts}
         \end{table}
         
-        Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE 
+        Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for
         
         <<gender_niche_chisq_perform>>=
         @
@@ -151,23 +135,23 @@
             \centering
             <<gender_niche_chisq_expected>>=
             @
-            \caption{Expected counts for a $\chi^2$ test for independence between gender and ni(che).}
+            \caption{Expected counts for a $\chi^2$ test for independence between gender and ni(ch)e.}
             \label{tab:gender_niche_expect}
         \end{table}
         <<gender_niche_chisq_result>>=
         @
         
-        Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity 
+        Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for
         
         \begin{table}[htbp]
             \centering
             <<ethnicity_niche_table>>=
             @
-            \caption{Counts for ni(che) by ethnicity.}
+            \caption{Counts for ni(ch)e by ethnicity.}
             \label{tab:ethnicity_niche_counts}
         \end{table}
         
-        Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE 
+        Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test
         
         <<ethnicity_niche_chisq_perform>>=
         @
@@ -175,7 +159,7 @@
             \centering
             <<ethnicity_niche_chisq_expected>>=
             @
-            \caption{Expected counts for a $\chi^2$ test for independence between ethnicity and ni(che).}
+            \caption{Expected counts for a $\chi^2$ test for independence between ethnicity and ni(ch)e.}
             \label{tab:ethnicity_niche_expect}
         \end{table}
         
@@ -186,17 +170,17 @@
         <<ethnicity_niche_fish_result>>=
         @
         
-        Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location 
+        Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for 
         
         \begin{table}[htbp]
             \centering
             <<location_niche_table>>=
             @
-            \caption{Counts for ni(che) by location.}
+            \caption{Counts for ni(ch)e by location.}
             \label{tab:location_niche_counts}
         \end{table}
         
-        Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE 
+        Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location 
         
         <<location_niche_chisq_perform>>=
         @
@@ -204,24 +188,24 @@
             \centering
             <<location_niche_chisq_expected>>=
             @
-            \caption{Expected counts for a $\chi^2$ test for independence between location and ni(che).}
+            \caption{Expected counts for a $\chi^2$ test for independence between location and ni(ch)e.}
             \label{tab:location_niche_expect}
         \end{table}
         
         <<location_niche_chisq_result>>=
         @
         
-        Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year 
+        Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year 
         
         \begin{table}[htbp]
             \centering
             <<year_niche_table>>=
             @
-            \caption{Counts for ni(che) by school year.}
+            \caption{Counts for ni(ch)e by school year.}
             \label{tab:year_niche_counts}
         \end{table}
         
-        Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE 
+        Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between 
         
         <<year_niche_chisq_perform>>=
         @
@@ -229,7 +213,7 @@
             \centering
             <<year_niche_chisq_expected>>=
             @
-            \caption{Expected counts for a $\chi^2$ test for independence between school year and ni(che).}
+            \caption{Expected counts for a $\chi^2$ test for independence between school year and ni(ch)e.}
             \label{tab:year_niche_expect}
         \end{table}
         
@@ -240,13 +224,13 @@
         <<year_niche_fish_result>>=
         @
         
-        Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: 
+        Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but
         
         \begin{figure}[tbhp]
             \centering
             <<year_niche_barplot>>=
             @
-            \caption{Proportion of each variant of ni(che) by school year.}
+            \caption{Proportion of each variant of ni(ch)e by school year.}
             \label{fig:year_niche_prop}
         \end{figure}
         
