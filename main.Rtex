@@ -2,7 +2,6 @@
     \usepackage{fontspec}
         \setmainfont{Doulos SIL}
     \usepackage{hyperref}
-    \usepackage{listings}
     \usepackage{natbib}
         \bibliographystyle{lingua}
     \title{The Niche}

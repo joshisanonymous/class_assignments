@@ -138,7 +138,6 @@ niCHE_by_Location_chisq_result
 # The result is not significant by any likely alpha
 
 # Test of independance between Year and niCHE
-## ---- Year_niche_independance
 # Exclude those with unknown ages or who were non-students, the non-students only numbering 2
 ## ---- year_niche_table ----
 data_cleaned_sans_unknown_and_nonstudent_years <- droplevels(data_cleaned[data_cleaned$Year != "Unknown" & data_cleaned$Year != "Not_student",])
