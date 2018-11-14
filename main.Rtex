@@ -76,18 +76,17 @@
             \label{tab:niche_niche_resid}
         \end{table}
         
-        <<
-        Overall, [tʃ] was much more common than [ʃ], as can be seen in Figure \ref{fig:S_vs_tS_overall}. Out of \Sexpr{sum(niCHE_overall)} tokens
+        <<niche_overall_barplot_make>>=
+        @
+        Overall, [tʃ] was much more common than [ʃ], as can be seen in Figure \ref{fig:S_vs_tS_overall}. Out of \Sexpr{sum(niCHE_overall)} tokens, only \Sexpr{niCHE_overall[1]} used the fricative variant instead of the affricate. However, it is worth asking whether these \Sexpr{niCHE_overall[1]} tokens can be explained by any particular class of students at UGA favoring the fricative pronunciation. As such, the rest of the analyses will divide the same data up according to age, gender, ethnicity, location, and school year.
         
         \begin{figure}[tbhp]
             \centering
-            <<niche_overall_barplot>>=
+            <<niche_overall_barplot_view>>=
             @
             \caption{Overall counts for each variant of ni(ch)e.}
             \label{fig:S_vs_tS_overall}
         \end{figure}
-        
-        Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age Results for age
         
         \begin{table}[htbp]
             \centering
@@ -97,27 +96,9 @@
             \label{tab:age_niche_counts}
         \end{table}
         
-        Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence between age and niCHE Test for independence
-        
-        <<age_niche_chisq_perform>>=
-        @
-        
-        \begin{table}[htbp]
-            \centering
-            <<age_niche_chisq_expected>>=
-            @
-            \caption{Expected counts for a $\chi^2$ test for independence between age and ni(ch)e.}
-            \label{tab:age_niche_expect}
-        \end{table}
-        
-        Expected values are too low for chi-square, so we use Fisher's exact
-        
         <<age_niche_fish_perform>>=
         @
-        <<age_niche_fish_result>>=
-        @
-        
-        Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender Results for gender
+        When we divided the respondents up into three age groups -- 20 or younger, early 20s, and mid 20 or older -- we ended up with the counts in Table \ref{tab:age_niche_counts}. What is immediately obvious in the table is that the vast majority of the students appeared to be under 25 years old. In fact, the low count in for [ʃ] for the oldest group made the use of a $\chi^2$ test invalid, so Fisher's exact test was used instead, with a result that did not show statistical significance ($P<\Sexpr{round(niCHE_by_Age_Fish_result$p.value, 2)}$). Age groups did not seem to differ in their pronunciation, although caution should be used when interpreting this result as there was a very limited range of ages and therefore a likelihood that they were often guessed incorrectly when surveyors recorded them.
         
         \begin{table}[tbhp]
             \centering
@@ -127,21 +108,9 @@
             \label{tab:gender_niche_counts}
         \end{table}
         
-        Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for independence between gender and niCHE Test for
-        
         <<gender_niche_chisq_perform>>=
         @
-        \begin{table}[htbp]
-            \centering
-            <<gender_niche_chisq_expected>>=
-            @
-            \caption{Expected counts for a $\chi^2$ test for independence between gender and ni(ch)e.}
-            \label{tab:gender_niche_expect}
-        \end{table}
-        <<gender_niche_chisq_result>>=
-        @
-        
-        Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for ethnicity Results for
+        When we divided the respondents up into two genders -- male and female -- we ended up with the counts in Table \ref{tab:gender_niche_counts}. Unlike with age, the distribution for gender was almost exactly even and all cells contained large enough expected counts to use a $\chi^2$ test. The result, however, was not statistically significant ($P<\Sexpr{round(niCHE_by_Gender_chisq_result$p.value, 2)}$, $df=\Sexpr{niCHE_by_Gender_chisq_result$parameter}$). It appears that both men and women independently favor [tʃ].
         
         \begin{table}[htbp]
             \centering
@@ -151,24 +120,11 @@
             \label{tab:ethnicity_niche_counts}
         \end{table}
         
-        Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test
-        
-        <<ethnicity_niche_chisq_perform>>=
-        @
-        \begin{table}[htbp]
-            \centering
-            <<ethnicity_niche_chisq_expected>>=
-            @
-            \caption{Expected counts for a $\chi^2$ test for independence between ethnicity and ni(ch)e.}
-            \label{tab:ethnicity_niche_expect}
-        \end{table}
-        
-        Expected values too low, so use Fisher's exact instead
-        
         <<ethnicity_niche_fish_perform>>=
         @
-        <<ethnicity_niche_fish_result>>=
-        @
+        For the six categories of ethnicity -- Asian, Black, Hispanic, Indian, Middle Eastern, and White -- the vast majority of the respondents were recorded as being White, which can be seen plainly in Table \ref{tab:ethnicity_niche_counts}. In fact, the expected counts in almost every other cell were below the threshold of 5 required to use perform a $\chi^2$ test in a reliable way. We thus used Fisher's exact test, which produced a result that was not statistically significant ($P<\Sexpr{round(niCHE_by_Ethnicity_Fish_result$p.value, 4)}$).
+        
+        Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test
         
         Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for 
         
@@ -226,9 +182,11 @@
         
         Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but
         
+        <<year_niche_barplot_make>>=
+        @
         \begin{figure}[tbhp]
             \centering
-            <<year_niche_barplot>>=
+            <<year_niche_barplot_view>>=
             @
             \caption{Proportion of each variant of ni(ch)e by school year.}
             \label{fig:year_niche_prop}
