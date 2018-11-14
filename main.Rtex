@@ -23,6 +23,8 @@
     @
     <<load_cleaned>>=
     @
+    <<load_packages, message = FALSE>>=
+    @
     \maketitle
     \section{Introduction}
         \label{sec:introduction}
@@ -56,7 +58,7 @@
         
         First of all, two potential phonological variables within the word \emph{niche} were identified in section \ref{sec:introduction}: the vowel represented by the grapheme $\langle$i$\rangle$ and the consonant represented by the grapheme $\langle$ch$\rangle$, which we might represent in linguistic variable notation as n(i)che and ni(ch)e, respectively. However, our intuitions from the data collection experience suggested that these variables were not at all independent. Therefore, a $\chi^2$ test for independence was performed on the counts found in Table \ref{tab:niche_niche_counts}.
         
-        \begin{table}[tbhp]
+        \begin{table}[tbh]
             \centering
             <<niche_niche_table>>=
             @
@@ -68,7 +70,7 @@
         @
         The result of the $\chi^2$ test was statistically significant ($P<\Sexpr{round(nIche_by_niCHE_chisq_result$p.value, 11)}$, $df=\Sexpr{nIche_by_niCHE_chisq_result$parameter}$). As can be seen in the standardized residuals in Table \ref{tab:niche_niche_resid}, the test showed statistical significance because the vowel [i] greatly favors the consonant [ʃ], whereas the vowel [ɪ] greatly favors the consonant [tʃ]. These two phonological variables are so closely linked that it is reasonable to assume that sociolinguistic analyses for one hold for the other as well, and as such, the rest of the analyses were performed only on ni(ch)e.
         
-        \begin{table}[tbhp]
+        \begin{table}[tbh]
             \centering
             <<niche_niche_chisq_residuals>>=
             @
@@ -80,7 +82,7 @@
         @
         Overall, [tʃ] was much more common than [ʃ], as can be seen in Figure \ref{fig:S_vs_tS_overall}. Out of \Sexpr{sum(niCHE_overall)} tokens, only \Sexpr{niCHE_overall[1]} used the fricative variant instead of the affricate. However, it is worth asking whether these \Sexpr{niCHE_overall[1]} tokens can be explained by any particular class of students at UGA favoring the fricative pronunciation. As such, the rest of the analyses will divide the same data up according to age, gender, ethnicity, location, and school year.
         
-        \begin{figure}[tbhp]
+        \begin{figure}[tbh]
             \centering
             <<niche_overall_barplot_view>>=
             @
@@ -88,7 +90,7 @@
             \label{fig:S_vs_tS_overall}
         \end{figure}
         
-        \begin{table}[htbp]
+        \begin{table}[htb]
             \centering
             <<age_niche_table>>=
             @
@@ -98,9 +100,9 @@
         
         <<age_niche_fish_perform>>=
         @
-        When we divided the respondents up into three age groups -- 20 or younger, early 20s, and mid 20 or older -- we ended up with the counts in Table \ref{tab:age_niche_counts}. What is immediately obvious in the table is that the vast majority of the students appeared to be under 25 years old. In fact, the low count in for [ʃ] for the oldest group made the use of a $\chi^2$ test invalid, so Fisher's exact test was used instead, with a result that did not show statistical significance ($P<\Sexpr{round(niCHE_by_Age_Fish_result$p.value, 2)}$). Age groups did not seem to differ in their pronunciation, although caution should be used when interpreting this result as there was a very limited range of ages and therefore a likelihood that they were often guessed incorrectly when surveyors recorded them.
+        When we divided the respondents up into three age groups -- 20 or younger, early 20s, and mid 20 or older -- we ended up with the counts in Table \ref{tab:age_niche_counts}. What is immediately obvious in the table is that the vast majority of the students appeared to be under 25 years old. In fact, the low count in for [ʃ] for the oldest group made the use of a $\chi^2$ test invalid, so Fisher's exact test was used instead, with a result that did not show statistical significance ($P<\Sexpr{round_any(niCHE_by_Age_Fish_result$p.value, 0.01, ceiling)}$). Age groups did not seem to differ in their pronunciation, although caution should be used when interpreting this result as there was a very limited range of ages and therefore a likelihood that they were often guessed incorrectly when surveyors recorded them.
         
-        \begin{table}[tbhp]
+        \begin{table}[tbh]
             \centering
             <<gender_niche_table>>=
             @
@@ -110,9 +112,9 @@
         
         <<gender_niche_chisq_perform>>=
         @
-        When we divided the respondents up into two genders -- male and female -- we ended up with the counts in Table \ref{tab:gender_niche_counts}. Unlike with age, the distribution for gender was almost exactly even and all cells contained large enough expected counts to use a $\chi^2$ test. The result, however, was not statistically significant ($P<\Sexpr{round(niCHE_by_Gender_chisq_result$p.value, 2)}$, $df=\Sexpr{niCHE_by_Gender_chisq_result$parameter}$). It appears that both men and women independently favor [tʃ].
+        When we divided the respondents up into two genders -- male and female -- we ended up with the counts in Table \ref{tab:gender_niche_counts}. Unlike with age, the distribution for gender was almost exactly even and all cells contained large enough expected counts to use a $\chi^2$ test. The result, however, was not statistically significant ($P<\Sexpr{round_any(niCHE_by_Gender_chisq_result$p.value, 0.01, ceiling)}$, $df=\Sexpr{niCHE_by_Gender_chisq_result$parameter}$). It appears that both men and women independently favor [tʃ].
         
-        \begin{table}[htbp]
+        \begin{table}[htb]
             \centering
             <<ethnicity_niche_table>>=
             @
@@ -122,13 +124,9 @@
         
         <<ethnicity_niche_fish_perform>>=
         @
-        For the six categories of ethnicity -- Asian, Black, Hispanic, Indian, Middle Eastern, and White -- the vast majority of the respondents were recorded as being White, which can be seen plainly in Table \ref{tab:ethnicity_niche_counts}. In fact, the expected counts in almost every other cell were below the threshold of 5 required to use perform a $\chi^2$ test in a reliable way. We thus used Fisher's exact test, which produced a result that was not statistically significant ($P<\Sexpr{round(niCHE_by_Ethnicity_Fish_result$p.value, 4)}$).
+        For the six categories of ethnicity -- Asian, Black, Hispanic, Indian, Middle Eastern, and White -- the vast majority of the respondents were recorded as being White, which can be seen plainly in Table \ref{tab:ethnicity_niche_counts}. In fact, the expected counts in almost every cell outside of this group were below the threshold of 5 recommended for performing a $\chi^2$ test in a reliable way. We thus used Fisher's exact test, which produced a result that was not statistically significant ($P<\Sexpr{round_any(niCHE_by_Ethnicity_Fish_result$p.value, 0.01, ceiling)}$). It would be tempting to collapse all the categories other than White into a single category, perhaps \emph{non-White}, but this would be unmotivated as each group shows higher counts for [tʃ] than [ʃ] except \emph{Middle Eastern}, of which there was only a sole person recorded. It seems, then, that there is no real difference between how different ethnic classes pronounce The Niche at UGA.
         
-        Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test for independence between ethnicity and niCHE Test
-        
-        Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for location Results for 
-        
-        \begin{table}[htbp]
+        \begin{table}[htb]
             \centering
             <<location_niche_table>>=
             @
@@ -136,24 +134,11 @@
             \label{tab:location_niche_counts}
         \end{table}
         
-        Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location and niCHE Test for independence between location 
-        
         <<location_niche_chisq_perform>>=
         @
-        \begin{table}[htbp]
-            \centering
-            <<location_niche_chisq_expected>>=
-            @
-            \caption{Expected counts for a $\chi^2$ test for independence between location and ni(ch)e.}
-            \label{tab:location_niche_expect}
-        \end{table}
+        Location was one of the variables that was recorded in a rather precise way relative to the other variables. This is because the locations were not personal traits of respondents. Table \ref{tab:location_niche_counts} shows the counts for each of the three locations: North Campus, South Campus, and Downtown. The $\chi^2$ test for this combination of variables was not statistically significant ($P<\Sexpr{round_any(niCHE_by_Location_chisq_result$p.value, 0.01, ceiling)}$, $df=\Sexpr{niCHE_by_Location_chisq_result$parameter}$). The students that frequent different parts of UGA's campus do not seem to behave systematically differently from each other in respect to their pronunciations of The Niche.
         
-        <<location_niche_chisq_result>>=
-        @
-        
-        Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year Results for year 
-        
-        \begin{table}[htbp]
+        \begin{table}[htb]
             \centering
             <<year_niche_table>>=
             @
@@ -161,30 +146,13 @@
             \label{tab:year_niche_counts}
         \end{table}
         
-        Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between year and niCHE Test for independence between 
-        
-        <<year_niche_chisq_perform>>=
-        @
-        \begin{table}[htbp]
-            \centering
-            <<year_niche_chisq_expected>>=
-            @
-            \caption{Expected counts for a $\chi^2$ test for independence between school year and ni(ch)e.}
-            \label{tab:year_niche_expect}
-        \end{table}
-        
-        Expected values not high enough, so use Fisher's exact
-        
         <<year_niche_fish_perform>>=
         @
-        <<year_niche_fish_result>>=
-        @
-        
-        Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but there does seem to be a pattern: Year is not statistically significant, but
+        It is perhaps not surprising that none of the variables analyzed so far have yielded statistically significant results, but school year was assumed to be an important factor from the outset of this study. The counts tabulated for this variable can be seen in Table \ref{tab:year_niche_counts}. The expected counts for the higher years and several cells for [ʃ] were too low and so we used Fisher's exact test once again, which once again produced a result that was not statistically significant ($P<\Sexpr{round_any(niCHE_by_Year_Fish_result$p.value, 0.01, ceiling)}$).
         
         <<year_niche_barplot_make>>=
         @
-        \begin{figure}[tbhp]
+        \begin{figure}[tbh]
             \centering
             <<year_niche_barplot_view>>=
             @
@@ -192,13 +160,12 @@
             \label{fig:year_niche_prop}
         \end{figure}
         
-        May not be the right test for this subset as "year" can be viewed as a quantitative variable.
-        
+        The lack of significance for school year was surprising and begs the question of whether school year should be treated as a quantitative variable instead of a categorical variable. For instance, when plotted in a bar graph as in Figure \ref{fig:year_niche_prop}, there seems to be a regular pattern of [ʃ] becoming less frequent and [tʃ] becoming more frequent as the year increases, at least up to year 4, after which there are very few tokens anyway. Fisher's exact test is not good for identifying such gradient patterns as there will naturally be a number of points along the pattern where the counts only differ from what was expected by a small amount. In other words, Fisher's exact test does not detect trends, and perhaps there is a trend for school year in this data.
     \section{Discussion}
-        -Issues with assigning values for factors
-            -Most almost necessitate that people's identities are minimized to what can be gleamed from looking at them
-                -While it might not be too damaging to find, for instance, that ``such and such looking people pronounce the Niche such and such a way,'' the simple use of these variables does have a danger of reinforcing the idea that the categories used for each also represent cohesive groups, which is not necessarily the case.
-                    -All women do not necessarily know each other or even have the same idea of what it means to be a woman, for instance
-        Mention that we couldn't test if French-English bilinguals were the ones mostly producing [niS] using this method.
+        Perhaps one of the biggest issues that comes from using R\&A surveys for sociolinguistic research is that they more or less force the researcher to rely on their intuitions to identify characteristics about respondents. Ultimately, this runs a risk of not only gathering inaccurate data but also minimizing peoples' identities. This is a risk that comes up any time social variables are employed in a study, but perhaps more so when one cannot even ask their respondents to identify themselves explicitly. In a way, other than variables such as \emph{location}, what is really being tested is how well a data gatherer's intuitions about who people are upon first impression are associated with different realizations of a given variable.
+        
+        More specifically for the current study, there were two main issues. First, some variables were simply not very useful from the start. Recording age was not simply a problem because of having to guess; it was also a problem because we were likely to come across mostly students who are mostly around 18 to 25 years old. Likewise, either UGA or the city of Athens in general likely skew towards a White population, making it difficult to get a substantial number of tokens from the non-White populations without simply gathering very many tokens in general. Second, there was not really a study design that would have made it possible to tease out whether the variation was simply that or whether loanword adaptation was at play. For instance, there was no way to ascertain if any of the respondents also spoke French without simply asking.
+        
+        Ultimately, few conclusions can be drawn from this study. It does not appear that a student's social class has any bearing on their pronunciation of The Niche as none of the tests showed statistical significance. The closest thing to a telling result was the intuitively visible pattern of shifting towards [tʃ] the longer a student is at UGA, as was shown for school years in Figure \ref{fig:year_niche_prop}. This is an aspect of the pronunciation of The Niche that could still be explored further.
         \bibliography{References.bib}
 \end{document}
