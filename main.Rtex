@@ -1,6 +1,6 @@
 \documentclass{article}
     \usepackage{fontspec}
-        \setmainfont{BABEL Unicode}
+        \setmainfont{Charis SIL}
     \usepackage{hyperref}
     \usepackage[natbibapa]{apacite}
         \bibliographystyle{apacite}
