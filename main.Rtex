@@ -139,6 +139,8 @@
         @
         Location was one of the variables that was recorded in a rather precise way relative to the other variables. This is because the locations were not personal traits of respondents. Table \ref{tab:location_niche_counts} shows the counts for each of the three locations: North Campus, South Campus, and Downtown. The $\chi^2$ test for this combination of variables was not statistically significant ($P<\Sexpr{round_any(niCHE_by_Location_chisq_result$p.value, 0.01, ceiling)}$, $df=\Sexpr{niCHE_by_Location_chisq_result$parameter}$). The students that frequent different parts of UGA's campus do not seem to behave systematically differently from each other in respect to their pronunciations of The Niche.
         
+        <<year_niche_table_prep>>=
+        @
         \begin{table}[htb]
             \centering
             <<year_niche_table>>=
