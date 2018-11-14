@@ -116,10 +116,11 @@ kable(niCHE_by_Location_chisq_result$expected,
 ## ---- location_niche_chisq_result ----
 niCHE_by_Location_chisq_result
 
-## ---- year_niche_table ----
+## ---- year_niche_table_prep ----
 # Exclude those with unknown ages or who were non-students, the non-students only numbering 2
 data_cleaned_sans_unknown_and_nonstudent_years <- droplevels(data_cleaned[data_cleaned$Year != "Unknown" & data_cleaned$Year != "Not_student",])
 
+## ---- year_niche_table ----
 niCHE_by_Year <- table(data_cleaned_sans_unknown_and_nonstudent_years$niCHE,
                        data_cleaned_sans_unknown_and_nonstudent_years$Year)
 addmargins(niCHE_by_Year)
