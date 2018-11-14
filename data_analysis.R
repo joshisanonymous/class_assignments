@@ -32,8 +32,9 @@ kable(nIche_by_niCHE_chisq_result$residuals,
 # either one with the other factors and expect the same results. We'll use niCHE
 
 # Overall distribution of niCHE
-## ---- niche_overall_barplot ----
+## ---- niche_overall_barplot_make ----
 niCHE_overall <- table(data_cleaned$niCHE)
+## ---- niche_overall_barplot_view ----
 niCHE_overall_barplot <- barplot(niCHE_overall,
                                    ylim = c(0,
                                             1.3*max(niCHE_overall)),
@@ -164,9 +165,10 @@ niCHE_by_Year_Fish_result
     
 # There seems to be a pattern, though.
 # Create a side by side bar graph for Year by niCHE to show it
-## ---- year_niche_barplot ----
+## ---- year_niche_barplot_make ----
 niCHE_by_Year_props <- prop.table(niCHE_by_Year,
                                   2)
+## ---- year_niche_barplot_view ----
 niCHE_by_Year_barplot <- barplot(niCHE_by_Year_props,
                                  beside = TRUE,
                                  ylim = c(0,
