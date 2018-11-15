@@ -1,8 +1,8 @@
 \documentclass{article}
-    %\usepackage{fontspec}
-        %\setmainfont{Charis SIL}
     \usepackage{tipa}
     \usepackage{hyperref}
+        \hypersetup{colorlinks=true,
+                    allcolors=blue}
     \usepackage[natbibapa]{apacite}
         \bibliographystyle{apacite}
     \title{The Niche}
