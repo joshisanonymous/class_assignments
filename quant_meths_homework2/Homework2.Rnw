@@ -1,0 +1,112 @@
+\documentclass{article}
+    % Document info
+    \author{Joshua McNeill}
+    \title{Homework 2}
+    \date{\today}
+    
+    % Packages and package settings
+    \usepackage{fontspec}
+        \setmainfont{Charis SIL}
+    \usepackage[natbibapa]{apacite}
+        \bibliographystyle{apacite}
+    \usepackage{hyperref}
+        \hypersetup{colorlinks=true,
+                    allcolors=blue}
+\begin{document}
+    % Set chunk defaults, load script, load packages, load data, sort it out
+    <<set_opts_load_script, echo = FALSE>>=
+    opts_chunk$set(echo = FALSE,
+                   warning = FALSE,
+                   message = FALSE,
+                   fig.height = 3,
+                   fig.width = 3,
+                   results = "asis")
+    read_chunk("Homework2.R")
+    @
+    <<read_data_packages>>=
+    @
+    <<convert_reddit_rename>>=
+    @
+    <<sort_reddit_subset>>=
+    @
+    \maketitle
+    \section{Introduction}
+        The British National Corpus (BNC) and the Reddit word list collected from the linguistics subreddit both deal with English but are also quite different. The BNC was collected mostly between 1985 and 1993 \citep[p.~271]{podesva_creating_2013}, and while it does include written texts, they come from British publications, not from the internet. The Reddit word list, on the other hand, comes entirely from the internet, where people from anywhere can post, and is focused on a topic that is likely rare in the BNC: linguistics. However, one can expect that the highest frequency words in both collections are function words, particularly articles like \emph{a} and \emph{the}, which leads to the following hypotheses:
+        \begin{itemize}
+            \item $H_0$: Function words will not be more frequent than any other word types in the BNC and Reddit word list.
+            \item $H_A$: Function words will be more frequent than other word types in the BNC and Reddit word list.
+        \end{itemize}
+        
+        The reason that this difference in frequencies is likely is due to the greater number of contexts in which functions words can be found than other types of words. For instance, most noun phrases require an article, and most clauses have at least one noun phrase. As such, the chances of finding at least one article in every clause would likely be rather high compared to any given content word. One would not expect the verb \emph{say} to be useful in so many clauses even though this verb has quite a few uses. Even auxiliary verbs like \emph{be} do not have as many clause types that would accept and/or require them. For instance, if a speaker wants to express the action of speaking, they can use the verb \emph{say}, and there would certainly be room to add an article in at least the subject noun phrase no matter the tense, aspect, or mood, but that same clause would only allow \emph{be} in an embedded clause or if the progressive is being used. Likewise, domain-centric words like \emph{noun phrase} have a limited number of clause types into which it would make sense to insert them.
+    \section{Analysis}
+        In general, an idea of how the counts for words are distributed can be obtained for both samples, from the BNC and from Reddit, in a few different ways. What each of these methods show is that the samples have similar features and are far from being normally distributed.
+        
+        \begin{figure}
+            \caption{Histogram of the 200 most frequent words in the BNC}
+            \label{bnc_hist}
+            \centering
+            <<bnc_hist>>=
+            @
+        \end{figure}
+        \begin{figure}
+            \caption{Histogram of the 200 most frequent words on linguistics Reddit}
+            \label{reddit_hist}
+            \centering
+            <<reddit_hist>>=
+            @
+        \end{figure}
+        First of all, histograms of the frequency of different counts, as in Figure \ref{bnc_hist} for the BNC data and Figure \ref{reddit_hist} for the Reddit data, make it clear that most words have a very low frequency. These values are log transformed, which reduces the rapid decline in the frequeny of words that have higher counts, yet the pattern is still visible in the both graphs.
+        
+        \begin{figure}
+            \caption{Density plot of the 200 most frequent words in the BNC}
+            \label{bnc_density}
+            \centering
+            <<bnc_density>>=
+            @
+        \end{figure}
+        \begin{figure}
+            \caption{Density plot of the 200 most frequent words on linguistics Reddit}
+            \label{reddit_density}
+            \centering
+            <<reddit_density>>=
+            @
+        \end{figure}
+        Density plots tend to show data in a form similar to that of histograms. As such, Figures \ref{bnc_density} and \ref{reddit_density} look quite a bit like the histograms in Figures \ref{bnc_hist} and \ref{reddit_hist}. Once again, it appears that there are far more words with very low frequencies than with very high frequencies.
+        
+        \begin{figure}
+            \caption{Q-Q plot of the 200 most frequent words in the BNC}
+            \label{bnc_qq}
+            \centering
+            <<bnc_qq>>=
+            @
+        \end{figure}
+        \begin{figure}
+            \caption{Q-Q plot of the 200 most frequent words on linguistics Reddit}
+            \label{reddit_qq}
+            \centering
+            <<reddit_qq>>=
+            @
+        \end{figure}
+        Somewhat different from histograms and density plots are Q-Q plots. While the former seem to suggest that the data is not normally distributed as there is a clear right skew and no symmetry at all, Q-Q plots help make this clear even when it is not very clear in histograms and density plots. The scatterplots in Figures \ref{bnc_qq} and \ref{reddit_qq} show how the distribution of the samples matches up with related hypothetical normal distributions. The solid line indicates the pattern that the dots would form in cases where the relationship is very strong. The fact that the actual plots do not match up with the lines very well at all thus suggests that neither of these distributions are normal.
+        
+        <<shapiro-wilk_tests>>=
+        @
+        Of course, graphs are not necessarily needed to determine the character of these distributions. Another method is with the Shapiro-Wilk test for normality. This test uses the statistic $W$ to perform a hypothesis test where $H_0$ is that the data is normally distributed. Hence, if a significant $P$-value is found, one can conclude that the distribution is not normal. The BNC data yielded a $W$ of $\Sexpr{round_any(bnc.sh.wi$statistic, 0.001, f = round)}$ and a $P$-value of $<\Sexpr{round_any(bnc.sh.wi$p.value, 0.001, f = ceiling)}$. Thus, the BNC data is not normally distributed. Likewise, the Reddit data yielded a $W$ of $\Sexpr{round_any(reddit.sh.wi$statistic, 0.001, f = round)}$ and a $P$-value of $<\Sexpr{round_any(reddit.sh.wi$p.value, 0.001, f = ceiling)}$, suggesting that it too is not normally distributed.
+        
+        \begin{table}
+            \caption{The top 6 most frequent words in the BNC}
+            \label{bnc_top}
+            \centering
+            <<bnc_top>>=
+            @
+        \end{table}
+        \begin{table}
+            \caption{The top 6 most frequent words on linguistics Reddit}
+            \label{reddit_top}
+            \centering
+            <<reddit_top>>=
+            @
+        \end{table}
+        Finally, when looking at the most frequent words both in the BNC, as in Table \ref{bnc_top}, and on linguistics Reddit, as in Table \ref{reddit_top}, some conclusions about my initial hypotheses can be surmised. First of all, the words in both lists are much the same. Second, the articles \emph{the} and \emph{a} are in fact among the most frequent words in both samples. In fact, the all of the words in both tables are function words save arguably \emph{I} and \emph{be}. What is certainly not found in these lists, though, are content words or domain-centric words. There seems to be a good case for rejected $H_0$, although it would be wise to do further analysis.
+    \bibliography{References}
+\end{document}
