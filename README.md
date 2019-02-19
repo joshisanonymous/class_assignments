@@ -3,6 +3,7 @@
 Each folder here represents an assignment I've done for a class and so would be compiled separately. They include the following:
 
 ### Quantitative Methods (w/Dr Renwick)
+* quant_meths_homework3: Working with word recognition.
 * quant_meths_homework2: Using ggplot2 and dealing with BNC and Reddit data.
 
 ### Sociolinguistics (w/Dr Howe)

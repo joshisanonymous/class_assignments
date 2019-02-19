@@ -1,0 +1,11 @@
+\documentclass{article}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  % Title info
+  \author{Joshua McNeill}
+  \title{Homework 3}
+  \date{\today}
+\begin{document}
+  \maketitle
+\end{document}
