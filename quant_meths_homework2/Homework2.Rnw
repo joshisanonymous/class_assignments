@@ -15,13 +15,13 @@
 \begin{document}
     % Set chunk defaults, load script, load packages, load data, sort it out
     <<set_opts_load_script, echo = FALSE>>=
+    read_chunk("Homework2.R")
     opts_chunk$set(echo = FALSE,
                    warning = FALSE,
                    message = FALSE,
                    fig.height = 3,
                    fig.width = 3,
                    results = "asis")
-    read_chunk("Homework2.R")
     @
     <<read_data_packages>>=
     @

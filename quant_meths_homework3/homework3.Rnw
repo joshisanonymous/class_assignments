@@ -2,10 +2,124 @@
   % Packages and package settings
   \usepackage{fontspec}
     \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
   % Title info
   \author{Joshua McNeill}
   \title{Homework 3}
   \date{\today}
 \begin{document}
   \maketitle
+  <<settings_load_script, echo = FALSE>>=
+  read_chunk("homework3.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 fig.height = 3,
+                 fig.width = 3,
+                 results = "asis")
+  @
+  <<load_libraries_data>>=
+  @
+  \section{Introduction}
+    The \texttt{ratings} dataset from the \texttt{languageR} R package contains subject ratings of the weight and familiarity of various plants and animals on a scale from $1$ to $7$. After examining the particular plants and animals that were used in the study that generated this data, the following null hypothesis and one-tailed alternative hypothesis about the weight ratings of plants versus animals seem appropriate:
+    \begin{itemize}
+      \item $H_0$: Subjects rated the weights of plants and animals as being the same.
+      \item $H_A$: Subjects rated the weights of animals as being greater than those of plants.
+    \end{itemize}
+    While there are some plants that could arguably receive high weight ratings, such as \emph{kiwi} or \emph{pineapple}, the plants are generally limited to items that are not at all bulky, such as \emph{walnut} or \emph{paprika}. On the other hand, there are insects included among the animals, such as \emph{ant}, which would likely receive very low weight ratings, but the majority are at least small creatures that still dwarf the weight of grains and the like, and hence my alternative hypothesis.
+    
+    Familiarity ratings are more difficult to hypothesize about. Some plants on the list can be used in cooking, such as \emph{mushroom}, and so might be familiar to a large number of people. Similarly, it would be reasonable to assume that most people have some familiarity with \emph{ant} as this insect can be found all over the globe, but the same is probably not true of other animals such as \emph{magpie}. Perhaps, then, the most reasonable alternative hypothesis for the familiarity ratings would be two-tailed:
+    \begin{itemize}
+      \item $H_0$: There is no difference in the familiarity ratings between animals and plants.
+      \item $H_A$: There is a difference in the familiarity ratings between animals and plants.
+    \end{itemize}
+  \section{Analysis of means}
+    As I am dealing with comparing two groups, and as I am dealing with the means of two quantitative distributions, it would make sense to use a \emph{t}-test for sampling distribution of the difference in means to conclude which of my hypotheses are correct, as long as the conditions for using this test are met. First, however, it is important to calculate some descriptive statistics for both the weight ratings and the familiarity ratings of plants versus animals.
+    
+    \begin{figure}
+      \centering
+      \caption{Comparison of mean weight ratings for plants vs animals}
+      \label{fig:weights_boxplots}
+      <<weights_boxplots>>=
+      @
+    \end{figure}
+    
+    For weight ratings, the box plots in Figure \ref{fig:weights_boxplots} hint at a few characteristics for these two subsets of the data. First of all, for animals, the box plot seems fairly symmetrical, which would suggest that the data is normally distributed, one of the conditions that must be met in order to use a \emph{t}-test. Indeed, the mean and median for this distribution, \Sexpr{round(mean(ratings.animals$meanWeightRating), 3)} and \Sexpr{round(median(ratings.animals$meanWeightRating), 3)} respectively, are very similar, which also suggests symmetry.
+    
+    \begin{figure}
+      \centering
+      \caption{Histogram of the weight ratings for animals}
+      \label{fig:weights_histogram_animals}
+      <<weights_histogram_animals>>=
+      @
+    \end{figure}
+    
+    <<weights_shapiro_animals>>=
+    @
+    The histogram in Figure \ref{fig:weights_histogram_animals} also seems to suggest a normal distribution. There is a problem, however: the number of observations is relatively small at \Sexpr{nrow(ratings.animals)}, so the number of bins used for a histogram has a large impact on the appearance of the distribution. It would be better to employ a the Shapiro-Wilk test for normality, which returns a $W$ of \Sexpr{round(ratings.animals.weights.shapiro$statistic, 3)} where $P<$ \Sexpr{round_any(ratings.animals.weights.shapiro$p.value, 0.01, ceiling)}. I can therefore maintain the null hypothesis that the weight ratings for animals are normally distributed.
+    
+    \begin{figure}
+      \centering
+      \caption{Histogram of the weight ratings for plants}
+      \label{fig:weights_histogram_plants}
+      <<weights_histogram_plants>>=
+      @
+    \end{figure}
+    
+    <<weights_shapiro_plants>>=
+    @
+    Likewise, the histogram for the weight ratings for plants in Figure \ref{fig:weights_histogram_plants} seems normally distributed but is also sensitive to the number of bins used as the sample size is only \Sexpr{nrow(ratings.plants)}. Another Shapiro-Wilk test for normality is called for, and this time it returns a $W$ of \Sexpr{round(ratings.plants.weights.shapiro$statistic, 3)} where $P<$ \Sexpr{round_any(ratings.plants.weights.shapiro$p.value, 0.01, ceiling)}. We can therefore reject the null hypothesis that the weight ratings for plants are normally distributed.
+    
+    <<weights_wilcox>>=
+    @
+    A \emph{t}-test for the sampling distribution of the difference in means is not an appropriate method for testing the null hypothesis that there is no difference between these ratings for animals and plants. The non-parametric two-sample Wilcoxon rank sum test, on the other hand, would be appropriate here. This returns a $W$ of \Sexpr{ratings.weights.wilcox$statistic} where $P =$ \Sexpr{round_any(ratings.weights.wilcox$p.value, 0.01, ceiling)}. It is possible that this strange $P$-value is the result of a tie in the plants distribution, but adding jitter to that distribution still yields the same result. Apparently, I must fail to reject the null hypothesis that these means are the same.
+    
+    \begin{figure}
+      \centering
+      \caption{Comparison of mean familiarity ratings for plants vs animals}
+      \label{fig:familiarity_boxplots}
+      <<familiarity_boxplots>>=
+      @
+    \end{figure}
+    
+    <<famil_shapiro_animals>>=
+    @
+    <<famil_shapiro_plants>>=
+    @
+    <<famil_ttest>>=
+    @
+    As for the familiarity ratings of plants vs animals, the box plots in Figure \ref{fig:familiarity_boxplots} compare the two distributions. Each appears to be normally distributed judging by the centrality of their median lines within the boxes, but it is better to be safe and perform Shapiro-Wilk tests for normality again. For animals, the test returns a $W$ of \Sexpr{round(ratings.animals.famil.shapiro$statistic, 2)} where $P>$ \Sexpr{round_any(ratings.animals.famil.shapiro$p.value, 0.01, floor)}, meaning it is normally distributed. For plants, the test returns a $W$ of \Sexpr{round(ratings.plants.famil.shapiro$statistic, 2)} where $P>$ \Sexpr{round_any(ratings.plants.famil.shapiro$p.value, 0.01, floor)}, meaning that it too is normally distributed. A \emph{t}-test is therefore warranted and results in a $t$ of \Sexpr{round(ratings.famil.ttest$statistic, 3)} with a $df$ of \Sexpr{ratings.famil.ttest$parameter} where $P<$ \Sexpr{round_any(ratings.famil.ttest$p.value, 0.001, ceiling)}. The null hypothesis that the familiarity ratings for animals and plants are the same can thus be rejected.
+  
+  \section{Analysis of frequency to familiarity}
+    Beyond comparing the means of weight and familiarity ratings, the latter might also be correlated with how frequent words are. Indeed, Figure \ref{fig:freq_famil_scatterplot} suggests that these two variables might associated, though simply looking at the graph itself is not terribly convincing due to the spread of the points.
+    
+    \begin{figure}
+      \centering
+      \caption{Scatterplot of the relationship between word frequency and familiarity rating}
+      \label{fig:freq_famil_scatterplot}
+      <<freq_famil_scatterplot>>=
+      @
+    \end{figure}
+    
+    <<freq_famil_regression>>=
+    @
+    <<freq_famil_variance>>=
+    @
+    <<freq_famil_autocor>>=
+    @
+    In order to actually test the association between frequency and familiarity, it is necessary to determine what sort of test is most appropriate: Pearson's correlation or non-linear correlations such as Spearman's $\rho$ or Kendall's $\tau$. As Pearson's is the most powerful, it is best to test the conditions that it requires before moving on to the others. First of all, the data must have a bivariate normal distribution or $n$ must be larger than 30. The latter of these conditions is met as $n=$ \Sexpr{nrow(ratings)}. Next, the variance of the residuals must be constant along the range of the line that would be drawn through them (i.e., the residuals must be homoscedastic). A non-constant error variance test can be performed here, which yields a $\chi^2<$ \Sexpr{round_any(freq.famil.variance$ChiSquare, 0.001, ceiling)} with a $df$ of \Sexpr{freq.famil.variance$Df} where $P>$ \Sexpr{round_any(freq.famil.variance$p, 0.1, floor)}. The null hypothesis that the distribution of the residuals is homoscedastic therefore fails to be rejected. Finally, the residuals must be independent of each other (i.e., not autocorrelated). For that, the Durbin-Watson test returns a $D$-$W$ of \Sexpr{round(freq.famil.autocor$dw, 3)} where $P>$ \Sexpr{round_any(freq.famil.autocor$p, 0.1, floor)}, which means that I fail to reject the null hypothesis that the residuals are not autocorrelated.
+    
+    \begin{figure}
+      \centering
+      \caption{Scatterplot of the relationship between word frequency and familiarity rating with a regression line added}
+      \label{fig:freq_famil_scatterplot_line}
+      <<freq_famil_scatterplot_line>>=
+      @
+    \end{figure}
+    
+    <<freq_famil_r>>=
+    @
+    It is therefore appropriate to treat the association between frequency and familiarity as linear and test Pearson's correlation coefficient. A $t$-test returns a $t$ of \Sexpr{round(freq.famil.r$statistic, 3)} with a $df$ of \Sexpr{freq.famil.r$parameter} where $P<$ \Sexpr{round_any(freq.famil.r$p.value, 0.001, ceiling)}, meaning the correlation between frequency and familiarity is statistically significant. The correlation coefficient itself is \Sexpr{round(freq.famil.r$estimate, 3)}, signifying a moderately strong relationship. Finally, Figure \ref{fig:freq_famil_scatterplot_line} recreates the scatterplot from Figure \ref{fig:freq_famil_scatterplot} with the regression line added, making it clear that as the frequency of a word increases, its familiarity rating also increases.
 \end{document}
