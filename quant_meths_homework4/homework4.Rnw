@@ -84,7 +84,7 @@
     
     \begin{table}
       \centering
-      \caption{}
+      \caption{Shapiro-Wilk test for normality}
       \label{tab:anova_normality}
       <<anova_normality>>=
       @
