@@ -1,0 +1,49 @@
+\documentclass{article}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{natbib}
+    \bibliographystyle{apalike}
+  % Title info
+  \author{Joshua McNeill}
+  \title{Homework 5}
+  \date{\today}
+\begin{document}
+  \maketitle
+  <<settings_load_script, echo = FALSE>>=
+  read_chunk("homework5.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis")
+  @
+  <<load_libraries_data>>=
+  @
+  \section{Introduction}
+    The \textsc{pin-pen} merger involves the vowels /ɪ/ and /ɛ/ coming to lose their distinctions between each other (i.e., becoming one vowel) when preceding a nasal. The data from DASS offers an opportunity to perform a statistical analysis of this merger in the South for speakers born between the years \Sexpr{min(pin_pen$birth_year)} and \Sexpr{max(pin_pen$birth_year)}. Indeed, as the vowel plot in Figure \ref{fig:pin_pen_vowel_plot} suggests, these vowels are likely merged for many speakers. As such, I will build a mixed-effects model from the data for predicting vowel height (i.e., F1). I will then test another model's efficacy for predicting the F1 of a particular speaker.
+    
+    \begin{figure}
+      \caption{Vowel plot of the vowels in \textsc{pin} and \textsc{pen}.}
+      \label{fig:pin_pen_vowel_plot}
+      \centering
+      <<pin_pen_vowel_plot>>=
+      @
+    \end{figure}
+  \section{Model selection}
+    My model will be constructed from bottom to top, adding factors one by one. The response variable is the value of F1, and the random effect is the speaker. As the order that factors are added can affect resulting AICs and $P$-values when using an ANOVA to evaluate the impact of the factors, they must be added in a motivated order. I began with birth year as this is implicitly a variable that has changed over time, making it perhaps the broadest factor that would be expected to impact the realization of F1. In the interest of continuing from broad variables to more specific variables, land region was added next, followed by state, as people who form norm-enforcing communities must necessarily be close enough to each other to interact with each other on a regular basis. Additionally, if social stratification exists, those in the same social position may form communities but most likely not across all geographic space (e.g., lower class people from one state are not likely to interact with lower class people from another state, but are likely to interact with lower class people from their own state). Therefore, social variables were added after geographic variables, starting with social status, as this likely supercedes the other social variables (e.g., a member of a majority ethnic group with a high education is likely part of the upper class). This was followed by education, ethnicity, and finally sex. This produced the results in Table \ref{tab:pin_pen_lme_anova_result}.
+    
+    \begin{table}
+      \caption{Results of the ANOVA as applied to a series of mixed-effects models.}
+      \label{tab:pin_pen_lme_anova_result}
+      \centering
+      <<pin_pen_lme_anova_result>>=
+      @
+    \end{table}
+    
+    The results of the ANOVA test in Table \ref{tab:pin_pen_lme_anova_result} show that the AIC and BIC values do not shift very much, but that the $P$-values are not all statistically significant with an $\alpha$ of 0.05. I therefore dropped birth year, land region, and sex from the model. While land region might be better represented by state and sex might be subsumed under the other social variables, it is difficult to understand why birth year was not significant unless the \textsc{pin-pen} merger was already at an advanced stage by \Sexpr{min(pin_pen$birth_year)}.
+  \section{Model interpretation}
+    Another mixed-effects model with F1 as the response variable, speaker as the random effect, and social status as a fixed effect was then produced in order to better understand the impact that social status has on the realization of the \textsc{pin-pen} vowels. For speaker 412, who was a non-black male in the upper-middle class, the model predicted an F1 of \Sexpr{F1_predicted_412} for the vowel /ɛ/. For speaker 662, who was the same except in the lower-middle class, the model predicted an F1 of \Sexpr{F1_predicted_662} for the vowel /ɪ/. Speaker 662's vowel pronunciation was therefore lower than speaker 412's, despite the fact that these vowels in general would have heights that differed from each other in the reverse direction. It is possible that this is the result of 412 shifting his F1 up and 662 shifting his F1 down, both as realizations of the Southern Vowel Shift, but it is also possible that the shift has more of an impact on speakers in the lower social classes such as 662, in which case 412 would simply be producing something like a canonical vowel height.
+\end{document}
