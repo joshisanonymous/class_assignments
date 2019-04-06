@@ -1,0 +1,103 @@
+! The goal: Create a transducer that can analyze verbal morphosyntax in naturally
+!           occurring Louisiana French speech that may contain French verbs,
+!           borrowed English verbs, and Creole or French verbal morphosyntax.
+!           This would effectively be a sort of speech recognition system for
+!           situations with ample code-switching between three codes.
+!
+! Example: If the input is "je parlais," I want "je parl+Past+Imptive"
+
+Multichar_Symbols +Form +Inform ! formality
+                  +Inf +Pres +Itive +PastPar +PresPar ! tense
+                  +Cond ! mood
+                  +1p +2p +3p ! person
+                  +Sg +Pl ! number
+
+LEXICON Root
+                                Verbs           ;
+
+LEXICON Verbs
+parler:parl                     VFreERInf       ;
+accomplir:accompl               VFreIRInf       ;
+élire:él                        VFreIREInf      ;
+prendre:pr                      VFreDREInf      ;
+watch                           VEngInf         ;
+
+
+LEXICON VFreERInf
+! Infinitive
++Inf:er                         #               ;
+! Present
++Pres+1p+Sg:e                   #               ; ! je
++Pres+2p+Sg+Inform:es           #               ; ! tu
++Pres+2p+Sg+Form:ez             #               ; ! vous (sg)
++Pres+3p+Sg:e                   #               ; ! il/elle/ça (sg)/on (sg)
++Pres+1p+Pl:e                   #               ; ! on (pl)
++Pres+2p+Pl:e                   #               ; ! vous-autres
++Pres+3p+Pl:e                   #               ; ! eux/eux-autres/ça (pl)
++Pres+3p+Pl:ent                 #               ; ! ils
++Pres+3p+Pl:ont                 #               ; ! ils (ont)
+! Past
++Itive+1p+Sg:ais                #               ;
++Itive+2p+Sg+Inform:ais         #               ;
++Itive+2p+Sg+Form:iez           #               ;
++Itive+3p+Sg:ait                #               ;
++Itive+1p+Pl:ait                #               ;
++Itive+2p+Pl:ait                #               ;
++Itive+3p+Pl:aient              #               ;
++Itive+3p+Pl:iont               #               ;
+! Participle
++PastPar:é                      #               ;
++PresPar:ant                    #               ;
+! Conditional
++Cond+1p+Sg:erais               #               ;
++Cond+2p+Sg+Inform:erais        #               ;
++Cond+2p+Sg+Form:eriez          #               ;
++Cond+3p+Sg:erait               #               ;
++Cond+1p+Pl:erait               #               ;
++Cond+2p+Pl:erait               #               ;
++Cond+3p+Pl:eraient             #               ;
+
+LEXICON VFreIRInf
+! Infinitive
++Inf:ir                         #               ;
+! Present
++Pres+1p+Sg:is                  #               ; ! je
++Pres+2p+Sg+Inform:is           #               ; ! tu
++Pres+2p+Sg+Form:issez          #               ; ! vous (sg)
++Pres+3p+Sg:it                  #               ; ! il/elle/ça (sg)/on (sg)
++Pres+1p+Pl:it                  #               ; ! on (pl)
++Pres+2p+Pl:it                  #               ; ! vous-autres
++Pres+3p+Pl:it                  #               ; ! eux/eux-autres/ça (pl)
++Pres+3p+Pl:issent              #               ; ! ils
++Pres+3p+Pl:issont              #               ; ! ils (ont)
+! Past
++Itive+1p+Sg:issais             #               ;
++Itive+2p+Sg+Inform:issais      #               ;
++Itive+2p+Sg+Form:iez           #               ;
++Itive+3p+Sg:issait             #               ;
++Itive+1p+Pl:issait             #               ;
++Itive+2p+Pl:issait             #               ;
++Itive+3p+Pl:issaient           #               ;
++Itive+3p+Pl:issiont            #               ;
+! Participle
++PastPar:i                      #               ;
++PresPar:issant                 #               ;
+! Conditional
++Cond+1p+Sg:irais               #               ;
++Cond+2p+Sg+Inform:irais        #               ;
++Cond+2p+Sg+Form:iriez          #               ;
++Cond+3p+Sg:irait               #               ;
++Cond+1p+Pl:irait               #               ;
++Cond+2p+Pl:irait               #               ;
++Cond+3p+Pl:iraient             #               ;
+
+LEXICON VEngInf
+! Present
++Pres+1p+Sg:0                   #               ;
++Pres+2p+Sg:0                   #               ;
++Pres+3p+Sg:0                   #               ;
++Pres+1p+Pl:0                   #               ;
++Pres+2p+Pl:0                   #               ;
++Pres+3p+Pl:0                   #               ;
+! Past
++PastPar:0                      #               ;
