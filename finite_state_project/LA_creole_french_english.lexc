@@ -91,6 +91,74 @@ LEXICON VFreIRInf
 +Cond+2p+Pl:irait               #               ;
 +Cond+3p+Pl:iraient             #               ;
 
+LEXICON VFreIREInf
+! Infinitive
++Inf:ire                        #               ;
+! Present
++Pres+1p+Sg:is                  #               ; ! je
++Pres+2p+Sg+Inform:is           #               ; ! tu
++Pres+2p+Sg+Form:isez           #               ; ! vous (sg)
++Pres+3p+Sg:it                  #               ; ! il/elle/ça (sg)/on (sg)
++Pres+1p+Pl:it                  #               ; ! on (pl)
++Pres+2p+Pl:it                  #               ; ! vous-autres
++Pres+3p+Pl:it                  #               ; ! eux/eux-autres/ça (pl)
++Pres+3p+Pl:isent               #               ; ! ils
++Pres+3p+Pl:isont               #               ; ! ils (ont)
+! Past
++Itive+1p+Sg:isais              #               ;
++Itive+2p+Sg+Inform:isais       #               ;
++Itive+2p+Sg+Form:isiez         #               ;
++Itive+3p+Sg:isait              #               ;
++Itive+1p+Pl:isait              #               ;
++Itive+2p+Pl:isait              #               ;
++Itive+3p+Pl:isaient            #               ;
++Itive+3p+Pl:isiont             #               ;
+! Participle
++PastPar:u                      #               ;
++PresPar:isant                  #               ;
+! Conditional
++Cond+1p+Sg:irais               #               ;
++Cond+2p+Sg+Inform:irais        #               ;
++Cond+2p+Sg+Form:iriez          #               ;
++Cond+3p+Sg:irait               #               ;
++Cond+1p+Pl:irait               #               ;
++Cond+2p+Pl:irait               #               ;
++Cond+3p+Pl:iraient             #               ;
+
+LEXICON VFreDREInf
+! Infinitive
++Inf:endre                      #               ;
+! Present
++Pres+1p+Sg:ends                #               ; ! je
++Pres+2p+Sg+Inform:ends         #               ; ! tu
++Pres+2p+Sg+Form:enez           #               ; ! vous (sg)
++Pres+3p+Sg:end                 #               ; ! il/elle/ça (sg)/on (sg)
++Pres+1p+Pl:end                 #               ; ! on (pl)
++Pres+2p+Pl:end                 #               ; ! vous-autres
++Pres+3p+Pl:end                 #               ; ! eux/eux-autres/ça (pl)
++Pres+3p+Pl:ennent              #               ; ! ils
++Pres+3p+Pl:ennont              #               ; ! ils (ont)
+! Past
++Itive+1p+Sg:enais              #               ;
++Itive+2p+Sg+Inform:enais       #               ;
++Itive+2p+Sg+Form:eniez         #               ;
++Itive+3p+Sg:enait              #               ;
++Itive+1p+Pl:enait              #               ;
++Itive+2p+Pl:enait              #               ;
++Itive+3p+Pl:enaient            #               ;
++Itive+3p+Pl:eniont             #               ;
+! Participle
++PastPar:is                     #               ;
++PresPar:enant                  #               ;
+! Conditional
++Cond+1p+Sg:endrais               #               ;
++Cond+2p+Sg+Inform:erais        #               ;
++Cond+2p+Sg+Form:eriez          #               ;
++Cond+3p+Sg:erait               #               ;
++Cond+1p+Pl:erait               #               ;
++Cond+2p+Pl:erait               #               ;
++Cond+3p+Pl:eraient             #               ;
+
 LEXICON VEngInf
 ! Present
 +Pres+1p+Sg:0                   #               ;
