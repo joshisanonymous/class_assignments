@@ -16,10 +16,13 @@ LEXICON Root
                                 Verbs           ;
 
 LEXICON Verbs
-parler:parl                     VFreERInf       ;
-accomplir:accompl               VFreIRInf       ;
-élire:él                        VFreIREInf      ;
-prendre:pr                      VFreDREInf      ;
+parler:parl                     VFreERInf       ; ! cont classes named according
+accomplir:accompl               VFreIRInf       ; ! to which letters must be
+élire:él                        VFreIREInf      ; ! removed to obtain a stem
+prendre:pr                      VFreENDREInf    ;
+être:0                          VFreETREInf     ;
+avoir:0                         VFreAVOIRInf    ;
+voir:v                          VFreOIRInf      ;
 watch                           VEngInf         ;
 
 
@@ -125,7 +128,7 @@ LEXICON VFreIREInf
 +Cond+2p+Pl:irait               #               ;
 +Cond+3p+Pl:iraient             #               ;
 
-LEXICON VFreDREInf
+LEXICON VFreENDREInf
 ! Infinitive
 +Inf:endre                      #               ;
 ! Present
@@ -151,13 +154,110 @@ LEXICON VFreDREInf
 +PastPar:is                     #               ;
 +PresPar:enant                  #               ;
 ! Conditional
-+Cond+1p+Sg:endrais               #               ;
++Cond+1p+Sg:endrais             #               ;
 +Cond+2p+Sg+Inform:erais        #               ;
 +Cond+2p+Sg+Form:eriez          #               ;
 +Cond+3p+Sg:erait               #               ;
 +Cond+1p+Pl:erait               #               ;
 +Cond+2p+Pl:erait               #               ;
 +Cond+3p+Pl:eraient             #               ;
+
+LEXICON VFreETREInf
+! Infinitive
++Inf:être                       #               ;
+! Present
++Pres+1p+Sg:suis                #               ; ! je
++Pres+2p+Sg+Inform:es           #               ; ! tu
++Pres+2p+Sg+Form:êtes           #               ; ! vous (sg)
++Pres+3p+Sg:est                 #               ; ! il/elle/ça (sg)/on (sg)
++Pres+1p+Pl:est                 #               ; ! on (pl)
++Pres+2p+Pl:est                 #               ; ! vous-autres
++Pres+3p+Pl:est                 #               ; ! eux/eux-autres/ça (pl)
++Pres+3p+Pl:sont                #               ; ! ils
+! Past
++Itive+1p+Sg:étais              #               ;
++Itive+2p+Sg+Inform:étais       #               ;
++Itive+2p+Sg+Form:étiez         #               ;
++Itive+3p+Sg:était              #               ;
++Itive+1p+Pl:était              #               ;
++Itive+2p+Pl:était              #               ;
++Itive+3p+Pl:étaient            #               ;
++Itive+3p+Pl:éstiont            #               ;
+! Participle
++PastPar:été                    #               ;
++PresPar:étant                  #               ;
+! Conditional
++Cond+1p+Sg:serais              #               ;
++Cond+2p+Sg+Inform:serais       #               ;
++Cond+2p+Sg+Form:seriez         #               ;
++Cond+3p+Sg:serait              #               ;
++Cond+1p+Pl:serait              #               ;
++Cond+2p+Pl:serait              #               ;
++Cond+3p+Pl:seraient            #               ;
+
+LEXICON VFreAVOIRInf
+! Infinitive
++Inf:avoir                      #               ;
+! Present
++Pres+1p+Sg:ai                  #               ; ! je
++Pres+2p+Sg+Inform:as           #               ; ! tu
++Pres+2p+Sg+Form:avez           #               ; ! vous (sg)
++Pres+3p+Sg:a                   #               ; ! il/elle/ça (sg)/on (sg)
++Pres+1p+Pl:a                   #               ; ! on (pl)
++Pres+2p+Pl:a                   #               ; ! vous-autres
++Pres+3p+Pl:a                   #               ; ! eux/eux-autres/ça (pl)
++Pres+3p+Pl:ont                 #               ; ! ils
+! Past
++Itive+1p+Sg:avais              #               ;
++Itive+2p+Sg+Inform:avais       #               ;
++Itive+2p+Sg+Form:aviez         #               ;
++Itive+3p+Sg:avait              #               ;
++Itive+1p+Pl:avait              #               ;
++Itive+2p+Pl:avait              #               ;
++Itive+3p+Pl:avaient            #               ;
+! Participle
++PastPar:eu                     #               ;
++PresPar:ayant                  #               ;
+! Conditional
++Cond+1p+Sg:aurais              #               ;
++Cond+2p+Sg+Inform:aurais       #               ;
++Cond+2p+Sg+Form:auriez         #               ;
++Cond+3p+Sg:aurait              #               ;
++Cond+1p+Pl:aurait              #               ;
++Cond+2p+Pl:aurait              #               ;
++Cond+3p+Pl:auraient            #               ;
+
+LEXICON VFreOIRInf
+! Infinitive
++Inf:oir                        #               ;
+! Present
++Pres+1p+Sg:ois                 #               ; ! je
++Pres+2p+Sg+Inform:ois          #               ; ! tu
++Pres+2p+Sg+Form:oyez           #               ; ! vous (sg)
++Pres+3p+Sg:oit                 #               ; ! il/elle/ça (sg)/on (sg)
++Pres+1p+Pl:oit                 #               ; ! on (pl)
++Pres+2p+Pl:oit                 #               ; ! vous-autres
++Pres+3p+Pl:oit                 #               ; ! eux/eux-autres/ça (pl)
++Pres+3p+Pl:oient               #               ; ! ils
+! Past
++Itive+1p+Sg:oyais              #               ;
++Itive+2p+Sg+Inform:oyais       #               ;
++Itive+2p+Sg+Form:oyiez         #               ;
++Itive+3p+Sg:oyait              #               ;
++Itive+1p+Pl:oyait              #               ;
++Itive+2p+Pl:oyait              #               ;
++Itive+3p+Pl:oyaient            #               ;
+! Participle
++PastPar:u                      #               ;
++PresPar:oyant                  #               ;
+! Conditional
++Cond+1p+Sg:errais              #               ;
++Cond+2p+Sg+Inform:errais       #               ;
++Cond+2p+Sg+Form:erriez         #               ;
++Cond+3p+Sg:errait              #               ;
++Cond+1p+Pl:errait              #               ;
++Cond+2p+Pl:errait              #               ;
++Cond+3p+Pl:erraient            #               ;
 
 LEXICON VEngInf
 ! Present
