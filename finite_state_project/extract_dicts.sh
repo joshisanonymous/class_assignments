@@ -13,6 +13,10 @@
 #
 # -Joshua McNeill (joshua dot mcneill at uga dot edu)
 
+###########
+# English #
+###########
+
 # Get all the tagged words from the SPPAS English dictionary
 awk '{ print $1 }' eng.dict |
 sed "s/(.)//" | # These two lines remove duplicates in the form
@@ -37,6 +41,10 @@ awk 'BEGIN { print "LEXICON NonVerbsEng" }
 
 # Get rid of intermediate extracted_eng_dict.txt file
 rm extracted_eng_dict.txt
+
+##########
+# French #
+##########
 
 # Get all the tagged words from the SPPAS French dictionary
 awk '{ print $1 }' fra.dict |
@@ -84,6 +92,15 @@ sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
            { printf("%s:%s    VFreOIRInf    ;\n", $1, substr($1, 1, length($1) - 3)) }' > freVoir_dict.lexc
+
+# Save all the French verb headwords that don't fit in the other clases
+# (i.e., that need to be accounted for still) to their own file
+awk '{ print $1, $2 }' extracted_fra_dict.txt |
+awk '/^V.{,2}/ && !/(er|ir|ire|endre|oir)$/ { print $2 }' |
+sort |
+uniq |
+awk 'BEGIN { print "LEXICON VerbsFre" }
+           { printf("%s    #    ;\n", $1) }' > freVother_dict.lexc
 
 # Save all the French non-headword non-verbs to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
