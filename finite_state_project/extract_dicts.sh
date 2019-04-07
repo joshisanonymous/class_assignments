@@ -25,7 +25,7 @@ awk '/^V.{,2}/ { print $2 }' |
 sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsEng" }
-           { printf("%s    #    ;\n", $1) }' > engV_dict.lexc
+           { printf("%s    VEngInf    ;\n", $1) }' > engV_dict.lexc
 
 # Save all the English non-headword non-verbs to their own file
 awk -F "\t" '{ print $2, $1 }' extracted_eng_dict.txt |
@@ -51,7 +51,7 @@ awk '/^V.{,2}.*er$/ { print $2 }' |
 sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
-           { printf("%s:%s    #    ;\n", $1, substr($1, 1, length($1) - 2)) }' > freVer_dict.lexc
+           { printf("%s:%s    VFreERInf    ;\n", $1, substr($1, 1, length($1) - 2)) }' > freVer_dict.lexc
 
 # Save all the -ir French verb headwords to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
@@ -59,7 +59,7 @@ awk '/^V.{,2}.*[^o]ir$/ { print $2 }' |
 sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
-           { printf("%s:%s    #    ;\n", $1, substr($1, 1, length($1) - 2)) }' > freVir_dict.lexc
+           { printf("%s:%s    VFreIRInf    ;\n", $1, substr($1, 1, length($1) - 2)) }' > freVir_dict.lexc
 
 # Save all the -ire French verb headwords to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
@@ -67,7 +67,7 @@ awk '/^V.{,2}.*ire$/ { print $2 }' |
 sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
-           { printf("%s:%s    #    ;\n", $1, substr($1, 1, length($1) - 3)) }' > freVire_dict.lexc
+           { printf("%s:%s    VFreIREInf    ;\n", $1, substr($1, 1, length($1) - 3)) }' > freVire_dict.lexc
 
 # Save all the -endre French verb headwords to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
@@ -75,7 +75,7 @@ awk '/^V.{,2}.*endre$/ { print $2 }' |
 sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
-           { printf("%s:%s    #    ;\n", $1, substr($1, 1, length($1) - 5)) }' > freVendre_dict.lexc
+           { printf("%s:%s    VFreENDREInf    ;\n", $1, substr($1, 1, length($1) - 5)) }' > freVendre_dict.lexc
 
 # Save all the -oir French verb headwords to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
@@ -83,7 +83,7 @@ awk '/^V.{,2}.*oir$/ { print $2 }' |
 sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
-           { printf("%s:%s    #    ;\n", $1, substr($1, 1, length($1) - 3)) }' > freVoir_dict.lexc
+           { printf("%s:%s    VFreOIRInf    ;\n", $1, substr($1, 1, length($1) - 3)) }' > freVoir_dict.lexc
 
 # Save all the French non-headword non-verbs to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
