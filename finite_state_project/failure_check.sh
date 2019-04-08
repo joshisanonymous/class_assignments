@@ -11,14 +11,15 @@
 if [ -n "$3" ]
 then
   cat $2 |
-  sed "s/$3//" |  # remove leading speaker identifiers
-  tr " " "\n" |   # tokenize
-  sed "s/'/'\n/" |# split up elision like "j'ai"
-  egrep "[^-]$" | # don't consider transcribed hesitations
+  sed "s/$3//" |    # remove leading speaker identifiers
+  tr " " "\n" |     # tokenize
+  sed "s/'/'\n/" |  # split up elision like "j'ai"
+  egrep "[^-]$" |   # don't consider transcribed hesitations
   flookup $1 |
-  grep "+?" |     # grab only failures in the results
+  grep "+?" |       # grab only failures in the results
   sort |
-  uniq
+  uniq -c |
+  sort -nr
 else
   cat $2 |
   tr " " "\n" |
@@ -27,5 +28,6 @@ else
   flookup $1 |
   grep "+?" |
   sort |
-  uniq
+  uniq -c |
+  sort -nr
 fi
