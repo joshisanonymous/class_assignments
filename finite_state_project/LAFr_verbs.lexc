@@ -32,25 +32,12 @@ LEXICON VFreERInf
 +Pres+3p+Pl:ent                 #               ; ! ils
 +Pres+3p+Pl:ont                 #               ; ! ils (ont)
 ! Past
-+Itive+1p+Sg:ais                #               ;
-+Itive+2p+Sg+Inform:ais         #               ;
-+Itive+2p+Sg+Form:iez           #               ;
-+Itive+3p+Sg:ait                #               ;
-+Itive+1p+Pl:ait                #               ;
-+Itive+2p+Pl:ait                #               ;
-+Itive+3p+Pl:aient              #               ;
-+Itive+3p+Pl:iont               #               ;
+                                VFreItive       ;
 ! Participle
 +PastPar:é                      #               ;
-+PresPar:ant                    #               ;
+                                VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:erais               #               ;
-+Cond+2p+Sg+Inform:erais        #               ;
-+Cond+2p+Sg+Form:eriez          #               ;
-+Cond+3p+Sg:erait               #               ;
-+Cond+1p+Pl:erait               #               ;
-+Cond+2p+Pl:erait               #               ;
-+Cond+3p+Pl:eraient             #               ;
+                                VFreEtoCond     ;
 
 LEXICON VFreIRInf
 ! Infinitive
@@ -66,25 +53,12 @@ LEXICON VFreIRInf
 +Pres+3p+Pl:issent              #               ; ! ils
 +Pres+3p+Pl:issont              #               ; ! ils (ont)
 ! Past
-+Itive+1p+Sg:issais             #               ;
-+Itive+2p+Sg+Inform:issais      #               ;
-+Itive+2p+Sg+Form:iez           #               ;
-+Itive+3p+Sg:issait             #               ;
-+Itive+1p+Pl:issait             #               ;
-+Itive+2p+Pl:issait             #               ;
-+Itive+3p+Pl:issaient           #               ;
-+Itive+3p+Pl:issiont            #               ;
+iss                             VFreItive       ;
 ! Participle
 +PastPar:i                      #               ;
-+PresPar:issant                 #               ;
+iss                             VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:irais               #               ;
-+Cond+2p+Sg+Inform:irais        #               ;
-+Cond+2p+Sg+Form:iriez          #               ;
-+Cond+3p+Sg:irait               #               ;
-+Cond+1p+Pl:irait               #               ;
-+Cond+2p+Pl:irait               #               ;
-+Cond+3p+Pl:iraient             #               ;
+                                VFreItoCond     ;
 
 LEXICON VFreIREInf
 ! Infinitive
@@ -100,25 +74,12 @@ LEXICON VFreIREInf
 +Pres+3p+Pl:isent               #               ; ! ils
 +Pres+3p+Pl:isont               #               ; ! ils (ont)
 ! Past
-+Itive+1p+Sg:isais              #               ;
-+Itive+2p+Sg+Inform:isais       #               ;
-+Itive+2p+Sg+Form:isiez         #               ;
-+Itive+3p+Sg:isait              #               ;
-+Itive+1p+Pl:isait              #               ;
-+Itive+2p+Pl:isait              #               ;
-+Itive+3p+Pl:isaient            #               ;
-+Itive+3p+Pl:isiont             #               ;
+is                              VFreItive       ;
 ! Participle
 +PastPar:u                      #               ;
-+PresPar:isant                  #               ;
+is                              VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:irais               #               ;
-+Cond+2p+Sg+Inform:irais        #               ;
-+Cond+2p+Sg+Form:iriez          #               ;
-+Cond+3p+Sg:irait               #               ;
-+Cond+1p+Pl:irait               #               ;
-+Cond+2p+Pl:irait               #               ;
-+Cond+3p+Pl:iraient             #               ;
+                                VFreItoCond     ;
 
 LEXICON VFreENDREInf
 ! Infinitive
@@ -134,25 +95,12 @@ LEXICON VFreENDREInf
 +Pres+3p+Pl:ennent              #               ; ! ils
 +Pres+3p+Pl:ennont              #               ; ! ils (ont)
 ! Past
-+Itive+1p+Sg:enais              #               ;
-+Itive+2p+Sg+Inform:enais       #               ;
-+Itive+2p+Sg+Form:eniez         #               ;
-+Itive+3p+Sg:enait              #               ;
-+Itive+1p+Pl:enait              #               ;
-+Itive+2p+Pl:enait              #               ;
-+Itive+3p+Pl:enaient            #               ;
-+Itive+3p+Pl:eniont             #               ;
+                                VFreEntoItive   ;
 ! Participle
 +PastPar:is                     #               ;
-+PresPar:enant                  #               ;
+en                              VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:endrais             #               ;
-+Cond+2p+Sg+Inform:erais        #               ;
-+Cond+2p+Sg+Form:eriez          #               ;
-+Cond+3p+Sg:erait               #               ;
-+Cond+1p+Pl:erait               #               ;
-+Cond+2p+Pl:erait               #               ;
-+Cond+3p+Pl:eraient             #               ;
+end                             VFreCond        ;
 
 LEXICON VFreETREInf
 ! Infinitive
@@ -167,25 +115,12 @@ LEXICON VFreETREInf
 +Pres+3p+Pl:est                 #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:sont                #               ; ! ils
 ! Past
-+Itive+1p+Sg:étais              #               ;
-+Itive+2p+Sg+Inform:étais       #               ;
-+Itive+2p+Sg+Form:étiez         #               ;
-+Itive+3p+Sg:était              #               ;
-+Itive+1p+Pl:était              #               ;
-+Itive+2p+Pl:était              #               ;
-+Itive+3p+Pl:étaient            #               ;
-+Itive+3p+Pl:estiont            #               ;
+ét                              VFreItive       ;
 ! Participle
 +PastPar:été                    #               ;
-+PresPar:étant                  #               ;
+ét                              VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:serais              #               ;
-+Cond+2p+Sg+Inform:serais       #               ;
-+Cond+2p+Sg+Form:seriez         #               ;
-+Cond+3p+Sg:serait              #               ;
-+Cond+1p+Pl:serait              #               ;
-+Cond+2p+Pl:serait              #               ;
-+Cond+3p+Pl:seraient            #               ;
+                                VFreEtoCond     ;
 
 LEXICON VFreAVOIRInf
 ! Infinitive
@@ -200,24 +135,12 @@ LEXICON VFreAVOIRInf
 +Pres+3p+Pl:a                   #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:ont                 #               ; ! ils
 ! Past
-+Itive+1p+Sg:avais              #               ;
-+Itive+2p+Sg+Inform:avais       #               ;
-+Itive+2p+Sg+Form:aviez         #               ;
-+Itive+3p+Sg:avait              #               ;
-+Itive+1p+Pl:avait              #               ;
-+Itive+2p+Pl:avait              #               ;
-+Itive+3p+Pl:avaient            #               ;
+av                              VFreItive       ;
 ! Participle
 +PastPar:eu                     #               ;
-+PresPar:ayant                  #               ;
+ay                              VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:aurais              #               ;
-+Cond+2p+Sg+Inform:aurais       #               ;
-+Cond+2p+Sg+Form:auriez         #               ;
-+Cond+3p+Sg:aurait              #               ;
-+Cond+1p+Pl:aurait              #               ;
-+Cond+2p+Pl:aurait              #               ;
-+Cond+3p+Pl:auraient            #               ;
+au                              VFreCond        ;
 
 LEXICON VFreOIRInf
 ! Infinitive
@@ -232,24 +155,12 @@ LEXICON VFreOIRInf
 +Pres+3p+Pl:oit                 #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:oient               #               ; ! ils
 ! Past
-+Itive+1p+Sg:oyais              #               ;
-+Itive+2p+Sg+Inform:oyais       #               ;
-+Itive+2p+Sg+Form:oyiez         #               ;
-+Itive+3p+Sg:oyait              #               ;
-+Itive+1p+Pl:oyait              #               ;
-+Itive+2p+Pl:oyait              #               ;
-+Itive+3p+Pl:oyaient            #               ;
+oy                              VFreItive       ;
 ! Participle
 +PastPar:u                      #               ;
-+PresPar:oyant                  #               ;
+oy                              VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:errais              #               ;
-+Cond+2p+Sg+Inform:errais       #               ;
-+Cond+2p+Sg+Form:erriez         #               ;
-+Cond+3p+Sg:errait              #               ;
-+Cond+1p+Pl:errait              #               ;
-+Cond+2p+Pl:errait              #               ;
-+Cond+3p+Pl:erraient            #               ;
+er                              VFreCond        ;
 
 LEXICON VFreALLERInf
 ! Infinitive
@@ -264,24 +175,12 @@ LEXICON VFreALLERInf
 +Pres+3p+Pl:va                  #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:vont                #               ; ! ils
 ! Past
-+Itive+1p+Sg:allais             #               ;
-+Itive+2p+Sg+Inform:allais      #               ;
-+Itive+2p+Sg+Form:alliez        #               ;
-+Itive+3p+Sg:allait             #               ;
-+Itive+1p+Pl:allait             #               ;
-+Itive+2p+Pl:allait             #               ;
-+Itive+3p+Pl:allaient           #               ;
+all                             VFreItive       ;
 ! Participle
 +PastPar:allé                   #               ;
-+PresPar:allant                 #               ;
+all                             VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:irais               #               ;
-+Cond+2p+Sg+Inform:irais        #               ;
-+Cond+2p+Sg+Form:iriez          #               ;
-+Cond+3p+Sg:irait               #               ;
-+Cond+1p+Pl:irait               #               ;
-+Cond+2p+Pl:irait               #               ;
-+Cond+3p+Pl:iraient             #               ;
+                                VFreItoCond     ;
 
 LEXICON VFreENIRInf
 ! Infinitive
@@ -296,24 +195,12 @@ LEXICON VFreENIRInf
 +Pres+3p+Pl:ient                #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:iennent             #               ; ! ils
 ! Past
-+Itive+1p+Sg:enais              #               ;
-+Itive+2p+Sg+Inform:enais       #               ;
-+Itive+2p+Sg+Form:eniez         #               ;
-+Itive+3p+Sg:enait              #               ;
-+Itive+1p+Pl:enait              #               ;
-+Itive+2p+Pl:enait              #               ;
-+Itive+3p+Pl:enaient            #               ;
+                                VFreEntoItive   ;
 ! Participle
 +PastPar:enu                    #               ;
-+PresPar:enant                  #               ;
+en                              VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:iendrais              #               ;
-+Cond+2p+Sg+Inform:iendrais       #               ;
-+Cond+2p+Sg+Form:iendriez         #               ;
-+Cond+3p+Sg:iendrait              #               ;
-+Cond+1p+Pl:iendrait              #               ;
-+Cond+2p+Pl:iendrait              #               ;
-+Cond+3p+Pl:iendraient            #               ;
+iend                            VFreCond        ;
 
 LEXICON VFreAITREInf
 ! Infinitive
@@ -328,24 +215,12 @@ LEXICON VFreAITREInf
 +Pres+3p+Pl:aît                 #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:aissent             #               ; ! ils
 ! Past
-+Itive+1p+Sg:aissais            #               ;
-+Itive+2p+Sg+Inform:aissais     #               ;
-+Itive+2p+Sg+Form:aissiez       #               ;
-+Itive+3p+Sg:aissait            #               ;
-+Itive+1p+Pl:aissait            #               ;
-+Itive+2p+Pl:aissait            #               ;
-+Itive+3p+Pl:aissaient          #               ;
+aiss                            VFreItive       ;
 ! Participle
 +PastPar:u                      #               ;
-+PresPar:aissant                #               ;
+aiss                            VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:aîtrais             #               ;
-+Cond+2p+Sg+Inform:aîtrais      #               ;
-+Cond+2p+Sg+Form:aîtriez        #               ;
-+Cond+3p+Sg:aîtrait             #               ;
-+Cond+1p+Pl:aîtrait             #               ;
-+Cond+2p+Pl:aîtrait             #               ;
-+Cond+3p+Pl:aîtraient           #               ;
+aît                             VFreCond        ;
 
 LEXICON VFreOULOIRInf
 ! Infinitive
@@ -360,24 +235,12 @@ LEXICON VFreOULOIRInf
 +Pres+3p+Pl:eut                 #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:eulent              #               ; ! ils
 ! Past
-+Itive+1p+Sg:oulais             #               ;
-+Itive+2p+Sg+Inform:oulais      #               ;
-+Itive+2p+Sg+Form:ouliez        #               ;
-+Itive+3p+Sg:oulait             #               ;
-+Itive+1p+Pl:oulait             #               ;
-+Itive+2p+Pl:oulait             #               ;
-+Itive+3p+Pl:oulaient           #               ;
+oul                             VFreItive       ;
 ! Participle
 +PastPar:oulu                   #               ;
-+PresPar:oulant                 #               ;
+oul                             VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:oudrais             #               ;
-+Cond+2p+Sg+Inform:oudrais      #               ;
-+Cond+2p+Sg+Form:oudriez        #               ;
-+Cond+3p+Sg:oudrait             #               ;
-+Cond+1p+Pl:oudrait             #               ;
-+Cond+2p+Pl:oudrait             #               ;
-+Cond+3p+Pl:oudraient           #               ;
+oud                             VFreCond        ;
 
 LEXICON VFreELERInf
 ! Infinitive
@@ -392,24 +255,12 @@ LEXICON VFreELERInf
 +Pres+3p+Pl:elle                #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:ellent              #               ; ! ils
 ! Past
-+Itive+1p+Sg:elais              #               ;
-+Itive+2p+Sg+Inform:elais       #               ;
-+Itive+2p+Sg+Form:eliez         #               ;
-+Itive+3p+Sg:elait              #               ;
-+Itive+1p+Pl:elait              #               ;
-+Itive+2p+Pl:elait              #               ;
-+Itive+3p+Pl:elaient            #               ;
+el                              VFreItive       ;
 ! Participle
 +PastPar:elé                    #               ;
-+PresPar:elant                  #               ;
+el                              VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:ellerais            #               ;
-+Cond+2p+Sg+Inform:ellerais     #               ;
-+Cond+2p+Sg+Form:elleriez       #               ;
-+Cond+3p+Sg:ellerait            #               ;
-+Cond+1p+Pl:ellerait            #               ;
-+Cond+2p+Pl:ellerait            #               ;
-+Cond+3p+Pl:elleraient          #               ;
+elle                            VFreCond        ;
 
 LEXICON VFreOUVOIRInf
 ! Infinitive
@@ -424,24 +275,12 @@ LEXICON VFreOUVOIRInf
 +Pres+3p+Pl:eut                 #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:euvent              #               ; ! ils
 ! Past
-+Itive+1p+Sg:ouvais             #               ;
-+Itive+2p+Sg+Inform:ouvais      #               ;
-+Itive+2p+Sg+Form:ouviez        #               ;
-+Itive+3p+Sg:ouvait             #               ;
-+Itive+1p+Pl:ouvait             #               ;
-+Itive+2p+Pl:ouvait             #               ;
-+Itive+3p+Pl:ouvaient           #               ;
+ouv                             VFreItive       ;
 ! Participle
 +PastPar:u                      #               ;
-+PresPar:ouvant                 #               ;
+ouv                             VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:ourrais             #               ;
-+Cond+2p+Sg+Inform:ourrais      #               ;
-+Cond+2p+Sg+Form:ourriez        #               ;
-+Cond+3p+Sg:ourrait             #               ;
-+Cond+1p+Pl:ourrait             #               ;
-+Cond+2p+Pl:ourrait             #               ;
-+Cond+3p+Pl:ourraient           #               ;
+our                             VFreCond        ;
 
 LEXICON VFreMOURIRInf
 ! Infinitive
@@ -456,24 +295,12 @@ LEXICON VFreMOURIRInf
 +Pres+3p+Pl:meurt               #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:meurent             #               ; ! ils
 ! Past
-+Itive+1p+Sg:mourais            #               ;
-+Itive+2p+Sg+Inform:mourais     #               ;
-+Itive+2p+Sg+Form:mouriez       #               ;
-+Itive+3p+Sg:mourait            #               ;
-+Itive+1p+Pl:mourait            #               ;
-+Itive+2p+Pl:mourait            #               ;
-+Itive+3p+Pl:mouraient          #               ;
+mour                            VFreItive       ;
 ! Participle
 +PastPar:mouru                  #               ;
-+PresPar:mourant                #               ;
+mour                            VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:mourrais            #               ;
-+Cond+2p+Sg+Inform:mourrais     #               ;
-+Cond+2p+Sg+Form:mourriez       #               ;
-+Cond+3p+Sg:mourrait            #               ;
-+Cond+1p+Pl:mourrait            #               ;
-+Cond+2p+Pl:mourrait            #               ;
-+Cond+3p+Pl:mourraient          #               ;
+mour                            VFreCond        ;
 
 LEXICON VFreETTREInf
 ! Infinitive
@@ -488,24 +315,12 @@ LEXICON VFreETTREInf
 +Pres+3p+Pl:et                  #               ; ! eux/eux-autres/ça (pl)
 +Pres+3p+Pl:ettent              #               ; ! ils
 ! Past
-+Itive+1p+Sg:ettais             #               ;
-+Itive+2p+Sg+Inform:ettais      #               ;
-+Itive+2p+Sg+Form:ettiez        #               ;
-+Itive+3p+Sg:ettait             #               ;
-+Itive+1p+Pl:ettait             #               ;
-+Itive+2p+Pl:ettait             #               ;
-+Itive+3p+Pl:ettaient           #               ;
+ett                             VFreItive       ;
 ! Participle
 +PastPar:is                     #               ;
-+PresPar:ettant                 #               ;
+ett                             VFrePresPar     ;
 ! Conditional
-+Cond+1p+Sg:ettrais             #               ;
-+Cond+2p+Sg+Inform:ettrais      #               ;
-+Cond+2p+Sg+Form:ettriez        #               ;
-+Cond+3p+Sg:ettrait             #               ;
-+Cond+1p+Pl:ettrait             #               ;
-+Cond+2p+Pl:ettrait             #               ;
-+Cond+3p+Pl:ettraient           #               ;
+ett                             VFreCond        ;
 
 LEXICON VFreALLOIRInf
 ! Infinitive
@@ -513,11 +328,42 @@ LEXICON VFreALLOIRInf
 ! Present
 +Pres+3p+Sg:aut                 #               ; ! il/elle/ça (sg)/on (sg)
 ! Past
-+Itive+3p+Sg:allait             #               ;
+all                             VFreItive       ;
 ! Participle
 +PastPar:allu                   #               ;
 ! Conditional
-+Cond+3p+Sg:audrait             #               ;
+aud                             VFreCond        ;
+
+LEXICON VFreEntoItive
+en                              VFreEntoItive   ;
+
+LEXICON VFreItive
++Itive+1p+Sg:ais                #               ;
++Itive+2p+Sg+Inform:ais         #               ;
++Itive+2p+Sg+Form:iez           #               ;
++Itive+3p+Sg:ait                #               ;
++Itive+1p+Pl:ait                #               ;
++Itive+2p+Pl:ait                #               ;
++Itive+3p+Pl:aient              #               ;
++Itive+3p+Pl:iont               #               ;
+
+LEXICON VFreEtoCond
+e                               VFreCond        ;
+
+LEXICON VFreItoCond
+i                               VFreCond        ;
+
+LEXICON VFreCond
++Cond+1p+Sg:rais                #               ;
++Cond+2p+Sg+Inform:rais         #               ;
++Cond+2p+Sg+Form:riez           #               ;
++Cond+3p+Sg:rait                #               ;
++Cond+1p+Pl:rait                #               ;
++Cond+2p+Pl:rait                #               ;
++Cond+3p+Pl:raient              #               ;
+
+LEXICON VFrePresPar
++PresPar:ant                    #               ;
 
 LEXICON VEngInf
 ! Present
