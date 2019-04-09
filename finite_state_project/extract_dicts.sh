@@ -98,7 +98,7 @@ awk 'BEGIN { print "LEXICON VerbsFre" }
 
 # Save all the aller French verb headwords to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
-awk '/aller$/ { print $2 }' |
+awk '/[\s\t]aller$/ { print $2 }' |
 sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
