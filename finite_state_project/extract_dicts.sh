@@ -13,6 +13,9 @@
 #
 # -Joshua McNeill (joshua dot mcneill at uga dot edu)
 
+# Create the directory where all the dictionaries will go
+mkdir ./generated_dicts
+
 #####################
 #      English      #
 #####################
@@ -147,7 +150,7 @@ awk '/^V.{,2}.*mourir$/ { print $2 }' |
 sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
-           { printf("%s:0    VFreMOURIRInf    ;\n", $1, substr($1) }' > generated_dicts/freVmourir_dict.lexc
+           { printf("%s:0    VFreMOURIRInf    ;\n", $1) }' > generated_dicts/freVmourir_dict.lexc
 
 # Save all the -ettre French verb headwords to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
