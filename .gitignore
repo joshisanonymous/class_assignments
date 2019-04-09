@@ -20,3 +20,4 @@ homework6.tex
 failures.all
 LAFr_verbs.bin
 finite_state_project/*.txt
+finite_state_project/generated_dicts/
