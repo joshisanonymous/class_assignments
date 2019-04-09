@@ -170,11 +170,19 @@ awk 'BEGIN { print "LEXICON VerbsFre" }
 
 # Save all the être French verb headwords to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
-awk '/^V.{,2}.*[\s\t]être$/ { print $2 }' |
+awk '/^V.*\sêtre$/ { print $2 }' |
 sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
            { printf("%s:0    VFreETREInf    ;\n", $1) }' > generated_dicts/freVetre_dict.lexc
+
+# Save all the avoir French verb headwords to their own file
+awk '{ print $1, $2 }' extracted_fra_dict.txt |
+awk '/^V.*\savoir$/ { print $2 }' |
+sort |
+uniq |
+awk 'BEGIN { print "LEXICON VerbsFre" }
+           { printf("%s:0    VFreAVOIRInf    ;\n", $1) }' > generated_dicts/freVavoir_dict.lexc
 
 # Save all the French verb headwords that don't fit in the other clases
 # (i.e., that need to be accounted for still) to their own file
