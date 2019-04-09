@@ -107244,6 +107244,8 @@ zyuganov    #    ;
 zywicki    #    ;
 
 LEXICON VerbsFre
+être:0    VFreETREInf    ;
+avoir:0    VFreAVOIRInf    ;
 mouver:m        VFreERInf ;
 mouvoir:m    VFreOUVOIRInf    ;
 pouvoir:p    VFreOUVOIRInf    ;
