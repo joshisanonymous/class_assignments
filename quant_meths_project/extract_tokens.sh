@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 # This script will extract tokens of tu/toi/te and vous from plain text
 # versions of the NCCFr to csv files. The original transcriptions (in ELAN
 # .eaf files) each contained two speakers on different tiers. ELAN was used

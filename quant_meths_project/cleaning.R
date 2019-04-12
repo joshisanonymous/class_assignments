@@ -1,3 +1,14 @@
+# This script reads in the raw NCCFr T-V tokens, with a column for the
+# speaker that produced each token, collapses the different cases of
+# "tu" (and removes preceding dashes when they were in interrogative
+# constructions), adds columns for other social variables for the
+# speakers, then finally outputs a new csv for analysis.
+#
+# This script is evaluated when nccfr_tv.Rnw is run.
+#
+# -Joshua McNeill (joshua dot mcneill at uga dot edu)
+
+## ---- clean_data ----
 # Read in the data
 tv <- read.csv("nccfr_tv_raw.csv",
                header = FALSE)
@@ -6,6 +17,16 @@ tv <- read.csv("nccfr_tv_raw.csv",
 colnames(tv) <- c("TV",
                   "SPEAKER")
 
+# Collapse "-vous" to just "vous"
+tv$TV <- as.factor(gsub("-vous",
+                        "vous",
+                        tv$TV))
+
+# Collapse "toi", "te", "t'", and "-tu" to just "tu"
+tv$TV <- as.factor(gsub("(-tu|t(oi|e|'))",
+                        "tu",
+                        tv$TV))
+
 # Add a column for gender (the first letter of each speaker ID)
 tv$GENDER <- substr(tv$SPEAKER,
                     1,
@@ -13,10 +34,13 @@ tv$GENDER <- substr(tv$SPEAKER,
 tv$GENDER[tv$GENDER == "F"] <- "female"
 tv$GENDER[tv$GENDER == "M"] <- "male"
 
-###############################################
-# The values for the remaining variables from #
-# from Torreira et al. (2010, p. 202).        #
-###############################################
+# Coerce gender to a factor
+tv$GENDER <- as.factor(tv$GENDER)
+
+##########################################
+# The values for the remaining variables #
+# from Torreira et al. (2010, p. 202).   #
+##########################################
 
 # Add a column for age
 tv$AGE[tv$SPEAKER == "M01L"] <- 23
@@ -113,6 +137,9 @@ tv$REGION[tv$SPEAKER == "M22L"] <- "not_paris"
 tv$REGION[tv$SPEAKER == "M22R"] <- "not_paris"
 tv$REGION[tv$SPEAKER == "M23L"] <- "paris"
 tv$REGION[tv$SPEAKER == "M23R"] <- "paris"
+
+# Coerce region to a factor
+tv$REGION <- as.factor(tv$REGION)
 
 # Save completed data frame as a new csv
 write.csv(tv,
