@@ -1,0 +1,26 @@
+\documentclass{article}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{natbib}
+    \bibliographystyle{apalike}
+  % Title info
+  \author{Joshua McNeill}
+  \title{Homework 6}
+  \date{\today}
+\begin{document}
+  <<settings_load_script, echo = FALSE>>=
+  read_chunk("homework6.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis")
+  @
+  <<load_libraries_data>>=
+  @
+  \maketitle
+  \section{Introduction}
+\end{document}
