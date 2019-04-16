@@ -21,3 +21,7 @@ failures.all
 LAFr_verbs.bin
 finite_state_project/*.txt
 finite_state_project/generated_dicts/
+nccfr_tv_present.nav
+nccfr_tv_present.snm
+nccfr_tv_present.tex
+nccfr_tv_present.toc
