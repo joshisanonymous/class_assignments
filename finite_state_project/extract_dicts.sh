@@ -88,6 +88,14 @@ uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
            { printf("%s:%s    VFreENDREInf    ;\n", $1, substr($1, 1, length($1) - 5)) }' > generated_dicts/freVendre_dict.lexc
 
+# Save all the -ondre French verb headwords to their own file
+awk '{ print $1, $2 }' extracted_fra_dict.txt |
+awk '/^V.{,2}.*ondre$/ { print $2 }' |
+sort |
+uniq |
+awk 'BEGIN { print "LEXICON VerbsFre" }
+           { printf("%s:%s    VFreONDREInf    ;\n", $1, substr($1, 1, length($1) - 5)) }' > generated_dicts/freVondre_dict.lexc
+
 # Save all the -oir French verb headwords to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
 awk '/^V.{,2}.*[^l]oir$/ && !/voir$/ { print $2 }' |
@@ -98,7 +106,7 @@ awk 'BEGIN { print "LEXICON VerbsFre" }
 
 # Save all the aller French verb headwords to their own file
 awk '{ print $1, $2 }' extracted_fra_dict.txt |
-awk '/[\s\t]aller$/ { print $2 }' |
+awk '/^V.*\saller$/ { print $2 }' |
 sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
@@ -183,6 +191,14 @@ sort |
 uniq |
 awk 'BEGIN { print "LEXICON VerbsFre" }
            { printf("%s:0    VFreAVOIRInf    ;\n", $1) }' > generated_dicts/freVavoir_dict.lexc
+
+# Save all the -voir French verb headwords to their own file
+awk '{ print $1, $2 }' extracted_fra_dict.txt |
+awk '/^V.*voir$/ && !/^V.*(\sa|ce|u|sa|de)voir$/ { print $2 }' |
+sort |
+uniq |
+awk 'BEGIN { print "LEXICON VerbsFre" }
+           { printf("%s:%s    VFreVOIRInf    ;\n", $1, substr($1, 1, length($1) - 4)) }' > generated_dicts/freVvoir_dict.lexc
 
 # Save all the French verb headwords that don't fit in the other clases
 # (i.e., that need to be accounted for still) to their own file
