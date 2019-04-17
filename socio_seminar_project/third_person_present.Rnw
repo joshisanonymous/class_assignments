@@ -1,0 +1,55 @@
+\documentclass{beamer}
+  % Beamer settings
+  \usetheme{CambridgeUS}
+  \usecolortheme{seagull}
+  \usefonttheme{professionalfonts}
+  \usefonttheme{serif}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{natbib}
+    \bibliographystyle{apalike}
+  % Title info
+  \author{Joshua McNeill}
+  \institute[LING]{Seminar}
+  \title{3rd Person Subject Pronouns in Louisiana French}
+  \date{\today}
+\begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("cleaning.R")
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis")
+  @
+  <<clean_data>>=
+  @
+  <<load_libraries_data>>=
+  @
+  \begin{frame}
+    \titlepage
+  \end{frame}
+  \begin{frame}
+    \tableofcontents
+  \end{frame}
+  \AtBeginSection[]
+    {
+    \begin{frame}
+      \tableofcontents[currentsection]
+    \end{frame}
+    }
+  \section{Introduction}
+    \begin{frame}{}
+      \begin{block}{}
+      \end{block}
+    \end{frame}
+  \section{Methodology}
+  \section{Results}
+  \section{Conclusion}
+  \section{References}
+    \bibliography{References}
+\end{document}
