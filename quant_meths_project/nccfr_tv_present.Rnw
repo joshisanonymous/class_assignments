@@ -1,0 +1,149 @@
+\documentclass{beamer}
+  % Beamer settings
+  \usetheme{CambridgeUS}
+  \usecolortheme{seagull}
+  \usefonttheme{professionalfonts}
+  \usefonttheme{serif}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{natbib}
+    \bibliographystyle{apalike}
+  % Title info
+  \author{Joshua McNeill}
+  \institute[LING6400]{Quantitative Methods in Linguistics}
+  \title{The T-V distinction in the French NCC}
+  \date{\today}
+\begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("cleaning.R")
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis")
+  @
+  <<clean_data>>=
+  @
+  <<load_libraries_data>>=
+  @
+  \begin{frame}
+    \titlepage
+  \end{frame}
+  \begin{frame}
+    \tableofcontents
+  \end{frame}
+  \AtBeginSection[]
+    {
+    \begin{frame}
+      \tableofcontents[currentsection]
+    \end{frame}
+    }
+  \section{Introduction}
+    \begin{frame}{The T-V Distinction}
+      \begin{block}{Definition}
+        A contrast in pronominal forms of address relevant to power relations and social distance \citep{brown_pronouns_1960}
+      \end{block}
+      \begin{block}<2->{}
+        In French, this comes down to two variants:
+        \begin{itemize}
+          \item The tutoiement $\rightarrow$ \emph{tu/te/toi}
+          \item The vouvoiement $\rightarrow$ \emph{vous/vous/vous}
+        \end{itemize}
+      \end{block}
+    \end{frame}
+    \begin{frame}{Objective}
+      \begin{block}{}
+        To identify if different social groups in the Nijmegen Corpus of Casual French (NCCFr) \citep{torreira_nijmegen_2010} have the same patterns of T-V usage
+      \end{block}
+    \end{frame}
+    \begin{frame}{The NCCFr}
+      \begin{block}{Characteristics}
+        \begin{itemize}
+          \item 46 participants
+          \item Participants were pairs of same gender friends
+          \item Raised either in the Paris metropolitan area or in the north
+          \item 20-60 minutes of speaking from each participant
+        \end{itemize}
+      \end{block}
+    \end{frame}
+    \begin{frame}{Research Question}
+      \begin{block}{}
+        Do these speakers differ in their T-V usage according to gender, region, and/or age in the NCCFr?
+      \end{block}
+    \end{frame}
+  \section{Methodology}
+    \begin{frame}{Variables}
+      \begin{block}{Response variable}
+        \begin{itemize}
+          \item T-V: \emph{tu} vs \emph{vous}\\
+            \emph{tu/te/toi} collapsed to \emph{tu}
+        \end{itemize}
+      \end{block}
+      \begin{block}<2->{Explanatory variables}
+        \begin{itemize}
+          \item Gender: male vs female
+          \item Region: Paris vs not Paris
+          \item Age: Quantitative
+        \end{itemize}
+      \end{block}
+    \end{frame}
+    \begin{frame}{Model}
+      \begin{block}{}
+        Binomial logistic regression model
+      \end{block}
+      \begin{block}{Hypotheses}
+        \begin{itemize}
+          \item $H_0$: Gender, region, and age have no impact on T-V usage
+          \item $H_A$: Gender, region, and/or age do have an impact on T-V usage
+        \end{itemize}
+      \end{block}
+      \begin{block}{Signficance}
+        $\alpha =$ 0.05
+      \end{block}
+    \end{frame}
+  \section{Results}
+    \begin{frame}{Hypothesis Tests}
+      \begin{block}{}
+        The model as a whole is statistically significant ($\chi^2$ (\Sexpr{tv.lrm$stats["d.f."]}) = \Sexpr{round(tv.lrm$stats["Model L.R."], 3)}, $P<$ \Sexpr{round_any(tv.lrm$stats["P"], 0.001, f = ceiling)}, $n$ = \Sexpr{nrow(tv)})
+      \end{block}
+      \begin{block}<2->{}
+        \begin{table}
+          \caption{Results for each explanatory variable separately}
+          \label{tab:coef_tests}
+          \begin{tabular}{l @{ } r @{ } r}
+            Variable (Reference) & Coefficient & $P$-value ($<$) \\
+            \hline
+            \hline
+            Gender (Female) & \Sexpr{round(tv.lrm$coefficients["GENDER=male"], 3)} & \Sexpr{round_any(tv.lrm.anova["GENDER","P"], 0.001, f = ceiling)} \\
+            Region (Not Paris) & \Sexpr{round(tv.lrm$coefficients["REGION=paris"], 3)} & \Sexpr{round_any(tv.lrm.anova["REGION","P"], 0.001, f = ceiling)} \\
+            Age & \Sexpr{round(tv.lrm$coefficients["AGE"], 3)} & \Sexpr{round_any(tv.lrm.anova["AGE","P"], 0.001, f = ceiling)}
+          \end{tabular}
+        \end{table}
+      \end{block}
+    \end{frame}
+    \begin{frame}{Further Checks}
+      \begin{block}{Stepdown selection}
+        Only gender was kept (AIC = \Sexpr{tv.glm.bw$aic})
+      \end{block}
+      \begin{block}<2->{Overfitting}
+        Bootstrapping validation ($n$ = \Sexpr{tv.lrm.plus.val["Slope", "n"]}) suggests that the model is not overfit (Optimism of the slope = \Sexpr{round(tv.lrm.plus.val["Slope", "optimism"], 3)})
+      \end{block}
+    \end{frame}
+  \section{Conclusion}
+    \begin{frame}{Conclusion}
+      \begin{block}{}
+        Males use \emph{vous} with male friends in the NCCFr less than females:
+        \begin{itemize}
+          \item A model that includes only gender has a coefficient of \Sexpr{round(tv.lrm.final$coefficients["GENDER=male"], 3)}
+          \item where \emph{tu} is the reference level of T-V usage and
+          \item female is the reference level of gender
+        \end{itemize}
+      \end{block}
+    \end{frame}
+  \section{References}
+    \bibliography{References}
+\end{document}
