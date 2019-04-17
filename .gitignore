@@ -9,6 +9,11 @@
 *.sty
 *.bbl
 *.blg
+*.toc
+*.aux
+*.out
+*.nav
+*.snm
 *-concordance.tex
 main.tex
 Homework2.tex
@@ -16,14 +21,8 @@ homework3.tex
 homework4.tex
 homework5.tex
 homework6.tex
-nccfr_tv.tex
+quant_meths_project/*.tex
 failures.all
 LAFr_verbs.bin
 finite_state_project/*.txt
 finite_state_project/generated_dicts/
-quant_meths_project/*.nav
-quant_meths_project/*.snm
-quant_meths_project/*.tex
-quant_meths_project/*.toc
-quant_meths_project/*.aux
-quant_meths_project/*.out
