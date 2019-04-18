@@ -34,7 +34,7 @@ uniq |
 awk 'BEGIN { print "LEXICON VerbsEng" }
            { printf("%s    VEngInf    ;\n", $1) }' > generated_dicts/engV_dict.lexc
 
-# Save all the English non-headword non-verbs to their own file
+# Save all the English non-verbs headwords to their own file
 awk '!/^V.{,2}/ { print $2 }' extracted_eng_dict.txt |
 sort |
 uniq |
