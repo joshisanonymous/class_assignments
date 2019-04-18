@@ -13,6 +13,7 @@ tv <- read.csv("nccfr_tv_cleaned.csv")
 # Load packages
 library(rms)
 library(plyr)
+library(knitr)
 
 ################
 #   Analyses   #
@@ -56,10 +57,14 @@ tv.lrm.final <- lrm(TV ~
                     data = tv)
 
 ################
-#    Graphs    #
+#    Tables    #
 ################
 
-## ---- final_model ----
-ggplot(tv,
-       aes(x = GENDER)) +
-  geom_bar()
+## ---- final_model_table ----
+kable(round(prop.table(xtabs(~
+                               TV +
+                               GENDER,
+                             data = tv),
+                       2),
+            3),
+      format = "latex")
