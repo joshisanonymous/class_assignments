@@ -3,7 +3,7 @@ PRONOUN,SPEAKER,SPECIFICITY,ANIMACY,REF.DISTANCE,VERB.TYPE
 ils,coulson,RGE,RAN,OTU,VEA
 ils,coulson,RGE,RAN,OTU,VEA
 ils,coulson,RGE,RAN,OTU,VEA
-ça,coulson,RSE,RAN,OTU,VRB
+ça,coulson,RSP,RAN,OTU,VRB
 ça,coulson,RGE,RAN,OTU,VRB
 ils,coulson,RSP,RAN,ITU,VEA
 ça,coulson,RSP,RAN,OTU,VRB
@@ -50,7 +50,7 @@ ils,coulson,RSP,RAN,ITU,VEA
 ils,coulson,RSP,RAN,OTU,VEA
 ça,coulson,RSP,RAN,OTU,VRB
 ça,coulson,RGE,RAN,OTU,VRB
-ça,coulson,RSP,ANI,ITU,VRB
+ça,coulson,RSP,RAN,ITU,VRB
 ils,coulson,RSP,RAN,ITU,VEA
 ça,coulson,RSP,RAN,OTU,VRB
 ça,coulson,RSP,RAN,OTU,VRB
@@ -59,8 +59,8 @@ ils,coulson,RGE,RAN,OTU,VEA
 ils,coulson,RGE,RAN,OTU,VEA
 ils,coulson,RGE,RAN,OTU,VEA
 ils,coulson,RGE,RAN,OTU,VEA
-ils,coulson,RGE,ANI,OTU,VEA
-ils,coulson,RGE,ANI,OTU,VEA
+ils,coulson,RGE,RAN,OTU,VEA
+ils,coulson,RGE,RAN,OTU,VEA
 ils,coulson,RGE,RAN,OTU,VEA
 ils,coulson,RGE,RAN,OTU,VEA
 ils,coulson,RGE,RAN,OTU,VEA
@@ -138,7 +138,7 @@ ils,talbot,RGE,RAN,OTU,VRB
 ça,talbot,RSP,RAN,OTU,VRB
 ça,talbot,RSP,RAN,OTU,VRB
 ça,talbot,RSP,RAN,OTU,VRB
-ça,talbot,RSP,RAN,UTO,VRB
+ça,talbot,RSP,RAN,OTU,VRB
 ça,talbot,RSP,RAN,OTU,VRB
 ça,talbot,RGE,RAN,OTU,VRB
 ça,talbot,RGE,RAN,OTU,VRB
