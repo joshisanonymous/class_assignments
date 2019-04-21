@@ -22,29 +22,43 @@ tp$PRONOUN <- as.factor(gsub("ç'",
 
 # Substitute positional tags to readable values
 tp$SPECIFICITY <- as.factor(gsub("RGE",
-                                 "generic",
+                                 "Generic Referent",
                                  tp$SPECIFICITY))
 tp$SPECIFICITY <- as.factor(gsub("RSP",
-                                 "specific",
+                                 "Specific Referent",
                                  tp$SPECIFICITY))
 tp$ANIMACY <- as.factor(gsub("RAN",
-                             "animate",
+                             "Animate Referent",
                              tp$ANIMACY))
 tp$ANIMACY <- as.factor(gsub("RIN",
-                             "inanimate",
+                             "Inanimate Referent",
                              tp$ANIMACY))
 tp$REF.DISTANCE <- as.factor(gsub("ITU",
-                                  "in.t.unit",
+                                  "Referent in the T-unit",
                                   tp$REF.DISTANCE))
 tp$REF.DISTANCE <- as.factor(gsub("OTU",
-                                  "out.t.unit",
+                                  "Referent not in the T-unit",
                                   tp$REF.DISTANCE))
 tp$VERB.TYPE <- as.factor(gsub("VEA",
-                               "etre.avoir",
+                               "Être or Avoir Verb",
                                tp$VERB.TYPE))
 tp$VERB.TYPE <- as.factor(gsub("VRB",
-                               "regular",
+                               "Regular Verb",
                                tp$VERB.TYPE))
+
+# Capitalize speaker IDs
+tp$SPEAKER <- as.factor(gsub("coulson",
+                             "Coulson",
+                             tp$SPEAKER))
+tp$SPEAKER <- as.factor(gsub("talbot",
+                             "Talbot",
+                             tp$SPEAKER))
+tp$SPEAKER <- as.factor(gsub("fitz",
+                             "Fitz",
+                             tp$SPEAKER))
+tp$SPEAKER <- as.factor(gsub("ward",
+                             "Ward",
+                             tp$SPEAKER))
 
 # Save completed data frame as a new csv
 write.csv(tp,
