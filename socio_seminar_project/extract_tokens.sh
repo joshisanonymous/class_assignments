@@ -7,16 +7,18 @@
 #
 # -Joshua McNeill (joshua dot mcneill at uga dot edu)
 
+# Create the header for the csv file
+echo "PRONOUN,SPEAKER,SPECIFICITY,ANIMACY,REF.DISTANCE,VERB.TYPE" > third_person_raw.csv
+
 for file in $@
 do
-  # Captures the speaker ID from the filename
-  filename=`echo "$file" |
-            awk -F "_" '{ print $1 }' | # removes the extension
-            awk -F "/" '{ print $NF }'` # removes the path
-  # Captures tokens and saves them to a csv as token,ID
+  # Captures the speaker ID from the filename and makes it available to perl later
+  export speaker=`echo "$file" |
+                  awk -F "." '{ print $1 }' | # removes the extension
+                  awk -F "/" '{ print $NF }'` # removes the path
+  # Captures tokens and saves them to a csv as ...
   cat $file |
+  grep -A $(wc -l < $file) "</META>" | # grab everything after the initial meta-data
   tr " " "\n" | # tokenize
-  egrep "^\-?(eux|eux-autres|ça|c'|ils|elles)$" |
-  awk -v filename=$filename 'BEGIN { OFS="," }
-                                   { print $1, filename }' >> third_person_raw.csv
+  perl -n -e '/^<(.*),(.*),(.*),(.*)\>(.*)\</.*\>$/ && print "$5,$ENV{speaker},$1,$2,$3,$4\n"' >> third_person_raw.csv
 done

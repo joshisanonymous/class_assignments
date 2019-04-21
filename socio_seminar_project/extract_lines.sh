@@ -16,6 +16,6 @@ do
             awk -F "/" '{ print $NF }'` # removes the path
   # Captures the actual lines
   cat $file |
-  egrep -vn "^J(osh)?:" | # remove lines spoken by the interviewer
+  egrep -vn "^J:" | # remove lines spoken by the interviewer
   egrep "(ça|c'|ils|elles|eux)" > ${filename}_lines.txt
 done
