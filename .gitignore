@@ -27,3 +27,6 @@ finite_state_project/generated_dicts/
 failures.all
 LAFr_verbs.bin
 socio_seminar_project/*.txt
+socio_seminar_project/third_person_cleaned.csv
+quant_meths_project/nccfr_tv_cleaned.csv
+socio_intro_the_niche/data_cleaned.csv
