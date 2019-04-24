@@ -16,7 +16,7 @@
   \author{Joshua McNeill}
   \institute[LING6400]{Quantitative Methods in Linguistics}
   \title{The T-V distinction in the French NCC}
-  \date{\today}
+  \date{April 25th, 2019}
 \begin{document}
   <<settings_load_scripts, echo = FALSE>>=
   read_chunk("cleaning.R")
@@ -32,6 +32,7 @@
   @
   \begin{frame}
     \titlepage
+    \tiny{Data and code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/quant_meths_project}}
   \end{frame}
   \begin{frame}
     \tableofcontents
@@ -57,7 +58,7 @@
     \end{frame}
     \begin{frame}{Objective}
       \begin{block}{}
-        To identify if different social groups in the Nijmegen Corpus of Casual French (NCCFr) \citep{torreira_nijmegen_2010} have the same patterns of T-V usage
+        To identify if different social groups in the Nijmegen Corpus of Casual French (NCCFr) \citep{torreira_nijmegen_2010} have different patterns of T-V usage
       \end{block}
     \end{frame}
     \begin{frame}{The NCCFr}
@@ -112,14 +113,14 @@
       \end{block}
       \begin{block}<2->{}
         \begin{table}
-          \caption{Results for each explanatory variable separately}
+          \caption{Results for each explanatory variable separately where \emph{tu} is the reference level of T-V}
           \label{tab:coef_tests}
           \begin{tabular}{l @{ } r @{ } r}
-            Variable (Reference) & Coefficient & $P$-value ($<$) \\
+            Variable & Coefficient & $P$-value ($<$) \\
             \hline
             \hline
-            Gender (Female) & \Sexpr{round(tv.lrm$coefficients["GENDER=male"], 3)} & \Sexpr{round_any(tv.lrm.anova["GENDER","P"], 0.001, f = ceiling)} \\
-            Region (Not Paris) & \Sexpr{round(tv.lrm$coefficients["REGION=paris"], 3)} & \Sexpr{round_any(tv.lrm.anova["REGION","P"], 0.001, f = ceiling)} \\
+            Gender (Female $\rightarrow$ Male) & \Sexpr{round(tv.lrm$coefficients["GENDER=male"], 3)} & \Sexpr{round_any(tv.lrm.anova["GENDER","P"], 0.001, f = ceiling)} \\
+            Region (Not Paris $\rightarrow$ Paris) & \Sexpr{round(tv.lrm$coefficients["REGION=paris"], 3)} & \Sexpr{round_any(tv.lrm.anova["REGION","P"], 0.001, f = ceiling)} \\
             Age & \Sexpr{round(tv.lrm$coefficients["AGE"], 3)} & \Sexpr{round_any(tv.lrm.anova["AGE","P"], 0.001, f = ceiling)}
           \end{tabular}
         \end{table}
@@ -138,18 +139,22 @@
       \begin{block}{}
         Males use \emph{vous} with male friends in the NCCFr less than females:
         \begin{itemize}
-          \item A model that includes only gender has a coefficient of \Sexpr{round(tv.lrm.final$coefficients["GENDER=male"], 3)}
-          \item where \emph{tu} is the reference level of T-V usage and
-          \item female is the reference level of gender
+          \item A model that includes only gender has a coefficient of \Sexpr{round(tv.lrm.final$coefficients["GENDER=male"], 3)} and intercept of \Sexpr{round(tv.lrm.final$coefficients["Intercept"], 3)}
+          \item This means a man would be \Sexpr{100 * (round(exp(tv.lrm.final$coefficients["Intercept"] + tv.lrm.final$coefficients["GENDER=male"]), 3))}\% less likely to use \emph{vous} than a woman
         \end{itemize}
       \end{block}
-      \begin{block}{}
+      \begin{block}<2->{}
         \begin{table}
           \caption{Proportion of \emph{tu} vs \emph{vous} by gender}
           \label{tab:final_model_table}
           <<final_model_table>>=
           @
         \end{table}
+      \end{block}
+    \end{frame}
+    \begin{frame}{Fin}
+      \begin{block}{}
+        Data and code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/quant_meths_project}
       \end{block}
     \end{frame}
   \section{References}
