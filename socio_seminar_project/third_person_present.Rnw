@@ -37,7 +37,7 @@
   @
   \begin{frame}
     \titlepage
-    \tiny{Data and code available at \url{https://github.com/joshisanonymous/class_assignments}}
+    \tiny{Data and code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/socio_seminar_project}}
   \end{frame}
   \begin{frame}
     \tableofcontents
@@ -239,7 +239,7 @@
   \end{frame}
   \begin{frame}
     \begin{block}{}
-      Data and code avaiable at \url{https://github.com/joshisanonymous/class_assignments}
+      Data and code avaiable at \url{https://github.com/joshisanonymous/class_assignments/tree/master/socio_seminar_project}
     \end{block}
   \end{frame}
   \section{References}
