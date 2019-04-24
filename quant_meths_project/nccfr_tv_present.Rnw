@@ -140,15 +140,18 @@
         Males use \emph{vous} with male friends in the NCCFr less than females:
         \begin{itemize}
           \item A model that includes only gender has a coefficient of \Sexpr{round(tv.lrm.final$coefficients["GENDER=male"], 3)} and intercept of \Sexpr{round(tv.lrm.final$coefficients["Intercept"], 3)}
-          \item This means a man would be \Sexpr{100 * (round(exp(tv.lrm.final$coefficients["Intercept"] + tv.lrm.final$coefficients["GENDER=male"]), 3))}\% less likely to use \emph{vous} than a woman
         \end{itemize}
       \end{block}
       \begin{block}<2->{}
         \begin{table}
-          \caption{Proportion of \emph{tu} vs \emph{vous} by gender}
+          \caption{Probability of \emph{tu} vs \emph{vous} by gender according to the final model}
           \label{tab:final_model_table}
-          <<final_model_table>>=
-          @
+          \begin{tabular}{r | r @{ } r}
+             & Female & Male\\
+            \hline
+            \emph{tu} & \Sexpr{round(1 - tv.lrm.final.female, 3)} & \Sexpr{round(1 - tv.lrm.final.male, 3)} \\
+            \emph{vous} & \Sexpr{round(tv.lrm.final.female, 3)} & \Sexpr{round(tv.lrm.final.male, 3)}
+          \end{tabular}
         \end{table}
       \end{block}
     \end{frame}

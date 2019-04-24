@@ -56,15 +56,12 @@ tv.lrm.final <- lrm(TV ~
                       GENDER,
                     data = tv)
 
-################
-#    Tables    #
-################
+# Calculte the probability of either a man or a woman
+# producing vous given the final model
+tv.lrm.final.male <- (exp(tv.lrm.final$coefficients["Intercept"] +
+                            tv.lrm.final$coefficients["GENDER=male"])) /
+                     (1 + exp(tv.lrm.final$coefficients["Intercept"] +
+                                tv.lrm.final$coefficients["GENDER=male"]))
 
-## ---- final_model_table ----
-kable(round(prop.table(xtabs(~
-                               TV +
-                               GENDER,
-                             data = tv),
-                       2),
-            3),
-      format = "latex")
+tv.lrm.final.female <- (exp(tv.lrm.final$coefficients["Intercept"])) /
+                       (1 + exp(tv.lrm.final$coefficients["Intercept"]))
