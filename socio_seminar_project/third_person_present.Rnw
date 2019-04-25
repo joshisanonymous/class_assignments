@@ -21,7 +21,7 @@
   \author{Joshua McNeill}
   \institute[LING8980]{Current Methods in Sociolinguistics}
   \title[3P Plural Subject Pronouns]{3rd Person Subject Pronouns in Louisiana French}
-  \date{\today}
+  \date{April 25th, 2019}
 \begin{document}
   <<settings_load_scripts, echo = FALSE>>=
   read_chunk("cleaning.R")
@@ -189,6 +189,8 @@
           \label{tab:final_model}
           \begin{tabular}{l @{ } r}
             Factor & Coefficient\\
+            \hline
+            \hline
             (Intercept) & \Sexpr{round(tp.glmer.final.coefs["(Intercept)", "Estimate"], 3)}\\
             Verb Type (\emph{être/avoir} $\rightarrow$ regular) & \Sexpr{round(tp.glmer.final.coefs["VERB.TYPERegular Verb", "Estimate"], 3)}\\
             Referent Distance (in the T-unit $\rightarrow$ not in) & \Sexpr{round(tp.glmer.final.coefs["REF.DISTANCENot in the T-unit", "Estimate"], 3)}
@@ -236,8 +238,30 @@
           $\rightarrow$ Larger sample of speakers\\
       \end{itemize}
     \end{block}
+    \begin{block}<2->{Design}
+      \begin{itemize}
+        \item Short enough to be carried out and transcribed quickly
+        \item Include phrases that would likely be translated in such a way as to obtain one token for each combination of structural variables from each participant
+        \item Presented to participants in a random order
+      \end{itemize}
+    \end{block}
   \end{frame}
-  \begin{frame}
+  \begin{frame}{Translation Task Sample}
+    \begin{block}{Probably good}
+      \begin{itemize}
+        \item (Être/Avoir-Specific-Animate-Close) My kids, they have kids, too.
+        \item (Être/Avoir-Generic-Animate-Distant) They closed the school.
+        \item (Regular-Specific-Inanimate-Close) Those roads, they run from here to Lafayette.
+      \end{itemize}
+    \end{block}
+    \begin{block}<2->{Questionable to impossible}
+      \begin{itemize}
+        \item (Être/Avoir-Generic-Inanimate-Close) Things, they are what they are.
+        \item (Regular-Generic-Inanimate-Distant) Things would be good to have. They cost a lot, though.
+      \end{itemize}
+    \end{block}
+  \end{frame}
+  \begin{frame}{Fin}
     \begin{block}{}
       Data and code avaiable at \url{https://github.com/joshisanonymous/class_assignments/tree/master/socio_seminar_project}
     \end{block}
