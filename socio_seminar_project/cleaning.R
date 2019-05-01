@@ -2,7 +2,8 @@
 # speakers and performs data cleaning on the raw data before outputting
 # a the results to a new csv.
 #
-# This script is evaluated when third_person.Rnw is run.
+# This script must be evaluated before analysis.R, third_person.Rnw,
+# and third_person_present.Rnw.
 #
 # -Joshua McNeill (joshua dot mcneill at uga dot edu)
 
@@ -64,10 +65,10 @@ tp$SPEAKER <- as.factor(gsub("ward",
 # Gender
 tp$GENDER <- "Male"
 # Age
-tp$AGE[tp$SPEAKER == "Coulson"] <- ""
-tp$AGE[tp$SPEAKER == "Talbot"] <- ""
-tp$AGE[tp$SPEAKER == "Fritz"] <- ""
-tp$AGE[tp$SPEAKER == "Ward"] <- ""
+tp$AGE[tp$SPEAKER == "Coulson"] <- 68
+tp$AGE[tp$SPEAKER == "Talbot"] <- 71
+tp$AGE[tp$SPEAKER == "Fritz"] <- 34
+tp$AGE[tp$SPEAKER == "Ward"] <- 47
 # Current residence
 tp$LOCATION[tp$SPEAKER == "Coulson"] <- "Baton Rouge"
 tp$LOCATION[tp$SPEAKER == "Talbot"] <- "Youngsville"

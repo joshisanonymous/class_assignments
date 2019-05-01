@@ -24,7 +24,6 @@
   \date{April 25th, 2019}
 \begin{document}
   <<settings_load_scripts, echo = FALSE>>=
-  read_chunk("cleaning.R")
   read_chunk("analysis.R")
   opts_chunk$set(echo = FALSE,
                  warning = FALSE,
@@ -116,10 +115,10 @@
             Speaker & Gender & Age & Residence & Origin & 1st Language\\
             \hline
             \hline
-            Coulson & Male & 6\_ & Baton Rouge & Chataignier & French\\
-            Talbot & Male & 6\_ & Youngsville & Lafayette & French\\
-            Ward & Male & 4\_ & New Orleans & Gramercy & English\\
-            Fitz & Male & 3\_ & Baton Rouge & Baton Rouge & English
+            Coulson & Male & 68 & Baton Rouge & Chataignier & French\\
+            Talbot & Male & 71 & Youngsville & Lafayette & French\\
+            Ward & Male & 47 & New Orleans & Gramercy & English\\
+            Fitz & Male & 34 & Baton Rouge & Baton Rouge & English
           \end{tabular}
         \end{table}
       \end{block}
