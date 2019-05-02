@@ -19,7 +19,7 @@
   % Title info
   \author{Joshua McNeill}
   \title{Third person plural subject pronouns in Louisiana French\footnote{Data and code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/socio_seminar_project}.}}
-  \date{April 30th, 2019}
+  \date{May 1st, 2019}
 \begin{document}
   <<settings_load_scripts, echo = FALSE>>=
   read_chunk("analysis.R")
