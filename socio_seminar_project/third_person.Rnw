@@ -36,11 +36,11 @@
   \section{Introduction}
     \label{sec:intro}
     Louisiana is perhaps linguistically unique in being a U.S. state where French has been a major or even majority language up until relatively recently, at least in the southern portion of the state. Indeed, the 1970 census showed that there were still roughly 500,000 people in Louisiana who claimed French as their mothertongue \citep[as cited in][pp.~19/36]{johnson_louisiana_1976}, though there is evidence that the continuation of French in Louisiana was in danger by the end of the 1980s \citep{trepanier_french_1988}. Up until that time period, speakers were generally described as living in isolation both from community to community and from the rest of the francophone world (\citeauthor{gold_french_1979}, \citeyear[p.~272]{gold_french_1979}; \citeauthor{johnson_louisiana_1976}, \citeyear[p.~28]{johnson_louisiana_1976}), which perhaps explains some of the unique features of the variety spoken there.
-    
+
     One interesting and unique feature of Louisiana French is its pronoun system, particularly third person plural subject pronouns. Two third person plural subject pronouns are normally found in French textbooks: \emph{ils} and \emph{elles}. The former is masculine or mixed gender and the latter is feminine. These are also used for inanimate referents. In Louisiana French, however, \emph{elles} is presumed to not exist \citep[p.~84]{papen_structural_1997}, whereas several pronouns that are unattested elsewhere or only attested as disjunctive pronouns are added to the list of third person plural subject pronouns in Louisiana so that the full set includes \emph{ils}, \emph{ça}, \emph{eux}, \emph{eux-autres}, and \emph{yé} (\citeauthor{brown_pronominal_1988}, \citeyear[pp.~152-153]{brown_pronominal_1988}; \citeauthor{byers_defining_1988}, \citeyear[pp.~88-92]{byers_defining_1988}; \citeauthor{klingler_if_2003}, \citeyear[p.~206]{klingler_if_2003}; \citeauthor{papen_structural_1997}, \citeyear[p.~84]{papen_structural_1997}; \citeauthor{rottet_language_1995}, \citeyear[p.~201]{rottet_language_1995}; \citeauthor{smith_morphosyntactic_1994}, \citeyear[p.~60]{smith_morphosyntactic_1994}).
-    
+
     Quantitative analyses of the third person plural subject pronouns in Louisiana French have suggested several constraints on their realizations. Socially, speakers under the age of 50 seem to prefer \emph{ça} in Avoyelles and Assumption Parishes \citep[p.~178]{brown_pronominal_1988}, whereas those under the age of 55 seem to prefer \emph{eux} in Houma \citep[p.~207]{rottet_language_1995}.\footnote{These areas can be seen in Figure (\ref{fig:map}).} \citet{brown_pronominal_1988} also found that speakers in Avoyelles Parish in general preferred \emph{ça}, whereas those in Assumption Parish dispreferred it (p.~176), Finally, \citet{rottet_language_1995} found that speakers who identified as Indian use \emph{eux} much more than the other forms, whereas there was no clear preference for speakers who identified as Cajun (p.~207).
-    
+
     \begin{figure}[tb]
       \caption{Locations sampled in \citet{brown_pronominal_1988}, \citet{rottet_language_1995}, and the current study}
       \label{fig:map}
@@ -48,18 +48,18 @@
       <<map>>=
       @
     \end{figure}
-    
+
     Beyond the social constraints of age, locality, and ethnicity, there appear to be structural constraints on the realization of the third person plural subject pronoun, as well. \citet{brown_pronominal_1988} found that \emph{ça} became less and less preferred as the intended referent switched from abstract to concrete to animate (p.~168), which was a result corroborated by \citet[pp.~209-210]{rottet_language_1995}. \citet{brown_pronominal_1988} also found that \emph{ça} was dispreferred when the following verb was modal (pp.~173-174). \citet{rottet_language_1995} did not look at this factor, however.
-    
+
     Quantitative studies of the third person plural subject pronoun have therefore identified some factors that play a role in its realization that are sometimes corroborated and occasionally contradicted. The objective of the present study is to focus on structural factors only in order to validate, invalidate, or otherwise add more information to previous findings. This focus on structural factors is born out of the small sample of speakers that were interviewed. Thus, a translation task will also be proposed and detailed in order to look more closely at structural factors in the future. More specifically, my research question was the following:
     \begin{itemize}
       \item[RQ:] Is the realization of the third person plural subject pronoun constrained by structural factors in a sample of four Louisiana French speakers?
     \end{itemize}
-    
+
   \section{Methodology}
     \label{sec:method}
     For the analyses that have been completed, data was collected through sociolinguistic interviews with four Louisiana French speakers whose social characteristics can be found in Table (\ref{tab:participants}). Interviews were conducted and recorded over Skype on March 18th and 20th, 2019, and lasted between 30 and 60 minutes each. The topics discussed focused on characterizing the locals where each speaker currently lives or has lived in the past, as can be seen the interview module that was used in Appendix (\ref{app:module}). This module was used somewhat loosely, however, so that where speakers had something to say on any topic at all, they were allowed to continue unhindered. That said, most of the interviewees did speak on a good deal of the topics in the module.
-    
+
     \begin{table}[tb]
       \caption{Participants\tablefootnote{All names were anonymized}}
       \label{tab:participants}
@@ -74,11 +74,11 @@
         Fitz & Male & 34 & Baton Rouge & Baton Rouge & English
       \end{tabular}
     \end{table}
-    
+
     It is worth noting that conducting interviews over Skype, while convenient, does present its own set of issues. On the convenience side, almost anyone can be reached through Skype, reducing the cost and trouble of traveling. The fact that Skype is not just an audio interface but a video interface as well also makes the exchanges feel more natural and comfortable. That said, not all potential participants are themselves comfortable with working such modern technologies. Among the participants in this study, Coulson was unfamiliar with the software and did not seem to have a camera set up, though the audio came through very clearly. Ward was able to use video, though his microphone and his computer's audio device left much to be desired sound-wise. At times, I was unable to determine just what was said during the transcription process due to this issue. However, Skype's advantages and disadvantages perhaps balance each other out. Ideally, recording speakers in person would have been preferred, but there does not appear to be a great deal lost from carrying out interviews over Skype.
-    
-    The interview data, once collected, was transcribed manually, first into plain text and then into segments and tiers using ELAN \citep{brugman_annotating_2004}. Relevant lines of plain text (i.e., those potentially containing tokens of third person plural subject pronouns) were extracted using a script, the crux of which was the regular expression \lstinline+(ça|c'|ils|elles|eux)+\footnote{The pronoun \emph{eux-autres} was not enumerated in the regular expression because \lstinline+eux+ would capture it just as well.}. Once all of the lines which did not actually include relevant tokens were excluded, tokens within the resulting lines were then coded for specificity of the referent, animacy of the referent, distance from the explicit referent, and the type of the following verb using pseudo-XML tags in the original plain text transcripts in the format \lstinline+<spec,anim,dist,verb>token</spec,anim,dist,verb>+. This made it possible to use another script to extract tokens and their codings and save them to a \lstinline+csv+ file directly, this time using the regular expression \lstinline+^<(.*),(.*),(.*),(.*)\>(.*)\</.*\>$+.
-    
+
+    The interview data, once collected, was transcribed manually, first into plain text and then into segments and tiers using ELAN \citep{brugman_annotating_2004}. Relevant lines of plain text (i.e., those potentially containing tokens of third person plural subject pronouns) were extracted using a script, the crux of which was the regular expression \lstinline+(ça|c'|ils|elles|eux)+\footnote{The pronoun \emph{eux-autres} was not enumerated in the regular expression because \lstinline+eux+ would capture it just as well.}. Once all of the lines which did not actually include relevant tokens were excluded, tokens within the resulting lines were then coded for specificity of the referent, animacy of the referent, distance from the explicit referent, and the type of the following verb using pseudo-XML tags in the original plain text transcripts in the format \lstinline+<spec,anim,dist,verb>token</spec,anim,dist,verb>+. This made it possible to use another script to extract tokens and their codings and save them to a \lstinline+csv+ file directly, this time using the regular expression \lstinline+^<(.*),(.*),(.*),(.*)\>(.*)\</.*\>$+ in order to capture each code as a group. Additionally, it is worth noting that where multiple tokens of (ils) were produced in a row due to presumed hesitation, only the final token was coded and extracted.
+
     \begin{table}[tb]
       \caption{List of variables used}
       \label{tab:variables}
@@ -99,19 +99,19 @@
          & VRB & Regular Verb
       \end{tabular}
     \end{table}
-    
+
     The variables used in this study can be found in Table (\ref{tab:variables}). The response variable, (ils)\footnote{This notation was used following \citet{rottet_language_1995}.}, contains two values: \emph{ça} and \emph{ils}. Two others, \emph{eux} and \emph{yé}, did appear in the data but only once each. They were excluded both because it would be difficult to interpret their impact on the resulting statistical model and because it would require a more complicated model to be used. The factors were chosen mostly in order to make the results comparable to that which \citet{brown_pronominal_1988} and \citet{rottet_language_1995} found in terms of structural constraints on the realization of (ils).
-    
+
     The statistical model used to analyze the relationship between these variables was a binomial mixed-effects model, calculated using the \lstinline|glmer| function in the \lstinline|lme4| R package \citep{bates_lme4:_2019}. A mixed-effects model was chosen because, as can be seen by the frequency of tokens when broken down by speaker in Figure (\ref{fig:dist_by_speaker}), two speakers produced far fewer tokens than the others and one produced no tokens of \emph{ça} at all. Speaker was therefore used as a random intercept to account for these differences. Finally, my hypotheses for this model were the following:
     \begin{itemize}
       \item[$H_0$:] Structural factors have no impact on the realization of (ils).
       \item[$H_A$:] Structural factors do have an impact on the realization of (ils).
     \end{itemize}
-    
+
   \section{Results}
     \label{sec:results}
     Most generally, \emph{ça} was more common in the conducted interviews than \emph{ils} as a third person plural subject pronoun, though the results were far from categorical. This can be seen clearly in Figure (\ref{fig:dist_overall}). As has already been mentioned, however, not every speaker's general usage was identical, as can be seen in Figure (\ref{fig:dist_by_speaker}). The two older native speakers, Coulson and Talbot, for instance, had similar distributions, though Coulson used \emph{ils} much more often than Talbot. Ward, on the other hand, never used \emph{ça}, and Fitz used the two roughly the same amount.\footnote{It is notable, also, that Fitz was the speaker who produced the tokens of \emph{eux} and \emph{yé}.}
-    
+
     \begin{figure}[tb]
       \caption{Overall Distribution}
       \label{fig:dist_overall}
@@ -119,7 +119,7 @@
       <<dist_overall>>=
       @
     \end{figure}
-    
+
     \begin{figure}[tb]
       \caption{Distribution by Speaker}
       \label{fig:dist_by_speaker}
@@ -127,9 +127,9 @@
       <<dist_by_speaker>>=
       @
     \end{figure}
-    
+
     Using a binomial mixed-effects model to analyze the data more closely reveals how each factor influences the realization of (ils) individually. Table (\ref{tab:factor_tests}), which shows the coefficients and hypothesis test results for each factor when they are all included in the model, suggests that the animacy and specificity of the referent do not have statistically significant impacts on the realization of (ils), but the type of the following verb and the distance of any explicit mention of the referent from the pronoun are statistically significant factors. As such, the model was refit using only verb type and referent distance as factors. The coefficients for the final model can be seen in Table (\ref{tab:final_model}).
-    
+
     \begin{table}[tb]
       \caption{$z$-tests for each factor's association with the \emph{ils} variant of (ils)}
       \label{tab:factor_tests}
@@ -145,9 +145,9 @@
         Referent Distance (in the T-unit $\rightarrow$ not in) & \Sexpr{round(tp.glmer.coefs["REF.DISTANCENot in the T-unit", "Estimate"], 3)} & \Sexpr{round_any(tp.glmer.coefs["REF.DISTANCENot in the T-unit", "Pr(>|z|)"], 0.001, f = ceiling)}
       \end{tabular}
     \end{table}
-    
+
     The final model suggests that verb type is a much more important factor than referent distance. For verb type, \emph{ils} is less likely to appear when the following verb is not \emph{être} or \emph{avoir}. Likewise, \emph{ils} is less likely to appear when the referent is not mentioned within the same T-unit as the pronoun itself. Indeed, the probability of \emph{ils} in such a case, where there is a regular verb and great distance from the referent, is only \Sexpr{round(tp.glmer.final.ils.prob, 3)} according to this model.
-    
+
     \begin{table}[tb]
       \caption{Final model for the production of the \emph{ils} variant of (ils)}
       \label{tab:final_model}
@@ -161,9 +161,9 @@
         Referent Distance (in the T-unit $\rightarrow$ not in) & \Sexpr{round(tp.glmer.final.coefs["REF.DISTANCENot in the T-unit", "Estimate"], 3)}
       \end{tabular}
     \end{table}
-    
+
     Figure (\ref{fig:dist_by_verb_and_dist}) provides a useful visualization of the situation in this data when dividing it up according to verb type and referent distance. When moving between \emph{être} or \emph{avoir} and regular verbs. the frequencies of \emph{ça} and \emph{ils} reverse regardless of whether the referent is mentioned in the same T-unit or not. The contrast when moving between tokens whose referent is in the same T-unit and those whose referent is not in the same T-unit is not so stark. In fact, the general pattern does not change; the difference in frequency between the two pronouns simply shrinks. For regular verbs, for instance, \emph{ça} is always more frequent, but \emph{ils} is closer to the frequency of \emph{ça} when the referent is mentioned in the T-unit.
-    
+
     \begin{figure}[tb]
       \caption{Frequency of \emph{ça} vs \emph{ils} by verb type and distance from the referent}
       \label{fig:dist_by_verb_and_dist}
@@ -171,24 +171,24 @@
       <<dist_by_verb_and_dist>>=
       @
     \end{figure}
-    
+
   \section{Discussion}
     \label{sec:discussion}
     The results of the current analysis suggest that verb type is the most important factor for predicting which variant of (ils) will be produced. Regular verbs are associated with \emph{ça}, whereas \emph{être} and \emph{avoir} are associated with \emph{ils}. This result mostly corroborates \citeauthor{brown_pronominal_1988}'s (\citeyear{brown_pronominal_1988}) finding that \emph{ça} was dispreferred with modal verbs, as \emph{être} and \emph{avoir}, being auxiliary verbs, can easily be conceptualized as belonging to a broader category such as modal verbs. Although modal verbs in general did not serve as a category for the verb type factor in the present study, a cursory view of the transcriptions suggests that any preference for \emph{ils} in these cases would not be as strong as with auxiliary verbs only. It is in fact possible that the delineation of categories that \citeauthor{brown_pronominal_1988} used was simply not fine enough, although the current data would need to be coded for modal verbs to come to any solid conclusion in this regard.
-    
+
     There are, however, some limitations to the analyses performed on the data coming from the conducted sociolinguistic interviews. Firstly, with only four participants, it would be difficult to argue that these results are generalizable to a larger population. Indeed, these four speakers were raised in regions of Louisiana that are hundreds of miles apart from each other, making it difficult to generalize these results to even a single neighborhood or city. Secondly, the small sample of participants also makes it difficult to analyze social variation in this data. It does appear that there are differences related to the age of the speakers and/or to their first languages, particularly in Ward's production of (ils), but a much broader range of speakers would be necessary to begin drawing conclusions about the importance of different social factors.
-    
+
     To that end, I propose carrying out the translation task in Appendix (\ref{app:trans_task}) with a much larger sample of speakers. Translation tasks have three notable advantages to interviews: 1) they allow the researcher to obtain exactly the sort of tokens they are after, 2) they can be be carried out much more quickly than interviews, and 3) they can be transcribed much more quickly than interviews. Although this would not facilitate obtaining much depth of language data for each speaker, it would facilitate obtaining a breadth of language data across many speakers.
-    
+
     There is also an issue of whether the data obtained from translation tasks is natural speech. To whatever extent one subscribes to \citeauthor{labov_principles_1972}'s (\citeyear{labov_principles_1972}) vernacular principle and the primacy of said vernacular style, this does not appear to be an issue with Louisiana French speakers. Perhaps it is due to the infrequency with which they are able to find other French speakers with whom they can speak, or perhaps it is simply due to my own attempts to imitate their way of speaking, but there was no sign of linguistic self-consciousness during the interviews conducted for this study. Indeed, Coulson felt comfortable enough to use an English borrowing in his very first utterance, and Fitz's metalinguistic comments about using Louisiana Creole features suggested that he was positively anxious to show off his linguistic virtuosity, whereas one might otherwise expect these features to be stygmatized. Perhaps the only speaker to show any signs of self-consciousness was Ward, who was coincidentally the only speaker taking structured courses in French at the time of the interviews. It is possible that whatever overt commentary he receives on his language skills in classes has provided him incentive to prefer \emph{ils} and employ \emph{être} for compositional past tenses for verbs of change and movement where the other speakers used \emph{avoir} regardless of the verb. This distinction has in fact been analyzed sociolinguistically in other varieties of French since at least the 1970s \citep[e.g.,][]{sankoff_linguistic_1978}. There is thus reason to believe that the first translation Louisiana French speakers offer for each sentence of a translation task would be their typical utterance for similar sentences.
-    
+
     Finally, there remains the question of whether every combination of the structural factors laid out in this study can be combined. In particular, it is not clear whether there truly exists a inanimate form of the generic third person plural pronoun. For instance, the following sentences are less than satisfying attempts at creating such reference, though they are perhaps the best that can be done:
     \begin{itemize}
       \item (Être/Avoir-Generic-Inanimate-Close) Things, they are what they are.
       \item (Regular-Generic-Inanimate-Distant) Things would be good to have. They cost a lot, though.
     \end{itemize}
     However, it can perhaps be assumed that constructing quality sentences that target generic inanimate referents is difficult because it simply is not possible, in which case these attempts do no harm.
-    
+
     In conclusion, I have shown that structural constraints do in fact act upon the realization of the third person plural subject pronoun for the speakers that I interviewed. In particular, verb type was a powerful factor. However, there is still more to be learned in terms of social constraints. As such, I have formulated a translation task aimed at doing just that.
   \appendix
     \section{Appendix: Local People Interview Module}
