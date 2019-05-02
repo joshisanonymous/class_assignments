@@ -1,0 +1,47 @@
+\documentclass{article}
+% Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{natbib}
+    \bibliographystyle{apalike}
+  % Title info
+  \author{Joshua McNeill}
+  \title{The T-V distinction in the French NCC}
+  \date{\today}
+\begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("cleaning.R")
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis")
+  @
+  <<clean_data>>=
+  @
+  <<load_libraries_data>>=
+  @
+  \maketitle
+  \section{Introduction}
+    \label{sec:intro}
+    % What is the T-V distinction
+    % What do I want to figure out
+  \section{Methodology}
+    \label{sec:method}
+    % Where does the data come from
+    % How was it organized/coded
+    % What tests/models am I using
+    % What are my hypotheses
+    % Are assumptions met
+  \section{Results}
+    \label{sec:results}
+    % What does the general distribution look like
+    % What factors are significant
+    % How can this be modeled
+  \section{Conclusion}
+    \label{sec:conc}
+  \bibliography{References}
+\end{document}

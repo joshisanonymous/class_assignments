@@ -1,0 +1,86 @@
+\documentclass{article}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{natbib}
+    \bibliographystyle{apalike}
+  % Title info
+  \author{Joshua McNeill}
+  \title{Homework 6}
+  \date{\today}
+\begin{document}
+  <<settings_load_script, echo = FALSE>>=
+  read_chunk("homework6.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis")
+  @
+  <<load_libraries_data>>=
+  @
+  \maketitle
+  \section{Introduction}
+    In \citeauthor{labov_social_2006}'s (\citeyear{labov_social_2006}) famous rapid and anonymous (R\&A) study of department stores in New York City, he used the department stores as a proxy for determining whether social class was a associated with the realization of syllable final /r/. He obtained tokens of (r) by asking workers where items were that were on the fourth floor. He then pretended to not hear so as to get them to say it again more emphatically. The data he collected will be reanalyzed here with a binomial logistic regression model.
+  \section{Model Selection}
+    The first step is to determine which explanatory variables should be included in the model. The linguistic variable (r) will be the response variable in all cases. The explanator variables include word (i.e., \Sexpr{levels(ff$word)[1]} vs \Sexpr{levels(ff$word)[2]}), store (i.e., \Sexpr{levels(ff$store)[1]} vs \Sexpr{levels(ff$store)[2]} vs \Sexpr{levels(ff$store)[3]}), and emphasis (i.e., \Sexpr{levels(ff$emphasis)[1]} vs \Sexpr{levels(ff$emphasis)[2]}).
+    
+    An initial model that includes all the explanatory variables proves to be statistically significant (Likelihood Ratio (\Sexpr{round(ff.lrm$stats["d.f."], 0)}) = \Sexpr{round(ff.lrm$stats["Model L.R."], 3)}, $P<$ 0.001), meaning the deviance for the model that includes all the explanatory variables is not the same as the deviance for the model that does not include any of the explanatory variables. The concordance index $C$, which quantifies how well the model discriminates, is \Sexpr{round(ff.lrm$stats["C"], 3)}. This means that the model's prediction of which variant of (r) will be realized matched what was observed approximately \Sexpr{100*round(ff.lrm$stats["C"], 2)}\% of the time. This is an acceptable amount of discrimination, but perhaps not as good as is possible.
+    
+    To attempt to improve the model, a step-down process can be used to determine whether removing any of the explanatory variables improves the model's fit to the data. The result is that all explanatory variables should be kept as AIC only increases from the initial \Sexpr{round(ff.glm.bw$aic, 3)} as variables are removed from the model.
+    
+    The model might still be improved if there are interactions between the explanatory variables that have not yet been detected. However, there do not seem to be interaction affects for any combination of explanatory variables, as can be seen in the results in Table \ref{tab:int_anova}. It would therefore be best to leave interaction effects out of the model.
+    
+    \begin{table}
+      \caption{ANOVA tests for all possible interactions}
+      \label{tab:int_anova}
+      \centering
+      \begin{tabular}{l @{ } r @{ } r}
+        Interaction & $df$ & $P>$ \\
+        \hline
+        \hline
+        Word \& Emphasis & \Sexpr{ff.glm.int1.anova$Df[2]} & \Sexpr{round_any(ff.glm.int1.anova$`Pr(>Chi)`[2], 0.001, f = floor)} \\
+        Word \& Store & \Sexpr{ff.glm.int2.anova$Df[2]} & \Sexpr{round_any(ff.glm.int2.anova$`Pr(>Chi)`[2], 0.001, f = floor)} \\
+        Store \& Emphasis & \Sexpr{ff.glm.int3.anova$Df[2]} & \Sexpr{round_any(ff.glm.int3.anova$`Pr(>Chi)`[2], 0.001, f = floor)}
+      \end{tabular}
+    \end{table}
+    
+    The model should also be tested for multicollinearity between explanatory variables and overfitting for the observed data. For multicollinearity, the highest VIF score is only \Sexpr{round(max(ff.lrm.vif), 3)}, well below the conservative threshold of 5, above which one might suspect some multicollinearity. Likewise, a bootstrap validation ($B =$ 200) of the model shows that the optimism for the slope is less than \Sexpr{round_any(ff.lrm.plus.val["Slope", "optimism"], 0.001, f = ceiling)}, below the threshold of 0.050, meaning the mode is not overfitted for the data.
+  \section{Model Interpretation}
+    It appears that word, store, and emphasis are all associated with the realization of (r). As the coefficients in Table \ref{tab:coefs} show, (r) is pronounced less often in the word \emph{fourth} than in the word \emph{four}, more often in Macy's than in Klein's, even more often in Saks than in Klein's, and less often when not emphasizing.
+    
+    \begin{table}
+      \caption{Coefficients for the binomial logistic regression model with the realization of (r) as the response variable}
+      \label{tab:coefs}
+      \centering
+      \begin{tabular}{l @{ } r}
+        Term & Coefficient \\
+        \hline
+        \hline
+        (Intercept) & \Sexpr{round(ff.lrm$coefficients["Intercept"], 3)} \\
+        Four to fourth & \Sexpr{round(ff.lrm$coefficients["word=fouRth"], 3)} \\
+        Klein's to Macy's & \Sexpr{round(ff.lrm$coefficients["store=Macy's"], 3)} \\
+        Klein's to Saks & \Sexpr{round(ff.lrm$coefficients["store=Saks"], 3)} \\
+        Emphasized to unemphasized & \Sexpr{round(ff.lrm$coefficients["emphasis=normal"], 3)}
+      \end{tabular}
+    \end{table}
+    
+    Having established the final model, it can now be used to predict realizations of (r) given a particular set of circumstances. For instance, an employee of Klein's pronouncing the worth \emph{fourth} without emphasis would have their realization of (r) represented with Equation \ref{eq:emp_kleins}, which yields a result of \Sexpr{round(ff.lrm$coefficients["Intercept"] + 0 * 1 + ff.lrm$coefficients["word=fouRth"] * 1 + ff.lrm$coefficients["emphasis=normal"] * 1, 3)}, or in simple odds \Sexpr{round(exp(ff.lrm$coefficients["Intercept"] + 0 * 1 + ff.lrm$coefficients["word=fouRth"] * 1 + ff.lrm$coefficients["emphasis=normal"] * 1), 3)}, which means that this speaker would be \Sexpr{100 * round(exp(ff.lrm$coefficients["Intercept"] + 0 * 1 + ff.lrm$coefficients["word=fouRth"] * 1 + ff.lrm$coefficients["emphasis=normal"] * 1), 3)}\% more likely to pronounce [r] in this situation.
+    
+    \begin{equation}
+      \label{eq:emp_kleins}
+      g \left( x \right) = \Sexpr{round(ff.lrm$coefficients["Intercept"], 3)} + 0 \times 1 + \Sexpr{round(ff.lrm$coefficients["word=fouRth"], 3)} \times 1 + \Sexpr{round(ff.lrm$coefficients["emphasis=normal"], 3)} \times 1
+    \end{equation}
+    
+    \begin{equation}
+      \label{eq:emp_saks}
+      g \left( x \right) = \Sexpr{round(ff.lrm$coefficients["Intercept"], 3)} + \Sexpr{round(ff.lrm$coefficients["store=Saks"], 3)} \times 1 + \Sexpr{round(ff.lrm$coefficients["word=fouRth"], 3)} \times 0 + \Sexpr{round(ff.lrm$coefficients["emphasis=normal"], 3)} \times 0
+    \end{equation}
+    
+    In the case of an employee of Saks pronouncing \emph{floor} with emphasis, their behavior can be predicted with Equation \ref{eq:emp_saks}. This yields a result of \Sexpr{round(ff.lrm$coefficients["Intercept"] + ff.lrm$coefficients["store=Saks"] * 1 + ff.lrm$coefficients["word=fouRth"] * 0 + ff.lrm$coefficients["emphasis=normal"] * 0, 3)}, which in simple odds is \Sexpr{round(exp(ff.lrm$coefficients["Intercept"] + ff.lrm$coefficients["store=Saks"] * 1 + ff.lrm$coefficients["word=fouRth"] * 0 + ff.lrm$coefficients["emphasis=normal"] * 0), 3)}, meaning it is \Sexpr{100 * round(exp(ff.lrm$coefficients["Intercept"] + ff.lrm$coefficients["store=Saks"] * 1 + ff.lrm$coefficients["word=fouRth"] * 0 + ff.lrm$coefficients["emphasis=normal"] * 0), 3)}\% more likely to pronounce [r] in this situation.
+    
+    These results corroborate \citeauthor{labov_social_2006}'s conclusions. Those in more prestigious stores pronounce [r] more often, which is the greatest explanatory factor in the data. The word \emph{fourth} works against this, but not to as great an extent. Emphasis was thought to by an indicator of style difference, and this is represented in the model, but its effect is much smaller than that of the other explanatory variables.
+  \bibliography{References}
+\end{document}

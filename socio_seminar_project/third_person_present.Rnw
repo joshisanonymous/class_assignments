@@ -1,0 +1,270 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1) Run cleaning.R first %
+% 2) Compile with XeLaTeX %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Beamer settings
+  \usetheme{CambridgeUS}
+  \usecolortheme{seagull}
+  \usefonttheme{professionalfonts}
+  \usefonttheme{serif}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{natbib}
+    \bibliographystyle{apalike}
+  % Title info
+  \author{Joshua McNeill}
+  \institute[LING8980]{Current Methods in Sociolinguistics}
+  \title[3P Plural Subject Pronouns]{3rd Person Subject Pronouns in Louisiana French}
+  \date{April 25th, 2019}
+\begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis",
+                 fig.height = 2.35,
+                 fig.width = 3.5)
+  @
+  <<load_libraries_data>>=
+  @
+  \begin{frame}
+    \titlepage
+    \tiny{Data and code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/socio_seminar_project}}
+  \end{frame}
+  \begin{frame}
+    \tableofcontents
+  \end{frame}
+  \AtBeginSection[]
+    {
+    \begin{frame}
+      \tableofcontents[currentsection]
+    \end{frame}
+    }
+  \section{Introduction}
+    \begin{frame}{Phenomenon}
+      \begin{block}{}
+        3rd person subject pronouns in Louisiana French take many forms:
+        \begin{itemize}
+          \item \emph{ça}, \emph{ils}, \emph{eux}, \emph{eux-autres}, \emph{yé}
+        \end{itemize}
+      \end{block}
+      \begin{block}{From interviews}
+        \begin{itemize}
+          \item Éoù tu restes, \alert{ça} vend les écrevisses bouillies.\\
+            `Wherever you live, they sell boiled crawfish.'
+          \item \alert{Ils} ont cassé les maisons, you know?\\
+            `They demolished the houses, you know?'
+          \item \alert{Yé} té trouver bâton-yé.\\
+            `They found sticks.'
+          \item \alert{Eux} avait une manière à penser de LSU.\\
+            `They had a way of thinking about LSU.'
+        \end{itemize}
+      \end{block}
+    \end{frame}
+    \begin{frame}{Elsewhere}
+      \begin{block}{Typically}
+        Two 3p plural subject pronouns exist: \emph{ils} and \emph{elles}
+      \end{block}
+      \begin{block}<2->{In the past}
+        Grevisse (1969) suggested that \emph{ça} had the following uses in 17th century France \citep[as cited in][pp.~123-124]{brown_pronominal_1988}:
+        \begin{itemize}
+          \item An emotive pronoun that can refer to a person/persons
+          \item A pleonastic pronoun for weather\\
+            In LA today: \emph{ça mouille} or \emph{ça fait chaud}
+        \end{itemize}
+      \end{block}
+    \end{frame}
+    \begin{frame}{In Louisiana}
+      \begin{block}{Social constraints}
+        \begin{itemize}
+          \item Age\\
+            Under 50 preferred \emph{ça} \citep[p.~178]{brown_pronominal_1988}\\
+            Under 55 preferred \emph{eux}, (over 55 had no preference) \citep[p.207]{rottet_language_1995}
+          \item Locality\\
+            Avoyelles Parish preferred \emph{ça} and Assumption Parish dispreferred \citep[p.~176]{brown_pronominal_1988}
+        \end{itemize}
+      \end{block}
+    \end{frame}
+    \begin{frame}{In Louisiana cont.}
+      \begin{block}{Structural constraints}
+        \begin{itemize}
+          \item Referent\\
+            \emph{Ça} became less preferred as one moved towards more concrete and animate referents (\citeauthor{brown_pronominal_1988}, \citeyear[p.~168]{brown_pronominal_1988}; \citeauthor{rottet_language_1995}, \citeyear[pp.~209-210]{rottet_language_1995})
+          \item Verb type\\
+            \emph{Ça} became less preferred as one moved towards modal verbs \citep[pp.~173-174]{brown_pronominal_1988}
+        \end{itemize}
+      \end{block}
+      \begin{block}<2->{Objective}
+        To analyze the structural constraints on the realization of the 3p plural subject pronoun, henceforth (ils), following \citet[pp.~81-82]{rottet_language_1995}
+      \end{block}
+    \end{frame}
+  \section{Methodology}
+    \begin{frame}{Data}
+      \begin{block}{}
+        \begin{table}[h]
+          \caption{Participants\footnote{All names were anonymized}}
+          \label{tab:participants}
+          \begin{tabular}{l @{ } r @{ } r @{ } r @{ } r @{ } r}
+            Speaker & Gender & Age & Residence & Origin & 1st Language\\
+            \hline
+            \hline
+            Coulson & Male & 68 & Baton Rouge & Chataignier & French\\
+            Talbot & Male & 71 & Youngsville & Lafayette & French\\
+            Ward & Male & 47 & New Orleans & Gramercy & English\\
+            Fitz & Male & 34 & Baton Rouge & Baton Rouge & English
+          \end{tabular}
+        \end{table}
+      \end{block}
+      \begin{block}<2->{Interviews}
+        All interviews were 30+ minutes and were conducted over Skype.
+      \end{block}
+    \end{frame}
+    \begin{frame}{Analysis}
+      \begin{block}{Model}
+        Data was fit to a binomial mixed-effects model using the \texttt{glmer} function from the \texttt{lme4} package \citep{bates_lme4:_2019}
+      \end{block}
+      \begin{block}<2->{Response variable}
+        Levels of (ils): \emph{ça} vs \emph{ils}
+      \end{block}
+      \begin{block}<3->{Initial factors}
+        \begin{itemize}
+          \item Verb type: \emph{être} or \emph{avoir} vs regular verbs
+          \item Animacy: animate vs inanimate
+          \item Specificity of referent: specific vs generic
+          \item Distance of referent: in the T-unit vs outside of the T-unit
+        \end{itemize}
+      \end{block}
+    \end{frame}
+  \section{Results}
+    \begin{frame}{General}
+      \begin{block}{}
+        \begin{figure}
+          \caption{Overall Distribution}
+          \label{fig:dist_overall}
+          <<dist_overall>>=
+          @
+        \end{figure}
+      \end{block}
+    \end{frame}
+    \begin{frame}{More Specific}
+      \begin{block}{}
+        \begin{figure}
+          \caption{Distribution by Speaker}
+          \label{fig:dist_by_speaker}
+          <<dist_by_speaker>>=
+          @
+        \end{figure}
+      \end{block}
+    \end{frame}
+    \begin{frame}{Tests}
+      \begin{block}{}
+        \begin{table}
+          \caption{z-tests for each factor's association with the \emph{ils} variant of (ils)}
+          \label{tab:factor_tests}
+          \begin{tabular}{l @{ } r @{ } r}
+            Factor & Coefficient & $P<$\\
+            \hline
+            \hline
+            (Intercept) & \Sexpr{round(tp.glmer.coefs["(Intercept)", "Estimate"], 3)} & \Sexpr{round_any(tp.glmer.coefs["(Intercept)", "Pr(>|z|)"], 0.001, f = ceiling)}\\
+            \alert<2->{Verb Type (\emph{être/avoir} $\rightarrow$ regular)} & \alert<2->{\Sexpr{round(tp.glmer.coefs["VERB.TYPERegular Verb", "Estimate"], 3)}} & \alert<2->{\Sexpr{round_any(tp.glmer.coefs["VERB.TYPERegular Verb", "Pr(>|z|)"], 0.001, f = ceiling)}}\\
+            Referent Animacy (animate $\rightarrow$ inanimate) & \Sexpr{round(tp.glmer.coefs["ANIMACYInanimate Referent", "Estimate"], 3)} & \Sexpr{round_any(tp.glmer.coefs["ANIMACYInanimate Referent", "Pr(>|z|)"], 0.001, f = ceiling)}\\
+            Referent Specificity (generic $\rightarrow$ specific) & \Sexpr{round(tp.glmer.coefs["SPECIFICITYSpecific Referent", "Estimate"], 3)} & \Sexpr{round_any(tp.glmer.coefs["SPECIFICITYSpecific Referent", "Pr(>|z|)"], 0.001, f = ceiling)}\\
+            \alert<2->{Referent Distance (in the T-unit $\rightarrow$ not in)} & \alert<2->{\Sexpr{round(tp.glmer.coefs["REF.DISTANCENot in the T-unit", "Estimate"], 3)}} & \alert<2->{\Sexpr{round_any(tp.glmer.coefs["REF.DISTANCENot in the T-unit", "Pr(>|z|)"], 0.001, f = ceiling)}}
+          \end{tabular}
+        \end{table}
+      \end{block}
+    \end{frame}
+    \begin{frame}{Model}
+      \begin{block}{}
+        \begin{table}
+          \caption{Final model for the production of the \emph{ils} variant of (ils)}
+          \label{tab:final_model}
+          \begin{tabular}{l @{ } r}
+            Factor & Coefficient\\
+            \hline
+            \hline
+            (Intercept) & \Sexpr{round(tp.glmer.final.coefs["(Intercept)", "Estimate"], 3)}\\
+            Verb Type (\emph{être/avoir} $\rightarrow$ regular) & \Sexpr{round(tp.glmer.final.coefs["VERB.TYPERegular Verb", "Estimate"], 3)}\\
+            Referent Distance (in the T-unit $\rightarrow$ not in) & \Sexpr{round(tp.glmer.final.coefs["REF.DISTANCENot in the T-unit", "Estimate"], 3)}
+          \end{tabular}
+        \end{table}
+      \end{block}
+    \end{frame}
+    \begin{frame}{Visualization}
+      \begin{block}{}
+        \begin{figure}
+          \caption{Frequency of \emph{ça} vs \emph{ils} by verb type and distance from the referent}
+          \label{fig:dist_by_verb_and_dist}
+          <<dist_by_verb_and_dist>>=
+          @
+        \end{figure}
+      \end{block}
+    \end{frame}
+  \section{Discussion}
+  \begin{frame}{Conclusion}
+    \begin{block}{}
+      Among these four speakers, verb type is the overriding structural factor predicting the realization of (ils):
+      \begin{itemize}
+        \item \emph{ça} is preferred with regular verbs
+        \item \emph{ils} is preferred with \emph{être} and \emph{avoir}
+      \end{itemize}
+    \end{block}
+    \begin{block}<2->{}
+      This fits with \citeauthor{brown_pronominal_1988}'s (\citeyear{brown_pronominal_1988}) finding that \emph{ça} is dispreferred with modal verbs.
+    \end{block}
+  \end{frame}
+  \begin{frame}{Limitations}
+    \begin{block}{}
+      The sample of speakers only being four entails two limitations:
+      \begin{itemize}
+        \item These results can't be generalized
+        \item No social variation can be analyzed quantitatively
+      \end{itemize}
+    \end{block}
+  \end{frame}
+  \begin{frame}{Further Research}
+    \begin{block}{}
+      Oral translation tasks may rectify these limitations:
+      \begin{itemize}
+        \item They can be carried out and transcribed much more quickly\\
+          $\rightarrow$ Larger sample of speakers\\
+      \end{itemize}
+    \end{block}
+    \begin{block}<2->{Design}
+      \begin{itemize}
+        \item Short enough to be carried out and transcribed quickly
+        \item Include phrases that would likely be translated in such a way as to obtain one token for each combination of structural variables from each participant
+        \item Presented to participants in a random order
+      \end{itemize}
+    \end{block}
+  \end{frame}
+  \begin{frame}{Translation Task Sample}
+    \begin{block}{Probably good}
+      \begin{itemize}
+        \item (Être/Avoir-Specific-Animate-Close) My kids, they have kids, too.
+        \item (Être/Avoir-Generic-Animate-Distant) They closed the school.
+        \item (Regular-Specific-Inanimate-Close) Those roads, they run from here to Lafayette.
+      \end{itemize}
+    \end{block}
+    \begin{block}<2->{Questionable to impossible}
+      \begin{itemize}
+        \item (Être/Avoir-Generic-Inanimate-Close) Things, they are what they are.
+        \item (Regular-Generic-Inanimate-Distant) Things would be good to have. They cost a lot, though.
+      \end{itemize}
+    \end{block}
+  \end{frame}
+  \begin{frame}{Fin}
+    \begin{block}{}
+      Data and code avaiable at \url{https://github.com/joshisanonymous/class_assignments/tree/master/socio_seminar_project}
+    \end{block}
+  \end{frame}
+  \section{References}
+    \bibliography{References}
+\end{document}
