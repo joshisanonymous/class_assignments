@@ -1,0 +1,43 @@
+! The goal: Create a transducer that can analyze verbal morphosyntax in naturally
+!           occurring Louisiana French speech that may contain French verbs,
+!           borrowed English verbs, and Creole or French verbal morphosyntax.
+!           This would effectively be a sort of speech recognition system for
+!           situations with ample code-switching between three codes.
+!
+! Example: If the input is "je parlais," I want "je parl+Past+Imptive"
+
+Multichar_Symbols +Inf +Pres +Sg +Pl +2p +3p
+
+LEXICON Root
+                        ClassEr ;
+                        ClassIr ;
+                        ClassRe ;
+                        ClassEng;
+
+
+LEXICON erClass
+parl                    VInf    ;
+
+LEXICON VInf
+! Infinitive
++Inf:er                 #       ;
+! Present
++Pres:e                 #       ; ! je vous il elle on ça vous-autres nous-autres eux eux-autres Creole (mo to yé etc)
++Pres+2p+Sg:ez          #       ; ! vous
++Pres+2p+Pl:ez          #       ; ! vous
++Pres+3p+Pl:ent         #       ; ! ils elles
+! Past
+! Very underspecified
++Ptive:er
++Itive+1p+Sg:ais
++Itive+2p+Sg:ais
++Itive+3p:
+
+
+
+
+parlé
+
+parlais
+parlait
+parlaient
