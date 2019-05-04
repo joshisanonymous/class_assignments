@@ -119,8 +119,8 @@
             Variable & Coefficient & $P$-value ($<$) \\
             \hline
             \hline
-            Gender (Female $\rightarrow$ Male) & \Sexpr{round(tv.lrm$coefficients["GENDER=male"], 3)} & \Sexpr{round_any(tv.lrm.anova["GENDER","P"], 0.001, f = ceiling)} \\
-            Region (Not Paris $\rightarrow$ Paris) & \Sexpr{round(tv.lrm$coefficients["REGION=paris"], 3)} & \Sexpr{round_any(tv.lrm.anova["REGION","P"], 0.001, f = ceiling)} \\
+            Gender (Female $\rightarrow$ Male) & \Sexpr{round(tv.lrm$coefficients["GENDER=Male"], 3)} & \Sexpr{round_any(tv.lrm.anova["GENDER","P"], 0.001, f = ceiling)} \\
+            Region (Not Paris $\rightarrow$ Paris) & \Sexpr{round(tv.lrm$coefficients["REGION=Paris"], 3)} & \Sexpr{round_any(tv.lrm.anova["REGION","P"], 0.001, f = ceiling)} \\
             Age & \Sexpr{round(tv.lrm$coefficients["AGE"], 3)} & \Sexpr{round_any(tv.lrm.anova["AGE","P"], 0.001, f = ceiling)}
           \end{tabular}
         \end{table}
@@ -139,7 +139,7 @@
       \begin{block}{}
         Males use \emph{vous} with male friends in the NCCFr less than females:
         \begin{itemize}
-          \item A model that includes only gender has a coefficient of \Sexpr{round(tv.lrm.final$coefficients["GENDER=male"], 3)} and intercept of \Sexpr{round(tv.lrm.final$coefficients["Intercept"], 3)}
+          \item A model that includes only gender has a coefficient of \Sexpr{round(tv.lrm.final$coefficients["GENDER=Male"], 3)} and intercept of \Sexpr{round(tv.lrm.final$coefficients["Intercept"], 3)}
         \end{itemize}
       \end{block}
       \begin{block}<2->{}
