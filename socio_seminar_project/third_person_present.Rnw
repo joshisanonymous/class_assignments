@@ -36,7 +36,7 @@
   @
   \begin{frame}
     \titlepage
-    \tiny{Data and code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/socio_seminar_project}}
+    \tiny{Code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/socio_seminar_project}}
   \end{frame}
   \begin{frame}
     \tableofcontents
