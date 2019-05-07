@@ -15,7 +15,7 @@
   % Title info
   \author{Joshua McNeill}
   \title{The T-V distinction in the French NCC\footnote{Code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/quant_meths_project}.}}
-  \date{May 5th, 2019}
+  \date{May 7th, 2019}
 \begin{document}
   <<settings_load_scripts, echo = FALSE>>=
   read_chunk("cleaning.R")
@@ -36,11 +36,11 @@
     \label{sec:intro}
     The T-V distinction traditionally refers to a contrast in pronominal forms of address that is constrained by the power relationship between two speakers as well as their social solidarity or lack thereof \citep{brown_pronouns_1960}. For example, English speakers once employed either \emph{thou} or \emph{you/ye} as a subject pronoun when addressing their interlocutor, which \citet{brown_pronouns_1960} supposed to have been based on whether the interlocutor was familiar or someone from whom they wanted to maintain a polite distance (p.~252). The phenomenon in European languages is assumed to stem from its existence in Latin, in which the respective pronouns were \emph{tu} and \emph{vos}, hence ``T-V'' \citep[p.~254]{brown_pronouns_1960}. Today, the T-V distinction is still a salient component of French in the form of the pronouns \emph{tu} and \emph{vous}, matching the initial letters of the earlier Latin pronouns.
 
-    The interpretation of the T-V distinction in French has at times been challenged, however. \citet{brown_pronouns_1960} set the stage for the debate by introducing the idea that the choice of terms of address could be boiled down to power and solidarity. Their argument was mostly based on their own intuitive reasoning, though they did carry out a survey questionnaire to learn more about which second person pronouns upper-class men in France choose using a Likert scale \citep[pp.~262-263]{brown_pronouns_1960}. Their results showed that in only 11\% of hypothetical encounters between social unequals did respondants claim that the choice of \emph{tu} or \emph{vous} would not be reciprocal \citep[p.~261]{brown_pronouns_1960}. They concluded from this that solidarity had become the most important factor in choosing terms of address by that time. This means that they did not present this information as proof of their interpretation but as an example of the application of their interpretation. Still, the information they provided is useful for understanding the distribution of \emph{tu} versus \emph{vous}.
+    The interpretation of the T-V distinction in French has at times been challenged, however. \citet{brown_pronouns_1960} set the stage for the debate by introducing the idea that the choice of terms of address could be boiled down to power and solidarity. Their argument was mostly based on their own intuitive reasoning, though they did carry out a survey questionnaire to learn more about which second person pronouns upper-class men in France chose using a Likert scale \citep[pp.~262-263]{brown_pronouns_1960}. Their results showed that in only 11\% of hypothetical encounters between social unequals did respondants claim that the choice of \emph{tu} or \emph{vous} would not be reciprocal \citep[p.~261]{brown_pronouns_1960}. They concluded from this that solidarity had become the most important factor in choosing terms of address by that time. This means that they did not present this information as proof of their interpretation but as an example of the application of their interpretation. Still, the information they provided is useful for understanding the distribution of \emph{tu} versus \emph{vous}.
 
-    Several years later, \citet{lambert_use_1967} conducted a similar survey with teenage males in Quebec City. His questionnaires simply asked respondants to identify which pronouns they use and receive with different interlocutors. The results also showed reciprocity between friends and between strangers in public but clear non-reciprocity with grandparents and extended family \citep[p.~615]{lambert_use_1967}. Once again, \citeauthor{lambert_use_1967}'s results did not provide direct evidence for the validity of \citeauthor{brown_pronouns_1960}'s interpretation of the T-V distinction, but he was able to use the ideas of power and solidarity to effectively explain the distribution he found.
+    Several years later, \citet{lambert_use_1967} conducted a similar survey with teenage males in Quebec City. His questionnaires simply asked respondants to identify which pronouns they used and received with different interlocutors. The results also showed reciprocity between friends and between strangers in public but clear non-reciprocity with grandparents and extended family \citep[p.~615]{lambert_use_1967}. Once again, \citeauthor{lambert_use_1967}'s results did not provide direct evidence for the validity of \citeauthor{brown_pronouns_1960}'s interpretation of the T-V distinction, but he was able to use the ideas of power and solidarity to effectively explain the distribution he found.
 
-    Much later on, \citet{morford_social_1997} argued extensively against the idea that power and solidarity alone can explain the choice of terms of address in French. She claimed that this two factors oversimplify the dynamics of interactions, which she supported with extensive ethnographic data. For instance, one of her informants explained that her parents went to lengths to address all friends with \emph{tu} as a sort of liberal political stance rather than as an effort to recognize power relations or create solidarity \citep[pp.~19-20]{morford_social_1997}. However, while \citeauthor{morford_social_1997} successfully highlighted the complexity of pronoun choice in French, it is not entirely clear that such stances cannot be characterized purely in terms of power and solidarity. Indeed, the idea in this case seems to be that liberals in France value egalitarianism and hence solidarity.
+    Much later on, \citet{morford_social_1997} argued extensively against the idea that power and solidarity alone can explain the choice of terms of address in French. She claimed that these two factors oversimplify the dynamics of interactions, which she supported with extensive ethnographic data. For instance, one of her informants explained that her parents went to lengths to address all friends with \emph{tu} as a sort of liberal political stance rather than as an effort to recognize power relations or create solidarity \citep[pp.~19-20]{morford_social_1997}. However, while \citeauthor{morford_social_1997} successfully highlighted the complexity of pronoun choice in French, it is not entirely clear that such stances cannot be characterized purely in terms of power and solidarity. Indeed, the idea in this case seems to be that liberals in France value egalitarianism and hence solidarity.
 
     The studies mentioned above in part focused on the appropriate way to interpret the T-V distinction in French and in part provided some evidence for how \emph{tu} and \emph{vous} are distributed socially. However, there is still much that can be learned by performing more quantitative analyses of pronoun choice. For instance, while survey questionnaires have the advantage of being able to capture a wide breadth of social classes, some important broad social classes were left out of these studies, such as women. Survey questionnaires also rely entirely on self-reported usage. In the case of a fairly overt variable like T-V choice, self-reported usage may in fact be accurate, but it could still be beneficial to look at language in use to ascertain how T-V choice plays out when speakers are not making a conscious effort to think about which pronouns they are using. The objective in the current study is thus to carry out a quantitative analysis of the social factors that may or may not play a role in the use of \emph{tu} versus \emph{vous} in natural conversations. Specifically, I ask the following question:
     \begin{itemize}
@@ -48,32 +48,32 @@
     \end{itemize}
   \section{Methodology}
     \label{sec:method}
-    The data for this study comes from the Nijmegen Corpus of Casual French (NCCFr) \citep{torreira_nijmegen_2010}. There were 46 participants who were recorded in pairs for the NCCFr, though \Sexpr{46 - nrow(tv[!duplicated(tv$SPEAKER),])} produced no tokens of second person singular pronouns and so were not included in the present analysis. The process involved a confederates who were students at the University of Paris 3 Sorbonne Nouvelle each recruiting two friends to participate. All three would begin conversing in a room without any researchers present until the confederate was called out by a researcher under the guise of having to fix a malfunctioning microphone. The two participants remained in the room and continued to have normal discussions for roughly 40 minutes. This section of the procedure was recorded and makes up the actual corpus.
+    The data for this study comes from the Nijmegen Corpus of Casual French (NCCFr) \citep{torreira_nijmegen_2010}. There were 46 participants who were recorded in pairs for the NCCFr, though \Sexpr{46 - nrow(tv[!duplicated(tv$SPEAKER),])} produced no tokens of second person singular pronouns and so were not included in the present analysis. The process involved confederates who were students at the University of Paris 3 Sorbonne Nouvelle each recruiting two friends to participate. All three would begin conversing in a room without any researchers present until the confederate was called out by a researcher under the guise of having to fix a malfunctioning microphone. The two participants remained in the room and continued to have normal discussions for roughly 40 minutes. This section of the procedure was recorded and makes up the actual corpus.
 
     The participants were not only friends but were also the same gender, by design. Confederates were instructed to recruit two friends who shared their own gender. Naturally, due to the confederates being college age, the participants were almost all \Sexpr{min(tv$AGE)} to \Sexpr{levels(as.factor(tv$AGE))[length(levels(as.factor(tv$AGE))) - 2]} years old, only one being \Sexpr{levels(as.factor(tv$AGE))[length(levels(as.factor(tv$AGE))) - 1]} and one being \Sexpr{levels(as.factor(tv$AGE))[length(levels(as.factor(tv$AGE)))]}. Of the participants included in the present analysis, \Sexpr{nrow(tv[!duplicated(tv$SPEAKER) & tv$REGION == "Paris",])} were also from the Paris metropolitan area, the rest being from cities and towns in northern France. The speakers were however balanced for gender.
-    
-    The NCCFr has typically been used in phonetic studies and computational linguistic studies. The fact that the corpus is an audio corpus has facilitated its use in phonetic studies \citep[e.g.,][]{torreira_vowel_2011, torreira_realization_2011}. However, the corpus also contains video recordings of the conversations that took place, leading to the incorporation of visual data in at least one phonetic study \citep{torreira_phonetic_2015}. Additionally, the corpus has been used in research on speech recognition \citep[e.g.,][]{rouas_comparaison_2010}.
-    
-    However, the NCCFr is also appropriate for sociolinguistic studies. The fact that the recordings are of speech in a natural setting means that the resulting data is similar to what would typically be collected through sociolinguistic interviews. The creators of the corpus also included several social characteristics of the participants, those being their gender, ages, and regions of origin. While economic and ethnic details are left out, and while the ages do not cover a broad range, these details are at least good enough to get some preliminary sociolinguistic results to prepare for conducting larger studies.
-    
-    The corpus was thus coded for gender, age, and region of origin. Gender included both male and female, and age is given in years, meaning it is treated as a quantitative variable in the current analysis. The region of origin includes the \emph{Île-de-France}, roughly equivalent the Paris metropolitan area, and several regions of northern France, specifically Poitou-Charentes, Nord-Pas-de-Calais, Limousin, Centre-Val de Loire, Upper Normandy, Lower Normandy, Burgundy, and Brittany. Naturally, the description of northern France here is fairly loose. Since the number of participants from each of these regions is not great, they have been collapsed into one group for the present analysis, called simply ``not Paris''.
-    
-    Linguistically, only the response variable (T-V) was coded for. This is due to the very large number of tokens ($n =$ \Sexpr{nrow(tv)}) and the limited amount of time available to code by hand. Technically, (T-V) includes different cases for both \emph{vous} and \emph{tu}. The former, however, is identical in all cases: always \emph{vous}. The latter, however, takes the form of \emph{tu} in subject position, \emph{te} as the object of a verb, and \emph{toi} as either a disjunctive pronoun or as the object of a preposition. These three forms were collapsed into \emph{tu} for two reasons: 1) I assumed that speakers would not oscillate between \emph{tu} and \emph{vous} within any single clause, and the real interest here is which term of address is being used in most utterances, and 2) coding \emph{vous} for case as well would require manual coding, which was impractical for the given analysis considering the number of tokens and time constraints.
-    
-    Tokens of (T-V) themselves were extracted from the corpus transcripts using a \lstinline|bash| script. The central piece of the script is a regular expression in of the form \lstinline+^(\-?tu|toi|te|t'|\-?vous)$+ which eventually outputs to a csv file. I considered this regex sufficient to extract all tokens as the corpus was transcribed in typical prescriptivist style writing so that, for example, \orth{vs} for \orth{vous} is not likely to be in the transcription as this is normally used in casual writing in text messaging and on services such as Twitter.
-    
+
+    The NCCFr has typically been used in phonetic studies and computational linguistics studies. The fact that the corpus is an audio corpus has facilitated its use in phonetic studies \citep[e.g.,][]{torreira_vowel_2011, torreira_realization_2011}. However, the corpus also contains video recordings of the conversations that took place, leading to the incorporation of visual data in at least one phonetic study \citep{torreira_phonetic_2015}. Additionally, the corpus has been used in research on speech recognition \citep[e.g.,][]{rouas_comparaison_2010}.
+
+    However, the NCCFr is also appropriate for sociolinguistic studies. The fact that the recordings are of speech in a natural setting means that the resulting data is similar to what would typically be collected through sociolinguistic interviews. The creators of the corpus also included several social characteristics of the participants, those being their gender, age, and region of origin. While economic and ethnic details are left out, and while the ages do not cover a broad range, these details are at least good enough to get some preliminary sociolinguistic results to prepare for conducting larger studies.
+
+    The corpus was thus coded for gender, age, and region of origin. Gender includes both male and female, and age is given in years, meaning it is treated as a quantitative variable in the current analysis. The region of origin includes the \emph{Île-de-France}, roughly equivalent to the Paris metropolitan area, and several regions of northern France, specifically Poitou-Charentes, Nord-Pas-de-Calais, Limousin, Centre-Val de Loire, Upper Normandy, Lower Normandy, Burgundy, and Brittany. Naturally, the description of northern France here is fairly loose. Since the number of participants from each of these regions is not great, they have been collapsed into one group for the present analysis, called simply ``not Paris''.
+
+    Linguistically, only the response variable (T-V) was coded for. This is due to the very large number of tokens ($n =$ \Sexpr{nrow(tv)}) and the limited amount of time available to code by hand. Technically, (T-V) includes different cases for both \emph{vous} and \emph{tu}. The former is identical in all cases: always \emph{vous}. The latter, however, takes the form of \emph{tu} in subject position, \emph{te} as the object of a verb, and \emph{toi} as either a disjunctive pronoun or as the object of a preposition. These three forms were collapsed into \emph{tu} for two reasons: 1) I assumed that speakers would not oscillate between \emph{tu} and \emph{vous} within any single clause, and the real interest here is which term of address is being used in most utterances, and 2) coding \emph{vous} for case as well would require manual coding, which was impractical for the given analysis considering the number of tokens and time constraints.
+
+    Tokens of (T-V) themselves were extracted from the corpus transcripts using a \lstinline|bash| script. The central piece of the script is a regular expression in of the form \lstinline+^(\-?tu|toi|te|t'|\-?vous)$+, which eventually outputs to a csv file. I considered this regex sufficient to extract all tokens as the corpus was transcribed in typical prescriptivist style writing so that, for example, \orth{vs} for \orth{vous} is not likely to be in the transcription as this is normally used in casual writing in text messaging and on services such as Twitter.
+
     The model used in the analysis of (T-V) realization in the NCCFr was a binomial logistic regression model. The response variable was (T-V) and the factors included in the model were gender, region, and age. The hypotheses for the model were non-directional:
     \begin{itemize}
       \item[$H_0$:] Gender, region, and age have no impact on the realization of (T-V).
       \item[$H_A$:] Gender, region, and/or age \emph{do} have an impact on the realization of (T-V).
     \end{itemize}
-    The $\alpha$ level for these hypothesis tests is set to 0.05.
-    
-    While these non-directional hypotheses are indicative of my lack of position on the expected results, I do still have some expectations in terms of the general distribution of (T-V). As the literature suggests \citep[e.g.,][p.~615]{lambert_use_1967}, friends tend to use \emph{tu} reciprocally amongst each other. While this does not rule out the possibility of differences in the realization as \emph{vous} between subgroups of the participants, it would not be surprising to find that \emph{vous} is generally rare.
+    The $\alpha$ level for these hypothesis tests was set to 0.05.
+
+    While these non-directional hypotheses were indicative of my lack of position on the expected results, I did still have some expectations in terms of the general distribution of (T-V). As the literature suggests \citep[e.g.,][p.~615]{lambert_use_1967}, friends tend to use \emph{tu} reciprocally amongst each other. While this would not rule out the possibility of differences in the realization as \emph{vous} between subgroups of the participants, it would not have be surprising to find that \emph{vous} was generally rare.
   \section{Results}
     \label{sec:results}
     As can be seen in Figure \ref{fig:tv_overall}, \emph{tu} is in fact much more frequent in the corpus than \emph{vous}, overall. This general distribution seems to hold even when subdividing the the data by gender and region, as can be seen in Figure \ref{fig:tv_factors}. Likewise, Figure \ref{fig:tv_age} appears to show a fairly uniform distribution in the proportion of \emph{vous} for each age. However, while \emph{vous} is clearly not the preferred term of address in these exchanges, and while it appears to not vary according to the social factors considered here, a binomial logistic regression model may still reveal some systematic variation.
-    
+
     \begin{figure}[tb]
       \caption{Overall distribution of (T-V)}
       \label{fig:tv_overall}
@@ -81,7 +81,7 @@
       <<tv_overall>>=
       @
     \end{figure}
-    
+
     \begin{figure}[tb]
       \caption{Distribution of (T-V) by Gender and Region}
       \label{fig:tv_factors}
@@ -89,7 +89,7 @@
       <<tv_factors>>=
       @
     \end{figure}
-    
+
     \begin{figure}[tb]
       \caption{Distribution of (T-V) by Age}
       \label{fig:tv_age}
@@ -97,9 +97,9 @@
       <<tv_age, fig.width = 4, fig.height = 3>>=
       @
     \end{figure}
-    
+
     As a whole, the binomial logistic regression model that includes all factors considered here is statistically significant ($\chi^2$ (\Sexpr{tv.lrm$stats["d.f."]}) = \Sexpr{round(tv.lrm$stats["Model L.R."], 3)}, $P<$ \Sexpr{round_any(tv.lrm$stats["P"], 0.001, f = ceiling)}). However, Table \ref{tab:coef_tests} suggests that gender is the only statistically significant factor in the model. Using a stepdown process to determine which factors should be kept in the model also suggests that only gender should be kept. Removing gender from the model increases the AIC, whereas removing the other factors creates practically no change in the AIC at all. The final model thus has an AIC of \Sexpr{trunc(tv.glm.bw$aic)}.
-    
+
     \begin{table}[tb]
       \caption{Results for each factor separately where \emph{tu} is the reference level of (T-V)}
       \label{tab:coef_tests}
@@ -113,9 +113,9 @@
         Age & \Sexpr{round(tv.lrm$coefficients["AGE"], 3)} & \Sexpr{round_any(tv.lrm.anova["AGE","P"], 0.001, f = ceiling)}
       \end{tabular}
     \end{table}
-    
+
     Bootstrapping was used to validate the final model, ensuring that it is not overfit for the current dataset. Performing \Sexpr{tv.lrm.plus.val["Slope", "n"]} bootstraps yielded a slope of \Sexpr{round(tv.lrm.plus.val["Slope", "optimism"], 3)}, which suggests that the model is not overfit for the current dataset. This, of course, is not surprising given that only one factor was kept.
-    
+
     \begin{table}[tb]
       \caption{Results of ANOVAs for interactions between factors}
       \label{tab:ints}
@@ -129,15 +129,15 @@
         Region \& Age & \Sexpr{round_any(tv.glm.int.test3$`Pr(>Chi)`[2], 0.001, ceiling)}
       \end{tabular}
     \end{table}
-    
+
     Additionally, interactions between factors were checked. As can be seen in Table \ref{tab:ints}, none of the models that included all factors with any combination of interactions were significantly different from the model that includes all factors without any specified interactions. This suggests that interactions are not coloring the results that would lead me to remove region and age from the model.
-    
-    Surprisingly, performing an ANOVA to compare the final model and the initial model that includes all factors suggests that these models are not significantly different (\Sexpr{round_any(tv.glm.anova$`Pr(>Chi)`[2], 0.001, ceiling)}). However, since every other model selection metric that was checked in this analysis suggested that only gender should be kept in the model, I decided to stick to that model, which finally looks like the following:
+
+    Surprisingly, performing an ANOVA to compare the final model and the initial model that includes all factors suggests that these models are not significantly different ($P<$ \Sexpr{round_any(tv.glm.anova$`Pr(>Chi)`[2], 0.001, ceiling)}). However, since every other model selection metric that was checked in this analysis suggested that only gender should be kept in the model, I decided to stick to that model, which finally looks like the following:
     \begin{equation}
       \textrm{logit}\left(p_i\right) = \Sexpr{round(tv.lrm.final$coefficients["Intercept"], 3)} + \Sexpr{round(tv.lrm.final$coefficients["GENDER=Male"], 3)}\left(\textrm{Male}\right)
     \end{equation}
-    Calculating the probability then of \emph{tu} and \emph{vous} for both males and femles yields the values in Table \ref{tab:final_model_table}.
-    
+    Calculating the probability, then, of \emph{tu} and \emph{vous} for both males and femles yields the values in Table \ref{tab:final_model_table}.
+
     \begin{table}
       \caption{Probability of \emph{tu} vs \emph{vous} by gender according to the final model}
       \label{tab:final_model_table}
@@ -149,13 +149,13 @@
         \emph{vous} & \Sexpr{round(tv.lrm.final.female, 3)} & \Sexpr{round(tv.lrm.final.male, 3)}
       \end{tabular}
     \end{table}
-    
+
   \section{Conclusion}
     \label{sec:conc}
     From this analysis of the variation in (T-V) in the NCCFr, it appears that males produce \emph{vous} less often than females. What is important to note, however, is that \emph{vous} is far less frequent than \emph{tu} overall. Even though males are less likely to produce \emph{vous} than females, the probabilities are still only \Sexpr{round(tv.lrm.final.female, 3)} and \Sexpr{round(tv.lrm.final.male, 3)}, respectively. In practical terms, this variation seems almost meaningless.
-    
+
     This small effect size also makes it difficult to posit an explanation for what underlies this variation in (T-V). Given that \emph{vous} has been argued in the literature to indicate greater social distance, it might be that females are more likely than males to want to create space between each other, even when they are friends. Any solid explanation for this difference would require a more qualitative analysis of the tokens in the corpus, however.
-    
+
     There are still factors that can be analyzed in the present dataset, as well. No structural factors were included in the model, for one, and the number of social factors included in the model was also limited. For the former, perhaps the case of the pronoun has some impact on its distribution or perhaps the verb type has some impact, though I can think of no motivation for suggesting that this would be the case. For the latter, adding factors such as ethnicity or economic class might prove fruitful. For the moment, however, only gender appears to be significant, though still not very important in practical terms.
   \appendix
     \section{Appendix: R Session Information}
