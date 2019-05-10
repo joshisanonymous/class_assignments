@@ -16,6 +16,7 @@ tv <- read.csv("nccfr_tv_cleaned.csv")
 library(rms)
 library(plyr)
 library(knitr)
+library(ggplot2)
 
 ################
 #   Analyses   #
