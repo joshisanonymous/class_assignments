@@ -1,0 +1,18 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily,
+            breaklines=true}
+
+  % Document information
+  \title{Homework 1}
+  \author{Joshua McNeill}
+  \date{\today}
+
+\begin{document}
+  \begin{itemize}
+    \item[Q1] When l
+  \end{itemize}
+\end{document}
