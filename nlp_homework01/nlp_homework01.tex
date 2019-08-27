@@ -1,0 +1,31 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily,
+            breaklines=true}
+
+  % Document information
+  \title{Homework 1}
+  \author{Joshua McNeill}
+  \date{\today}
+
+\begin{document}
+  \maketitle
+  \begin{itemize}
+    \item[(Q1)] When retrieving concordance matches for \texttt{fathers}, the following word seems highly variable. It can be anything from \texttt{to} to \texttt{may} to \texttt{decided} or \texttt{God}. The preceding word appears to almost always be a determiner, however, and most often \texttt{our}, which is clearly a reference to metaphorical founding fathers that all Americans share. In comparison, matches for singular \texttt{father} are also typically about George Washington, used as an appositive title as in \texttt{the Father of our Country}. A lexical item like \texttt{monstrous} returns no results at all in the inaugural addresses, presumably because presidents try not to speak of particularly negative topics. For \textit{Sense and Sensability} and \textit{Moby Dick}, \texttt{monstrous} is matched, 11 times each. However, in the former, it is followed by positive words like \texttt{glad}, whereas in the latter, it feels more negative as it is followed by words like \texttt{cannibal} and \texttt{Pictures of Whales}.
+    \item[(Q2)] The number of types drops dramatically as the required tokens increases. By 9 tokens, the number of types is already 98. By 16, the number of types is in the 30s. From there on, the abruptness of the drop in types ceases, but the pattern is hardly ever reversed at all. This is perfectly in line with Zipf's law in that only very few words should have high token frequencies in a corpus.
+    \item[(Q3)] The list comprehension \lstinline|[word for word in austen if word.endswith("ly") and austen[word] > 10]| will capture all the words in the Austen text that end in $\langle$ly$\rangle$ and are attested more than ten times.
+    \item[(Q4)] Looking at the \texttt{most\_common} 100 words in the \texttt{austen} FreqDist object, well-attested proper names include Elinor, Marianne, Edward, Dashwood, Jennings, and Willoughby. Using the \texttt{similar} method for Elinor, the well-attested names Marianna, Edward, and Willoughby can be found in similar contexts, but also a variety of pronouns. However, for Dashwood, almost every other word found in similar contexts is another proper name. Dashwood is most likely a last name, not often used as a hole NP by itself, whereas Elinor is a given name that might easily match the distribution of generic NPs.
+    \item[(Q5)] For \textit{husband}, the words with similar distributions include other kinship terms like \textit{daughter} and \textit{brother} and a couple common nouns like \textit{eyes} and \textit{letter}. Just like Dashwood, \textit{husband} is probably not used without a determiner of some sort and so cannot be an NP on its own like Elinor can, so it also cannot be replaced by generic pronouns. It is somewhat surprising that there would be a semantic constraint on the words that have similar distributions as even \textit{family} is returned.
+    \item[(Q6)] To get the most frequent words that preced \textit{whale}, the following code can be used:
+    \item[] \begin{lstlisting}
+mdb = bigrams(text1)
+mddist = FreqDist([bigram for bigram in mdb if "whale" in bigram[1]])
+mddist.most_common(10)
+            \end{lstlisting}
+    \item[] The result is that, unsurprisingly, \textit{the} is the most common preceding word as this bigram shows up 369 times. The only three non function words out of the ten most frequent preceding words are \textit{sperm}, \textit{white} and \textit{Greenland}, which all simple describe the whale.
+    \item[(Q7)] The trigram model often remains grammatical in the Chomskyian sense: generated text like \texttt{he thought of that at every distinct repetition} is perfectly grammatical English. Most likely this is because the typical size of constituents allows the model to sort of see the head of a constituent while looking for the beginning of an adjacent constituent. For example, the verb \texttt{noticed} would likely be followed by an NP, typically in the Det + N arrangement, meaning the model can look for a whole adjacent NP for this verb while it is still aware of the verb, yielding \texttt{noticed those whales} in this case. By the time it moves one more word down the line, \texttt{noticed} is gone, and now the model can be aware of the noun \texttt{whales} while looking for the following VP. However, that VP ends up being \texttt{influenced}, which would make perfect sense had the word \texttt{noticed} not been used just to the left. This is where trigram models break down; they are not only bad at long distance dependencies, they fail to make sense beyond a few words because they literally forget what they were talking about that quickly.
+  \end{itemize}
+\end{document}
