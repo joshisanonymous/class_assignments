@@ -1,0 +1,61 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily,
+            breaklines=true,
+            language=Python}
+
+  % Document information
+  \title{Homework 2}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+
+\begin{document}
+  % <<setup, echo = FALSE>>=
+  % knitr::opts_chunk$set(engine = "python",
+  %                       engine.path = "C:/Users/josh8/AppData/Local/Programs/Python/Python37")
+  % @
+  \maketitle
+  \begin{itemize}
+    \item[Q1] Using the following code returns five past perfect constructions in Whitman's ``Leaves of Grass'' that use the archaic apostrophe instead of \orth{e}:
+                \begin{lstlisting}
+pastperfectPattern = re.compile(r"had\s+\w+\'d")
+pastperfectUses = pastperfectPattern.findall(leaves)
+len(pastperfectUses)
+                \end{lstlisting}
+              Included in the five are four types:
+                \begin{enumerate}
+                  \item had form'd
+                  \item had receiv'd (two tokens)
+                  \item had father'd
+                  \item had conceiv'd
+                \end{enumerate}
+    \item[Q2] The following regular expressions find words with specific affixes:
+      \begin{enumerate}
+        \item \orth{-er} or \orth{-est}:
+          \begin{itemize}
+            \item[] \lstinline|\w{2,}(er|est)\W|
+          \end{itemize}
+        \item \orth{-ment}:
+          \begin{itemize}
+            \item[] \lstinline|\w{2,}ment\W|
+          \end{itemize}
+        \item Negating prefixes:
+          \begin{itemize}
+            \item[] \lstinline|\W(in|im|ir|il|non|un)\w{2,}|
+          \end{itemize}
+        \item Adv + less than 8 letter word pairs:
+          \begin{itemize}
+            \item[] \lstinline|\w{2,}ly\s+\w{1,8}\W|
+          \end{itemize}
+      \end{enumerate}
+      In each case, there were at least some matches that did not involve affixes. Despite asking for at least two word characters before \orth{er} in (1), \orth{her} was still matched. For (2), there was only one match and it did not involve an affix: \orth{apartment}. For (4), a proper name was even matched: \orth{ally sheedy}. However, many matches did fit the criteria, such as \orth{closer}, \orth{unhappy}, and \orth{tightly written}.
+    \item[Q3]
+  \end{itemize}
+
+\end{document}
