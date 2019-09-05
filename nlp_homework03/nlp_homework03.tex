@@ -1,0 +1,39 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily,
+            breaklines=true,
+            language=Python}
+
+  % Document information
+  \title{Homework 3}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+
+\begin{document}
+  \maketitle
+  \begin{itemize}
+    \item[Q1] A transducer that can normalize values greater than 59, as the time normalizer did, follows much the same pattern with only a few extensions. For one, the tens mapping must go up to 9. Beyond that, a mapping for both hundreds and thousands must be given, each up to 9, as well. Each one of these mappings is simply the union of 9 transducers that convert those numbers into their written forms (e.g., for the hundreds mapping, 9 $\rightarrow$ nine hundred). Additionally, more than one extraneous \orth{0} may be left over for larger values, such as 600 or 3000, and so the zero deletion mapping uses a few extra transducers to remove \orth{00} and \orth{000}. Finally, a new mapping of transducers that convert abbreviated quantity terms into written forms was added. Rewrite rules were then given for each mapping, the following context being more than one number each for the hundreds and thousands mappings, and those rewrite rules were all composed to form the final transducer.
+
+    The following test strings yielded the correct results:
+    \begin{lstlisting}
+print(normalize("7525 lb."))
+    seven thousand five hundred twenty five pounds
+print(normalize("7520 lb."))
+    seven thousand five hundred twenty pounds
+print(normalize("7515 lb."))
+    seven thousand five hundred fifteen pounds
+print(normalize("7500 lb."))
+    seven thousand five hundred pounds
+print(normalize("7000 lb."))
+    seven thousand pounds
+    \end{lstlisting}
+    The whole of the code used is the following:
+    \lstinputlisting{nlp_homework03.py}
+  \end{itemize}
+\end{document}

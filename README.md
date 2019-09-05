@@ -8,6 +8,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 ### Natural Language Processing (2019 w/Dr Hale)
 * nlp_homework01: Intro to the NLTK Python module
 * nlp_homework02: Regular expressions
+* nlp_homework03: Number normalizer with pynini
 
 ### Current Methods in Sociolinguistics (2019 w/Dr Howe)
 * socio_seminar_project: Analysis of 3p plural subject pronouns in Louisiana French interviews
