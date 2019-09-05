@@ -1,0 +1,83 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily,
+            breaklines=true,
+            language=Python}
+
+  % Document information
+  \title{Homework 2}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+
+\begin{document}
+  \maketitle
+  \begin{itemize}
+    \item[Q1] Using the following code returns five past perfect constructions in Whitman's ``Leaves of Grass'' that use the archaic apostrophe instead of \orth{e}:
+                \begin{lstlisting}
+pastperfectPattern = re.compile(r"had\s+\w+\'d")
+pastperfectUses = pastperfectPattern.findall(leaves)
+len(pastperfectUses)
+                \end{lstlisting}
+              Included in the five are four types:
+                \begin{enumerate}
+                  \item had form'd
+                  \item had receiv'd (two tokens)
+                  \item had father'd
+                  \item had conceiv'd
+                \end{enumerate}
+    \item[Q2] The following regular expressions find words with specific affixes:
+      \begin{enumerate}
+        \item \orth{-er} or \orth{-est}:
+          \begin{itemize}
+            \item[] \lstinline!\w{2,}(er|est)\W!
+          \end{itemize}
+        \item \orth{-ment}:
+          \begin{itemize}
+            \item[] \lstinline!\w{2,}ment\W!
+          \end{itemize}
+        \item Negating prefixes:
+          \begin{itemize}
+            \item[] \lstinline!\W(in|im|ir|il|non|un)\w{2,}!
+          \end{itemize}
+        \item Adv + less than 8 letter word pairs:
+          \begin{itemize}
+            \item[] \lstinline!\w{2,}ly\s+\w{1,8}\W!
+          \end{itemize}
+      \end{enumerate}
+      In each case, there were at least some matches that did not involve affixes. Despite asking for at least two word characters before \orth{er} in (1), \orth{her} was still matched. For (2), there was only one match and it did not involve an affix: \orth{apartment}. For (4), a proper name was even matched: \orth{ally sheedy}. However, many matches did fit the criteria, such as \orth{closer}, \orth{unhappy}, and \orth{tightly written}.
+    \item[Q3] I used Carroll's \emph{Alice in Wonderland} to:
+      \begin{enumerate}
+        \item find all the past progressive constructions
+        \item using the regular expression \lstinline!(was|were)\s+\w+ing!.
+        \item Ninety-six matches were returned which included 54 types. None of the matches were unexpected, except perhaps \orth{was something} and \orth{was nothing}, which are clearly not progressive constructions. Others were arguably not progressive, such as \orth{was bristling}, but the matches were mostly those such as \orth{was looking}, \orth{was going}, and \orth{was talking}.
+      \end{enumerate}
+    \item[Q4] To normalize all the past tense forms in ``Leaves'', I used the following code:
+      \begin{lstlisting}
+from nltk.corpus import gutenberg
+leaves = gutenberg.raw("whitman-leaves.txt")
+participlePattern = re.compile(r"(\w+)'(d)")
+leavesNorm = participlePattern.sub(r"\g<1>e\g<2>", leaves)
+      \end{lstlisting}
+      The first 1,000 characters in \texttt{leavesNorm} were the following:
+      \lstinputlisting{./text/leavesNorm.txt}
+      Of course, this does not prove that there are no more apostrophes, but \lstinline!re.findall(r"\w+'d", leavesNorm)! returns no matches.
+    \item[Q5] I used the same string, \texttt{leavesNorm}, and converted all instances of \emph{word} + \orth{'ll} to \emph{word} + \orth{will}. To do this, I used the following code:
+      \begin{lstlisting}
+willPattern = re.compile(r"(\w+)'(ll\W)")
+leavesNorm = willPattern.sub(r"\g<1>\swi\g<2>", leavesNorm)
+      \end{lstlisting}
+      Checking the results with \lstinline!re.findall(r"\w+\swill", leavesNorm)! suggests that the substitutions worked as there were no matches.
+    \item[Q6] In order to capture more money terms than, I modified the original regular expression by adding \lstinline!(?:.[0-9]+)?!, so that the full regular expression is:
+      \begin{lstlisting}
+[A-Za-z]+|--|[.,?]|\$ [0-9]+(?:.[0-9]+)? (?:million|billion|thousand)?
+      \end{lstlisting}
+      Specifically, this will capture decimals in the terms, where the original does not. The first 100 matches, then, look like the following:
+      \lstinputlisting{./text/moneyTerms.txt}
+  \end{itemize}
+\end{document}
