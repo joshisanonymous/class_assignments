@@ -5,6 +5,9 @@
   \usepackage{hyperref}
     \hypersetup{colorlinks=true,
                 allcolors=blue}
+  \usepackage{graphicx}
+    \graphicspath{{./figures/}}
+  \usepackage{phonrule}
 
   % Title info
   \author{Joshua McNeill}
@@ -18,6 +21,39 @@
   \maketitle
   \begin{enumerate}
     \item (Lab 2 Step 10)
+
+    There is clearly some structured positional variation in the duration of vowels in English. Zsiga explains that ``[v]owels are lengthened in open syllables, and before consonants'' (p.~70), which does in fact appear to be what is happening in our data. To begin with, Figure \ref{fig:durVowel} shows that different vowels have different duration in general: [ɑ], [i], and [u] are on the shorter side and the diphthongs as well as [ɔ] are on the longer side. It is also apparent in Figure \ref{fig:durStructure} that the structure of the syllable, whether it is open (i.e., CV) or closed (i.e., CVC), has an impact on vowel duration, with vowels in open syllables being longer. However, Figure \ref{fig:durFinalC} shows that it is not just whether the syllable is open or closed, but also whether the final consonant is /t/ or /d/, where /d/ leads to vowel durations similar to those of open syllables. Finally, to clarify that this is not simply confounding with certain vowels being in certain syllable structures, Figure \ref{fig:durVC} gives the conditional distribution for vowel durations by final consonant for each vowel. The result confirms that vowel duration really is longer in open syllables and when the final consonant is voiced, at least with final /d/ compared to final /t/. The rule might be stated in the following way:
+    \begin{enumerate}
+      \item \phonc{V}{\phonfeat{+long}}{\oneof{\phold \phonfeat{+voiced} \\ \phold \#}}
+    \end{enumerate}
+    
+    \begin{figure}[htb]
+      \caption{Mean vowel duration (seconds) by vowel}
+      \label{fig:durVowel}
+      \centering
+      \includegraphics{durVowel.jpg}
+    \end{figure}
+
+    \begin{figure}[htb]
+      \caption{Mean vowel duration (seconds) by syllable structure}
+      \label{fig:durStructure}
+      \centering
+      \includegraphics{durStructure.jpg}
+    \end{figure}
+
+    \begin{figure}[htb]
+      \caption{Mean vowel duration (seconds) by final consonant}
+      \label{fig:durFinalC}
+      \centering
+      \includegraphics{durFinalC.jpg}
+    \end{figure}
+
+    \begin{figure}[htb]
+      \caption{Mean vowel duration (seconds) by vowel and final consonant}
+      \label{fig:durVC}
+      \centering
+      \includegraphics{durVC.jpg}
+    \end{figure}
     \item Transcription:
 
     [aɪ lʊkt ʌp ən sɔ ðæt̚ ðɛɹ wəz ə pʰəlismən stæ̃ndɪ̃n ɪ̃n fɹʌ̃n ə mi ɛ̃n i wəz seɪən ɛ̃niwən æt̚ hoʊm bəɾ aɪ dɪən noʊ wʌt̚ ðæt̚ mɛ̃nt̚ ɛ̃n ðɛ̃n i sɛd ɑɹ ju̟ ɑl ɹaɪt̚ jʌ̃ŋ mæ̝̃n aɪ lʊkt æɾ əm ən aɪ θɔt̚ fəɹ ə bɪt̚ soʊ ðæɾ aɪ wʊd̚ æ̝̃ntsəɹ ðə kwɛʃtʃən kʰəɹɛkli ɛ̃n aɪ sɛd noʊ ɛ̃n i sɛd jəɹ lʊkɪ̃n ə bɪt̚ wərs fəɹ wɛɹ i æd ə ɡɔld̚ ɹɪ̃ŋ ɔ̃n wʌ̃n əv ɪz fɪ̃ŋɡəɹs ɛ̃n ɪt̚ hæd kʰəɹli lɛɾəɹz ɔ̃n ɪt̚ bəɾ aɪ kʰʊd̚n si wʌt̪̚ ðə leɾəɹz wəɹ ðɛ̃n i sɛd̚ ðə leɪɾi æt̪̚ ðə kʰæfeɪ sɛz ju̟v bɪ̃n iɹ fəɹ tʰu̟ ən ə hæf aʊɹz ɛ̃n wɛ̃n ʃi t̠ɹaɪd̚ tʰɔkɪ̃n tʰə jə, ju̟ wəɹ ɪ̃n ə kʰəmpʰlit̠̚ t̠ɹæ̝̃nts ðɛ̃n i sɛd wʌtʃ jəɹ neɪ̃m ɛ̃n aɪ sɛd kɹɪstəfəɹ bu̟n ɛn i sɛd wɛɹ ɾə jə lɪv ɛ̃n aɪ sɛd θʌɾi sɪks ɹæ̝̃ndɔf s̠t̠ɹit̚ ɛ̃nd aɪ stɑɹɾɪd filɪn bɛɾəɹ bikʰʌz aɪ laɪk pʰəlismən ɛ̃n ɪt̚ wəz ən izi kwɛʃtʃən]
