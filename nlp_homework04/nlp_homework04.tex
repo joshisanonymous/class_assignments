@@ -18,6 +18,26 @@
 \begin{document}
   \maketitle
   \begin{itemize}
-    \item[Q1] 
+    \item[Q1] I used the following code to build a bigram tagger with two backoff levels:
+    \lstinputlisting{nlp_homework04Q1.py}
+    A few details can be gleamed from the results. For one, the tagger was successful about 85\% of the time. Additionally, it appears that many of the incorrect tags were just cases where the default tag was ultimately applied. Cases like \texttt{advances} or \texttt{teen-agers} were tagged as \texttt{NN} but should have been \texttt{NNS} for plural nouns. Likewise, large numbers, such as \texttt{50,000,000} were tagged as \texttt{NN} instead of \texttt{CD} for numerical. The word \texttt{that} in particular was always tagged \texttt{CS} for subordinating conjunction, but the actual tags for the test portion of the corpus were always \texttt{DT} for determiner and \texttt{WPS} for wh-pronoun. It is not all that clear why this might have happened. Perhaps the training data, by virtue of being much larger than the test data, ultimately had more occurrences of \texttt{that} as a subordinating conjunction, whereas the test data may have coincidentally been a small sample that bucked this trend.
+    \item[Q2a] I used the following code to build a bigram tagger from the BNC corpus using the CLAWS tagset:
+    \lstinputlisting{nlp_homework04Q2a.py}
+    This resulted in an accuracy of about 93\%, which was 8\% higher than the previous attempt. Looking through the possible CLAWS tags makes it clear that there are far more tags in the Brown tagset, which one might expect to lead to more precise and therefore accurate tagging, but that does not seem to be the case. It may be that the smaller CLAWS tagset is more in line with the tagset used for the BNC originally and so there are fewer chances for discrepencies.
+    \item[Q2b] For the bigram model trained on text that was tagged with the universal tagset, I used the following code, identical to Q2a except for the tagset attribute:
+    \lstinputlisting{nlp_homework04Q2b.py}
+    Oddly enough, the accuracy of this tagger was exactly the same as the previous tagger to many decimal places, as can be seen in Table \ref{tab:clawsuniversal}. It is not at all clear why this would be the case, and NLTK does not contain help documentation for the universal tagset to see how it might differ from the CLAWS tagset, though some searching online suggests that the universal tagset is a very small, general tagset. I would expect this to lead to higher accuracy, as was the case when going from the Brown tagset to the CLAWS tagset, but maybe that effect plateaus at some point.
+    \begin{table}[tbh]
+      \caption{Accuracy of bigram taggers on the BNC corpus}
+      \label{tab:clawsuniversal}
+      \centering
+      \begin{tabular}{r | r}
+        Tagset    & Accuracy \\
+        \hline
+        CLAWS     & 0.928467 \\
+        Universal & 0.928467
+      \end{tabular}
+    \end{table}
+    \item[Q3] Frankly, I was not able to find a single employable method for improving performance in chapter 5. There was a vague statement about possible pre- or post-processing data to deal with tags that are difficult to assign, but it is really not clear what that might mean.
   \end{itemize}
 \end{document}
