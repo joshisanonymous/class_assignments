@@ -1,0 +1,33 @@
+\documentclass{article}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{natbib}
+    \bibliographystyle{apalike}
+  
+  % Title info
+  \author{Joshua McNeill}
+  \title{Homework 3}
+  \date{\today}
+  
+\begin{document}
+  <<settings_load_script, echo = FALSE>>=
+  read_chunk("phon_phon_homework03.R")
+  opts_chunk$set(echo = FALSE,
+             warning = FALSE,
+             message = FALSE,
+             results = "asis")
+  @
+  \maketitle
+  \begin{enumerate}
+    \item The EGG recording of the phrase in Setswana effectively isolates one part of the overall sound of the utterance, namely the voicing.
+    This is produced in the larynx and is very clearly heard on the EGG recording right up until the last two segments where the voicing is lost.
+    The spectrogram also shows an obvious voice bar as well as regular striations, suggesting this was modal voicing.
+    The voicing is actually still very apparent in the regular audio, but the formants of the vowels, along with where they are shaped by the consonant articulations, add much more distinctive qualities to each part of the utterance.
+    The voice bar and striations are still quite evident in the spectrogram, too, of course.
+    \item 
+  \end{enumerate}
+\end{document}
