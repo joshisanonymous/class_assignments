@@ -1,0 +1,45 @@
+\documentclass{article}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{caption}
+  \usepackage{graphicx}
+    \graphicspath{{./figures/}}
+
+  % Title info
+  \author{Joshua McNeill}
+  \title{Homework 4}
+  \date{\today}
+
+  % Custom commands
+  \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\specfig}[2]{
+    \begin{minipage}[t]{\linewidth}
+      \captionof{figure}{#1}
+      \label{fig:#2}
+      \centering
+      \includegraphics[scale=0.5]{#2.jpg}
+    \end{minipage}
+  }
+
+\begin{document}
+  \maketitle
+  \begin{enumerate}
+    \item do later
+    \item
+    \specfig{[i] in \lexi{he}}{ispectrum}
+    The spectral peaks of the first three formants of [i] in Figure \ref{fig:ispectrum} are 338Hz (F1), 2993Hz (F2), and 3587Hz (F3).
+
+    \specfig{[e] in \lexi{may}}{espectrum}
+    The spectral peaks of the first three formants of [e] in Figure \ref{fig:espectrum} are 622Hz (F1), 2512Hz (F2), and 3194Hz (F3).
+
+    \specfig{[æ] in \lexi{map}}{aespectrum}
+    The spectral peaks of the first three formants of [æ] in Figure \ref{fig:aespectrum} are 1020Hz (F1), 2002Hz (F2), and 3194Hz (F3).
+
+    \specfig{[ɔ] in \lexi{Bobby}}{ospectrum}
+    The spectral peaks of the first three formants of [ɔ] in Figure \ref{fig:ospectrum} are 590Hz (F1), 1161Hz (F2), and 2863Hz (F3).
+  \end{enumerate}
+\end{document}
