@@ -21,7 +21,15 @@
       \captionof{figure}{#1}
       \label{fig:#2}
       \centering
-      \includegraphics[scale=0.5]{#2.jpg}
+      \includegraphics[scale=0.65]{#2.jpg}
+    \end{minipage}
+  }
+  \newcommand{\bigfig}[2]{
+    \begin{minipage}[t]{\linewidth}
+      \captionof{figure}{#1}
+      \label{fig:#2}
+      \centering
+      \includegraphics[scale=0.85]{#2.jpg}
     \end{minipage}
   }
 
@@ -41,5 +49,7 @@
 
     \specfig{[ɔ] in \lexi{Bobby}}{ospectrum}
     The spectral peaks of the first three formants of [ɔ] in Figure \ref{fig:ospectrum} are 590Hz (F1), 1161Hz (F2), and 2863Hz (F3).
+    \item
+    \specfig{Sapir segmentation}{sapir}
   \end{enumerate}
 \end{document}
