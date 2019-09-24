@@ -7,6 +7,7 @@
                 allcolors=blue}
   \usepackage{natbib}
     \bibliographystyle{apalike}
+  \usepackage{caption}
   
   % Title info
   \author{Joshua McNeill}
@@ -17,9 +18,13 @@
   <<settings_load_script, echo = FALSE>>=
   read_chunk("phon_phon_homework03.R")
   opts_chunk$set(echo = FALSE,
-             warning = FALSE,
-             message = FALSE,
-             results = "asis")
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis",
+                 fig.width = 3.5,
+                 fig.height = 2.5)
+  @
+  <<data>>=
   @
   \maketitle
   \begin{enumerate}
@@ -28,6 +33,65 @@
     The spectrogram also shows an obvious voice bar as well as regular striations, suggesting this was modal voicing.
     The voicing is actually still very apparent in the regular audio, but the formants of the vowels, along with where they are shaped by the consonant articulations, add much more distinctive qualities to each part of the utterance.
     The voice bar and striations are still quite evident in the spectrogram, too, of course.
-    \item 
+    \item
+      \begin{minipage}[t]{\linewidth}
+        \captionof{figure}{4th Sinusoid}
+        \label{fig:fourth}
+        \centering
+        <<plot1>>=
+        @
+      \end{minipage}
+      The frequency here is \Sexpr{8*50}Hz and the amplitude is 1.5dB.
+      
+      \begin{minipage}[t]{\linewidth}
+        \captionof{figure}{5th Sinusoid}
+        \label{fig:fifth}
+        \centering
+        <<plot2>>=
+        @
+      \end{minipage}
+      The frequency here is \Sexpr{5*50}Hz and the amplitude is 1.5dB.
+      
+      \begin{minipage}[t]{\linewidth}
+        \captionof{figure}{6th Sinusoid}
+        \label{fig:sixth}
+        \centering
+        <<plot3>>=
+        @
+      \end{minipage}
+      The frequency here is \Sexpr{1*50}Hz and the amplitude is 1.5dB.
+      
+      \begin{minipage}[t]{\linewidth}
+        \captionof{figure}{Combination of first three sinusoids}
+        \label{fig:combo}
+        \centering
+        <<plotcombo>>=
+        @
+      \end{minipage}
+      This wave is complex and has a fundamental frequency of \Sexpr{2*50}Hz.
+      \item
+      \begin{tabular}{l l l}
+        a) 1s = 1000ms    & b) 2.6s = 2600ms    & c) 0.03s = 30ms \\
+        d) 0.345s = 345ms & e) 0.0015s = 1.5ms  & f) 0.0004s = 0.4ms
+      \end{tabular}
+      \item
+      \begin{tabular}{l l l}
+        a) 0.001s = \Sexpr{1/0.001}Hz                                 & b) 20ms = \Sexpr{1000/20}Hz     & c) 0.5ms = \Sexpr{1000/0.5}Hz \\
+        d) 0.025ms = \Sexpr{format(1000/0.025, scientific = FALSE)}Hz & e) 0.0015s = \Sexpr{round(1/0.0015)}Hz &
+      \end{tabular}
+      \item
+      \begin{tabular}{l l l l}
+        a) 500Hz = \Sexpr{1000/500}ms & b) 10000Hz = \Sexpr{1000/10000}ms & c) 20Hz = \Sexpr{1000/20}ms & d) 800Hz = \Sexpr{1000/800}ms
+      \end{tabular}
+      \item
+      \begin{tabular}{l l l}
+        a) 500Hz = \Sexpr{340/500}m & b) 1200Hz = \Sexpr{round(340/1200, 3)}m & c) 8000Hz = \Sexpr{340/8000}m
+      \end{tabular}
+      
+      The wavelength gets shorter as the frequency goes up.
+      \item
+      \begin{tabular}{l l l}
+        a) 100 to 1 = \Sexpr{10*log10(100/1)}dB & b) 1000 to 1 = \Sexpr{10*log10(1000/1)}dB & c) 1 million to 1 = \Sexpr{10*log10(1000000/1)}dB
+      \end{tabular}
   \end{enumerate}
 \end{document}
