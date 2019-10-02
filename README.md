@@ -7,6 +7,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 * phon_phon_homework02: Narrow transcriptions
 * phon_phon_homework03: Acoustic phonetics
 * phon_phon_homework04: Analyzing spectra
+* phon_phon_homework05: Vowels and stress
 
 ### Natural Language Processing (2019 w/Dr Hale)
 * nlp_homework01: Intro to the NLTK Python module
