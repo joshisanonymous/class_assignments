@@ -13,6 +13,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 * nlp_homework02: Regular expressions
 * nlp_homework03: Number normalizer with pynini
 * nlp_homework04: Tagger evaluation
+* nlp_homework05: Top-down parsing
 
 ### Current Methods in Sociolinguistics (2019 w/Dr Howe)
 * socio_seminar_project: Analysis of 3p plural subject pronouns in Louisiana French interviews
