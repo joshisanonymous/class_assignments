@@ -1,0 +1,125 @@
+\documentclass{article}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{caption}
+  \usepackage{graphicx}
+    \graphicspath{{./figures/}}
+  \usepackage{enumerate}
+
+  % Title info
+  \author{Joshua McNeill}
+  \title{Homework 5}
+  \date{\today}
+
+  % Custom commands
+  \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\regfig}[2]{
+    \begin{minipage}[t]{\linewidth}
+      \captionof{figure}{#1}
+      \label{fig:#2}
+      \centering
+      \includegraphics[scale=0.8]{#2.jpg}
+    \end{minipage}
+  }
+
+\begin{document}
+  \maketitle
+  \begin{enumerate}[I]
+    \item
+    \begin{enumerate}
+      \item[2] The content in the recordings \texttt{mollywillrun1} and \texttt{mollywillrun2} is identical: Both are `Molly will run in the rain.' However, the pitch patterns are not at all identical.
+      \item[5]
+      \begin{minipage}[t]{\linewidth}
+        \captionof{table}{Average F0s of stressed words}
+        \label{tab:avgf0}
+        \centering
+        \begin{tabular}{l | r r}
+                & \multicolumn{2}{c}{F0 (Hz)} \\
+          Word  & \texttt{mollywillrun1}  & \texttt{mollywillrun2} \\
+          \hline
+          Molly & 123                     & 124 \\
+          run   & 123                     & 189 \\
+          rain  & 108                     & 193
+        \end{tabular}
+      \end{minipage}
+      \item[6]
+      \regfig{Pitch contour for \texttt{mollywillrun1}}{mollywillrun1}
+      \regfig{Pitch contour for \texttt{mollywillrun2}}{mollywillrun2}
+      \item[7] Pitch helps signal the difference between statements and questions in English by increasing towards the end when the utterance is a question.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item[11]
+      \begin{minipage}[t]{\linewidth}
+        \captionof{table}{Characteristics of stressed vs unstressed words}
+        \label{tab:stress}
+        \centering
+        \begin{tabular}{l | r r r | r r r}
+                & \multicolumn{3}{c}{\texttt{marywillwin1}} & \multicolumn{3}{c}{\texttt{marywillwin2}} \\
+          Word  & dB  & F0 (Hz) & Dur. (ms)                 & dB  & F0 (Hz) & Dur. (ms) \\
+          \hline
+          Mary  & 70  & 123     & 433                       & 77  & 157     & 483 \\
+          medal & 69  & 116     & 429                       & 66  & 107     & 404
+        \end{tabular}
+      \end{minipage}
+      \item[12]
+      \regfig{Intensity contour for \texttt{marywillwin1}}{marywillwin1}
+      \regfig{Intensity contour for \texttt{marywillwin2}}{marywillwin2}
+      \item[13] Amplitude, pitch and duration all increase to signal stress in English.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item[15d]
+      \begin{minipage}[t]{\linewidth}
+        \captionof{table}{Lab vowel formants}
+        \label{tab:vowels_lab}
+        \centering
+        \begin{tabular}{l l | r r}
+          Word          & Phone & F1 (Hz) & F2 (Hz) \\
+          \hline
+          \lexi{bead}   & [i]   & 404     & 2490 \\
+          \lexi{bid}    & [ɪ]   & 522     & 2131 \\
+          \lexi{bade}   & [e]   & 437     & 2268 \\
+          \lexi{bed}    & [ɛ]   & 592     & 1972 \\
+          \lexi{bad}    & [æ]   & 653     & 1951 \\
+          \lexi{booed}  & [u]   & 390     & 1694 \\
+          \lexi{book}   & [ʊ]   & 588     & 1124 \\
+          \lexi{boat}   & [o]   & 514     & 1515 \\
+          \lexi{bought} & [ɔ]   & 613     & 1087 \\
+          \lexi{body}   & [ɑ]   & 685     & 1282 \\
+          \lexi{bud}    & [ʌ]   & 613     & 1185 \\
+        \end{tabular}
+      \end{minipage}
+      \item[16]
+      \regfig{Lab vowel plot}{vowels_lab}
+      \item[18b]
+      \begin{minipage}[t]{\linewidth}
+        \captionof{table}{Josh vowel formants}
+        \label{tab:vowels_josh}
+        \centering
+        \begin{tabular}{l l | r r}
+          Word          & Phone & F1 (Hz) & F2 (Hz) \\
+          \hline
+          \lexi{bead}   & [i]   & 251     & 2296 \\
+          \lexi{bid}    & [ɪ]   & 328     & 1918 \\
+          \lexi{bade}   & [e]   & 369     & 2158 \\
+          \lexi{bed}    & [ɛ]   & 503     & 1688 \\
+          \lexi{bad}    & [æ]   & 606     & 1669 \\
+          \lexi{booed}  & [u]   & 291     & 1495 \\
+          \lexi{book}   & [ʊ]   & 517     & 1109 \\
+          \lexi{boat}   & [o]   & 487     & 1184 \\
+          \lexi{bought} & [ɔ]   & 620     & 1285 \\
+          \lexi{body}   & [ɑ]   & 927     & 1224 \\
+          \lexi{bud}    & [ʌ]   & 587     & 1146 \\
+        \end{tabular}
+      \end{minipage}
+    \end{enumerate}
+    \item[18d]
+    \regfig{Josh vowel plot}{vowels_josh}
+    \item[19] My vowel space is not unusual in any obvious way, except perhaps the presence of a very low [ɑ]. In fact, one of the most immediate differences between my own vowel space and that from the lab recording is that I have both higher high vowels and lower low vowels than the lab recording. Another notable difference is the position of the vowels relative to each other. For instance, my [o] is very close to my [ʌ], but the lab recording has a fronted [o]. Also, my [ɪ] is higher than my [e], but the lab recording has the opposite pattern.
+  \end{enumerate}
+\end{document}
