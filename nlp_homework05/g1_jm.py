@@ -9,13 +9,19 @@ g1 = [('S',['DP','VP']),  # categorial rules
       ('NP',['N']),
       ('NP',['N','PP']),
       ('VP',['VI']), # made intransitive
-      ('VP',['VT','DP']), # made transitive
       ('VP',['VI','PP']), # made intransitive
-      ('VP',['VC','CP']), # made complementizer
-      ('VP',['V','VP']),
+      ('VP',['VT','DP']), # made transitive
       ('VP',['VT','DP','PP']), # made transitive
-      ('VP',['V','DP','CP']),
-      ('VP',['V','DP','VP']),
+      ('VP',['VC','DP']),
+      ('VP',['VC','DP','PP']),
+      ('VP',['VC','CP']),
+      ('VP',['AuxFut','VFut']),
+      ('VP',['AuxPerf','VPerf']),
+      ('VP',['AuxProg','VPresPart']),
+      ('VFut',['VInf']),
+      ('VFut',['VCopInf','VPresPart']),
+      ('VPerf',['VPresPart']),
+      ('VPerf',['VCopPart','VPresPart']),
       ('PP',['P']),
       ('PP',['P','DP']),
       ('AP',['A']),
@@ -49,6 +55,14 @@ g1 = [('S',['DP','VP']),  # categorial rules
       ('VT',['criticizes']), # DP+PP or DP
       ('VC',['says']), # CP or DP+PP or DP
       ('VC',['knows']), # CP or DP+PP or DP
+      ('AuxFut',['will']),
+      ('AuxPerf',['has']),
+      ('AuxProg',['is']),
+      ('VInf',['laugh']),
+      ('VCopInf',['be'])
+      ('VPresPart',['laughing']),
+      ('VPastPart',['laughed']),
+      ('VA',)
       ('Adv',['happily']),
       ('Adv',['sadly']),
       ('Adv',['impartially']),
