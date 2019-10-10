@@ -1,0 +1,42 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily,
+            breaklines=true,
+            language=Python}
+
+  % Document information
+  \title{Homework 5a}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\sent}[1]{\textit{#1}}
+
+\begin{document}
+  \maketitle
+  \section{1.3 exercises}
+    \begin{enumerate}
+      \item To fix the issue where sentences like \sent{Sue laughs the student} are no longer accepted by the recognizer, the grammar needs to differentiate between intransitive verbs, transitive verbs, and verbs that take complementizers. To do so, the following changes to the categorial and lexical rules can be made:
+
+      \begin{minipage}[t]{0.5\linewidth}
+        \lstinputlisting[firstline=11, lastline=17]{g1_jm.py}
+      \end{minipage}
+      \begin{minipage}[t]{0.5\linewidth}
+        \lstinputlisting[firstline=52, lastline=57]{g1_jm.py}
+      \end{minipage}
+      These changes create three classes of verbs: \texttt{Vint} for intransitive verbs, \texttt{Vtran} for transitive verbs, and \texttt{Vcomp} for verbs that take complementizers.
+      \item Once verb classes have been added to the grammar, auxiliary constructions can be dealt with auxiliary verb classes, participles classes, and infinitives. The resulting categorial and lexical rules look like the following:
+
+      \begin{minipage}[t]{0.5\linewidth}
+        \lstinputlisting[firstline=18, lastline=24]{g1_jm.py}
+      \end{minipage}
+      \begin{minipage}[t]{0.5\linewidth}
+        \lstinputlisting[firstline=58, lastline=65]{g1_jm.py}
+      \end{minipage}
+      The three auxiliary classes are \texttt{AuxFut} for future tense, \texttt{AuxPerf} for perfective constructions, and \texttt{AuxProg} for progressive constructions. In order to maximum being able to reuse categories, \texttt{VFut} goes with \texttt{AuxFut} and rewrites as either just an infinitive or the copula as an infinitive plus a present participle. This allows for both \sent{Sue will laugh} and \sent{Sue will be laughing}. The same is done for perfective constructions with the \texttt{VPerf} category. Splitting up the categories in this way also avoids the issue of generating ungrammatical sentences like \sent{Sue will been laughing}.
+    \end{enumerate}
+\end{document}

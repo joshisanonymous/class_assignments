@@ -8,20 +8,20 @@ g1 = [('S',['DP','VP']),  # categorial rules
       ('DP',['Pronoun']),
       ('NP',['N']),
       ('NP',['N','PP']),
-      ('VP',['VI']), # made intransitive
-      ('VP',['VI','PP']), # made intransitive
-      ('VP',['VT','DP']), # made transitive
-      ('VP',['VT','DP','PP']), # made transitive
-      ('VP',['VC','DP']),
-      ('VP',['VC','DP','PP']),
-      ('VP',['VC','CP']),
+      ('VP',['Vint']),
+      ('VP',['Vint','PP']),
+      ('VP',['Vtran','DP']),
+      ('VP',['Vtran','DP','PP']),
+      ('VP',['Vcomp','DP']),
+      ('VP',['Vcomp','DP','PP']),
+      ('VP',['Vcomp','CP']),
       ('VP',['AuxFut','VFut']),
       ('VP',['AuxPerf','VPerf']),
-      ('VP',['AuxProg','VPresPart']),
-      ('VFut',['VInf']),
-      ('VFut',['VCopInf','VPresPart']),
-      ('VPerf',['VPresPart']),
-      ('VPerf',['VCopPart','VPresPart']),
+      ('VP',['AuxProg','PresPart']),
+      ('VFut',['Inf']),
+      ('VFut',['InfProg','PresPart']),
+      ('VPerf',['PastPart']),
+      ('VPerf',['PastPartProg','PresPart']),
       ('PP',['P']),
       ('PP',['P','DP']),
       ('AP',['A']),
@@ -49,20 +49,20 @@ g1 = [('S',['DP','VP']),  # categorial rules
       ('N',['university']),
       ('N',['beer']),
       ('N',['wine']),
-      ('VI',['laughs']), # PP or nothing
-      ('VI',['cries']), # PP or nothing
-      ('VT',['praises']), # DP+PP or DP
-      ('VT',['criticizes']), # DP+PP or DP
-      ('VC',['says']), # CP or DP+PP or DP
-      ('VC',['knows']), # CP or DP+PP or DP
+      ('Vint',['laughs']),
+      ('Vint',['cries']),
+      ('Vtran',['praises']),
+      ('Vtran',['criticizes']),
+      ('Vcomp',['says']),
+      ('Vcomp',['knows']),
       ('AuxFut',['will']),
       ('AuxPerf',['has']),
       ('AuxProg',['is']),
-      ('VInf',['laugh']),
-      ('VCopInf',['be'])
-      ('VPresPart',['laughing']),
-      ('VPastPart',['laughed']),
-      ('VA',)
+      ('Inf',['laugh']),
+      ('InfProg',['be']),
+      ('PastPart',['laughed']),
+      ('PastPartProg',['been']),
+      ('PresPart',['laughing']),
       ('Adv',['happily']),
       ('Adv',['sadly']),
       ('Adv',['impartially']),
