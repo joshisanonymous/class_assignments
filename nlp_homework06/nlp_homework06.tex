@@ -1,0 +1,33 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily,
+            breaklines=true,
+            language=Python}
+
+  % Document information
+  \title{Homework 6}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\sent}[1]{\textit{#1}}
+
+\begin{document}
+  \maketitle
+  \begin{enumerate}
+    \item[Q1] My idea was to assign the \texttt{None} values in sets to each position in the chart when initializing it.
+    This would then, I thought, allow me to use the \texttt{add} method on them whenever the value was not \texttt{None} in the complete function so as to avoid overwriting any non-terminal category that was already entered in the position earlier in the loop.
+    However, this does not seem to work and instead generates an ``unhashable type'' error.
+    For the specific issue of being able to explain both ways of parsing \sent{I shot an elephant in my pajamas}, it seems that changing the grammar would be most effective.
+    Simply converting \texttt{NP -> Det N | Det N PP | "I"} into \texttt{NP -> Det N | NP PP | "I"} yields the same chart with an additional NP at (2, 7), which means the PP could be contained under an NP instead of the VP.
+    This possibility is not added into the chart from the original grammar because it is not in Chomsky normal form, which requires rewrites to all be binary, and the original version had a tertiary rewrite.
+    As far as how to have sets representing all possible rewrites for some portion of the sentence, I am at a loss.
+    \item[Q2] I am really at a loss again.
+    It seems as though I should be able to replace \texttt{wfst[start][end] = index[(nt1, nt2)]} with the assignment of a tuple instead of just a value, but that leads to the error saying that ``not all arguments converted during string formatting.''
+    Without having a workable chart, I was unable to approach the rest of the problem.
+  \end{enumerate}
+\end{document}
