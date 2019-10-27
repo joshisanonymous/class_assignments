@@ -1,0 +1,14 @@
+C' est de cette façon que des conditions socio-économiques radicalement nouvelles ( néolibéralisme ) ont été imposées durant les années 1980 à 1990 . 
+F conditions nsubj radicalement
+F radicalement nsubj:pass imposées
+F que mark radicalement
+F nouvelles xcomp radicalement
+F 1990 obl:mod imposées
+F néolibéralisme parataxis radicalement
+M 1990 nmod 1980
+M conditions nsubj:pass imposées
+M que mark imposées
+M néolibéralisme appos conditions
+M radicalement advmod nouvelles
+M nouvelles amod conditions
+En outre , il a été décidé de faire Freddy un pédophile , par opposition à son milieu traditionnel d' un tueur d' enfants . 
