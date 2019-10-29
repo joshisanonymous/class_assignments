@@ -1,0 +1,37 @@
+\documentclass{article}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{phonrule}
+
+  % Title info
+  \author{Joshua McNeill}
+  \title{Homework 7}
+  \date{\today}
+
+  % Custom commands
+  \newcommand{\lexi}[1]{\textit{#1}}
+
+\begin{document}
+  \maketitle
+  \begin{enumerate}
+    \item In Dagur Mongolian, /e/ can be deleted when it is between two consonants with the same place of articulation.
+    The rule might be written as follows:
+    \begin{enumerate}
+      \item \phonb{/e/}{[]}{\phonfeat{+consonant \\ place-X}}{\phonfeat{+consonant \\ place-X}}
+    \end{enumerate}
+    \item In Georgian, the [r] in [uri] can be realized as an [l] instead if there is an [r] in the root without any intervening [l] in the root.
+    In effect, a root like [XrX] would yield [uli], but [XlX] would yield [uri] and [XrXlX] would yield [uri], as well.
+    \item There are three allomorphs for the second person possessive morpheme in Ngalakan: [ŋɡi], [ɡi], and [i].
+    The preceding segment controls which allomorph is realized, which can be described with the following phonological rules:
+    \begin{enumerate}
+      \item \phonb{\phonfeat{+2p \\ +\textsc{GEN}}}{[ŋɡi]}{\phonfeat{+sonorant}}{\#}
+      \item \phonb{\phonfeat{+2p \\ +\textsc{GEN}}}{[ɡi]}{\phonfeat{+obstruent}}{\#}
+      \item \phonb{\phonfeat{+2p \\ +\textsc{GEN}}}{[i]}{k}{\#}
+    \end{enumerate}
+    Because [k] is also an obstruent, the rules (b) and (c) must be applied in the order c $\rightarrow$ b, otherwise we would end up with things like \phon{[bak]}{[bakɡi]}.
+  \end{enumerate}
+\end{document}
