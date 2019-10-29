@@ -5,6 +5,7 @@
   \usepackage{hyperref}
     \hypersetup{colorlinks=true,
                 allcolors=blue}
+  \usepackage{phonrule}
 
   % Title info
   \author{Joshua McNeill}
@@ -43,5 +44,16 @@
       It seems to be a stop, like a dental [d].
       I imagine this is because of the preceding [d] in \lexi{should}.
     \end{itemize}
+    \item The four phones, [r], [r̥], [ɾ], and [ɻ], are not phonemes as there are no minimal pairs in this data.
+    They are in fact not even in contrastive distribution but are instead in complementary distribution, making them allophones.
+    However, each allophone appears in exactly one phonetic environment, making it difficult to decide which should represent the phoneme, so the archiphoneme /R/ can be used instead of one of the four allophones.
+    The resulting rules are the following:
+    \begin{enumerate}
+      \item \phonb{/R/}{[r]}{\#}{V}
+      \item \phonb{/R/}{[r̥]}{V}{\#}
+      \item \phonb{/R/}{[ɾ]}{V}{V}
+      \item \phonb{/R/}{[ɻ]}{V}{C}
+    \end{enumerate}
+    \item For [t̪] and [t], there is a minimal pair in [maɹakat̪a] `knee cap' and [maɹakata] `fine rain' that leads to the conclusion that these are separate phonemes, namely /t̪/ and /t/.
   \end{enumerate}
 \end{document}
