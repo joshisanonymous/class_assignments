@@ -4,9 +4,7 @@
 S -> NP[CASE=nom, AGR=?a] VP[AGR=?a]
 NP[CASE=?c, AGR=?a] -> PRO[CASE=?c, AGR=?a]
 NP[CASE=?c, AGR=?a] -> Det[CASE=?c, AGR=?a] N[CASE=?c, AGR=?a]
-# old VP[AGR=?a] -> IV[AGR=?a]
 VP[AGR=?a] -> V[SUBCAT=intrans, AGR=?a]
-# old VP[AGR=?a] -> TV[OBJCASE=?c, AGR=?a] NP[CASE=?c]
 VP[AGR=?a] -> V[SUBCAT=trans, OBJCASE=?c, AGR=?a] NP[CASE=?c]
 
 # Lexical Productions
@@ -47,30 +45,12 @@ PRO[CASE=nom, AGR=[PER=2,NUM=pl]] -> 'ihr'
 PRO[CASE=nom, AGR=[PER=3,NUM=pl]] -> 'sie'
 
 # Verbs
-# old IV[AGR=[NUM=sg,PER=1]] -> 'komme'
-# old IV[AGR=[NUM=sg,PER=2]] -> 'kommst'
-# old IV[AGR=[NUM=sg,PER=3]] -> 'kommt'
-# old IV[AGR=[NUM=pl, PER=1]] -> 'kommen'
-# old IV[AGR=[NUM=pl, PER=2]] -> 'kommt'
-# old IV[AGR=[NUM=pl, PER=3]] -> 'kommen'
 V[SUBCAT=intrans, AGR=[NUM=sg,PER=1]] -> 'komme'
 V[SUBCAT=intrans, AGR=[NUM=sg,PER=2]] -> 'kommst'
 V[SUBCAT=intrans, AGR=[NUM=sg,PER=3]] -> 'kommt'
 V[SUBCAT=intrans, AGR=[NUM=pl, PER=1]] -> 'kommen'
 V[SUBCAT=intrans, AGR=[NUM=pl, PER=2]] -> 'kommt'
 V[SUBCAT=intrans, AGR=[NUM=pl, PER=3]] -> 'kommen'
-# old TV[OBJCASE=acc, AGR=[NUM=sg,PER=1]] -> 'sehe' | 'mag'
-# old TV[OBJCASE=acc, AGR=[NUM=sg,PER=2]] -> 'siehst' | 'magst'
-# old TV[OBJCASE=acc, AGR=[NUM=sg,PER=3]] -> 'sieht' | 'mag'
-# old TV[OBJCASE=dat, AGR=[NUM=sg,PER=1]] -> 'folge' | 'helfe'
-# old TV[OBJCASE=dat, AGR=[NUM=sg,PER=2]] -> 'folgst' | 'hilfst'
-# old TV[OBJCASE=dat, AGR=[NUM=sg,PER=3]] -> 'folgt' | 'hilft'
-# old TV[OBJCASE=acc, AGR=[NUM=pl,PER=1]] -> 'sehen' | 'moegen'
-# old TV[OBJCASE=acc, AGR=[NUM=pl,PER=2]] -> 'sieht' | 'moegt'
-# old TV[OBJCASE=acc, AGR=[NUM=pl,PER=3]] -> 'sehen' | 'moegen'
-# old TV[OBJCASE=dat, AGR=[NUM=pl,PER=1]] -> 'folgen' | 'helfen'
-# old TV[OBJCASE=dat, AGR=[NUM=pl,PER=2]] -> 'folgt' | 'helft'
-# old TV[OBJCASE=dat, AGR=[NUM=pl,PER=3]] -> 'folgen' | 'helfen'
 V[SUBCAT=trans, OBJCASE=acc, AGR=[NUM=sg,PER=1]] -> 'sehe' | 'mag'
 V[SUBCAT=trans, OBJCASE=acc, AGR=[NUM=sg,PER=2]] -> 'siehst' | 'magst'
 V[SUBCAT=trans, OBJCASE=acc, AGR=[NUM=sg,PER=3]] -> 'sieht' | 'mag'

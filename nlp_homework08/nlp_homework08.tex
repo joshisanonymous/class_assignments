@@ -17,18 +17,45 @@
   % New commands
   \newcommand{\orth}[1]{$\langle$#1$\rangle$}
   \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\treefig}[3]{
+    \begin{figure}
+      \caption{#1}
+      \label{fig:#2}
+      \centering
+      \includegraphics[scale=0.65]{#3}
+    \end{figure}
+  }
 
 \begin{document}
   \maketitle
   \begin{enumerate}
-    \item[Q1] The German grammar given in \texttt{german.fcfg} deals with different verb classes by dividing the lexical category V into IV for intransitives and TV for transitives.
+    \item The German grammar given in \texttt{german.fcfg} deals with different verb classes by dividing the lexical category V into IV for intransitives and TV for transitives, but this is not an elegant solution.
     To constrain the grammar so that it correctly produces intransitive sentences only for intransitive verbs and transitive for only transitive, one can instead rely on subcategorizations, specifying the verb class in its lexical entry.
     This involves changing the relevant production rules so that, instead of having more specific lexical categories, there is only one lexical category, V, and each V has a SUBCAT that classifies it, as in Figure \ref{fig:germ_productions}.
     \begin{figure}[htbp]
       \caption{Modification of German production rules}
       \label{fig:germ_productions}
-      \lstinputlisting[firstline=7, lastline=10]{german.fcfg}
+      \lstinputlisting[firstline=7, lastline=8]{german.fcfg}
     \end{figure}
-    
+    The lexical expressions in the grammar then need to be changed to have the appropriate SUBCAT values, as well.
+    For instance, TV becomes instead V[SUBCAT=trans].
+    The resulting lexicon can be seen in Figure \ref{fig:germ_lexicon}.
+    \begin{figure}[htbp]
+      \caption{Modification of German lexicon}
+      \label{fig:germ_lexicon}
+      \lstinputlisting[firstline=47, lastline=65]{german.fcfg}
+    \end{figure}
+    These modifications seem to work, considering the following sentences:
+    \begin{enumerate}
+      \item der Hunde kommt\label{sent:germ_bad_intrans}
+      \item der Hund kommt\label{sent:germ_good_intrans}
+      \item der Hund kommt mir\label{sent:germ_bad_trans}
+      \item der Hund folgt mir\label{sent:germ_good_trans}
+    \end{enumerate}
+    Sentence \ref{sent:germ_bad_intrans} should fail, and does, because \lexi{Hunde} does not agree with \lexi{der} for the NUM feature.
+    Likewise, Sentence \ref{sent:germ_bad_trans} fails because VP can only rewrite to V NP if the V has trans for its SUBCAT feature.
+    Sentences \ref{sent:germ_good_intrans} and \ref{sent:germ_good_trans} succeed, though, and yield the trees in Figures \ref{fig:germ_tree_intrans} and \ref{fig:germ_tree_trans}.
+    \treefig{der Hund kommt}{germ_tree_intrans}{derHundkommt.ps}
+    \treefig{der Hund folgt mir}{germ_tree_trans}{derHundfolgtmir.ps}
   \end{enumerate}
 \end{document}
