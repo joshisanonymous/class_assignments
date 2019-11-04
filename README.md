@@ -20,6 +20,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 * nlp_homework05: Top-down parsing
 * nlp_homework06: Chart parsing
 * nlp_homework07: Dependency grammar parsing
+* nlp_homework08: Feature-based grammars
 
 ### Current Methods in Sociolinguistics (2019 w/Dr Howe)
 * socio_seminar_project: Analysis of 3p plural subject pronouns in Louisiana French interviews

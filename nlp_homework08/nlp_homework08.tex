@@ -1,0 +1,34 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily,
+            breaklines=true,
+            language=Python}
+  \usepackage{graphicx}
+    \graphicspath{{figures/}}
+
+  % Document information
+  \title{Homework 8}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\lexi}[1]{\textit{#1}}
+
+\begin{document}
+  \maketitle
+  \begin{enumerate}
+    \item[Q1] The German grammar given in \texttt{german.fcfg} deals with different verb classes by dividing the lexical category V into IV for intransitives and TV for transitives.
+    To constrain the grammar so that it correctly produces intransitive sentences only for intransitive verbs and transitive for only transitive, one can instead rely on subcategorizations, specifying the verb class in its lexical entry.
+    This involves changing the relevant production rules so that, instead of having more specific lexical categories, there is only one lexical category, V, and each V has a SUBCAT that classifies it, as in Figure \ref{fig:germ_productions}.
+    \begin{figure}[htbp]
+      \caption{Modification of German production rules}
+      \label{fig:germ_productions}
+      \lstinputlisting[firstline=7, lastline=10]{german.fcfg}
+    \end{figure}
+    
+  \end{enumerate}
+\end{document}
