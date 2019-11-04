@@ -10,6 +10,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 * phon_phon_homework05: Vowels and stress
 * phon_phon_homework06: More narrow transcriptions
 * phon_phon_homework07: Phonological and morphological analyses
+* phon_phon_project: Analysis of merger or lack thereof of [e] and [ɛ] as well as [ɔ̃] and [ɑ̃] in Louisiana French
 
 ### Natural Language Processing (2019 w/Dr Hale)
 * nlp_homework01: Intro to the NLTK Python module
