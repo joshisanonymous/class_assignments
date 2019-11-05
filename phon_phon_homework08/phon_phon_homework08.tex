@@ -1,0 +1,51 @@
+\documentclass{article}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{phonrule}
+
+  % Title info
+  \author{Joshua McNeill}
+  \title{Homework 8}
+  \date{\today}
+
+  % Custom commands
+  \newcommand{\lexi}[1]{\textit{#1}}
+
+\begin{document}
+  \maketitle
+  \begin{enumerate}
+    \item At first glance, distinctive features and the phonetic classifications used in the IPA seem very closely related.
+    After all, a number of features are the same as IPA descriptions: Nasal, lateral, voiced, high, low, back, and rounded are all features but also used to name IPA symbols.
+    It is also true that you can describe natural classes with both features and IPA descriptions.
+    What really sets distinctive features apart from IPA descriptions, however, is the emphasize on distinctiveness.
+    Features must be shown to be capable of creating distinctions in languages whereas IPA descriptions have no such requirement.
+
+    Perhaps the clearest example of where features and IPA descriptions different is in targeting manners of articulation.
+    For the IPA, this is simply a matter of naming the manner of articulation, such as stop, fricatives, approximant, etc.
+    For features, manners are targetted indirectly through the combination of (mostly) binary features.
+    For instance, fricatives are not syllabic nor sonorant but are consonantal and continuant.
+    The result is the features -syllabic, -sonorant, +consonantal, and +continuant, respectively.
+    This particular combination of values for this features narrow the field of possible speech sounds down to fricatives only.
+
+    While using so many features to target fricatives might seem more cumbersome then simply saying something like +fricative, the advantage is that any value for the features used should describe a valid natural class in some language in the world.
+    This would not be the case for +fricative as -fricative almost definitely does not describe some meaningful natural class in any language in the world.
+    It is, though, possible to imagine a language using all the +sonorant sounds as a natural class as well as all the -sonorant sounds, and likewise for consonantal, continuant, syllabic, etc.
+
+    IPA descriptions, in effect, are truly just descriptions, whereas features are phonologically meaningful.
+    It makes sense to maintain IPA descriptions when dealing with phonetics and certainly when introducing students to phonetics and phonology as these descriptions are both easier to associate with relevant articulations and much more directly comprehensible, but they are ultimately not as phonologically relevant as distinctive features.
+    \item
+    \begin{enumerate}
+      \item \phonr{\phonfeat{-consonantal \\ +high \\ -low}}{\phonfeat{-consonantal \\ -high \\ -low}}{\phonfeat{+consonantal \\ dorsal \\ +low}}
+      \item \phonb{//}{\phonfeat{-consonantal \\ +high \\ -low \\ -back \\ +ATR}}{\phonfeat{-sonorant \\ +consonantal \\ coronal \\ -voice}}{\phonfeat{-sonorant \\ +consonantal \\ coronal \\ -voice \\ +continuant}}
+      \item \phonr{\phonfeat{-consonantal \\ +sonorant \\ +continuant \\ +syllabic \\ -back \\ -round}}{\phonfeat{-consonantal \\ +sonorant \\ +continuant \\ -syllabic}}{\phonfeat{-consonantal \\ +sonorant \\ +continuant \\ +syllabic}}
+      \item \phonr{\phonfeat{+consonantal \\ -continuant \\ nasal}}{\phonfeat{$\alpha$labial \\ $\beta$coronal \\ $\gamma$anterior \\ $\delta$dorsal \\ $\epsilon$back \\ $\phi$low}}{\phonfeat{+consonantal \\ -continuant \\ -sonorant \\ $\alpha$labial \\ $\beta$coronal \\ $\gamma$anterior \\ $\delta$dorsal \\ $\epsilon$back \\ $\phi$low}}
+      \item \phonr{\oneof{\phonfeat{labial} \\ \phonfeat{dorsal} \\ \phonfeat{pharyngeal} \\ \phonfeat{laryngeal}}}{[]}{\#}
+      \item \phonr{\phonfeat{$\alpha$round \\ -consonantal \\ +syllabic}}{\phonfeat{$\alpha$round \\ -consonantal \\ +syllabic \\ +back \\ +low}}{\phonfeat{pharyngeal \\ +consonantal \\ -sonorant \\ +continuant}}
+      \item \phonr{\phonfeat{+consonantal \\ -sonorant \\ coronal \\ +anterior}}{\phonfeat{+consonantal \\ -sonorant \\ coronal \\ +anterior \\ delayed released}}{\phonfeat{-consonantal \\ +sonorant \\ +syllabic \\ +high}}
+    \end{enumerate}
+  \end{enumerate}
+\end{document}
