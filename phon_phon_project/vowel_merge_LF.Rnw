@@ -20,6 +20,10 @@
   \title{} % Add footnote to specify where code is
   \date{\today}
 
+  % Custom commands
+  \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\gloss}[1]{`#1'}
+
 \begin{document}
   % <<settings_load_scripts, echo = FALSE>>=
   % read_chunk("analysis.R")
@@ -34,7 +38,19 @@
   % @
   \maketitle
   \begin{abstract}
-    Generally in French, there is evidence that the back nasal vowels [ɑ̃] and [ɔ̃]
+    In passing, it would not be surprising for a listener to hear the back nasal vowels [ɑ̃] and [ɔ̃] produced by a Louisiana French speaker as one and the same vowel.
+    Indeed, \textcite{blainey_first_2013} acknowledges that these vowels ``sometimes overlap'' for her informants in southeast Louisiana in words like \lexi{souvent} \gloss{often}, which would end with [ɑ̃] in standard French varieties (pp.~100-101), although some confusion between these vowels has also been noted among Parisians \parencite[pp.~229-230]{fonagy_francais_1989}.
+    What seems to be missing in the literature, however, is any real quantitative analysis that attempts to tease apart whether a [ɑ̃] and [ɔ̃] have merged, are merging, or are not merging at all for Louisiana French speakers.
+
+    In this study, I aim to do such a quantative analysis using sociolinguistic interviews conducted with four individuals in early 2019.
+    MAUS at the BAS web services site will be used to align transcriptions of the text, and Praat will be used to extract vowel formants.
+    Each speaker's vowel space will be analyzed using Bhattacharyya distance to determine how much overlap there is in the F1 values of their realizations of [ɑ̃] and [ɔ̃].
+
+    This process will provide real quantitative evidence for or against the idea that these vowels are merging.
+    There will, however, be limitations considering the very small sample of speakers.
+    The study will necessarily be exploratory, but the nature of who the speakers are may offer additional insights along the way.
+    Two of the speakers are native speakers of advanced age while the other two are relatively younger speakers who nonetheless were interested enough in their linguistic heritage to attempt to learn Louisiana French specifically.
+    The implications for how these vowels are managed for different age groups and speakers of different native-speaking status will inform future studies.
   \end{abstract}
 %   \section{Introduction}
 %     \label{sec:intro}
