@@ -1,12 +1,15 @@
 % start S
 
 # phrasal
-S -> NP VP
-PP -> P NP
+S -> NP[+ANIM, PER=?per, NUM=?num] VP[PER=?per, NUM=?num]
+NP[ANIM=?anim] -> N[ANIM=?anim]
+VP[PER=?per, NUM=?num] -> V NP[-ANIM]
+VP[PER=?per, NUM=?num] -> V PP[+ANIM]
+PP[ANIM=?anim] -> P NP[ANIM=?anim]
 
 # lexical
-P[case=acc, +anim] -> 'a'
-N[-anim] -> 'algo'
-N[+anim] -> 'alguien'
-N[num=sg,gen=masc,+anim] -> 'Juan'
-V[tense=past] -> 'vió'
+P -> 'a'
+N[-ANIM, PER=3, NUM=sg] -> 'algo'
+N[+ANIM, PER=3, NUM=sg] -> 'alguien'
+N[+ANIM, PER=3, NUM=sg, GEN=masc] -> 'Juan'
+V[TENSE=past] -> 'vió'

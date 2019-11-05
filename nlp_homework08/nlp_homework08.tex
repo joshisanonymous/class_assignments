@@ -57,5 +57,22 @@
     Sentences \ref{sent:germ_good_intrans} and \ref{sent:germ_good_trans} succeed, though, and yield the trees in Figures \ref{fig:germ_tree_intrans} and \ref{fig:germ_tree_trans}.
     \treefig{der Hund kommt}{germ_tree_intrans}{derHundkommt.ps}
     \treefig{der Hund folgt mir}{germ_tree_trans}{derHundfolgtmir.ps}
+    \item Perhaps the most important thing to account for in the Spanish sentences is animacy.
+    Indeed, even though the lexical category P is given CASE as a feature, it is not necessary to use this feature to create a properly constrained grammar.
+    In fact, it seems more appropriate the place P's ANIM feature instead on the N and have it percolate up from there, as prepositions are not typically thought of as having grammar.
+    Essentially, providing the ANIM feature for the Ns, and then having the production rules carry the feature up to the NP level and then the PP level with the ?anim variable allows for referencing the animacy of the object for the VP production rules.
+    It is not actually necessary to create different V classes as in the German grammar, but instead create two VP rules: one that rewrites as V and an inanimate NP and one that rewrites as V and an animate PP.
+    Although the example sentences only ever use \lexi{Juan} as the subject, it is also possible to restrict subjects to only animate beings -- since inanimate things cannot see -- by adding the +ANIM feature to NP in the S rewrite rule.
+    The resulting grammar can be seen in Figure \ref{fig:span_grammar} and the results of the test in Figure \ref{fig:span_results}.
+    \begin{figure}
+      \caption{Modification of Spanish grammar}
+      \label{fig:span_grammar}
+      \lstinputlisting[firstline=3, lastline=15]{spanish.fcfg}
+    \end{figure}
+    \begin{figure}
+      \caption{Spanish grammar results}
+      \label{fig:span_results}
+      \lstinputlisting{./figures/spanish_results.txt}
+    \end{figure}
   \end{enumerate}
 \end{document}

@@ -1,0 +1,5 @@
+example             	analyses
+Juan vió algo       	       1
+Juan vió a algo     	       0
+Juan vió alguien    	       0
+Juan vió a alguien  	       1
