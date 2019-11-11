@@ -25,17 +25,14 @@
 \begin{document}
   \maketitle
   \begin{abstract}
-    Part of speech tagging systems have been a major area of natural language processing at least since the 1980s \parencite[e.g.,][]{garside_claws_1987}.
-    However, much of the training and testing for part of speech tagging has been done using written language as opposed to spoken language.
+    Much of the training and testing for part of speech tagging has been done using written language as opposed to spoken language.
     One major area in which spoken language differs from written language is in the presence of disfluences such as repetitions, hesitations, and repairs.
-    As such, I propose tagging training data with disfluencies as part of the part of speech tags.
-    For example, NNs that are within the reparandum would instead be labeled NN\_DIS.
-    As a result, the tagger would potentially be able to identify disfluencies when used, and these disfluencies would not have to be normalized out of the data before tagging, which is often not what those working with natural speech want to do.
+    As such, I propose tagging spoken training data from sociolinguistic interviews with disfluencies as part of the part of speech tags.
+    Ideally, this will allow the tagger to be able to identify disfluencies when used, and these disfluencies would not have to be normalized out of the data before tagging, which is often not what those working with natural speech want to do.
 
-    This modification fo the training data is not expected to improve the accuracy of taggers for spoken language.
-    Indeed, a few attempts have already been made to improve accuracy by incorporating prosodic features from the original audio \parencite[e.g.,][]{christodoulides_dismo:_2018}.
+    This modification fo the training data is not expected to improve the accuracy of taggers for spoken language as some taggers are already successful in dealing with disfluencies using prosodic features from the audio \parencite[e.g.,][]{christodoulides_dismo:_2018}.
     However, the original audio is not always available, particularly when working with secondary data.
-    Additionally, being able to tag disfluencies automatically without the need for audio would likely be far more efficient.
+    Additionally, being able to tag disfluencies automatically without the need for audio would likely be more efficient.
 
     This modification would potentially be a sign that disfluencies can be accurately identified in language even without prosodic information.
     To a degree, this is a linguistic hypothesis that can be tested here.
@@ -70,17 +67,28 @@
     In the latter case, the challenge is to account for disfluencies while still being able to perform part of speech tagging with high accuracy.
 
   \section{Proposed solution}
-    As such, I propose tagging training data with disfluencies as part of the part of speech tags.
-    For example, NNs that are within the reparandum would instead be labeled NN\_DIS.
-    As a result, the tagger would potentially be able to identify disfluencies when used, and these disfluencies would not have to be normalized out of the data before tagging, which is often not what those working with natural speech want to do.
+    The approach proposed here would be to tag training data with disfluencies as part of the part of speech tags.
+    For example, using the Penn Treebank tagset, nouns that are within the reparandum would be labeled NN\_DIS instead of simply NN.
+    As a result, \emph{n}-grams at moments of interruption might, for example look like \lexi{nous/PRP\_DIS nous/PRP} instead of appearing to be some sort of construction that would involve two identical pronouns in a row, such as disjunctives or reflexives.
 
-    This modification fo the training data is not expected to improve the accuracy of taggers for spoken language.
+    The training data will come from four 30 minute sociolinguistic interviews conducted with speakers of Louisiana French in early 2019.
+    The transcriptions will be tokenized using SPPAS \parencite{bigi_sppas_2015} as this program will also align words to the text, allowing for phonetic processing in future projects.
+    Part of speech tags with disfluencies indicated will be attached by hand, and an \emph{n}-gram tagger will be trained on 90\% of the dataset and tested on the remaining 10\%.
+
+  \section{Implications}
+    This modification of the training data is not expected to improve the accuracy of taggers for spoken language beyond what is already possible.
     Indeed, a few attempts have already been made to improve accuracy by incorporating prosodic features from the original audio \parencite[e.g.,][]{christodoulides_dismo:_2018}.
     However, the original audio is not always available, particularly when working with secondary data.
-    Additionally, being able to tag disfluencies automatically without the need for audio would likely be far more efficient.
+    Secondary data is particularly prevalent in sociolinguistic research due to the high cost of obtaining and transcribing large amounts of natural speech.
+    Being able to effectively tag large amounts of secondary interview data that may not be marked up with part of speech tags to begin with would facilitate more research that may have previously been avoided because of a lack of resources.
 
-    This modification would potentially be a sign that disfluencies can be accurately identified in language even without prosodic information.
-    To a degree, this is a linguistic hypothesis that can be tested here.
+    Additionally, being able to tag disfluencies automatically without the need for audio would likely be more efficient.
+    Audio processing is certainly more taxing on computer resources than text processing.
+
+    Linguistically, the success of a modification to training data would potentially be a sign that disfluencies can be accurately identified in language even without prosodic information.
+    At face value, this is a reasonable assumption.
+    After all, the very process proposed for tagging disfluencies in training data here presumes that disfluencies can be identified directly from written transcriptions.
+    However, an \emph{n}-gram tagger would be using very little context to accomplish the same, which would suggest some limits to how much information is needed to identify disfluencies.
 
   % \section{Methodology}
   %
