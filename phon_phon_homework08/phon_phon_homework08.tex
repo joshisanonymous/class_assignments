@@ -13,7 +13,12 @@
   \date{\today}
 
   % Custom commands
-  \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\rulealign}[1]{
+    \begin{tabular}[t]{l}
+      \\
+      #1
+    \end{tabular}
+  }
 
 \begin{document}
   \maketitle
@@ -39,13 +44,27 @@
     It makes sense to maintain IPA descriptions when dealing with phonetics and certainly when introducing students to phonetics and phonology as these descriptions are both easier to associate with relevant articulations and much more directly comprehensible, but they are ultimately not as phonologically relevant as distinctive features.
     \item
     \begin{enumerate}
-      \item \phonr{\phonfeat{-consonantal \\ +high \\ -low}}{\phonfeat{-consonantal \\ -high \\ -low}}{\phonfeat{+consonantal \\ dorsal \\ +low}}
-      \item \phonb{//}{\phonfeat{-consonantal \\ +high \\ -low \\ -back \\ +ATR}}{\phonfeat{-sonorant \\ +consonantal \\ coronal \\ -voice}}{\phonfeat{-sonorant \\ +consonantal \\ coronal \\ -voice \\ +continuant}}
-      \item \phonr{\phonfeat{-consonantal \\ +sonorant \\ +continuant \\ +syllabic \\ -back \\ -round}}{\phonfeat{-consonantal \\ +sonorant \\ +continuant \\ -syllabic}}{\phonfeat{-consonantal \\ +sonorant \\ +continuant \\ +syllabic}}
-      \item \phonr{\phonfeat{+consonantal \\ -continuant \\ nasal}}{\phonfeat{$\alpha$labial \\ $\beta$coronal \\ $\gamma$anterior \\ $\delta$dorsal \\ $\epsilon$back \\ $\phi$low}}{\phonfeat{+consonantal \\ -continuant \\ -sonorant \\ $\alpha$labial \\ $\beta$coronal \\ $\gamma$anterior \\ $\delta$dorsal \\ $\epsilon$back \\ $\phi$low}}
-      \item \phonr{\oneof{\phonfeat{labial} \\ \phonfeat{dorsal} \\ \phonfeat{pharyngeal} \\ \phonfeat{laryngeal}}}{[]}{\#}
-      \item \phonr{\phonfeat{$\alpha$round \\ -consonantal \\ +syllabic}}{\phonfeat{$\alpha$round \\ -consonantal \\ +syllabic \\ +back \\ +low}}{\phonfeat{pharyngeal \\ +consonantal \\ -sonorant \\ +continuant}}
-      \item \phonr{\phonfeat{+consonantal \\ -sonorant \\ coronal \\ +anterior}}{\phonfeat{+consonantal \\ -sonorant \\ coronal \\ +anterior \\ delayed released}}{\phonfeat{-consonantal \\ +sonorant \\ +syllabic \\ +high}}
+      \item \rulealign{
+        \phonr{\phonfeat[l]{-consonantal \\ +syllabic \\ +high}}{\phonfeat[l]{-high \\ -low}}{\phonfeat[l]{-continuant \\ dorsal \\ +low}}
+      }
+      \item \rulealign{
+        \phonb{ø}{\phonfeat[l]{-consonantal \\ + syllabic \\ +high \\ -back}}{\phonfeat[l]{-sonorant \\ +consonantal \\ coronal \\ -voice \\ +strident}}{\phonfeat[l]{-sonorant \\ +continuant \\ coronal \\ -voice}}
+      }
+      \item \rulealign{
+        \phonr{\phonfeat[l]{-consonantal \\ +syllabic \\ -back \\ -round}}{\phonfeat[l]{-syllabic \\ dorsal}}{\phonfeat[l]{-consonantal \\ +syllabic}}
+      }
+      \item \rulealign{
+        \phonr{\phonfeat[l]{nasal}}{\phonfeat[l]{$\alpha$labial \\ $\beta$coronal \\ $\gamma$anterior \\ $\delta$dorsal \\ $\epsilon$back \\ $\phi$low}}{\phonfeat[l]{-continuant \\ -sonorant \\ $\alpha$labial \\ $\beta$coronal \\ $\gamma$anterior \\ $\delta$dorsal \\ $\epsilon$back \\ $\phi$low}}
+      }
+      \item \rulealign{
+        \phonr{\phonfeat[l]{+consonantal} \\ \oneof[l]{\phonfeat[l]{labial} \\ \phonfeat[l]{dorsal} \\ \phonfeat[l]{pharyngeal} \\ \phonfeat[l]{laryngeal}}}{ø}{\#}
+      }
+      \item \rulealign{
+        \phonr{\phonfeat[l]{$\alpha$round \\ -consonantal \\ +syllabic}}{\phonfeat[l]{$\alpha$round \\ +back \\ +low}}{\phonfeat[l]{pharyngeal \\ -sonorant \\ +continuant}}
+      }
+      \item \rulealign{
+        \phonr{\phonfeat[l]{-sonorant \\ -continuant \\ -strident \\ coronal \\ +anterior}}{\phonfeat[l]{+strident \\ delayed released}}{\phonfeat[l]{-consonantal \\ +syllabic \\ +high}}
+      }
     \end{enumerate}
   \end{enumerate}
 \end{document}
