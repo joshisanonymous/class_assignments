@@ -1,0 +1,41 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily,
+            breaklines=true,
+            language=Python}
+  \usepackage{graphicx}
+    \graphicspath{{figures/}}
+
+  % Document information
+  \title{Homework 9}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\lexi}[1]{\textit{#1}}
+  \renewcommand{\theenumii}{\alph{enumii}}
+
+\begin{document}
+  \maketitle
+  \begin{enumerate}
+    \setcounter{enumi}{1}
+    \item
+    \begin{enumerate}
+      \item like(Angus, Cyril) $\land$ hate(Irene, Cyril)
+      \item taller(Tofu, Bertie)
+      \item love(Bruce, Bruce) $\land$ love(Pat, Pat)
+      \item see(Cyril, Bertie) $\land$ $\neg$see(Angus, Bertie)
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+      \item $\exists{}x$(person($x$) $\land$ like(Angus, $x$)) $\land \exists{}y$(person($y$) $\land$ like($y$, Julia))
+      \item $\exists{}x$(dog($x$) $\land$ love(Angus, $x$) $\land$ love($x$, Angus))
+      \item $\neg\exists{}x$(person($x$) $\land$ smile($x$, Pat))
+      \item $\exists{}x$(person($x$) $\land$ cough($x$) $\land$ sneeze($x$))
+    \end{enumerate}
+  \end{enumerate}
+\end{document}
