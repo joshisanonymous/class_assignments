@@ -52,4 +52,7 @@ tagger_trigram = nltk.TrigramTagger(train_sents, backoff=tagger_bigram)
 
 # Evaluate without disfluency chunks
 result = tagger_trigram.evaluate(test_sents)
-print(f"{result} -> without disfluency chunks")
+stats_dir = "./stats/"
+
+with open(f"{stats_dir}test_nodis_result.tex", "w") as file:
+    file.write(str(result))

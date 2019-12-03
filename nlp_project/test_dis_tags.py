@@ -2,6 +2,7 @@ import os
 import re
 import nltk
 import sklearn
+import io
 
 
 # Variables
@@ -50,11 +51,23 @@ tagger_bigram = nltk.BigramTagger(train_sents, backoff=tagger_unigram)
 tagger_trigram = nltk.TrigramTagger(train_sents, backoff=tagger_bigram)
 
 # Evaluate with disfluency chunks and print some stats
+stats_dir = "./stats/"
 result = tagger_trigram.evaluate(test_sents)
-size_train = len(train_sents)
-print(f"{result} -> with disfluency chunks")
-print(f"{size_train} -> size of training set")
+train_size = len(train_sents)
+
+with open(f"{stats_dir}test_dis_result.tex", "w") as file:
+    file.write(str(result))
+
+with open(f"{stats_dir}train_size.tex", "w") as file:
+    file.write(str(train_size))
+
 tagged_test_sents = tagger_trigram.tag_sents([[token for token, tag in sent] for sent in test_sents])
 gold = [str(tag) for sentence in test_sents for token, tag in sentence]
 pred = [str(tag) for sentence in tagged_test_sents for token,tag in sentence]
-print(sklearn.metrics.classification_report(gold, pred))
+
+with open(f"{stats_dir}cat_stats.txt", "w") as file:
+    file.write(sklearn.metrics.classification_report(gold, pred))
+
+# Export raw text as a file
+with open(f"{directory}all_tagged.txt", "w", encoding="utf-8") as file:
+    file.write(corpus_raw)
