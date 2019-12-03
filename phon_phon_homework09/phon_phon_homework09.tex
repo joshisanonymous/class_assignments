@@ -1,0 +1,58 @@
+\documentclass{article}
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{phonrule}
+
+  % Title info
+  \author{Joshua McNeill}
+  \title{Homework 9}
+  \date{\today}
+
+  % Custom commands
+  \newcommand{\rulealign}[1]{
+    \begin{tabular}[t]{l}
+      \\
+      #1
+    \end{tabular}
+  }
+
+\begin{document}
+  \maketitle
+  \begin{enumerate}
+    \item
+    \begin{enumerate}
+      \item Alveolar stops are deleted when preceding bilabial consonants.
+      \item Alveolar nasals assimilate to the place of articulation of the following consonant.
+      \item \rulealign{
+        \phonr{\phonfeat[l]{-continuant \\ -sonorant \\ coronal \\ +anterior}}{ø}{\phonfeat[l]{+labial \\ -strident}}
+      }
+      \item \rulealign{
+        \phonr{\phonfeat[l]{nasal \\ coronal}}{\phonfeat[l]{$\alpha$labial \\ $\beta$coronal \\ $\gamma$anterior \\ $\delta$dorsal \\ $\epsilon$back \\ $\phi$low}}{\phonfeat[l]{-syllabic \\ $\alpha$labial \\ $\beta$coronal \\ $\gamma$anterior \\ $\delta$dorsal \\ $\epsilon$back \\ $\phi$low}}
+        \vspace{2cm}
+      }
+      \item
+      \begin{tabular}[t]{l l l}
+        UR           & ɡɹændmʌðɹ̩ & boldkʰal \\
+        Deletion     & ɡɹænmʌðɹ̩  & --- \\
+        Assimilation & ɡɹæmmʌðɹ̩  & --- \\
+        SR           & ɡɹæmmʌðɹ̩  & boldkʰal
+      \end{tabular}
+      Deletion applies first so that the /d/ in \emph{grandmother} is deleted, though the rule does not apply to the [d] in \emph{bold call} because there is no bilabial sound at the beginning of \emph{call}. Likewise, assimilation applies to \emph{grandmother} since there is now a sequence of /nm/, but not for \emph{bold call}. This yields the correct surface representations.
+      \item Rule ordering is essential for \emph{grandmother} but not for \emph{bold call}. If the order was reverse, assimilation would not apply to \emph{grandmother} because there would still be a [d] between the two /n/ at the end of \emph{grand}, but deletion would still apply, yielding [ɡɹænmʌðɹ̩].
+    \end{enumerate}
+    \item There are two rules that apply:
+    \begin{enumerate}
+      \item (voicing) \rulealign{
+        \phonl{\phonfeat[l]{-sonorant \\ +continuant \\ -voice}}{\phonfeat{+voice}}{\phonfeat{nasal}}
+      }
+      \item (backing) \rulealign{
+        \phonr{\phonfeat[l]{-sonorant \\ +continuant \\ -voice \\ +anterior}}{\phonfeat{-anterior}}{\phonfeat[l]{+syllabic \\ -low \\ -back}}
+      }
+    \end{enumerate}
+    The rules can apply in any order. The reason one would never end up with [ʒ] in words like \emph{umziktʃʌm} (i.e., [um\textbf{ʒ}iktʃʌm]) is because the voicing rule is restricted to alveolar fricatives, otherwise this incorrect surface representation would be possible.
+  \end{enumerate}
+\end{document}
