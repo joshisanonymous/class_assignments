@@ -11,6 +11,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 * phon_phon_homework06: More narrow transcriptions
 * phon_phon_homework07: Phonological and morphological analyses
 * phon_phon_homework08: Distinctive features
+* phon_phon_homework09: More rules and autosegmental phonology
 * phon_phon_project: Analysis of merger or lack thereof of [e] and [ɛ] as well as [ɔ̃] and [ɑ̃] in Louisiana French
 
 ### Natural Language Processing (2019 w/Dr Hale)
@@ -23,6 +24,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 * nlp_homework07: Dependency grammar parsing
 * nlp_homework08: Feature-based grammars
 * nlp_homework09: Logical forms
+* nlp_project: Tagging disfluencies
 
 ### Current Methods in Sociolinguistics (2019 w/Dr Howe)
 * socio_seminar_project: Analysis of 3p plural subject pronouns in Louisiana French interviews
