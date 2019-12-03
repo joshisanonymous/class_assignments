@@ -6,13 +6,6 @@
         \setmainfont{Charis SIL}
     \usepackage[style=apa, backend=biber]{biblatex}
         \addbibresource{References.bib}
-    % \usepackage{listings}
-    %     \lstset{basicstyle=\ttfamily,
-    %             breaklines=true}
-    % \usepackage{graphicx}
-    % \usepackage{hyperref}
-    %     \hypersetup{colorlinks=true,
-    %                 allcolors=blue}
 
     % Additional commands
     \newcommand{\orth}[1]{$\langle$#1$\rangle$}
