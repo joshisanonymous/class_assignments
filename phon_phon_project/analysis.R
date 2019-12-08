@@ -5,8 +5,8 @@ library(adehabitatHR)
 data_dir <- "./data/"
 
 load_csv <- function(filename){
-  read.csv(paste(data_dir, filename,
-                 sep = ""),
+  read.csv(paste(data_dir, filename, sep = ""),
+           fileEncoding = "UTF-8",
            encoding = "UTF-8")
 }
 
@@ -20,7 +20,7 @@ convert_sampa_ipa <- function(vector){
   vector <- gsub("a~", "ɑ̃", vector)
   vector <- gsub("U~/", "ɛ̃", vector)
   vector <- gsub("O~", "ɔ̃", vector)
-  return(vector)
+  return(as.factor(vector))
 }
 
 make_uppercase <- function(vector){
@@ -29,7 +29,7 @@ make_uppercase <- function(vector){
   vector <- gsub("fitz", "Fitz", vector)
   vector <- gsub("ward", "Ward", vector)
   vector <- gsub("josh", "Josh", vector)
-  return(vector)
+  return(as.factor(vector))
 }
 
 mean_space <- function(df){
@@ -44,8 +44,8 @@ mean_space <- function(df){
 }
 
 nasal_histograms <- function(df, col){
-  ggplot(data = df,
-         aes(x = col, fill = PHONEME)) +
+  ggplot(data = df) +
+    aes(x = col, fill = PHONEME) +
     geom_histogram(alpha=0.2,
                    position="identity",
                    binwidth = 15) +
@@ -240,17 +240,18 @@ josh_nasals$SPEAKER <- make_uppercase(josh_nasals$SPEAKER)
 all_nasals$SPEAKER <- make_uppercase(all_nasals$SPEAKER)
 
 ## ---- all_vowel_space ----
-ggplot(data = all) +
-  aes(x = F2, y = F1, color = PHONEME) +
+ggplot(data = all,
+       aes(x = F2, y = F1, color = PHONEME)) +
   scale_x_reverse(name = "F2 (Hz)") +
   scale_y_reverse(name = "F1 (Hz)") +
   coord_cartesian(xlim = c(500, 2750),
                   ylim = c(200, 900)) +
   theme_classic() +
-  stat_ellipse(level = 0.67) +
+  stat_ellipse(level = 0.5) +
   geom_point(size = 0.5, alpha = 0.2) +
   facet_wrap(~ SPEAKER,
-             ncol = 2)
+             ncol = 2) +
+  labs(color = "Phoneme")
 
 ## ---- all_mean_space ----
 ggplot(data = all_means) +
@@ -273,7 +274,7 @@ nasal_histograms(all_nasals, all_nasals$F2)
 ## ---- all_nasalF3_histograms ----
 nasal_histograms(all_nasals, all_nasals$F3)
 
-## --- calculate_affinities ----
+## ---- calculate_affinities ----
 coulson_affinity <- get_affinity(coulson_nasals)
 talbot_affinity <- get_affinity(talbot_nasals)
 fitz_affinity <- get_affinity(fitz_nasals)
