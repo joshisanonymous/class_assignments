@@ -3,6 +3,7 @@ library(ggplot2)
 library(adehabitatHR)
 
 data_dir <- "./data/"
+figure_dir <- "./figure/"
 
 load_csv <- function(filename){
   read.csv(paste(data_dir, filename, sep = ""),
@@ -240,30 +241,36 @@ josh_nasals$SPEAKER <- make_uppercase(josh_nasals$SPEAKER)
 all_nasals$SPEAKER <- make_uppercase(all_nasals$SPEAKER)
 
 ## ---- all_vowel_space ----
-ggplot(data = all,
-       aes(x = F2, y = F1, color = PHONEME)) +
-  scale_x_reverse(name = "F2 (Hz)") +
-  scale_y_reverse(name = "F1 (Hz)") +
-  coord_cartesian(xlim = c(500, 2750),
-                  ylim = c(200, 900)) +
-  theme_classic() +
-  stat_ellipse(level = 0.5) +
-  geom_point(size = 0.5, alpha = 0.2) +
-  facet_wrap(~ SPEAKER,
-             ncol = 2) +
-  labs(color = "Phoneme")
+cairo_pdf(filename = paste(figure_dir, "all_vowel_space.pdf",
+                           sep= ""))
+  ggplot(data = all,
+         aes(x = F2, y = F1, color = PHONEME)) +
+    scale_x_reverse(name = "F2 (Hz)") +
+    scale_y_reverse(name = "F1 (Hz)") +
+    coord_cartesian(xlim = c(500, 2750),
+                    ylim = c(200, 900)) +
+    theme_classic() +
+    stat_ellipse(level = 0.5) +
+    geom_point(size = 0.5, alpha = 0.2) +
+    facet_wrap(~ SPEAKER,
+               ncol = 2) +
+    labs(color = "Phoneme")
+dev.off()
 
 ## ---- all_mean_space ----
-ggplot(data = all_means) +
-  aes(x = F2, y = F1, label = PHONEME) +
-  scale_x_reverse(name = "F2 (Hz)") +
-  scale_y_reverse(name = "F1 (Hz)") +
-  coord_cartesian(xlim = c(1200, 2000),
-                  ylim = c(300, 800)) +
-  theme_classic() +
-  geom_label() +
-  facet_wrap(~ SPEAKER,
-             ncol = 2)
+cairo_pdf(filename = paste(figure_dir, "all_mean_space.pdf",
+                           sep= ""))
+  ggplot(data = all_means) +
+    aes(x = F2, y = F1, label = PHONEME) +
+    scale_x_reverse(name = "F2 (Hz)") +
+    scale_y_reverse(name = "F1 (Hz)") +
+    coord_cartesian(xlim = c(1200, 2000),
+                    ylim = c(300, 800)) +
+    theme_classic() +
+    geom_label() +
+    facet_wrap(~ SPEAKER,
+               ncol = 2)
+dev.off()
 
 ## ---- all_nasalF1_histograms ----
 nasal_histograms(all_nasals, all_nasals$F1)
