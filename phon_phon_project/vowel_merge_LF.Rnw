@@ -14,55 +14,174 @@
                 allcolors=blue}
   \usepackage[style=apa, backend=biber]{biblatex}
     \addbibresource{References.bib}
+  \usepackage{graphicx}
+    \graphicspath{{./figure/}}
 
   % Title info
   \author{Joshua McNeill}
-  \title{} % Add footnote to specify where code is
+  \title{Merging of /ɔ̃/ and /ɑ̃/ among several speakers of Louisiana French\footnote{Code and data available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/phon_phon_project}.}}
   \date{\today}
 
   % Custom commands
   \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\uttr}[1]{\textit{#1}}
   \newcommand{\gloss}[1]{`#1'}
 
 \begin{document}
-  % <<settings_load_scripts, echo = FALSE>>=
-  % read_chunk("analysis.R")
-  % opts_chunk$set(echo = FALSE,
-  %                warning = FALSE,
-  %                message = FALSE,
-  %                results = "asis",
-  %                fig.height = 3.5,
-  %                fig.width = 3.5)
-  % @
-  % <<load_libraries_data>>=
-  % @
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis")
+  @
+  <<load_libraries_variables_functions>>=
+  @
+  <<load_data>>=
+  @
+  <<clean_data>>=
+  @
+  <<calculate_affinities>>=
+  @
   \maketitle
   \begin{abstract}
-    In passing, it would not be surprising for a listener to hear the back nasal vowels [ɑ̃] and [ɔ̃] produced by a Louisiana French speaker as one and the same vowel.
-    Indeed, \textcite{blainey_first_2013} acknowledges that these vowels ``sometimes overlap'' for her informants in southeast Louisiana in words like \lexi{souvent} \gloss{often}, which would end with [ɑ̃] in standard French varieties (pp.~100-101), although some confusion between these vowels has also been noted among Parisians \parencite[pp.~229-230]{fonagy_francais_1989}.
-    What seems to be missing in the literature, however, is any real quantitative analysis that attempts to tease apart whether a [ɑ̃] and [ɔ̃] have merged, are merging, or are not merging at all for Louisiana French speakers.
+    In French, the back nasal vowels, /ɔ̃/ and /ɑ̃/, have occasionally been described in the literature as merging to some degree.
+    This same phenomenon has even been reported in the perceptions of French speakers in France, where the vowels are confused.
+    However, there is a dearth of robust quantitative analyses of this potential vowel merger.
 
-    In this study, I aim to do such a quantative analysis using sociolinguistic interviews conducted with four individuals in early 2019.
-    MAUS at the BAS web services site will be used to align transcriptions of the text, and Praat will be used to extract vowel formants.
-    Each speaker's vowel space will be analyzed using Bhattacharyya affinity to determine how much overlap there is in the F1 values of their realizations of [ɑ̃] and [ɔ̃].
+    This pilot study begins to address this dearth by providing a quantative analysis using data from sociolinguistic interviews conducted with four speakers of Louisiana French in early 2019.
+    SPPAS was used to perform phonetic alignment, after which Praat was used to extract vowel formants.
+    Each speaker's vowel space was analyzed using Bhattacharyya affinity to determine the overlap in the F1 and F2 values for their realizations of /ɔ̃/ and /ɑ̃/.
 
-    This process will provide real quantitative evidence for or against the idea that these vowels are merging.
-    There will, however, be limitations considering the very small sample of speakers.
-    The study will necessarily be exploratory, but the nature of who the speakers are may offer additional insights along the way.
-    Two of the speakers are native speakers of advanced age while the other two are relatively younger speakers who nonetheless were interested enough in their linguistic heritage to attempt to learn Louisiana French specifically.
-    The implications for how these vowels are managed for different age groups and speakers of different native-speaking status will inform future studies.
+    The results suggest that both older native speakers and younger non-native speakers produce very nearly identical distributions of for /ɔ̃/ and /ɑ̃/, at least according to their F1 and F2 values.
+    There remains a possible distinction between the rounding of these two vowels that was not analyzed here, however.
+    Further research incorporating rounding and a larger pool of speakers appears to be warranted.
   \end{abstract}
-%   \section{Introduction}
-%     \label{sec:intro}
-%     Start
-%
-%   \appendix
-%     \section{Appendix: R Session Information}
-%       \label{app:r_session}
-%       \begin{lstlisting}
-% <<session>>=
-% sessionInfo()
-% @
-%       \end{lstlisting}
+  \section{Introduction}
+    \label{sec:intro}
+    In passing, it would not be surprising for a listener to hear the back nasal vowels /ɔ̃/ and /ɑ̃/ produced by a Louisiana French speaker as one and the same vowel.
+    Indeed, in \citeauthor{blainey_first_2013}'s (\citeyear{blainey_first_2013}) dissertation looking in depth at Louisiana French phonological patterns over time, she acknowledges that these vowels ``sometimes overlap'' for her informants in words like \lexi{souvent} \gloss{often}, which would end with /ɑ̃/ in standard French varieties (pp.~100-101).
+    However, \citeauthor{blainey_first_2013} did not specifically analyze to what degree these vowels overlap, and in fact, her study is fairly unique in commenting on the possible merger at all in Louisiana French.
+
+    Elsewhere in the francophone world, the relationship between /ɔ̃/ and /ɑ̃/ has been acknowledged more often, although as being part of a chain shift instead of merging.
+    One study showing some evidence of a merger was \citeauthor{fonagy_francais_1989}'s (\citeyear{fonagy_francais_1989}) in which Parisians were presented with phrases to transcribe which differed only in the quality of a single back nasal vowel, as in sentences \ref{sent:maintenant} and \ref{sent:maintenons}.
+    \begin{enumerate}
+      \item \label{sent:maintenant}
+      \begin{tabular}[t]{l l}
+        non   & maintenant \\
+        {[}nɔ̃ & mɛ̃tənɑ̃] \\
+        \multicolumn{2}{l}{\gloss{no, now}}
+      \end{tabular}
+      \item \label{sent:maintenons}
+      \begin{tabular}[t]{l l }
+        non   & maintenons \\
+        {[}nɔ̃ & mɛ̃tənɔ̃] \\
+        \multicolumn{2}{l}{\gloss{no, let's keep it up}}
+      \end{tabular}
+    \end{enumerate}
+    Listeners would often confuse these utterances, although the confusion was only for stimuli coming from one ``atypical'' speaker \parencite[pp.~229-230]{fonagy_francais_1989}.
+    On the other hand, \textcite{carignan_when_2013}, in summarizing previous research on ``Northern Metropolitan French'' and Quebec French, outlined a chain shift where /ɔ̃/ is raising and /ɑ̃/ retracting and raising in the former variety, and a possible chain shift moving in the opposite direction in the latter variety (pp.~28-29).
+
+    Missing in the literature on Louisiana French, however, is a robust quantitative analysis that attempts to tease apart whether a /ɔ̃/ and /ɑ̃/ have merged, are merging, or are not merging at all. With this in mind, I analyzed the relationship between these two vowels among four speakers of Louisiana French, in addition to in my own speech as a speaker of Louisiana French, as well. This small sample of speakers makes this an exploratory study with the following, rather general research questions:
+    \begin{itemize}
+      \item[R1.] Are /ɔ̃/ and /ɑ̃/ merged for any of these speakers of Louisiana French?
+      \begin{itemize}
+        \item[(a)] If so, in what direction should future research go?
+      \end{itemize}
+    \end{itemize}
+  \section{Methodology}
+    \label{sec:method}
+    % Data
+    Data for this study came from four sociolinguistic interviews.
+    The interviews were carried out in French over Skype in early 2019.
+    The participants\footnote{Names were anonymized.} were all speakers of Louisiana French, though two were native speakers and two were non-native speakers.
+    Nonetheless, the non-native speakers had picked up the language because of great interest in their linguistic heritage and so aimed to approximate the speech of native French speakers from Louisiana as opposed to those from France or perhaps Quebec.
+    The non-native speakers were also a good deal younger than the native speakers.
+    My own speech during these interviews was also analyzed as these facts about the younger speakers also hold for myself, and an analysis of phonological variation was not the goal at the time of the interviews, meaning I had no extra knowledge that could have biased my own behavior.
+
+    % Coding
+    The interviews were recorded in using Skype's built in record function.
+    My own microphone and analog-to-digital converter were professional grade.
+    I used a Sennheiser e815s run through an M-Audio Firewire 1814.
+    However, there was no way to control for the audio equipment used by the participants.
+    The recordings were save as 16kHz, 16-bit wav files with bit rates of 256k.
+
+    Transcriptions were completed by myself in chunks in ELAN \parencite{brugman_annotating_2004}.
+    Phonetic alignment was accomplished using SPPAS \parencite{bigi_sppas_2015}, though the appropriate protocols were not used to optimize the transcriptions.
+    For example, elided portions of words should be transcribed between parentheses when using SPPAS, but this was not done.
+    Finally, a Praat script was used to extract vowel formants from the midpoints of each vowel.
+
+    % Statistics
+    To analyze the data, Bhattacharyya affinity was calculated using the F1-F2 values for each token of /ɔ̃/ and then /ɑ̃/, which functioned as coordinates.
+    The actual calculation was carried out using the \texttt{adehabitatHR} R package \parencite{calenge_adehabitathr:_2019}.
+    Bhattacharyya affinity is common in ecological studies but has been used elsewhere in sociolinguistics to analyze vowel mergers \parencite[e.g.,][]{strelluf_overlap_2016}.
+    Resulting values are between 0 and 1 where 0 would mean there is no overlap in the vowel space and 1 would mean there is perfect overlap in the vowel space.
+  \section{Results}
+    \label{sec:results}
+    In general, the vowel spaces suggest a large amount of overlap, perhaps unnaturally large, as is made evident in Figure \ref{fig:all_vowel_space}.
+    It is unclear to what degree the quality of the recordings may have influenced this overlap.
+    Prior research has suggested that F1 and F2 are artificially increased over telephones \parencite{byrne_mobile_2004, kunzel_beware_2001}, and it is reasonable to assume that similar effects could be occurring over Skype, particularly with such a low sample rate (i.e., 16kHz).
+
+    \begin{figure}[tbp]
+      \caption{Vowel spaces for each speaker}
+      \label{fig:all_vowel_space}
+      <<all_vowel_space>>=
+      @
+    \end{figure}
+
+    Plotting only the mean values for each vowel cleans up the visual, of course, but even these values seem to be clustered together, as can be seen in Figure \ref{fig:all_mean_space}.
+    This appears to be particularly true for F1 values, which is unfortunate as an overlap of F2 values for /ɔ̃/ and /ɑ̃/ would not be surprising regardless of whether they overlap in general or not as they are both back vowels.
+    The greater distinction would likely be in the F1 values for these two vowels.
+
+    \begin{figure}[tbp]
+      \caption{Mean vowel values for each speaker}
+      \label{fig:all_mean_space}
+      <<all_mean_space>>=
+      @
+    \end{figure}
+
+    More informative than the visualizations is the Bhattacharyya affinity between /ɔ̃/ and /ɑ̃/ for each speaker, listed in Table \ref{tab:bhattacharyya}.
+    The lowest value here is for myself, \Sexpr{round(josh_affinity, 2)}, which is still quite high.
+    It appears that these two vowels do in fact overlap to a great degree.
+    Again, however, it is not clear whether the recording situation over Skype influenced that result or not.
+    Additionally, while /ɔ̃/ and /ɑ̃/ are occupying the same space using a coordinate system made up of F1 and F2 values, it is still possible that lip rounding is the important distinctive feature, and lip rounding has not been analyzed in this study.
+
+    \begin{table}[tbp]
+      \caption{Bhattacharyya affinity between /ɑ̃/ and /ɔ̃/ for each speaker}
+      \label{tab:bhattacharyya}
+      \begin{tabular}{r | r r | r r r}
+                               & \multicolumn{2}{c |}{Older Native} & \multicolumn{3}{c}{Younger Non-Native} \\
+        \hline
+        Speaker                & Coulson & Talbot                   & Fitz & Ward & Josh \\
+        Bhattacharyya affinity & \Sexpr{round(coulson_affinity, 2)} & \Sexpr{round(talbot_affinity, 2)} & \Sexpr{round(fitz_affinity, 2)} & \Sexpr{round(ward_affinity, 2)} & \Sexpr{round(josh_affinity, 2)}
+      \end{tabular}
+    \end{table}
+  \section{Discussion}
+    \label{sec:discussion}
+    What is immediately apparent is that there is clear evidence of a merger of /ɔ̃/ and /ɑ̃/ in Louisiana French.
+    Even if the F1 and F2 values were affected by recording over Skype, the high Bhattacharyya affinity values warrant further investigation.
+    Indeed, if recording over Skype leads to such extreme contraction of the vowel space as to make otherwise non-overlapping vowels appear to be almost exactly overlapping, this would be a significant cause for concern.
+
+    To that end, just what effect recordings over Skype have on vowel spaces would be a useful area of further research.
+    With increasing comfort with technology among the populace (both of the older speakers seemed perfectly comfortable with conversing over Skype), the potential for conducting sociolinguistic interviews from a distance is an attractive alternative to the travel, particularly for hard to reach speakers.
+    First of all, Skype is much cheaper than traveling.
+    Second of all, traveling indirectly exterts further time constraints: if one does not obtain enough data in one trip, it becomes necessary to make further trips.
+    In the case of Skype calls, recordings can be made at almost any time without affecting costs.
+
+    It also appears that age and/or nativeness are not important factors for this merger, as all speakers suggest a merger.
+    As only the older speakers are native speakers and only the younger speakers are non-native speakers, these variables are obviously associated, and so it is not possible to tease apart whether one is in fact important while the other is not.
+    It is perhaps possible that younger native speakers do not have a merger, though this would suggest a merger in the past that is now splitting back into two separate phonemes (i.e., reversing).
+    This would violate Garde's principle that mergers cannot be reversed \parencite{garde_reflexions_1961} and so would not be reasonable to use a point of departure for further research without much greater evidence.
+    On the other hand, it is also perhaps possible that older non-native speakers do not have a merger, though the implication would then be that language learners in the past had more difficulty approximating the pronunciations of native speakers than language learners today do.
+    While there are better perhaps better learning materials available today, there are also far fewer native speakers with whom to practice, and so this possibility also seems unreasonable.
+    Most likely, there is a merger of /ɔ̃/ and /ɑ̃/ that was essentially completed by even the first half of the 20th century and that non-native speakers do not have great difficulty approximating, though much more data would be necessary to say so with confidence.
+  \appendix
+    \section{Appendix: R Session Information}
+      \label{app:r_session}
+      \begin{lstlisting}
+<<session>>=
+sessionInfo()
+@
+      \end{lstlisting}
   \printbibliography
 \end{document}
