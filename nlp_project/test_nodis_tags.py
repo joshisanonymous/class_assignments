@@ -7,14 +7,17 @@ import nltk
 directory = "./data/"
 filenames = [directory+file for file in os.listdir(directory)]
 open_files = [open(file, "r", encoding="utf-8", newline="") for file in filenames]
-line_ending = re.compile(r"(\r)?\n$")
-periods = re.compile(r"PT")
-disfluencies = re.compile(r"_DIS")
 all_files = []
 all_text = []
 corpus_tagged_sents = []
 
 # Data cleanning
+line_ending = re.compile(r"(\r)?\n$")
+periods = re.compile(r"PT")
+disfluencies = re.compile(r"_DIS")
+noun_collapse = re.compile(r"NN[PS]")
+verb_collapse = re.compile(r"VB[DNPZ]")
+
 for files in open_files:
     for item in files:
         item = line_ending.sub("", item)
@@ -28,6 +31,8 @@ for files in open_files:
 for item in all_files:
     item = periods.sub(".", item)
     item = disfluencies.sub("", item)
+    item = noun_collapse.sub("NN", item)
+    item = verb_collapse.sub("VB", item)
     all_text.append(item)
 
 # Make raw text and then tokenize
@@ -54,5 +59,5 @@ tagger_trigram = nltk.TrigramTagger(train_sents, backoff=tagger_bigram)
 result = tagger_trigram.evaluate(test_sents)
 stats_dir = "./stats/"
 
-with open(f"{stats_dir}test_nodis_result.tex", "w") as file:
+with open(f"{stats_dir}test_nodis_result.txt", "w") as file:
     file.write(str(result))

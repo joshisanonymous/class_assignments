@@ -1,28 +1,37 @@
 \documentclass{article}
-    % Packages and settings
-    \usepackage{acl2015}
-    \usepackage{fontspec}
-        \setmainfont{Charis SIL}
-    \usepackage[style=apa, backend=biber]{biblatex}
-        \addbibresource{References.bib}
-    \usepackage{graphicx}
-    \usepackage{listings}
-        \lstset{basicstyle=\ttfamily,
-                breaklines=true}
-    \usepackage{hyperref}
-        \hypersetup{colorlinks=true,
-                    allcolors=blue}
+  % Packages and settings
+  \usepackage{./template/acl2015}
+  \usepackage{fontspec}
+      \setmainfont{Charis SIL}
+  \usepackage[style=apa, backend=biber]{biblatex}
+      \addbibresource{References.bib}
+  \usepackage{graphicx}
+  \usepackage{listings}
+      \lstset{basicstyle=\ttfamily,
+              breaklines=true}
+  \usepackage{hyperref}
+      \hypersetup{colorlinks=true,
+                  allcolors=blue}
 
-    % Additional commands
-    \newcommand{\orth}[1]{$\langle$#1$\rangle$}
-    \newcommand{\lexi}[1]{\textit{#1}}
+  % Additional commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\lexi}[1]{\textit{#1}}
 
-    % Document information
-    \title{Tagging disfluencies in sociolinguistic interview data\footnote{Code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/nlp_project}.}}
-    \author{Joshua McNeill}
-    \date{\today}
+  % Document information
+  \title{Tagging disfluencies in sociolinguistic interview data\footnote{Code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/nlp_project}.}}
+  \author{Joshua McNeill}
+  \date{\today}
 
 \begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("tagging_disfluencies.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis")
+  @
+  <<preamble>>=
+  @
   \maketitle
   \begin{abstract}
     Much of the training and testing for part of speech tagging has been done using written language as opposed to spoken language.
@@ -44,7 +53,7 @@
     For example, tagging a word like \lexi{run} as a noun is more likely if the preceding word is \lexi{the} than if the preceding word is {athletes}.
     An \emph{n}-gram language model takes this into account by calculating how often \lexi{run} is labeled as a noun in some training text when preceded by \lexi{the} versus when preceded by \lexi{athletes}.
 
-  \section{The Problem}
+  \section{Problem}
     Part of speech tagging systems have been a major area of natural language processing for quite some time.
     For example, the CLAWS tagging system \parencite{garside_claws_1987} has been in development since the 1980s.
     As a result, the accuracy of modern systems is very high.
@@ -66,7 +75,7 @@
     However, in fields such as sociolinguistics, disfluencies may be directly relevant to one's research interests.
     In the latter case, the challenge is to account for disfluencies while still being able to perform part of speech tagging with high accuracy.
 
-  \section{Proposed solution}
+  \section{Methodology}
     The approach proposed here would be to tag training data with disfluencies as part of the part of speech tags.
     For example, using the Penn Treebank tagset, nouns that are within the reparandum would be labeled NN\_DIS instead of simply NN.
     As a result, \emph{n}-grams at moments of interruption might, for example look like \lexi{nous/PRP\_DIS nous/PRP} instead of appearing to be some sort of construction that would involve two identical pronouns in a row, such as disjunctives or reflexives.
@@ -75,7 +84,15 @@
     The transcriptions will be tokenized using SPPAS \parencite{bigi_sppas_2015} as this program will also align words to the text, allowing for phonetic processing in future projects.
     Part of speech tags with disfluencies indicated will be attached by hand, and an \emph{n}-gram tagger will be trained on 90\% of the dataset and tested on the remaining 10\%.
 
-  \section{Implications}
+  \section{Results}
+    \begin{figure}[tbp]
+      \caption{Comparison between Tagging Strategies}
+      \label{fig:compare_accuracy}
+      <<compare_dis_nodis>>=
+      @
+    \end{figure}
+
+  \section{Discussion}
     This modification of the training data is not expected to improve the accuracy of taggers for spoken language beyond what is already possible.
     Indeed, a few attempts have already been made to improve accuracy by incorporating prosodic features from the original audio \parencite[e.g.,][]{christodoulides_dismo:_2018}.
     However, the original audio is not always available, particularly when working with secondary data.
@@ -89,10 +106,5 @@
     At face value, this is a reasonable assumption.
     After all, the very process proposed for tagging disfluencies in training data here presumes that disfluencies can be identified directly from written transcriptions.
     However, an \emph{n}-gram tagger would be using very little context to accomplish the same, which would suggest some limits to how much information is needed to identify disfluencies.
-
-  % \section{Methodology}
-  %
-  % \section{Conclusion}
-
   \printbibliography
 \end{document}

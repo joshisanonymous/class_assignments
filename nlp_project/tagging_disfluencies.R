@@ -1,20 +1,18 @@
 ## ---- preamble ----
 library(ggplot2)
 
-test_dis_result <- 0.7232796486090776
-test_nodis_result <- 0.8448023426061494
-test_results <- c(test_dis_result, test_nodis_result)
-names(test_results) <- c("w/ Disfluency Tags", "w/o Disfluency Tags")
+stats_dir <- "./stats/"
+
+test_dis_result <- scan(paste(stats_dir, "test_dis_result.txt",
+                              sep = ""))
+test_nodis_result <- scan(paste(stats_dir, "test_nodis_result.txt",
+                                sep = ""))
+test_dis_ext_result <- scan(paste(stats_dir, "test_dis_ext_result.txt",
+                                  sep = ""))
+test_results <- c(test_dis_result, test_nodis_result, test_dis_ext_result)
+names(test_results) <- c("w/ Disfluencies", "w/o Disfluencies", "w/ Extended Tags")
 
 ## ---- compare_dis_nodis ----
-# ggplot(data = test_results,
-#        aes(seq_along(test_results), test_results)) +
-#        geom_bar(stat = "identity")
 barplot(test_results,
         ylim = c(0, 1),
-        ylab = "Accuracy",
-        main = "Comparison b/w Tagging\nStrategies",
-        cex.axis = 2,
-        cex.names = 2,
-        cex.lab = 2,
-        cex.main = 2)
+        ylab = "Accuracy")

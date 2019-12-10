@@ -1,7 +1,6 @@
 import os
 import re
 import nltk
-import sklearn
 
 
 # Variables
@@ -15,10 +14,7 @@ corpus_tagged_sents = []
 # Data cleanning
 line_ending = re.compile(r"(\r)?\n$")
 periods = re.compile(r"PT")
-# Simplifying the tagset increases accuracy quite a bit
 dis_tags = re.compile(r".+_DIS")
-noun_collapse = re.compile(r"NN[PS]")
-verb_collapse = re.compile(r"VB[DNPZ]")
 
 for files in open_files:
     for item in files:
@@ -33,8 +29,6 @@ for files in open_files:
 for item in all_files:
     item = periods.sub(".", item)
     item = dis_tags.sub("DIS", item)
-    item = noun_collapse.sub("NN", item)
-    item = verb_collapse.sub("VB", item)
     all_text.append(item)
 
 # Make raw text and then tokenize
@@ -60,21 +54,6 @@ tagger_trigram = nltk.TrigramTagger(train_sents, backoff=tagger_bigram)
 # Evaluate with disfluency chunks and print some stats
 stats_dir = "./stats/"
 result = tagger_trigram.evaluate(test_sents)
-train_size = len(train_sents)
 
-with open(f"{stats_dir}test_dis_result.txt", "w") as file:
+with open(f"{stats_dir}test_dis_ext_result.txt", "w") as file:
     file.write(str(result))
-
-with open(f"{stats_dir}train_size.tex", "w") as file:
-    file.write(str(train_size))
-
-tagged_test_sents = tagger_trigram.tag_sents([[token for token, tag in sent] for sent in test_sents])
-gold = [str(tag) for sentence in test_sents for token, tag in sentence]
-pred = [str(tag) for sentence in tagged_test_sents for token,tag in sentence]
-
-with open(f"{stats_dir}cat_stats.txt", "w") as file:
-    file.write(sklearn.metrics.classification_report(gold, pred))
-
-# Export raw text as a file
-with open(f"{directory}all_tagged.txt", "w", encoding="utf-8") as file:
-    file.write(corpus_raw)
