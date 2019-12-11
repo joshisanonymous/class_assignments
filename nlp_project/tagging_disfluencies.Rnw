@@ -16,6 +16,7 @@
   % Additional commands
   \newcommand{\orth}[1]{$\langle$#1$\rangle$}
   \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\uttr}[1]{`#1'}
 
   % Document information
   \title{Tagging disfluencies in sociolinguistic interview data\footnote{Code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/nlp_project}.}}
@@ -49,33 +50,60 @@
 
   \section{Introduction}
     Part of speech tagging refers to the process of assigning lexical categories to lexical expressions in a text, either manually or automatically.
-    In natural language processing, the aim is to perform this task automatically, often through the use of \emph{n}-gram language models that provide the probability distribution for words receiving various part of speech tags given some previous context.
-    For example, tagging a word like \lexi{run} as a noun is more likely if the preceding word is \lexi{the} than if the preceding word is {athletes}.
-    An \emph{n}-gram language model takes this into account by calculating how often \lexi{run} is labeled as a noun in some training text when preceded by \lexi{the} versus when preceded by \lexi{athletes}.
+    In natural language processing, the aim is of course to perform this task automatically.
+    One way to do this is through the use of $n$-gram language models.
+    These models are simply probability distributions showing how likely a word is to have some part of speech tags given the previous $n$ words.
+    For example, the word \lexi{run} can have either of two parts of speech: noun or verb.
+    However, tagging \lexi{run} as a noun is far more likely if the preceding word is \lexi{the}, whereas tagging it as a verb is far more likely if the preceding word is \lexi{athletes}.
+
+    The probability distribution itself is generated using training data, meaning a corpus that has already been annotated for part of speech by hand.
+    The probability, then for a word to have a given part of speech is a function of how often it occurred in the training data with the preceding $n$ words.
+    Using the previous example, if \lexi{run} is annotated by hand as a noun every time \lexi{the run} appears, then the probability of assigning \lexi{run} that same part of speech automatically when that same sequence of words shows up in some other text is 1.0.
+
+    Naturally, an $n$-gram model only knows that a sequence like \lexi{the run} means \lexi{run} is a noun if that sequence appears in the training data in the first place.
+    Gaps like this are common enough for $n$-gram part of speech taggers that the phenomenon has a name: the sparse data problem.
+    A simple though imperfect solution is to rely on back-off models that look at less context for times when the more complicated model has a gap.
+    As such, a trigram model that relies on sequences of three words to guess parts of speech might use a bigram model as a back-off, which itself might use a unigram model as a back-off, and so on.
 
   \section{Problem}
     Part of speech tagging systems have been a major area of natural language processing for quite some time.
     For example, the CLAWS tagging system \parencite{garside_claws_1987} has been in development since the 1980s.
     As a result, the accuracy of modern systems is very high.
-    \textcite{hasan_comparison_2007} tested several systems on the Brown corpus \parencite{francis_brown_1964} and found upwards of 96\% accuracy (p.~125), and this was over a decade ago.
-    However, much of the training and testing for part of speech tagging has been done using written language as opposed to spoken language.
-    Indeed, the Brown corpus is a corpus of written language.
+    \textcite{hasan_comparison_2007} tested several systems on the Brown corpus \parencite{francis_brown_1964} and found upwards of 96\% accuracy (p.~125), meaning that training on some portion of the Brown corpus allowed these taggers to match up to 96\% of the hand annotations of some other portion of the corpus.
+    This performance was not only exceptional, it was achieved over a decade ago.
+    However, much of the training and testing for part of speech taggers has been done using written language as opposed to spoken language -- indeed, the Brown corpus itself is a corpus of written language -- and written language differs from spoken language in some notable ways.
 
     One major area in which spoken language differs from written language is in the presence of disfluencies such as repetitions, hesitations, and repairs.
-    Reptitions introduce problems for \emph{n}-gram models as some repetitions are not disfluencies at all, but rather grammatical.
-    For instance, in French reflexive constructions, \lexi{nous nous nous} may be a sequence representing a disjunctive pronoun for stress followed by the subject pronoun followed by the reflexive pronoun, but in other constructions, it may represent a disfluency where the subject pronoun is simply repeated for no grammatical reason.
+    Repetitions may be difficult for part of speech taggers to handle as not every repetition is a disfluency.
+    For instance, in French reflexive constructions, \lexi{nous nous nous} may be a sequence representing an emphatic pronoun followed by a subject pronoun followed by the reflexive pronoun, but it may also be a disfluency where the subject pronoun is simply repeated for no grammatical reason.
 
     Likewise, repairs introduce sequences into the data that do not represent anything structurally coherent.
     Repairs are made up of four parts: the reparandum, which is the part of the utterance to be repaired; a moment of interruption at the end of the reparandum; an editing term that introduces the repair; and the repair itself \parencite{levelt_monitoring_1983}.
-    With an \emph{n}-gram model, the word to the left and the word to the right of the moment of interruption are combined into an \emph{n}-gram, even though they do not belong together in any meaningful sense.
+    \citeauthor{levelt_monitoring_1983}'s own example of these parts can be seen in Utterance \ref{ex:levelt_parts}.
+    \begin{enumerate}
+      \item \uttr{Go from left again to, uh ..., from pink again to blue}\label{ex:levelt_parts}
+    \end{enumerate}
+    Here, \lexi{left again to} is the reparandum as this is the part of the original utterance that contains that which was not intended: the word \lexi{left}.
+    The moment of interruption is immediately after \lexi{again to}, meaning this is simply where the speaker stopped after making an error.
+    The editing term is \lexi{uh}, which signals that a corrected version of the original utterance is coming up.
+    Finally, the repair is \lexi{from pink again to blue}.
+
+    When performing part of speech tagging with an $n$-gram model, repairs lead to grammatically nonsensical combinations of words suddenly having probabilities because they show up in the training data.
+    For instance, Utterance \ref{ex:run} presents the sequence \lexi{the run}, yet \lexi{run} is not a noun in this case but a verb, which only becomes apparent after the sequence is uttered.
+    \begin{enumerate}
+      \setcounter{enumi}{1}
+      \item \uttr{The run fast, uh ..., the athletes run fast}\label{ex:run}
+    \end{enumerate}
     This same phenomenon occurs with hesitations, as well, which can be viewed as repairs with very short reparanda.
 
-    In many cases, an obvious solution is to simply normalize disfluencies out of a text before performing part of speech tagging.
-    This may work well when working in theoretical linguistics under the assumption that that which one really cares about is a speaker's competence, whereas disfluencies simply represent their performance \parencite[p.~4]{chomsky_aspects_1965}.
+  \section{Previous work}
+    In cases where disfluencies are not relevant for the person developing the tagger or the person using the tagger, a simple solution is to remove disfluencies from the training data or the corpus to be tagged, respectively.
+    For instance, theoretical linguists working under the assumption that that which one really cares about is a speaker's competence \parencite[p.~4]{chomsky_aspects_1965}, disfluencies can be disregarded as artifacts of performance without doing any harm.
+    Likewise, if one wishes to develop a tagger that is effective for tagging newspaper texts, keeping disfluencies in the training data is hardly useful.
     However, in fields such as sociolinguistics, disfluencies may be directly relevant to one's research interests.
-    In the latter case, the challenge is to account for disfluencies while still being able to perform part of speech tagging with high accuracy.
+    The challenge then is to account for disfluencies while still being able to perform part of speech tagging with high accuracy, and there have been several approaches to this.
 
-  \section{Methodology}
+  \section{Proposed approaches}
     The approach proposed here would be to tag training data with disfluencies as part of the part of speech tags.
     For example, using the Penn Treebank tagset, nouns that are within the reparandum would be labeled NN\_DIS instead of simply NN.
     As a result, \emph{n}-grams at moments of interruption might, for example look like \lexi{nous/PRP\_DIS nous/PRP} instead of appearing to be some sort of construction that would involve two identical pronouns in a row, such as disjunctives or reflexives.

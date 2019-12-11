@@ -14,7 +14,6 @@ corpus_tagged_sents = []
 # Data cleanning
 line_ending = re.compile(r"(\r)?\n$")
 periods = re.compile(r"PT")
-dis_tags = re.compile(r".+_DIS")
 
 for files in open_files:
     for item in files:
@@ -28,7 +27,6 @@ for files in open_files:
 
 for item in all_files:
     item = periods.sub(".", item)
-    item = dis_tags.sub("DIS", item)
     all_text.append(item)
 
 # Make raw text and then tokenize
