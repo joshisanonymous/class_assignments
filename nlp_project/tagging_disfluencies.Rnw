@@ -17,9 +17,11 @@
   \newcommand{\orth}[1]{$\langle$#1$\rangle$}
   \newcommand{\lexi}[1]{\textit{#1}}
   \newcommand{\uttr}[1]{`#1'}
+  \newcommand{\corp}[1]{\texttt{#1}}
+  \newcommand{\gloss}[1]{`#1'}
 
   % Document information
-  \title{Tagging disfluencies in sociolinguistic interview data\footnote{Code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/nlp_project}.}}
+  \title{Tagging disfluencies in sociolinguistic interview data}
   \author{Joshua McNeill}
   \date{\today}
 
@@ -38,26 +40,26 @@
     Much of the training and testing for part of speech tagging has been done using written language as opposed to spoken language.
     One major area in which spoken language differs from written language is in the presence of disfluences such as repetitions, hesitations, and repairs.
     As such, I propose tagging spoken training data from sociolinguistic interviews with disfluencies as part of the part of speech tags.
-    Ideally, this will allow the tagger to be able to identify disfluencies when used, and these disfluencies would not have to be normalized out of the data before tagging, which is often not what those working with natural speech want to do.
+    Ideally, this would allow the tagger to be able to identify disfluencies when used, and these disfluencies would not have to be normalized out of the data before tagging.
 
-    This modification fo the training data is not expected to improve the accuracy of taggers for spoken language as some taggers are already successful in dealing with disfluencies using prosodic features from the audio \parencite[e.g.,][]{christodoulides_dismo:_2018}.
+    This modification fo the training data is not expected to improve the accuracy of taggers for spoken language as some taggers are already successful in dealing with disfluencies using prosodic features from the audio.
     However, the original audio is not always available, particularly when working with secondary data.
     Additionally, being able to tag disfluencies automatically without the need for audio would likely be more efficient.
 
     This modification would potentially be a sign that disfluencies can be accurately identified in language even without prosodic information.
-    To a degree, this is a linguistic hypothesis that can be tested here.
+    To a degree, this is a linguistic hypothesis that can be tested here, as well.\footnote{Code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/nlp_project}.}
   \end{abstract}
 
   \section{Introduction}
     Part of speech tagging refers to the process of assigning lexical categories to lexical expressions in a text, either manually or automatically.
     In natural language processing, the aim is of course to perform this task automatically.
     One way to do this is through the use of $n$-gram language models.
-    These models are simply probability distributions showing how likely a word is to have some part of speech tags given the previous $n$ words.
+    These models are simply probability distributions showing how likely a word is to have some part of speech tag given the previous $n$ words.
     For example, the word \lexi{run} can have either of two parts of speech: noun or verb.
     However, tagging \lexi{run} as a noun is far more likely if the preceding word is \lexi{the}, whereas tagging it as a verb is far more likely if the preceding word is \lexi{athletes}.
 
     The probability distribution itself is generated using training data, meaning a corpus that has already been annotated for part of speech by hand.
-    The probability, then for a word to have a given part of speech is a function of how often it occurred in the training data with the preceding $n$ words.
+    The probability then for a word to have a given part of speech is a function of how often it occurred in the training data with the preceding $n$ words.
     Using the previous example, if \lexi{run} is annotated by hand as a noun every time \lexi{the run} appears, then the probability of assigning \lexi{run} that same part of speech automatically when that same sequence of words shows up in some other text is 1.0.
 
     Naturally, an $n$-gram model only knows that a sequence like \lexi{the run} means \lexi{run} is a noun if that sequence appears in the training data in the first place.
@@ -77,7 +79,6 @@
     Repetitions may be difficult for part of speech taggers to handle as not every repetition is a disfluency.
     For instance, in French reflexive constructions, \lexi{nous nous nous} may be a sequence representing an emphatic pronoun followed by a subject pronoun followed by the reflexive pronoun, but it may also be a disfluency where the subject pronoun is simply repeated for no grammatical reason.
 
-    Likewise, repairs introduce sequences into the data that do not represent anything structurally coherent.
     Repairs are made up of four parts: the reparandum, which is the part of the utterance to be repaired; a moment of interruption at the end of the reparandum; an editing term that introduces the repair; and the repair itself \parencite{levelt_monitoring_1983}.
     \citeauthor{levelt_monitoring_1983}'s own example of these parts can be seen in Utterance \ref{ex:levelt_parts}.
     \begin{enumerate}
@@ -97,22 +98,57 @@
     This same phenomenon occurs with hesitations, as well, which can be viewed as repairs with very short reparanda.
 
   \section{Previous work}
-    In cases where disfluencies are not relevant for the person developing the tagger or the person using the tagger, a simple solution is to remove disfluencies from the training data or the corpus to be tagged, respectively.
-    For instance, theoretical linguists working under the assumption that that which one really cares about is a speaker's competence \parencite[p.~4]{chomsky_aspects_1965}, disfluencies can be disregarded as artifacts of performance without doing any harm.
+    In cases where disfluencies are not relevant for the person developing the tagger or for the person using the tagger, a simple solution is to remove disfluencies from the training data or the corpus to be tagged, respectively.
+    For instance, for theoretical linguists working under the assumption that that which one really cares about is a speaker's competence \parencite[p.~4]{chomsky_aspects_1965}, disfluencies can be disregarded as artifacts of performance without doing any harm.
     Likewise, if one wishes to develop a tagger that is effective for tagging newspaper texts, keeping disfluencies in the training data is hardly useful.
     However, in fields such as sociolinguistics, disfluencies may be directly relevant to one's research interests.
     The challenge then is to account for disfluencies while still being able to perform part of speech tagging with high accuracy, and there have been several approaches to this.
 
-  \section{Proposed approaches}
-    The approach proposed here would be to tag training data with disfluencies as part of the part of speech tags.
-    For example, using the Penn Treebank tagset, nouns that are within the reparandum would be labeled NN\_DIS instead of simply NN.
-    As a result, \emph{n}-grams at moments of interruption might, for example look like \lexi{nous/PRP\_DIS nous/PRP} instead of appearing to be some sort of construction that would involve two identical pronouns in a row, such as disjunctives or reflexives.
+    One approach is to incorporate prosodic information into the tagger as pauses and such are natural cues to when a disfluency is occurring.
+    This was done in \textcite{christodoulides_dismo:_2018} and was part of the approach used in \textcite{hale_pcfgs_2006}.
+    This approach makes quite a bit of sense as pauses in speech as well as pitch patterns most likely work as cues for listeners that a speaker is in the middle of a disfluency.
+    However, this approach also requires either access to the original audio or painstakingly annotated prosodic information.
+    Corpora that contain prosodic annotations do exist, as \textcite{hale_pcfgs_2006} used the Switchboard corpus \parencite{ostendorf_prosodically_2001}, though this is not the norm.
 
-    The training data will come from four 30 minute sociolinguistic interviews conducted with speakers of Louisiana French in early 2019.
-    The transcriptions will be tokenized using SPPAS \parencite{bigi_sppas_2015} as this program will also align words to the text, allowing for phonetic processing in future projects.
-    Part of speech tags with disfluencies indicated will be attached by hand, and an \emph{n}-gram tagger will be trained on 90\% of the dataset and tested on the remaining 10\%.
+  \section{Proposed approach}
+    The approach proposed here is to tag training data with disfluencies in two different ways: in the same manner as IOB tags \parencite{ramshaw_text_1995} are added to regular part of speech tags or simply as general disfluencies.
+    IOB tags are used to identify chunks in a text by prefixing the regular part of speech tags with either a B if the word also begins a chunk, an I if it is part of the chunk, or an O if it is not in the chunk, where the result might look something like Utterance \ref{ex:iob} if one wanted a verb phrase to be chunked.
+    \begin{enumerate}
+      \setcounter{enumi}{2}
+      \item \corp{The/O-DET athletes/O-NNS run/B-VBP fast/I-RB}\label{ex:iob}
+    \end{enumerate}
+    In the example, \lexi{the athletes} is not part of the chunk, \lexi{run} begins the chunk, and \lexi{fast} is the rest of the chunk.
+    This method of tagging effectively adds a higher hierachical syntactic layer to the annotations, albeit a very simple one.
+    Applied to the problem of dealing with disfluencies, the hypothetical Utterance \ref{ex:run} might be tagged as in Utterance \ref{ex:run_chunked}.
+    \begin{enumerate}
+      \setcounter{enumi}{3}
+      \item \corp{The/DET run/VBP\_DIS fast/RB\_DIS, uh/UH\_DIS ,/,\_DIS the/DET athletes/NNS run/VBP fast/RB}\label{ex:run_chunked}
+    \end{enumerate}
+    The advantage of tagging the training data in this way is that the part of speech information about the items within disfluencies would be maintained.
+    This could be useful if one wished to ultimately analyze the structure of the disfluencies themselves.
+    The disadvantage is that this effectively doubles the number of annotations that the tagger must learn, and so the scarce data problem would be more of a concern.
+
+    The alternative is to tag disfluencies simply as \corp{DIS} without maintaining the part of speech as part of the tags.
+    In this way, the number of possible tags is only increased by one, but all the part of speech information about the words within disfluencies is lost.
+    While ideally, it is better to keep as much information as possible in the annotations, small training data adds value to the idea of keeping the number of possible tags to a minimum.
+    This latter point was particularly true for the current study, where the training data consisted of only \input{./stats/train_size_words.tex}words.
+
+    The data itself came from four 30 minute sociolinguistic interviews conducted myself with speakers of Louisiana French in early 2019.
+    Initial transcriptions into sentences were done in ELAN \parencite{brugman_annotating_2004} before being tokenized into words using SPPAS \parencite{bigi_sppas_2015}.
+    Part of speech tags with IOB style disfluency suffixes attached were then annotated by hand in ELAN with all further processing being done in Python, such as collapsing all of the IOB style tags into simply \corp{DIS} and tokenizing the data into lists of tagged sentences with which the NLTK package \parencite{bird_natural_2009} can work.
+
+    The tagger was trained on 90\% of the resulting \input{./stats/whole_size_sents.tex}sentences, the other 10\% being left as the test set for evaluating the accuracy of the tagger.
+    NLTK was used to train a trigram tagger with three levels of back-off: the first being a bigram tagger, the second being a unigram tagger, and third being a tagger that simply assigns \corp{NN} to every word.
+    The threshold for using a back-off tagger was zero, meaning a back-off tagger would only be used when there were no tokens at all of a given sequence in a more complicated model.
+    The accuracy of the tagger was then evaluated on the test set.
+    This whole process was repeated for the IOB style tags, the \corp{DIS} tags, and with no disfluency tags in the training set at all.
+    Finally, the \corp{sklearn} module was used to evaluate the precision, recall, and $F_1$ values for each tag individually.
 
   \section{Results}
+    The results have been summarized in Figure \ref{fig:compare_accuracy} and Table \ref{tab:evaluate_tag}.
+    Figure \ref{fig:compare_accuracy} suggests that using IOB style tags and using simple \corp{DIS} tags both lead to the same exact accuracy.
+    Indeed, the values listed are rounded to two decimal places, but the full values are identical to very many decimal places.
+    However, removing disfluency tags from the training data altogether leads to a large boost in accuracy, jumping from \Sexpr{round(test_dis_result, 2)} to \Sexpr{round(test_nodis_result, 2)}.
     \begin{figure}[tbp]
       \caption{Comparison between Tagging Strategies}
       \label{fig:compare_accuracy}
@@ -120,19 +156,71 @@
       @
     \end{figure}
 
+    As for the evaluation of each individual tag, Table \ref{tab:evaluate_tag} is somewhat enlightening.
+    The \corp{DIS} tag was handled much more poorly by the tagger than the other tags, which is perhaps not surprising seeing as it could potentially be applied to far more words than the other tags.
+    The \corp{DET} and \corp{DT} tags were also not handled very well, though this is most likely a result of the hand annotations mistakenly being the former sometimes and the latter other times.
+    Both of these tags refer to determiners and so should have both been \corp{DT}.
+    The \corp{NN} and \corp{VB} tags were managed in opposite ways, apparently: most tokens of \corp{NN} were indeed tagged as \corp{NN}, but so were tokens of words which should have been tagged differently, whereas the \corp{VB} tag was usually assigned correctly but not to very many of the tokens of \corp{VB}.
+    It is not clear why this would occur for \corp{VB}, but \corp{NN} was the tag used for the last back-off tagger, meaning scarce data naturally leads to this tag being used far too broadly.
+    In general, the $F_1$ scores for most of the tags were fairly acceptable for an initial attempt.
+    \begin{table}[tbp]
+      \caption{Evaluation of Each Tag}
+      \label{tab:evaluate_tag}
+      \begin{tabular}{l r r r r}
+        Tag          & Precision & Recall & $F_1$ & $N$ \\
+        \hline
+        .            & 1.00      & 1.00   & 1.00  & 45 \\
+        CC           & 0.80      & 0.89   & 0.84  & 27 \\
+        DET          & 0.00      & 0.00   & 0.00  & 0 \\
+        DIS          & 0.63      & 0.53   & 0.57  & 155 \\
+        DT           & 0.82      & 0.29   & 0.43  & 48 \\
+        IN           & 0.78      & 0.87   & 0.82  & 53 \\
+        JJ           & 0.79      & 0.65   & 0.71  & 23 \\
+        NN           & 0.59      & 0.91   & 0.72  & 68 \\
+        PRP          & 0.84      & 0.75   & 0.79  & 69 \\
+        RB           & 0.90      & 0.86   & 0.88  & 88 \\
+        RP           & 0.00      & 0.00   & 0.00  & 1 \\
+        UH           & 0.92      & 1.00   & 0.96  & 22 \\
+        VB           & 0.85      & 0.68   & 0.76  & 73 \\
+        WP           & 0.35      & 0.55   & 0.43  & 11 \\
+        \hline
+        Accuracy     &           &        & 0.72  & 683 \\
+        Macro Avg    & 0.66      & 0.64   & 0.64  & 683 \\
+        Weighted Avg & 0.77      & 0.72   & 0.73  & 683
+      \end{tabular}
+    \end{table}
+
+    To get a better idea of how the tagger treated the data, the utterance below can be seen with the correct hand annotations (\ref{ex:hand}) as well as the automatic tagger annotations (\ref{ex:auto}).
+    \begin{enumerate}
+      \setcounter{enumi}{4}
+      \item (hand annotated) \lstinputlisting{./data/hand_tagged_examp.txt}\label{ex:hand}
+      \item (tagger annotated) \lstinputlisting{./data/auto_tagged_examp.txt}\label{ex:auto}
+      \item \gloss{Yeah, that's not not a good way to to uh, yeah, to start, yeah, to speak with the the the students.}
+    \end{enumerate}
+    First of all, the \corp{DIS} tag is not assigned when there are repetitions that are only two words long, such as \lexi{pas pas} and \lexi{de de}, but the tagger has some success when it finds a repetition that is three words long in \lexi{les les les}.
+    However, it is the first two \lexi{les}s that should have been tagged as disfluencies and not the last, whereas the tagger decided that the last two \lexi{les}s were disfluencies and not the first.
+    This is not entirely surprising as the tagger is always looking at the previous context to make decisions, not the upcoming context.
+    The other disfluency that should have been spotted was a repair where \lexi{de commencer} was initially said and then switched to \lexi{de parler}.
+    Out of context, neither looks ungrammatical, and since the tagger only takes into account a very small range of context, this may be why it failed to find a disfluency here.
+
   \section{Discussion}
-    This modification of the training data is not expected to improve the accuracy of taggers for spoken language beyond what is already possible.
-    Indeed, a few attempts have already been made to improve accuracy by incorporating prosodic features from the original audio \parencite[e.g.,][]{christodoulides_dismo:_2018}.
-    However, the original audio is not always available, particularly when working with secondary data.
-    Secondary data is particularly prevalent in sociolinguistic research due to the high cost of obtaining and transcribing large amounts of natural speech.
-    Being able to effectively tag large amounts of secondary interview data that may not be marked up with part of speech tags to begin with would facilitate more research that may have previously been avoided because of a lack of resources.
+    This modification of the training data, adding IOB style disfluency tags or simply adding \corp{DIS} as a potential part of speech tag, was not expected to improve the accuracy of taggers for spoken language beyond what is already possible.
+    Indeed, attempts that incorporate prosodic features from the original audio already attain high levels of accuracy \parencite[e.g.,][]{christodoulides_dismo:_2018}.
+    However, the original audio is not always available, particularly when working with secondary data, and secondary data is particularly prevalent in sociolinguistic research due to the high cost of obtaining and transcribing large amounts of natural speech.
+    Being able to effectively tag large amounts of secondary interview data that may not be annotated with part of speech tags to begin with would facilitate more research that may have previously been avoided because of a lack of resources.
+    This was the more immediate goal of this study.
 
-    Additionally, being able to tag disfluencies automatically without the need for audio would likely be more efficient.
-    Audio processing is certainly more taxing on computer resources than text processing.
+    To that end, it appears that identifying disfluencies from text alone, at least without looking at any context beyond a couple words, does not look particularly promising.
+    Simply using regular part of speech tags and forgoing identifying disfluencies in the training data in fact leads to better results.
+    This would suggest that part of speech tagging is perfectly doable without even considering disfluencies.
+    It is thus only important to tackle the problem of identifying disfluencies if one wishes specifically to study them, in which case, the results here suggest that using IOB style tags is the better choice as more information is maintained and accuracy is just as high.
 
-    Linguistically, the success of a modification to training data would potentially be a sign that disfluencies can be accurately identified in language even without prosodic information.
-    At face value, this is a reasonable assumption.
-    After all, the very process proposed for tagging disfluencies in training data here presumes that disfluencies can be identified directly from written transcriptions.
-    However, an \emph{n}-gram tagger would be using very little context to accomplish the same, which would suggest some limits to how much information is needed to identify disfluencies.
+    An additional consideration for this study was the efficiency of tagging disfluencies in terms of processing resources.
+    Being able to tag disfluencies automatically without the need for audio would likely be more efficient as audio processing is certainly more taxing on computer resources than text processing.
+    However, even if this proved to be true, it hardly seems worthwhile to accept such a large drop in accuracy for a text-only tagger just to save on some computing power.
+
+    Finally, this study to some degree responds to a linguistic question: Can humans recognize disfluencies in the speech of others using no more than short sequences of words?
+    The trigram tagger used here was able to do so for some repetitions, but the results are not promising.
+    If humans can recognize disfluencies without the aid of prosody, they likely need much more context for disfluencies outside of simple repetitions.
   \printbibliography
 \end{document}

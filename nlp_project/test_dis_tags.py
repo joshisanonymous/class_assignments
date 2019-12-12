@@ -15,7 +15,6 @@ corpus_tagged_sents = []
 # Data cleanning
 line_ending = re.compile(r"(\r)?\n$")
 periods = re.compile(r"PT")
-# Simplifying the tagset increases accuracy quite a bit
 dis_tags = re.compile(r".+_DIS")
 noun_collapse = re.compile(r"NN[PS]")
 verb_collapse = re.compile(r"VB[DNPZ]")
@@ -60,13 +59,19 @@ tagger_trigram = nltk.TrigramTagger(train_sents, backoff=tagger_bigram)
 # Evaluate with disfluency chunks and print some stats
 stats_dir = "./stats/"
 result = tagger_trigram.evaluate(test_sents)
-train_size = len(train_sents)
+train_size_words = 0
+for sent in train_sents:
+    train_size_words += len(sent)
+whole_size_sents = len(corpus_tagged_sents)
 
 with open(f"{stats_dir}test_dis_result.txt", "w") as file:
     file.write(str(result))
 
-with open(f"{stats_dir}train_size.tex", "w") as file:
-    file.write(str(train_size))
+with open(f"{stats_dir}train_size_words.tex", "w") as file:
+    file.write(str(train_size_words))
+
+with open(f"{stats_dir}whole_size_sents.tex", "w") as file:
+    file.write(str(whole_size_sents))
 
 tagged_test_sents = tagger_trigram.tag_sents([[token for token, tag in sent] for sent in test_sents])
 gold = [str(tag) for sentence in test_sents for token, tag in sentence]
@@ -78,3 +83,14 @@ with open(f"{stats_dir}cat_stats.txt", "w") as file:
 # Export raw text as a file
 with open(f"{directory}all_tagged.txt", "w", encoding="utf-8") as file:
     file.write(corpus_raw)
+
+# Save an example of a hand tagged vs tagger tagged sentence
+test_sent_examp = [f"{tuple[0]}/{tuple[1]}" for tuple in test_sents[27]]
+test_sent_examp = " ".join(test_sent_examp)
+with open(f"{directory}hand_tagged_examp.txt", "w", encoding="utf-8") as file:
+    file.write(test_sent_examp)
+
+tagged_test_sent_examp = [f"{tuple[0]}/{tuple[1]}" for tuple in tagged_test_sents[27]]
+tagged_test_sent_examp = " ".join(tagged_test_sent_examp)
+with open(f"{directory}auto_tagged_examp.txt", "w", encoding="utf-8") as file:
+    file.write(tagged_test_sent_examp)
