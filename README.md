@@ -2,6 +2,9 @@
 
 Each folder here represents an assignment I've done for a class and so would be compiled separately. They include the following:
 
+### Language, Race and Ethnicity (2020 w/Dr Forrest)
+* race_ethnicity_01: Ethnolinguistic autobiography
+
 ### Phonetics and Phonology (2019 w/Dr Renwick)
 * phon_phon_homework01: Consonants
 * phon_phon_homework02: Narrow transcriptions
