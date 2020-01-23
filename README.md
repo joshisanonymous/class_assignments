@@ -2,6 +2,9 @@
 
 Each folder here represents an assignment I've done for a class and so would be compiled separately. They include the following:
 
+### French Syntax and Meaning (2020 w/Dr Ranson)
+* fr_01: Presentation of an article on word order in interrogatives
+
 ### Language, Race and Ethnicity (2020 w/Dr Forrest)
 * race_ethnicity_01: Ethnolinguistic autobiography
 
