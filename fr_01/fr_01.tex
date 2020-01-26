@@ -12,6 +12,7 @@
     \hypersetup{colorlinks=true,
                 allcolors=blue}
   \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{References.bib}
 
   % Document information
   \author{Joshua McNeill}
@@ -23,7 +24,23 @@
     \titlepage
   \end{frame}
 
-  \begin{frame}
+  \begin{frame}{Article}
+    \fullcitebib{dewaele_word_1999}
+  \end{frame}
+
+  \begin{frame}{Overview}
     \tableofcontents
   \end{frame}
+
+  \AtBeginSection{
+    \begin{frame}{Overview}
+      \tableofcontents[currentsection]
+    \end{frame}
+  }
+
+  \section{Introduction}
+  \section{Variables}
+  \section{Methodology}
+  \section{Analysis}
+  \section{Conclusion}
 \end{document}
