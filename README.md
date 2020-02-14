@@ -2,6 +2,9 @@
 
 Each folder here represents an assignment I've done for a class and so would be compiled separately. They include the following:
 
+### Creole Forms (2020 w/Dr Chamorro)
+* creole01: Discussion of Lefebvre (2001)
+
 ### French Syntax and Meaning (2020 w/Dr Ranson)
 * fr01: Presentation of an article on word order in interrogatives
 
