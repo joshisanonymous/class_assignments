@@ -4,6 +4,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 
 ### Creole Forms (2020 w/Dr Chamorro)
 * creole01: Discussion of Lefebvre (2001)
+* creole02: Discussion of Detges (2000)
 
 ### French Syntax and Meaning (2020 w/Dr Ranson)
 * fr01: Presentation of an article on word order in interrogatives
@@ -11,6 +12,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 ### Language, Race and Ethnicity (2020 w/Dr Forrest)
 * race_ethnicity01: Ethnolinguistic autobiography
 * race_ethnicity02: Presentation of Dubois \& Horvath (2003)
+* race_ethnicity03: Reflection on ethnolects in LA
 
 ### Phonetics and Phonology (2019 w/Dr Renwick)
 * phon_phon_homework01: Consonants
