@@ -1,0 +1,35 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{setspace}
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{References.bib}
+  % \usepackage{graphicx}
+  %   \graphicspath{{figures/}}
+
+  % Document information
+  \title{Dunno (proposal)}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\gloss}[1]{`#1'}
+  \newcommand{\image}[1]{
+    \begin{tabular}[t]{c}
+      \\
+      \includegraphics[scale=0.7]{#1}
+    \end{tabular}
+  }
+
+\begin{document}
+  \maketitle
+  \onehalfspacing
+  \section{Introduction}
+
+  \section{Methodology}
+
+    \printbibliography
+\end{document}
