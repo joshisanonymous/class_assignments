@@ -9,6 +9,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 
 ### French Syntax and Meaning (2020 w/Dr Ranson)
 * fr01: Presentation of an article on word order in interrogatives
+* fr02: Paper on passé composé in Louisiana French
 
 ### Language, Race and Ethnicity (2020 w/Dr Forrest)
 * race_ethnicity01: Ethnolinguistic autobiography
