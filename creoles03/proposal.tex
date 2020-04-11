@@ -9,7 +9,7 @@
   %   \graphicspath{{figures/}}
 
   % Document information
-  \title{Dunno (proposal)}
+  \title{Possessive determiners in Louisiana Creole}
   \author{Joshua McNeill}
   \date{\today}
 
@@ -17,19 +17,59 @@
   \newcommand{\orth}[1]{$\langle$#1$\rangle$}
   \newcommand{\lexi}[1]{\textit{#1}}
   \newcommand{\gloss}[1]{`#1'}
-  \newcommand{\image}[1]{
-    \begin{tabular}[t]{c}
-      \\
-      \includegraphics[scale=0.7]{#1}
-    \end{tabular}
-  }
 
 \begin{document}
   \maketitle
   \onehalfspacing
   \section{Introduction}
+    Louisiana has not only had a long relationship with the French language, it has even been French dominate up until the perhaps 50 years ago.
+    \textcite{smith_influence_1939} readily claimed that 90\% of South Louisiana spoke French at the time of his study looking into the influence of English on the vocabulary of the variety spoken there (p.~198).
+    The first time that ``mothertongue'' was included on the U.S. census, in 1970, roughly 570,000 people listed French as their mothertongue, making up about 15.83\% of the population.
+    While this figure also includes the mostly English speaking North Louisiana, it still suggests a strong downturn in speakers if we are to assume that the census came close to accurately capturing all those who speak the language.
+    More recent numbers suggest a continued decline; in 2010, the MLA sampled the population and concluded that there were roughly 142,000 French speakers left in the state, which sums to only 3.45\% of the population \parencite{mla_louisiana_nodate}.
+    While Louisiana has lost much of its status as a francophone state, the language still holds a valued symbolic position there as it is not difficult to find younger Louisianians whose grandparents speak French.
+
+    Besides French, the state is also known to have its own French-based creole, which is commonly mixed up with Louisiana French.
+    Indeed, this is one of the potential problems with the 1970 census as one of the possible mothertongues was ``LOUISIANA CREOLE'', which had a count of ...........
+    Louisiana Creole is often, though not always, considered distinct by those who speak it.
+    \textcite{klingler_if_2003} carried out a thorough grammatical description of the variety of Louisiana Creole spoken in Pointe Coupee Parish\footnote{Parishes are Louisiana's version of other stats' counties.} using data the he collected from interviews he conducted in the 1990s.
+    His participants would sometimes describe their language as ``créole'' [Creole], but also as ``français'' [French] or ``cadien'' [Cajun], this last term being a common way to refer to Louisiana French, that is, as Cajun French.
+    However, even those who described their language as French recognized that it was not quite like the French spoken in other parts of Louisiana let alone outside of Louisiana \parencite[p.~128]{klingler_if_2003}.
+
+    The variety of Louisiana Creole spoken in Pointe Coupee shares the same features as many of the Atlantic creoles. % Give example sentences from the corpus for this stuff later
+    It has a system of of preverbal markers that indicate tense, mood, and aspect; the copula is often omitted, definite and demonstrative determiners are postnominal, while indefinite determiners are prenominal; and the third person plural subject pronoun doubles as a plural marker for nouns \parencite[p.~63]{klingler_if_2003}.
+    There are enough similarities to Haitian Creole that it has sometimes been argued that those who came to Louisiana from Haiti after the revolution must have at least influenced Louisiana Creole if not created it, but \textcite{klingler_if_2003} argues that textual records suggest that the Louisiana Creole already existed before the revolution occurred (pp.~25-29).
+
+    Perhaps one of the reasons that Louisiana Creole speakers sometimes suggest that they speak French is because these languages are in close contact in much of the state, though less so in relatively isolated Pointe Coupee Parish.
+    As such, it is possible to find the influence of French in the speech of various speakers of the language.
+    One of the areas that French seems to exert influence is in the possessive determiner system. % perhaps start with a general framework for what possessive determiners are at all if need to flesh out
+    In French, grammatical gender plays a role in possessive determiners in that they must inflect for the gender of the noun to which they attach.
+    They must also inflect for the number of that noun. % Add example sentences
+    This is not so in the most so-called basilectal varieties of Louisiana Creole.
+    In such varieties, the possessive determiners are invariant, always terminating in [o]. % add paradigm table
+    However, some speakers of Louisiana Creole vary between invariant and inflected possessive determiners.
+    While \textcite{klingler_if_2003} did not provide a quantitative analysis of the language, he did make the observation that White speakers in his corpus used inflected possessive determiners more frequently than Black speakers (p.~116). % It might be worthwhile to get deeper into his observations here, also go into the prestige of Fr vs Cr and the history of Whites speaking Creole more than Blacks
+    The goal of the present study, then, is to investigate the variation in this linguistic form among speakers of Louisiana Creole as spoken in Pointe Coupee Parish.
+    Specifically, I put forth the following research question:
+
+    \begin{itemize}
+      \item[Q] Which social and linguistic factor(s) constrain the realization of possessive determiner in Louisiana Creole as either invariant or inflected for gender and number?
+    \end{itemize}
 
   \section{Methodology}
+    The data for this study comes from Klingler's own study.
+    In his book, he provides exerpts from a number of interviews that he conducted.
+    Two interviews were conducted with speakers who were identified as White and two with those who were identified as Creole, but the majority were with those who were identified as Black.
+    There is also a mix of males and females as well as ages, though speakers in their 50s are considered ``young'' in this context.
 
+    The content of the transcripts were retranscribed into plain text format for easier manipulation.
+    Each line represents one sentence, allowing for the use of regular expressions to automatically extract sentences that contain potential tokens.
+    The sentences will be read through manually to confirm that they are tokens and then coded for social and linguistic factors.
+
+    Quantitative analysis will be carried out to the extent that it can be.
+    Because of the small sample size for each social category, full statistical analyses cannot be carried out, but some indications of the validity of Klingler's claims as well as possible social constraints that he did not mention can be obtained through basic counts and proportions.
+    To that end, each tokens will be coded for race, gender, and age.
+    They will also be coded for linguistic factors, that is to say features of the nouns, such as whether they are animate or inanimate.
+    The linguistic factors can then have full statistical analyses applied as the category limitation is not relevant for these.
     \printbibliography
 \end{document}
