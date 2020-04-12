@@ -3,7 +3,7 @@
 # for être as the auxiliary according to Standard French
 # and saves them to new files to be manually checked.
 
-import sys
+import re
 from verbs import verbs_reg, verbs_reflex
 
 
@@ -15,6 +15,7 @@ files = [
     f"{data_dir}fitz.txt",
     f"{data_dir}ward.txt"
 ]
+pattern_interviewer = re.compile(r"J:")
 
 
 for file in files:
@@ -23,7 +24,7 @@ for file in files:
         to_check = []
         for line in corpus:
             for word in verbs:
-                if word in line:
+                if word in line and not pattern_interviewer.match(line):
                     to_check.append(line)
                     break
         with open(f"{file}_check", "w", encoding="utf-8") as fw:
