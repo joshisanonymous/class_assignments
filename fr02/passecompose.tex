@@ -10,6 +10,8 @@
   % \usepackage{graphicx}
   %   \graphicspath{{./figures/}}
   \usepackage[french]{babel}
+  \usepackage{caption}
+    \captionsetup[table]{name=Tableau}
 
   % Document information
   \author{Joshua McNeill}
@@ -24,6 +26,7 @@
 \begin{document}
   \maketitle
   \section{Introduction}
+    \label{sec:intro}
     Dans l'état de la Louisiane aux États-Unis, il y avait environ 142.000 francophones en 2010, 3,45\% de la population \parencite{mla_louisiana_nodate}.
     Ce nombre représente une forte diminution des locuteurs du français dans l'État.
     Quarante ans avant, il y en avait environ 570.000, 15,83\% de la population \parencite[p.~159]{us_department_of_commerce_1970_1973}.
@@ -108,21 +111,40 @@
     \end{itemize}
 
   \section{Méthode}
+    \label{sec:méthode}
     Le corpus utilisé ici a été construit à partir des interviews faits en 2019 sur Skype avec des locuteurs du français louisianais.
     Les interviews ont duré environ 30 minutes chacun.
     Les thèmes des discussions ont concerné les villes d'origine et les résidents de ces villes.
     Deux des participants, Fitz et Ward,\footnote{Les noms ont été anonymisés.} était relativement jeunes: 34 ans et 47 ans.
-    Ces deux parlaient français comme langue seconde, mais il s'intéressaient à imiter la variété parlée dans l'État.
+    Ces deux parlaient français comme langue seconde, mais il s'intéressaient à imiter la variété parlée dans l'État en raison de leur fierté pour leur culture.
     Ils habitaient à Bâton-Rouge et à la Nouvelle-Orléans, respectivement, mais Fitz avait souvent passé du temps dans la campagne, et Ward est récemment déménagé à la ville d'un petit village qui s'appelle Gramercy.
     Les deux autres participants, Coulson et Talbot, étaient plus vieux: 68 ans et 71 ans.
     Leur langue natale étaient le français, les deux.
-    Coulson a grandi dans un petit village au nord-ouest de Lafayette, mais il habitait à Bâton-Rouge depuis des années au moment de l'interview.
+    Coulson a grandi dans un petit village au nord-ouest de Lafayette qui s'appelle Chataignier, mais il habitait à Bâton-Rouge depuis des années au moment de l'interview.
     Talbot habitait au sud-est de Lafayette dans un village appelé Youngsville.
-    Il avait voyagé dans plusieurs parties du monde, mais la zone autour de Lafayette avait toujours été sa résidence principale.
-    % Corpus
+    Il avait voyagé dans plusieurs parties du monde, comme le New Jersey et Paris, mais la zone autour de Lafayette avait toujours été sa résidence principale.
+    Tous ces participants sont des hommes.
+    Ces caractéristiques sont résumées dans le Tableau \ref{tab:caracteristiques}.
+
+    \begin{table}[tbhp]
+      \caption{Caractéristiques des participants}
+      \label{tab:caracteristiques}
+      \centering
+      \begin{tabular}{l l l l l}
+        Nom     & Langue natale & Âge & Ville d'origine & Ville actuelle \\
+        \hline
+        Fitz    & anglais       & 34  & Bâton-Rouge     & Bâton-Rouge \\
+        Ward    & anglais       & 47  & Gramercy        & Nouvelle-Orléans \\
+        Coulson & français      & 68  & Chataignier     & Bâton-Rouge \\
+        Talbot  & français      & 71  & Lafayette       & Youngsville
+      \end{tabular}
+    \end{table}
+
+    Pour arriver à une liste d'occurrences 
     % Data collection and coding
     % Statistics
   \section{Résultats}
+    \label{sec:résultats}
     % Overall frequencies
     % Social factors (qualitative)
       % Age
@@ -130,5 +152,13 @@
     % Linguistic factors
       % Reflexive vs verb
   \section{Discussion}
+    \label{sec:discussion}
   \printbibliography
+  \appendix
+    \section{Verbes}
+      \label{app:verbes}
+      \subsection{Verbes non-réfléchis}
+        \noindent\input{./data/verbs_reg.tex}
+      \subsection{Verbes réfléchis}
+        \noindent\input{./data/verbs_reflex.tex}
 \end{document}
