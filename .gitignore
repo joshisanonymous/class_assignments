@@ -35,3 +35,7 @@ compile*.ps1
 phon_phon_project/transcripts/
 phon_phon_project/figure/
 nlp_project/data/
+fr02/data/fitz*
+fr02/data/talbot*
+fr02/data/coulson*
+fr02/data/ward*
