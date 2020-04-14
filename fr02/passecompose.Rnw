@@ -226,9 +226,64 @@
       <<freq_locuteur>>=
       @
     \end{figure}
-    
+
   \section{Discussion}
     \label{sec:discussion}
+    Les résultats dessus suggèrent que les facteurs linguistiques ne sont pas significatifs en termes du choix entre \lexi{être} et \lexi{avoir} pour l'auxiliaire dans le passé composé, mais seul un facteur a été examiné: les verbes pronominaux contre les verbes non-pronominaux.
+    Dans \textcite{papen_structural_1997}, ils ont affirmé que leurs informateurs n'utilisaient qu'\lexi{avoir} avec les verbes pronominaux.
+    Ici, c'était l'inverse, cependant ce n'était que Talbot parmi les aînés qui a produit un verbe pronominal et seulement une fois, ce verbe étant \lexi{se dire}, et en fait, il a choisi l'auxiliaire \lexi{avoir} dans ce cas.
+    En général, ce problème rend difficile les conclusions dans l'étude actuelle puisque les corpus ne se constitue que de \Sexpr{nrow(tokens)} occurrences, mais les résultats peuvent informer la recherche à venir.
+
+    La taille de l'échantillon ne m'a pas permis d'analyser individuellement les verbes de façon quantitative, mais ils présentent des indications intéressantes quand même.
+    \textcite{byers_defining_1988} a fait traduire le verbe \lexi{came} à ces informateurs, et quelques-uns ont produit le verbe \lexi{venir} avec l'auxiliaire \lexi{être}.
+    Pour ceux qui l'ont fait, leurs âges variaient.
+    Dans l'étude actuelle, seuls Talbot et Coulson, les deux locuteurs plus âgés, ont utilisé le verbe \lexi{venir} et toujours avec l'auxiliaire \lexi{avoir}, à l'opposé des résultats de Byers.
+    Cela soulève la question de ce que les plus jeunes locuteurs produiriaent pour \lexi{venir}, mais cette étude-là reste à faire.
+
+    Le verbe \lexi{aller} présente des résultats intéressants, aussi.
+    \textcite{byers_defining_1988} a affirmé que les Louisianais n'emploient jamais ce verbe au passé composé.
+    Ils le remplacent par \lexi{être}, et la forme finit par être \lexi{avoir été}.
+    C'est en fait le cas dans cette étude-ci, aussi sauf pour Ward.
+    Ward n'a produit qu'\lexi{être allé} pendant l'interview, et ce quatre fois, comme dans les Exemple \ref{ex:aller1} et \ref{ex:aller2}.
+
+    \begin{enumerate}
+      \setcounter{enumi}{7}
+      \item \label{ex:aller1} J'ai travaillé, mais après, \emph{je suis allé} à Finn McCool's.
+      \item \label{ex:aller2} \emph{Ma femme est allée} à une conférence.
+    \end{enumerate}
+
+    Il y avait plus de conformité pour le verbe \lexi{mourir}.
+    Les aînés ainsi que Ward ont toujours employé \lexi{être} avec \lexi{mourir}.
+    On peut imaginer cela comme un effet du verbe, mais il se peut que cela provienne des sémantiques du verbe.
+    En Louisiane, une autre version du participe qui est normalement \lexi{mort} existe: \lexi{mourru}.
+    Cette version unique peut prendre l'auxiliaire \lexi{avoir} pour qu'une variation entre les constructions \lexi{avoir mourru} et \lexi{être mort} s'opère.
+    Si c'est le cas, \lexi{être mort} pourrait être un adjectif d'état, tandis que \lexi{avoir mourru} exprime le passé composé.
+
+    En fait, \lexi{mourir} était le seul verbe qui a pris \lexi{être} pour Coulson et Talbot, qui suggère encore que \lexi{mort} n'est pas un participe mais un adjectif pour ces locuteurs et que les locuteurs plus âgés utilisent invariablement l'auxiliaire \lexi{avoir}.
+    Ce serait l'inverse des affirmations de \textcite{papen_structural_1997} que les aînés étaient les seuls qui ont démontré de la variation entre les auxiliaires dans le passé composé.
+    De plus, \textcite{byers_defining_1988} a trouvé de la variation parmi les aînés ainsi que les jeunes.
+    Il se peut que ces différences indiquent un changement linguistique vers l'usage invariant d\lexi{avoir}, puisque les deux aînés ici auraient été des jeunes à l'époque de l'étude de Byers.
+
+    Il serait cependant inattendu de trouver un changement vers \lexi{avoir} puis vers \lexi{être}, parce que les jeunes dans ce corpus ont régulièrement employé \lexi{être}.
+    Une autre possibilité est qu'il s'agit d'une différence entre les locuteurs natifs et les locuteurs non-natifs.
+    En ce cas, le changement aurait été dès l'usage variable de \lexi{être} et \lexi{avoir} vers l'usage invariant de \lexi{avoir}.
+    Les locuteurs natifs utiliseraient donc \lexi{être} en raison de la source de leur apprentissage du français: les écoles au lieu de la famille.
+
+    En effet, Fitz et Talbot sont fiers de leur héritage, les deux.
+    Fitz a appris à parler créole louisianais, une autre variété qui existe en Louisiane.
+    Cette variété a moins de locuteurs du français, qui lui donne un caractère spécial étroitement lié à la Louisiane.
+    Pour Ward, il a souvent mis l'accent sur son statut comme un vrai Cadien.
+    Sa famille était parmi les premières qui est arrivé en Louisiane des Provinces maritimes, c'est-à-dire parmi les premières familles acadiennes.
+    L'histoire typique pour l'origine des Cadiens est qui descendent des Acadiens qui avaient été expulsés du Canada à la fin du 18e siècle.
+    Ward était donc critique d'autres personnes qui revendique le statut cadien, même les résidents des villes comme Lafayette au beau milieu de la ``campagne cadienne''.
+    Or, Fitz et Ward ont appris le français aux universités, et à l'opposé à Talbot et Coulson, ils se servent de l'auxiliaire \lexi{être}.
+    En fait, Ward suivait des cours de français au moment de l'interview.
+
+    En dépit du fait que l'étude actuelle ne peut tirer de fortes conclusions, elle présente des indications intéressantes qui peuvent conduisent la recherche à venir.
+    Principalement, il faudra déterminer avec un corpus plus grand s'il y a de la variation selon l'âge ou selon le statut comme locuteur natif ou non.
+    Une difficulté qui soulèvera dans de telles études, c'est que les jeunes locuteurs du français louisianais sont souvent des locuteurs non-natifs, aussi, à cause de la diminution de la langue dans l'État.
+    Pour cette raison, il faudra effectuer ces études à la hâte.
+
   \printbibliography
   \appendix
     \section{Verbes}
