@@ -1,4 +1,6 @@
-## ---- load_data ----
+## ---- load_data_libraries ----
+library("ggplot2")
+
 directory <- "./data/"
 encoding <- "UTF-8"
 
@@ -25,3 +27,32 @@ tokens$AUXILIAIRE <- as.factor(tokens$AUXILIAIRE)
 tokens$PRONOM <- as.factor(tokens$PRONOM)
 
 tokens <- droplevels(tokens)
+
+names(tokens) <- c("auxiliaire", "verbe", "sujet", "pronominal", "locuteur")
+
+## ---- freq_overall ----
+ggplot(tokens,
+       aes(x = auxiliaire)) +
+  theme_bw() +
+  geom_bar()
+
+## ---- freq_pronominal ----
+ggplot(tokens,
+       aes(x = pronominal,
+           fill = auxiliaire)) +
+  theme_bw() +
+  geom_bar(position = position_dodge(preserve = "single"))
+
+## ---- freq_locuteur ----
+ggplot(tokens,
+       aes(x = locuteur,
+           fill = auxiliaire)) +
+  theme_bw() +
+  geom_bar(position = position_dodge(preserve = "single"))
+
+## ---- freq_pronom_locuteur ----
+ggplot(tokens,
+       aes(x = locuteur,
+           fill = pronominal)) +
+  theme_bw() +
+  geom_bar(position = position_dodge(preserve = "single"))

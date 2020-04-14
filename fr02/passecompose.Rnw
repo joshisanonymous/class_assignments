@@ -24,6 +24,19 @@
   \newcommand{\name}[1]{\textsc{#1}}
 
 \begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis",
+                 fig.height = 3,
+                 fig.width = 3.5)
+  @
+  <<load_data_libraries>>=
+  @
+  <<clean_data>>=
+  @
   \maketitle
   \section{Introduction}
     \label{sec:intro}
@@ -50,7 +63,7 @@
     Selon \textcite{luscher_emplois_1996}, le passé composé peut indique le temps du passé avec soit l'aspect perfectif soit l'aspect accompli (p.~192).
     En français louisianais, le sens est le même, mais la construction diffère.
     En français standard, on emploie d'habitude l'auxiliaire \lexi{avoir} suivi d'un participe du passé.
-    On emploie également l'auxiliaire \lexi{être} suivi d'un participe du passé si le verbe signifie un genre de mouvement ou de changement ou si le verbe est réfléchi.
+    On emploie également l'auxiliaire \lexi{être} suivi d'un participe du passé si le verbe signifie un genre de mouvement ou de changement ou si le verbe est réfléchi/pronominal.
     Ces deux auxiliares sont possible en français louisianais, aussi, mais \lexi{être} n'est pas forcément utilisé par tous les locuteurs.
 
     \textcite{papen_structural_1997} ont donné un esquisse du français parlé aux paroisses de Lafourche et Terrebonne au sud-est de la Louisiane.
@@ -140,17 +153,80 @@
       \end{tabular}
     \end{table}
 
-    Pour arriver à une liste d'occurrences 
-    % Data collection and coding
-    % Statistics
+    Le corpus se constituait de 718 énoncés, finalement.
+    Pour extraire les énoncés qui peuvent contenir des verbes qui prennent \lexi{être} au passé composé, un script a été créé qui identifier ces énoncés en utilisant les listes de participes dans l'Annexe \ref{app:verbes}.
+    La première liste, c'est des verbes intransitifs de mouvement ou de changement, c'est-à-dire ceux qui constituent l'acronyme classique Dr. and Mrs. Vandertramp.
+    La deuxième liste, c'est des verbes réfléchis qui sont généralement fréquents.
+    Certains de ces derniers sont des mots mieux connus en Louisiane comme \lexi{se tracasser}, où le verbe apparenté, \lexi{s'inquiéter}, n'est même pas constaté dans le Dictionary of Louisiana French \parencite{valdman_dictionary_2010}.
+    Après l'extraction, j'ai examiné à la main les énoncés pour trier ceux qui contenaient vraiment des occurrences du passé composé avec les verbes cible de ceux qui n'en contenaient pas.
+    Le nombre d'occurrences à la fin n'était que \Sexpr{nrow(tokens)}.
+
+    L'analyse originellement envisagée était quantitative, mais puisque l'on ne peut effectuer une telle analyse à partir d'un échantillon de \Sexpr{nrow(tokens)}, j'ai décidé de me contenter d'une analyse plutôt qualitative.
+    Des fréquences relatives ont été calculées, mais les résultats devrait être compris comme des indications pour de la recherche à venir.
   \section{Résultats}
     \label{sec:résultats}
-    % Overall frequencies
-    % Social factors (qualitative)
-      % Age
-      % 1st language
-    % Linguistic factors
-      % Reflexive vs verb
+    Une partie de la raison que le nombre d'occurrences des verbes qui pourraient prendre l'auxiliaire \lexi{être} au passé composé était si petit découle peut-être du nombre de verbes limités.
+    En effet, les verbes trouvés dans ce corpus étaient les suivants:
+
+    \begin{itemize}
+      \item[] aller, arriver, se dire, s'installer, mourir, passer, rester, revenir, venir
+    \end{itemize}
+
+    De plus, parmi les 718 énoncés dans le corpus, la plupart n'était pas au passé composé, naturellement.
+    Les sujets abordés ont principalement porté sur leurs perspectives sur les gens.
+    Pour obtenir plus du passé composé, il aurait fallu des sollicitations des histoires, peut-être.
+
+    \begin{figure}
+      \caption{Le passé composé réalisé avec \lexi{être} contre \lexi{avoir} en général}
+      \label{fig:freq_general}
+      \centering
+      <<freq_overall>>=
+      @
+    \end{figure}
+
+    Malgré le nombre d'occurrences, des fréquences relatives sont possibles.
+    La Figure \ref{fig:freq_general} montre une comparaison entre les réalisations de l'auxiliaire \lexi{être} contre \lexi{avoir} à part d'autres facteurs.
+    Ce qui est évident, c'est que \lexi{être} est plus fréquent qu'\lexi{avoir}.
+    Puisque l'idée générale des études précédentes était que la fréquence d'\lexi{être} et bien réduite en Louisiane, ce résultat est inattendu.
+
+    Pour aborder cet enjeu, j'ai divisé les données en les verbes réfléchis/pronominaux et ceux qui ne le sont pas.
+    La distribution résultante est dans la Figure \ref{fig:freq_pronominal}.
+    Deux faits sont évidents en regardant cette figure: les verbes non-pronominaux sont beaucoup plus fréquents que les verbes pronominaux, et les proportions sont similaires de toute façon.
+
+    \begin{figure}
+      \caption{Le passé composé réalisé avec \lexi{être} contre \lexi{avoir} selon le fait d'être pronominal ou non}
+      \label{fig:freq_pronominal}
+      \centering
+      <<freq_pronominal>>=
+      @
+    \end{figure}
+
+    En effect, si les données sont divisées entre les locuteurs, comme dans la Figure \ref{fig:freq_pronom_locuteur}, il est évident que les verbes non-pronominaux étaient plus fréquents pour tous les locuteurs sauf Fitz.
+    Fitz n'a produit le passé composé avec un verbe qui pourrait prendre \lexi{être} comme auxiliaire que \Sexpr{nrow(tokens[tokens$locuteur == "fitz",])} fois: une fois avec \lexi{être} et une fois avec \lexi{avoir}.
+    Fitz n'est pas un locuteur natif, mais il n'a évité ni l'aspect perfectif ni le temps du passé.
+    En fait, il a raconté plusieurs histoires pendant l'interview, mais il a souvent parlé créole louisianais au lieu du français, dans lequel l'aspect perfectif est exprimé avec le marqueur \lexi{té} est non un verbe auxiliaire.
+
+    \begin{figure}
+      \caption{Le passé composé réalisé avec des verbes pronominal contre non-pronominal selon le locuteur}
+      \label{fig:freq_pronom_locuteur}
+      \centering
+      <<freq_pronom_locuteur>>=
+      @
+    \end{figure}
+
+    Tandis que le fait d'être pronominal ou non ne dévoile pas beaoucoup, les facteurs sociaux semble fournir des indications utiles pour comprendre la haute fréquence d'\lexi{être} dans ce corpus en comparaison avec \lexi{avoir}.
+    La Figure \ref{fig:freq_locuteur} montre une préférence pour \lexi{être} parmi Fitz et Ward et pour \lexi{avoir} parmi Talbot et Coulson.
+    Ce résultat implique deux facteurs: l'âge et la langue natale.
+    Fitz et Ward sont plus jeunes et locuteurs natifs de l'anglais, les deux, tandis que Talbot et Coulson sont plus vieux et locuteurs natifs du français.
+
+    \begin{figure}
+      \caption{Le passé composé réalisé avec \lexi{être} contre \lexi{avoir} selon le locuteur}
+      \label{fig:freq_locuteur}
+      \centering
+      <<freq_locuteur>>=
+      @
+    \end{figure}
+    
   \section{Discussion}
     \label{sec:discussion}
   \printbibliography
