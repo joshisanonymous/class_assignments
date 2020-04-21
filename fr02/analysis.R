@@ -3,13 +3,14 @@ library("ggplot2")
 
 directory <- "./data/"
 encoding <- "UTF-8"
+axis_count <- "fréquence"
 
 talbot <- read.csv(paste(directory, "talbot_tokens.csv", sep = ""),
                  encoding = encoding)
 coulson <- read.csv(paste(directory, "coulson_tokens.csv", sep = ""),
                  encoding = encoding)
 fitz <- read.csv(paste(directory, "fitz_tokens.csv", sep = ""),
-                 encoding = encoding)                
+                 encoding = encoding)
 ward <- read.csv(paste(directory, "ward_tokens.csv", sep = ""),
                  encoding = encoding)
 
@@ -34,6 +35,7 @@ names(tokens) <- c("auxiliaire", "verbe", "sujet", "pronominal", "locuteur")
 ggplot(tokens,
        aes(x = auxiliaire)) +
   theme_bw() +
+  labs(y = axis_count) +
   geom_bar()
 
 ## ---- freq_pronominal ----
@@ -41,6 +43,7 @@ ggplot(tokens,
        aes(x = pronominal,
            fill = auxiliaire)) +
   theme_bw() +
+  labs(y = axis_count) +
   geom_bar(position = position_dodge(preserve = "single"))
 
 ## ---- freq_locuteur ----
@@ -48,6 +51,7 @@ ggplot(tokens,
        aes(x = locuteur,
            fill = auxiliaire)) +
   theme_bw() +
+  labs(y = axis_count) +
   geom_bar(position = position_dodge(preserve = "single"))
 
 ## ---- freq_pronom_locuteur ----
@@ -55,4 +59,5 @@ ggplot(tokens,
        aes(x = locuteur,
            fill = pronominal)) +
   theme_bw() +
+  labs(y = axis_count) +
   geom_bar(position = position_dodge(preserve = "single"))

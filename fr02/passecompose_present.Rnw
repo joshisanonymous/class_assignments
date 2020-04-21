@@ -1,0 +1,315 @@
+\documentclass{beamer}
+  % Beamer settings
+  \usetheme{CambridgeUS}
+  \usecolortheme{seagull}
+  \usefonttheme{professionalfonts}
+  \usefonttheme{serif}
+
+  % Packages and package settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{References.bib}
+  \usepackage[french]{babel}
+  \usepackage{caption}
+    \captionsetup[table]{name=Tableau}
+
+  % Document information
+  \author{Joshua McNeill}
+  \date{\today}
+  \title{Les auxiliaires pour le passé composé en français louisianais}
+
+  % Custom commands
+  \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\name}[1]{\textsc{#1}}
+  \newcommand{\gloss}[1]{`#1'}
+
+\begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis",
+                 fig.height = 3,
+                 fig.width = 3.5)
+  @
+  <<load_data_libraries>>=
+  @
+  <<clean_data>>=
+  @
+  \titlepage
+
+  \begin{frame}
+    \tableofcontents[hideallsubsections]
+  \end{frame}
+
+  \AtBeginSection[]{
+    \begin{frame}
+      \tableofcontents[currentsection,
+                       hideallsubsections]
+    \end{frame}
+  }
+
+  \section{Introduction}
+    \begin{frame}{Le fait français en Louisiane}
+      \begin{block}{}
+        Population francophone
+      \end{block}
+      \begin{center}
+        \begin{tabular}{l r r}
+          An   & Nombre  & Pourcentage \\
+          \hline
+          1939 &  ---    & 90,00\% \nocite{smith_influence_1939} \\
+          1970 & 570.000 & 15,83\% \nocite{us_department_of_commerce_1970_1973} \\
+          2010 & 142.000 & 3,45\%  \nocite{mla_louisiana_nodate}
+        \end{tabular}
+      \end{center}
+    \end{frame}
+
+    \begin{frame}{Caractéristiques}
+      \only<1>{
+        \begin{block}{}
+          Pronoms
+        \end{block}
+        \begin{center}
+          \begin{tabular}{l | l}
+            je           & nous, nous autres \\
+            \hline
+            tu, vous     & vous, vous autres \\
+            \hline
+            il, elle, on & ils, eux, eux autres, ça
+          \end{tabular}
+        \end{center}
+      }
+      \only<2>{
+        \begin{block}{Aspect progressif}
+          \lexi{être après} + verbe à l'infinitif
+          \begin{enumerate}
+            \item Il est après parler. \parencite{papen_structural_1997}
+            \item[] \gloss{Il est en train de parler.}
+          \end{enumerate}
+        \end{block}
+      }
+      \nocite{brown_pronominal_1988} \nocite{byers_defining_1988} \nocite{dajko_ethnic_2009} \nocite{rottet_language_1995} \nocite{smith_morphosyntactic_1994}
+    \end{frame}
+
+    \begin{frame}{Passé composé}
+      \only<1>{
+        \begin{block}{Français standard}
+          \begin{itemize}
+            \item Exprime l'aspect perfectif ou accompli \parencite[p.~192]{luscher_emplois_1996}
+            \item Prend l'auxiliaire \lexi{avoir} ou \lexi{être} avec les verbes réfléchis et certains autres
+          \end{itemize}
+        \end{block}
+      }
+      \only<2>{
+        \begin{block}{Français louisianais}
+          \begin{enumerate}
+            \item Exprime l'aspect perfectif ou accompli
+            \item Prend l'auxiliaire \lexi{avoir} ou \lexi{être} avec ... ?
+            \begin{itemize}
+              \item Paroisses Terrebonne et Lafourche: parfois les verbes intransitifs mais toujours \lexi{avoir} avec les verbes réfléchis \parencite[p.~101]{papen_structural_1997}
+              \begin{enumerate}
+                \setcounter{enumii}{2}
+                \item On s'a baigné
+                \item Eux s'a assis
+              \end{enumerate}
+              \item Dans le sud de la Louisiane en général: variation libre \parencite[pp.~50-51]{byers_defining_1988}
+            \end{itemize}
+          \end{enumerate}
+        \end{block}
+      }
+      \only<3>{
+        \begin{block}{Tâches de traduction de \textcite{byers_defining_1988}}
+          \begin{enumerate}
+            \item I went to the store yesterday. $\rightarrow$ \lexi{aller}
+            \item She came as soon as you called. $\rightarrow$ \lexi{venir}
+            \item I came as soon as you called. $\rightarrow$ \lexi{venir}
+            \item I returned to work yesterday. $\rightarrow$ \lexi{retourner/revenir}
+            \item He got up (from bed). $\rightarrow$ \lexi{se lever}
+          \end{enumerate}
+        \end{block}
+        \begin{block}{Résultats}
+          \begin{itemize}
+            \item Quelques-uns ont utilisé \lexi{être} avec \lexi{venir} et \lexi{se lever}
+            \begin{itemize}
+              \item Pas des caractéristiques sociaux en commun
+            \end{itemize}
+            \item (1) a toujours sollicité \lexi{j'ai été}
+          \end{itemize}
+        \end{block}
+      }
+      \only<4>{
+        \begin{block}{Jugements de \lexi{être venu} contre \lexi{avoir venu}}
+          \begin{itemize}
+            \item La moitié des utilisateurs de \lexi{être} ont mieux jugé \lexi{avoir}
+            \item La moitié des utilisateurs de \lexi{avoir} ont mieux jugé \lexi{être}
+          \end{itemize}
+        \end{block}
+      }
+    \end{frame}
+
+    \begin{frame}{Question de recherche}
+      \begin{block}{}
+        Quels sont les facteurs sociaux et linguistiques qui influencent la réalisation de l'auxiliaire comme \lexi{avoir} ou \lexi{être} au passé composé en français louisianais?
+      \end{block}
+    \end{frame}
+
+  \section{Méthode}
+    \begin{frame}{Interviews}
+      \begin{block}{}
+        \begin{itemize}
+          \item Faits en 2019 sur Skype par moi
+          \item \~30 minutes chacun
+          \item Thèmes: Les villes d'origine et les résidents de ces villes
+          \item 718 énoncés contenants des verbes cible
+        \end{itemize}
+      \end{block}
+      \begin{center}
+        \begin{tabular}{l l l l l}
+          Nom     & Langue natale & Âge & Ville d'origine & Ville actuelle \\
+          \hline
+          Fitz    & anglais       & 34  & Bâton-Rouge     & Bâton-Rouge \\
+          Ward    & anglais       & 47  & Gramercy        & Nouvelle-Orléans \\
+          Coulson & français      & 68  & Chataignier     & Bâton-Rouge \\
+          Talbot  & français      & 71  & Lafayette       & Youngsville
+        \end{tabular}
+      \end{center}
+    \end{frame}
+
+  \section{Résultats}
+    \begin{frame}{En général}
+      \begin{columns}
+        \column{0.4\linewidth}
+          \begin{block}{Verbes utilisés au passé composé}
+            aller, arriver, se dire, s'installer, mourir, passer, rester, revenir, venir
+          \end{block}
+        \column{0.6\linewidth}
+          <<freq_overall>>=
+          @
+      \end{columns}
+    \end{frame}
+
+    \begin{frame}{Verbes réfléchis}
+      \begin{columns}
+        \column{0.4\linewidth}
+          \begin{block}{}
+            \begin{itemize}
+              \item Les verbes non-pronominaux sont moins fréquents
+              \item Les proportions sont égales
+            \end{itemize}
+          \end{block}
+        \column{0.6\linewidth}
+          <<freq_pronominal>>=
+          @
+      \end{columns}
+    \end{frame}
+
+    \begin{frame}{Fréquences des types de verbes selon le locuteur}
+      \begin{columns}
+        \column{0.4\linewidth}
+          \begin{block}{}
+            Tous les locuteurs ont produit plus de verbes non-pronominaux sauf Fitz
+          \end{block}
+        \column{0.6\linewidth}
+          <<freq_pronom_locuteur>>=
+          @
+      \end{columns}
+    \end{frame}
+
+    \begin{frame}{Fréquences des auxiliaires selon le locuteur}
+      \begin{columns}
+        \column{0.4\linewidth}
+          \begin{block}{}
+            \begin{itemize}
+              \item Les locuteurs natifs et plus âgés ont produit plus d'\lexi{avoir}
+              \item Les locuteurs non-natifs et plus jeunes ont produit plus d'\lexi{être}
+            \end{itemize}
+          \end{block}
+        \column{0.6\linewidth}
+          <<freq_locuteur>>=
+          @
+      \end{columns}
+    \end{frame}
+
+  \section{Discussion}
+    \begin{frame}{Effet des types des verbes}
+      \begin{block}{}
+        \begin{itemize}
+          \item \textcite{papen_structural_1997} ont affirmé que leurs informateurs n'utilisaient qu'\lexi{avoir} avec les verbes pronominaux
+          \item Ici, c'est l'inverse
+          \begin{itemize}
+            \item Ce n'était que Talbot parmi les aînés qui a produit un seul verbe pronominal: \lexi{se dire} avec \lexi{avoir}
+          \end{itemize}
+        \end{itemize}
+      \end{block}
+    \end{frame}
+
+    \begin{frame}{Le verbe \lexi{venir}}
+      \begin{block}{}
+        \begin{itemize}
+          \item Dans \textcite{byers_defining_1988}, quelques-uns, de divers âges, ont traduit \lexi{came} comme \lexi{venir} avec \lexi{être}
+          \item Ici, seuls les aînés ont produit \lexi{venir} et toujours avec \lexi{avoir}
+          \begin{itemize}
+            \item Ils sont également les locuteurs natifs
+          \end{itemize}
+        \end{itemize}
+      \end{block}
+    \end{frame}
+
+    \begin{frame}{Le verbe \lexi{aller}}
+      \begin{block}{}
+        \begin{itemize}
+          \item \textcite{byers_defining_1988} a affirmé que les Louisianais n'emploient jamais \lexi{être/avoir allé} mais toujours \lexi{avoir été}
+          \item C'était pareil ici sauf pour Ward
+          \begin{enumerate}
+            \item J'ai travaillé, mais après, \emph{je suis allé} à Finn McCool's.
+            \item \emph{Ma femme est allée} à une conférence.
+          \end{enumerate}
+        \end{itemize}
+      \end{block}
+    \end{frame}
+
+    \begin{frame}{Le verbe \lexi{mourir}}
+      \begin{block}{}
+        \begin{itemize}
+          \item Les aînés ainsi que Ward ont toujours employé \lexi{être} avec \lexi{mourir}, c.-à-d. \lexi{être mort}
+          \begin{itemize}
+            \item C'était le seul avec \lexi{être} pour Coulson et Talbot
+          \end{itemize}
+          \item Mais en Louisiane, le participe \lexi{mourru} existe aussi
+          \begin{itemize}
+            \item[$\rightarrow$] C'était vraiment le passé composé ou une description d'un statut actuel?
+          \end{itemize}
+        \end{itemize}
+      \end{block}
+    \end{frame}
+
+  \section{Conclusions}
+    \begin{frame}{Changement ou statut comme natif contre non-natif?}
+      \begin{block}{Changement}
+        \begin{itemize}
+          \item Oui: Les jeunes emploient \lexi{être} et les aînés non
+          \item Non: Ceux encore plus vieux dans les études précédentes employaient \lexi{être}
+          \begin{itemize}
+            \item[$\rightarrow$] Changement d'\lexi{être} vers \lexi{avoir} puis encore vers \lexi{être}?
+          \end{itemize}
+        \end{itemize}
+      \end{block}
+      \begin{block}{Statut}
+        \begin{itemize}
+          \item Oui: Fitz et Ward ont produit presque tous les occurrences d'\lexi{être}
+          \item Non: Ils ne sont pas seulement des non-natifs mais aussi plus jeunes
+        \end{itemize}
+      \end{block}
+    \end{frame}
+
+    \begin{frame}[allowframebreaks]
+      \printbibliography
+    \end{frame}
+\end{document}
