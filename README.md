@@ -7,6 +7,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 * creoles02: Summary of Heine \& Kuteva (2003)
 * creoles03: Project proposal
 * creoles04: Summary of Myers-Scotton (2001) and Sánchez (2006)
+* creoles05: Summary of Aboh \& deGraff (2017)
 
 ### French Syntax and Meaning (2020 w/Dr Ranson)
 * fr01: Presentation of an article on word order in interrogatives

@@ -1,0 +1,27 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{setspace}
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{References.bib}
+  % \usepackage{graphicx}
+  %   \graphicspath{{figures/}}
+
+  % Document information
+  \title{Summary of Aboh \& deGraff (2017)}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\gloss}[1]{`#1'}
+  \newcommand{\titl}[1]{``#1''}
+
+\begin{document}
+  \maketitle
+  \onehalfspacing
+    \citeauthor{roberts_null_2017}
+    \printbibliography
+\end{document}
