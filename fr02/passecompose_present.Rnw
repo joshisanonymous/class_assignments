@@ -71,32 +71,32 @@
       \end{center}
     \end{frame}
 
-    \begin{frame}{Caractéristiques}
-      \only<1>{
-        \begin{block}{}
-          Pronoms
-        \end{block}
-        \begin{center}
-          \begin{tabular}{l | l}
-            je           & nous, nous autres \\
-            \hline
-            tu, vous     & vous, vous autres \\
-            \hline
-            il, elle, on & ils, eux, eux autres, ça
-          \end{tabular}
-        \end{center}
-      }
-      \only<2>{
-        \begin{block}{Aspect progressif}
-          \lexi{être après} + verbe à l'infinitif
-          \begin{enumerate}
-            \item Il est après parler. \parencite{papen_structural_1997}
-            \item[] \gloss{Il est en train de parler.}
-          \end{enumerate}
-        \end{block}
-      }
-      \nocite{brown_pronominal_1988} \nocite{byers_defining_1988} \nocite{dajko_ethnic_2009} \nocite{rottet_language_1995} \nocite{smith_morphosyntactic_1994}
-    \end{frame}
+    % \begin{frame}{Caractéristiques}
+    %   \only<1>{
+    %     \begin{block}{}
+    %       Pronoms
+    %     \end{block}
+    %     \begin{center}
+    %       \begin{tabular}{l | l}
+    %         je           & nous, nous autres \\
+    %         \hline
+    %         tu, vous     & vous, vous autres \\
+    %         \hline
+    %         il, elle, on & ils, eux, eux autres, ça
+    %       \end{tabular}
+    %     \end{center}
+    %   }
+    %   \only<2>{
+    %     \begin{block}{Aspect progressif}
+    %       \lexi{être après} + verbe à l'infinitif
+    %       \begin{enumerate}
+    %         \item Il est après parler. \parencite{papen_structural_1997}
+    %         \item[] \gloss{Il est en train de parler.}
+    %       \end{enumerate}
+    %     \end{block}
+    %   }
+    %   \nocite{brown_pronominal_1988} \nocite{byers_defining_1988} \nocite{dajko_ethnic_2009} \nocite{rottet_language_1995} \nocite{smith_morphosyntactic_1994}
+    % \end{frame}
 
     \begin{frame}{Passé composé}
       \only<1>{
@@ -165,7 +165,7 @@
       \begin{block}{}
         \begin{itemize}
           \item Faits en 2019 sur Skype par moi
-          \item \~30 minutes chacun
+          \item \~{}30 minutes chacun
           \item Thèmes: Les villes d'origine et les résidents de ces villes
           \item 718 énoncés contenants des verbes cible
         \end{itemize}
@@ -200,7 +200,7 @@
         \column{0.4\linewidth}
           \begin{block}{}
             \begin{itemize}
-              \item Les verbes non-pronominaux sont moins fréquents
+              \item Les verbes non-pronominaux sont plus fréquents
               \item Les proportions sont égales
             \end{itemize}
           \end{block}
