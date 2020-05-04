@@ -1,0 +1,741 @@
+<META>
+  <PARTICIPANT ID="1">
+    <NAME>YC</NAME>
+    <ORIGIN>Ventress</ORIGIN>
+    <BIRTHYEAR>1909</BIRTHYEAR>
+    <GENDER>Female</GENDER>
+    <RACE>Black</RACE>
+  </PARTICIPANT>
+  <PARTICIPANT ID="2">
+    <NAME>JL</NAME>
+    <ORIGIN>Ventress</ORIGIN>
+    <BIRTHYEAR>1913</BIRTHYEAR>
+    <GENDER>Female</GENDER>
+    <RACE>Black</RACE>
+  </PARTICIPANT>
+  <INTERVIEWYEAR>1991</INTERVIEWYEAR>
+</META>
+YC: Vye mounn tan pase ye te lenm pa lekòl.
+JL: Non, ye te pa, ye te pa BELIEVE tro, tro dan lekòl.
+YC: Ye vòye <DET>ye piti-ye</DET> lekòl--- mo mo kour lekòl mo te katòz on.
+TK: Ka vou kòmanse kouri lekòl?
+JL: Wè.
+YC: Kan mo konmonse mo aprann en peu.
+JL: Wè, e li aprann en peu (...).
+YC: Mo ap--- mo aprann (en) bon mòrso.
+JL: Wè, wè.
+YC: Mèrsi Bondjyeu pou sa.
+JL: THAT'S RIGHT.
+JL: (...) kòmanse kouri lekòl.
+YC: THAT'S RIGHT.
+TK: Konbyen lanne vou kouri lekòl?
+YC: O, me dan en lannen mo te trap de fwa ich en jou!
+YC: Par mwa konm sa mo se trap de fwa (kat), vye mounn-ye di to te gen kouri fe kèk lòt zafè.
+JL: (Kouri dan) dezè.
+YC: To te gen pou kouri.
+JL: (Kouri) dan dezèr, to te gen (kou dan) dezè
+YC: De fwa mo te bije STEAL <DET>mo TIME OFF</DET> pou galope pou kouri kote--- mo te lenm kou lekòl.
+TK: Vou te lenm sa?
+YC: O wè mo te lenm kou lekòl.
+YC: Mo aprann en pe osi.
+JL: YEH.
+TK: O, me vou te pa gen tan pou fe sa, bokou tan pou, plen tan pou fe sa?
+TK: Kouri lekòl?
+JL: Men non (li te pa gen tan pou kouri lekòl li) te gen pou travaye dan dezèr. (...)
+YC: Non, mo te, non, mo te va pa mòtch.
+TK: Pou vouzòt, ou pou lòt moun, ou pou vou fanmiy ou pou ... ?
+JL: Pou <DET>so fonmiy</DET> e pou lòt moun.
+YC: Aben, e--- ena dan vye mounn-ye, mo pa konnen, ye te lenm pa <DET>ye piti</DET> kou lekòl.
+JL: THAT'S RIGHT.
+JL: Ye te (ich te leme pa) ye te pa konnen mye (...), ye te pa konn aryen pou lekòl.
+YC: Ye te ich lenm, ye te ich pa konnen myeu keu, (ye) lenm pa (ye kou) lekòl.
+YC: '<DET>Mo ti-fiy</DET> e <DET>mo ti-garson</DET>, e le ti-garson ansanm, mo p <VERB>ole</VERB> ye kou lekòl konm sa.'
+JL: YEH.
+YC: Sa-fe, ina dan nouzòt, nou te nèf, piti <DET>mo monmon</DET> te gen.
+YC: Aben.
+YC: (...) se mon ki aprann plus ke enn.
+YC: (Paseu se mon ki....)
+TK: Se vou p--- uh, pli laje?
+TK: Pliz aje ou, pli vye?
+YC: Non, se pa mon ki (ply vye) mon se katriyenm.
+TK: Katriyenm.
+TK: E---
+YC: Lès mo wa astè (...).
+YC: Mon mo se katriyenm-la dan nèf.
+TK: E, vou, vou ne e elve on Lil osi, se sa?
+YC: Wè, an Vèntrès an, an Lil.
+JL: An Ventrès an Lil.
+TK: Vouzòt te vwazen?
+YC: Non, pa vwazen.
+TK: Pa vwazen?
+JL: Nou te vwazen apre li marye ave <DET>mo prèmyè kouzen</DET>.
+JL: Nou te vwazen.
+YC: Mo te vwazen ka mo te---
+JL: Tchobo sa, Y.
+YC: Ave, (...)
+JL: Met li kote <DET>to labouch</DET>.
+TK: Kòm, kòm sa.
+JL: Mèt li kòm sa.
+YC: O nou te, nou te bon.
+JL: Nou te, nou te vwazen apre li marye ave <DET>mo prèmyen kouzen</DET>.
+YC: Wè.
+JL: E la nou te vwazen, nou èlve tou <DET>no piti-ye</DET> ansanm konm sè e frè.
+TK: Se bon kòm sa.
+YC: E mwa e li nou v--- nou te va kon---, nou <VERB>va</VERB> konm sè e frè, kòm de sè.
+JL: Wè.
+JL: Nou janmen i en paròl ant nouzòt.
+JL: Toujou kouri byen.
+TK: Sa se byen bon pou viv kom sa.
+JL: Ansanm.
+JL: Wè.
+TK: E sa sè te toujou dan Yèn--- Vantrès?
+YC: Wè, tou dan Vèntrès, wè.
+YC: (Tou) dan Vèntrès, wè.
+JL: La nou MOVE don Chmen Nef la, e nou <VERB>frekont</VERB> pa souvan pakeu nou pa <VERB>gen</VERB> labarkasyon.
+JL: Men kan nou <VERB>kapab</VERB> nou <VERB>jwann</VERB> èn-a-lòt!
+JL: Wè.
+TK: Vou frekant pa, sa sa min vizite, ou ...
+JL: Non, si (èl) <VERB>veu</VERB> vizite, nou <VERB>pe</VERB> pa vizite konm nou te konnen paseu nou pa pròch konm nou te konnen et.
+JL: Mèt li kote <DET>to labouch</DET>.
+YC: O, o!
+JL: Kote to, kote to---
+YC: Aben mo mo gen, la mo gen parle pou mo-menm astè!
+JL: Wè, uhuh, YES!
+YC: Mo mo gen parle pou mo-menm ki se sa, BA--- BACK YONDER!
+JL: THA--- wè, THAT'S RIGHT!
+JL: Se sa li vini pou!
+TK: Mè wè (...)
+YC: TIME, (ka) tan pase, BACK YONDER.
+JL: Uhuh!
+TK: Se--- komon sè te?
+YC: Mo wa ou mo <VERB>sòr</VERB>, mo pa ich wa ou m e kouri.
+JL: Uhuh!
+YC: Mo wa ou mo <VERB>sòr</VERB>.
+JL: THAT'S RIGHT, nou kon---
+YC: Me se bon kan to wa ou to <VERB>sòr</VERB>!
+JL: THAT'S RIGHT.
+YC: Si to wa ou to <VERB>sòr</VERB>, t a konnen aou t e kouri ka t a, ka t a (vini pou ...)
+JL: THAT'S--- kan t a rive pou kouri la, THAT'S RIGHT.
+YC: ... Mon mo COME UP IN MY LIFE, dan <DET>motchèn lavi</DET>, IT WAS TOUGH!
+JL: Se sa mo di li.
+YC: Li te TOUGH!
+JL: Sè te byen tòf!
+YC: Mo wa ki-chò,
+JL: Sè te byen (STROUGH).
+YC: mo wa ki-chò, LORD, sa mo te, sa mo--- e m a janmen bliye li!
+JL: Hmhm.
+YC: M a janmen bliye sa mo wa.
+JL: Ben non!
+YC: E konmon ton te va AND EVERYTHING.
+JL: Wè, wè.
+YC: Y ich parl--- aben ina di se pei-la ki pa bon.
+JL: Mhm.
+YC: O na di se pei-la!
+YC: Men mon mo <VERB>krwa</VERB> pa se pei-la!
+JL: Se pa pei-la se monn,
+YC: Se mounn! Se mounn!
+JL: se l monn ki dan l pei, k ape fe leu, traka.
+YC: Paseu se pa konm sa mounn te, tan pase.
+JL: Huhuh.
+YC: Na, t a malad, ye pe e vini wa twa astè-la.
+JL: Ye pe e vini wa twa sèlmon
+YC: Na ka--- tan BACK, huh! Vye--- mounn-ye se kouri frekante mounn, e si ye se pa gen ase lenj pou mèt on ye, ye se donn ye yetchenn pou mèt on ye!
+JL: THAT'S RIGHT, THAT'S RIGHT.
+YC: E ka vye f--- mounn-ye se kou travay, ye se prann <DET>ye piti-ye</DET>, ye se kite kote lòt vwazen-la ki <VERB>va</VERB> pa travay.
+JL Uhuh.
+YC: E ye se TAKE CARE OF ye byen.
+JL: THAT'S RIGHT.
+YC: Aben jòrdi èna pa moyen fe sa.
+JL: Huhuh.
+YC: To pa <VERB>ka</VERB> touche piti kèkenn astèr-la!
+YC: Ye p <VERB>ole</VERB> to touche y paseu (se si se sa) traka.
+JL: Wè.
+YC: Me tan pase se pa konm s te.
+JL: Hmhm.
+YC: La, monmon <DET>sotchenn mari</DET>
+JL: Mhm!
+YC: konm èlve nouzòt paseu <DET>noutchenn monmon</DET> te gen travay.
+YC: Dan la kou Misye G.
+JL: Dan la kou blan-yè.
+YC: Dan la kou blan
+JL: (...) lòt blan-ye
+YC: li te gen travay
+JL: travay
+YC: e i te pey pa RENT.
+JL: THAT'S RIGHT.
+YC: Men sa ye te gen fe, te gen travay don la kou la ... ye se donn ye en vye lamezon pou ye rèste.
+JL: Wè.
+JL: Mo di vou sa yèr, en?
+YC: Mo vini, mo vini, mo vini, R--- R--- ROUGH.
+JL: ROUGH!
+YC: Se sa-ki fe mon mo pa <VERB>kapab</VERB> fe mal.
+JL: Hmhm!
+YC: Si m ole fe--- mon pa konnen ki se sa fe mal!
+JL: Nou pa konnen ki se sa pou trète l mounn mal.
+YC: Mon m pò konnen, mo pò konnen ki se sa.
+JL: Nou pa konnen kòmon pou konmonse sa.
+YC: E, e, e, e rèlmon astè, mo <VERB>krwa</VERB> le mounn blan te meyè ton pase ke astè.
+JL: Mhm, wè.
+YC: O wè!
+YC: Paskeu ye te fe pa (mòn di)---
+YC: Man, mon, mo kan mon mo ne, mo, mo t--- <DET>motchenn monmon te travay dan la kou TP.
+YC: E, ka li li se gen en ti bebe, madonm blan-la se gen en ti bebe,
+JL: Mhm.
+YC: li li se swanyen ti bebe madonm blan-la
+JL: Mhm.
+YC: e dèn sotchenn.
+YC: Li se dòn li <DET>sotchenn BREAST</DET>.
+JL: BREAST, uhuh, YEH.
+JL: Se sa ye <VERB>pèl</VERB> vou donn tète.
+JL: Dòn piti-la tète.
+YC: <DET>Mo nyes</DET> vini chèche mon kote en lekòl.
+YC: Lekòl (drèt dan) Chmen Nef la.
+YC: Pou mo vini parle kreyòl kote mounn-ye, sa, sa nou, sa mounn tan pase kouri THROUGH.
+JL: Kouri THROUGH, kòmon ye èlve <DET>ye piti-yen</DET>, kòmon ye (pase).
+YC: E, e, e sa ye--- THAT'S RIGHT, kòman ye te ajèt lenj pou ye.
+JL: Mhm.
+YC: Aben enen en charet ki te pas.
+JL: Mhm.
+YC: Letòf-la sè te sen sou la yad.
+JL: Sen sou la yad pou letòf.
+YC: Sen sou la yad.
+YC: E <DET>nou monmon</DET> se kouri achte kote charet li achte en gro blòk.
+YC: E li se vini e <DET>so sizo</DET> e <DET>so negwi</DET>, e li se fe nou ti ròb-ye pou mèt an nouzòt.
+YC: E nouzòt souye, nou tou te pa ka gen souye.
+JL: Mhm.
+YC: Kan <DET>mo popa</DET> (te) chèche en pèr tenis pou <DET>mo frè</DET>, senkont sou,
+JL: Mhm.
+YC: ka li vini e li li te tro piti, i dòn li kote mon.
+JL: Mhm.
+YC: La, frè te gen rèste san.
+YC: THAT'S RIGH--- sa se sa mon mo---
+JL: Sa se vre wi, sa!
+YC: THAT'S WHAT I KNOW!
+JL: THAT'S RIGHT!
+YC: Se sa mon mo konnen sa mon mo mo,
+JL: Sa se vre, uhuh, wè.
+YC: se sa mon mo konnen.
+JL: Sa se vre.
+YC: E, ye mannde mon pou chante kreyòl.
+JL: Mhm.
+YC: Pou chante kreyòl.
+JL: (...) an kreyòl.
+TK: Wè?
+JL: Uhuh.
+YC: THAT'S RIGHT.
+JL: Li konnen, li konnen chante en peu kreyòl.
+YC: Mo chante kreyòl.
+TK: Vou, vou ka chante pou mon?
+YC: Ye di sa, ye di--- wi---
+JL: Mhm, wè li <VERB>kapab</VERB>.
+YC: ye di, ye di konmon ye te konnen CARRY mounn mouri.
+YC: Ka mounn-la se mouri, ye se kou DRESS li, oben ye se DRESS li kote la mezon e ye se veye li---
+TK: Vou gen en paròl pou sa an kreyòl, DRESS li?
+JL: Wè, chanje li.
+YC: Chanje li.
+TK: Chanje li.
+YC: Chanje li, wè.
+JL: Chanje li (mwa?), benyen li e chanje li, pou èspoze li.
+YC: THAT'S RIGHT.
+JL: Vou konnen sa ye <VERB>pel</VERB> èkspoze?
+YC: Wi.
+TK: Se sa vou di osi an kreyòl?
+JL: Uhuh, èkspoze.
+YC: Wè, THAT'S RIGHT, poze li, THAT'S RIGHT.
+JL: Èkspoze, se s--- LAY, LAY, LAY, LAY HIM OUT.
+JL: Èkspoze.
+YC: E la ye se vèye ye.
+TK: E, sa vou te wa ankò?
+TK: Vou te di mon vou te wa plen zafè kan vou te, pli jenn.
+YC: Wa mounn blan-ye bimen mounn, mounn nwa-ye.
+JL: Mounn koul--- nwa, THAT'S RIGHT, te konnen konyen nouzòt.
+YC: Mo wa sa.
+TK: Wè.
+JL: YEH, i te konnen konnen--- konyen nou vye mounn-ye, sè te SLAVE TIME.
+YC: (Kote la, kote) la mezon <DET>mon momon</DET> li te travay dan la kou mounn blan-ye.
+JL: Bimen ye.
+YC: E,
+JL: Taye le piti-ye.
+TK: Vou te pa gen la te pou vou?
+YC: Non.
+TK: Te toujou
+JL: O non!
+TK: lwe la tèr ou (...) travay
+JL: (...) wè, wè.
+YC: (...)
+TK: (Vou di) peye lwaye?
+JL: Wè, peye lwaye travay pou la motchye travay pou le kar.
+YC: ON THE FIRST, kan nou FIRST vini, nou te gen pou trav---
+YC: Ye se donn nouzò en vye lamezon pou nou rèste <DET>nou momon</DET> e <DET>nou popa</DET>.
+JL: Wè, uhuh.
+YC: Men, ye ye te gen travay, ye te, ye te kou
+JL: Ye te gen travay pou ye pou la (pou)
+YC: dan dezè, (kan) ye te pa, ye te pey pa RENT.
+JL: Te pey pa la lwaye.
+YC: La (i) te gen (...) travay, travay pou ye.
+JL: Lwaye, dòn ye la mezon pou travay pou ye, pou travay pou ye.
+YC: Wè.
+YC: E ka momon-ye se travay dan <DET>ye lakou</DET> ye te pey pa ye.
+JL: Non.
+YC: Ye se dòn ye,
+JL: Te gen travay pou aryen.
+YC: ye se dòn ye en pe monje konm sa.
+JL: Uhuh.
+YC: O ka ye se, pliche depwa, ye se dòn <DET>ye kè-ye</DET> pou mennen la mezon e piti-ye te tro konton
+JL: Tro konton p---
+YC: pou monje le (mòs ennen) andan l.
+JL: THAT'S RIGHT, THAT'S RIGHT.
+JL: (Mòs ennen) andan.
+JL: Ye te gen pliche depwar-ye, ye te gen pou koupe la chèr-l an depwar-le, kèr-la.
+YC: Wè.
+JL: Ye te don ye, li.
+JL: E (den ye) te menn ye kote nouzòt e se sa nouzòt n te gen monje.
+JL: Kèr depwa-la.
+YC: THAT'S RIGHT.
+TK: Depwa se ...
+JL: Depwa se PEAR.
+YC: PEARS.
+TK: PEARS, OH.
+YC: (Se) te tòf.
+JL: YEH.
+TK: Me (poukwa) vou te di mon, titalèr vou te di mon, (vou) te krwa moun, moun blan ye, ye, ye pir astèr-la kè anvon, ye te meyæ anvon?
+JL: Men, sa---
+TK: E la vou di mon tou (...) tan pase.
+JL: Non, la se WAY BACK LONDER me l e pale ... Astœ, astær-la, ye pa osi mal ke sè te BACK YONDER.
+TK: (Vou pa k--- vou krwa sa.)
+JL: Non, ye po osi mal, paske, nou <VERB>gen</VERB> plus la libèrte, ke, nou te gen bæ--- laba dèryè.
+JL: Kan nou <VERB>travay</VERB> ye <VERB>pey</VERB>, ye gen peye nouzò.
+TK: Mhm, mhm.
+JL: (...) E, nou <VERB>kapab</VERB> achte, la tè, nou <VERB>ka</VERB> achte la mezon, AND THINGS LIKE THAT.
+JL: Nou te pa ka pou fe sa b--- uh, dèryè.
+YC: O men non.
+TK: E, WHEW!
+TK: Tan te dir?
+JL: Wè!
+JL: Plen, o, plen dir.
+JL: Nou te pa gen monje de fwa pou monje.
+JL: Lenj pou mèt an <DET>nou piti-ye</DET> (pel nouzò).
+JL: Ye mache ni-pye.
+TK: I---
+TK: Ni-pye vou di?
+JL: Pa gen souye.
+JL: Sa t--- ni-pye.
+JL: Ni-pye se kan to pa <VERB>gen</VERB> souye an to pye.
+YC: THAT'S RIGHT.
+JL: Sa se ni-pye.
+TK: E vou te gen mache, uh, lwen pou kouri dan chan, trava--- dan deze, pou travay?
+JL: O wè, n te va---
+TK: Sè te lwen, o---
+JL: Lwen!
+JL: lwen!
+JL: Nou te gen ki te pròch e nou te gen ki te lwen, men nou te kouri on wagon.
+JL: Ave <DET>nou mile-ye</DET>.
+JL: E kouri dan wagon, kouri lwon dèryè.
+JL: Wa ye te gen la--- uh, koton plante devan e mayi ON THE--- GOIN' ON WAY BACK IN THE FIELD.
+JL: E nou te gen kouri on wagon.
+JL: Te gen (...) de lak, on wagon pou kouri lot kote.
+YC: O no ja (si frwa).
+YC: Nou ja prète difeu kote enn-a-lòt.
+JL: Wè, p---
+YC: Pa gen!
+JL: Pa gen z--- pa ka achte zarimet!
+JL: Nou prète dufe.
+YC: (...) <DET>mo dèzyenm ti bèbè</DET> i, mo, <DET>mo mari</DET> te pa gen pase en sen sou dan <DET>so pòch</DET>.
+YC: E l te trouve sa deyò.
+JL: Wè.
+YC: Deyò!
+JL: Sen sou ave senk dezœf, heh, Y.?
+YC: (... sen sou.)
+YC: Dezèf sè te mo <VERB>krwa</VERB> THIRTY CENTS A, A DOZEN, e nou ka, ma--- men <DET>mon poul-ye</DET> te e ponn dan s tan-sa-la.
+JL: Uhuh.
+JL: Ina en bondjè!
+JL: Vou <VERB>BELIEVE</VERB> andan Bondjè?
+YC: Ènen en Bondjeu (...).
+JL: Vou <VERB>BELIEVE</VERB> dan Bondjè?
+TK: (...) mo krwa sa.
+TK: Mo pa konne aou!
+JL: Men nou, mon, nou pa konnen.
+YC: (... pa konnen aou) mo janmè wa li.
+JL: Se pa <DET>nou biznis</DET> aou li ye!
+JL: Me li la!
+YC: Ka mo kouri pou---
+JL: <DET>So spèrit</DET> la!
+YC: (...) kote en nonm, mo pa kou--- mo pa kouri kote en nonm an la tè, mo kouri kote Bondjeu mo kònen sa Bondjeu fe (...).
+JL: Uhuh, YEH.
+YC: Ka mo monde li pou, pou don mon, uh, la lijyon e lès mo, pran <DET>mo SIN</DET>, ote <DET>mo SIN</DET>---
+TK: Komon vou di sa an kreyòl?
+YC: TAKE MY (SIN) AWAY FROM ME.
+JL: To pèche, to pèche, san an kreyòl.
+YC: I ASK GOD (...) TAKE MY SINS AWAY FROM ME, I'LL SERVE YOU ALL MY DAYS!
+JL: YOU HEAR WHAT HE SAY?
+YC: M a sèrvi tou mo jou!
+YC: E mo gen sèrvi li tou <DET>mo jou</DET>!
+YC: O LORD HAVE MERCY!
+JL: Y., se sa l ole to di li sa an kreyòl.
+YC: Aben me e di li, me, me e di li---
+JL: Sa <VERB>min</VERB> li è s--- sèr---
+TK: Kreyòl e meriken (...)
+JL: e mer--- wè, uhuh, YEH.
+YC: Mo di li mo sèrvi li, m a sèrvi li tou <DET>mo jou</DET>!
+YC: Pase ina pa MISTAKE la!
+JL: Huhuh!
+TK: Kòmon vou pele plas aou Bondjè ye?
+JL: Paradi.
+TK: Ahh!
+YC: Ye, <VERB>pel</VERB> li paradi.
+JL: Paradi, paradi.
+YC: (Paskè) mo janmen wa plas-la, mo janmen wa Bondjè.
+JL: Nou pa konnen men nou lir pou li.
+YC: Men, mo janmen wa li, men mo, mo, mo
+JL: Nou konne ena enn.
+YC: Mo mo <VERB>krwa</VERB>, mo <VERB>krwa</VERB> dan---
+JL: <DET>Nou Labib</DET> di nouzòt sa. (...)
+JL: Labib di nouzòt sa.
+TK: (...) kouri legliz katolik
+JL: OH YEH!
+JL: Nou <VERB>va</VERB> kote legliz katolik!
+YC: (Katolik anvon mo) te bæbtis.
+YC: Men mo stil <VERB>trouv</VERB> sa te pa ase fòr pou mon.
+YC: Wè, men mo kouri kote li pou en REASON.
+YC: Mo JOIN katolik pou en REASON, paske, (...), vye mounn-ye, se pa kite <DET>ye piti</DET> JOIN bæbtis paske ye te dons pa.
+JL: Uhuh.
+YC: E nou te lenm donse!
+JL: Uhuh.
+YC: Sa-fe mo di 'M a pran katolik paskeu m <VERB>ole</VERB> donse.'
+JL: Uhuh.
+YC: E la, don la vi, kè-ki-chò (CHANGIN').
+JL: Uhuh.
+YC: (...) apre mo marye se SOMETHING ELSE, sè te en lòt lavi to gen aprann kan to marye.
+JL: Wè, THAT'S RIGHT.
+YC: Se kè-ki-chò, se kè-ki-chò to gen pou apronn pou to-menm.
+YC: La mo kantinu, mo kantinu wa kèk lòt zafè.
+YC: Mo kantinu wa, mo kouri kote katolik, pær-la ka mo vini pou ontre, (la) mo te (den en) lachez mo vini pou asi on la chez la i di mo, 'To pa <VERB>ka</VERB> (asi an-o l).'
+JL: Mhm.
+YC: ALL RIGHT, (sa-fe) si mo te pa ka asi an-o la mo te pa, mo te pa ne pou èt katolik.
+JL: To te pa sipoze katolik.
+JL: Mhm.
+YC: A, mo uch ne pou èt bæbtis, (mo mo) se en BAPTIST (ALL OVER).
+JL: Li di li te pa, li te pa ne pou èt en katolik.
+TK: AH!
+TK: OKAY.
+JL: Li te ne pou et en bæbtis.
+YC: Mo te katolik, ka mo kouri kote--- mo wa sa dan la nwit.
+YC: Mo rève sa!
+JL: Li wa so tr--- dan <DET>so dòrmi</DET>.
+YC: Mo kouri kote katolik (pèr-la pa aksèpte).
+JL: YEH.
+JL: Wè.
+JL: Spèrit, spèrit Bondjè mantre li sa.
+YC: Mo chanje <DET>mo nide</DET>.
+YC: Sa-fe mo te (... gen pran), la mo kòmonse wa bæbtis astè.
+YC: Mo wa bæbtis astè.
+TK: E kofè pret-la pa aksèpte?
+JL: Men li pa konnen paskè Bondyè te--- ve--- ve pa li èt en katolik!
+JL: En katolik, te pa sipoze pou et en katolik, sa li te, tournen li pou et en bæbtis.
+TK: Vou di vou pa ka asi on la chez (...)?!
+JL: Uhuh, wè.
+N: SHE DREAMED THAT.
+JL: Se dan so, dan---
+YC: I DREAMED THAT.
+TK: A!
+TK: Vou reve sa!
+TK: A!
+JL: Dan so, dan so, dan <DET>so TRAVELIN'</DET>.
+YC: THAT'S RIGHT.
+JL: Mhm, wè.
+YC: THAT'S RIGHT.
+TK: HUH.
+YC: E mò monde Bondjeu (ki-chòz ...)
+JL: Mhm, YEH.
+YC: sa-fe mo tro, mo tro
+JL: SHE'S A SPIRITUAL WOMAN NOW.
+YC: mo tro TANGLE UP.
+JL: Uhuh, YEH.
+YC: I'M TOO TANGLED UP FOR, FOR, FOR ME TO GET UNTANGLED.
+YC: Me e viv lanton dan pei-sa-la.
+TK: Wè.
+JL: Mè wè!
+JL: E wè.
+YC: Huh!
+YC: E mo <VERB>son</VERB> mo-mèm byen.
+YC: Mo pa gro, mo pa, mo pa
+JL: Li te janmen en gro pèrsòn.
+YC: mo pa, mon pa gro gro gro
+JL: (...) pa gro.
+YC: men, I FEEL GOOD.
+YC: AND I DON'T--- AND I DON'T HAVE--- mo <VERB>gen</VERB> pa tro doulè non-plu.
+JL: Uhuh.
+YC: Mo ja rache tou <DET>mo dan-yen</DET>.
+TK: Wè?
+JL: Mhm.
+YC: THAT'S RIGHT.
+JL: Li <VERB>gen</VERB> FALSE TEETH.
+JL: Mhm.
+YC: E m--- e, si mo te pa gen (PYORRHEA OF THE) GUM mo te petèt pa beuzòn rache.
+JL: Uhuh.
+JL: Men, i te bije.
+YC: THAT'S RIGHT.
+JL: Mhm.
+YC: E pèrsòn fe pa mo aryen.
+JL: Mhm.
+YC: <DET>Mo piti-ye</DET> p <VERB>ole</VERB> mo rèste mo tou-sel.
+TK: Me sa se bon.
+JL: Mhm, pèrsòn <VERB>trakas</VERB> pa li.
+YC: Mo di ye, mo di ye, tan ki mo <VERB>san</VERB> mo-menm byen, mo pa malad, mo di
+ye, mo gen rèste mo tou-sel.
+JL: Mhm.
+YC: E mo di, si mo vini malad, ye pe e gen traka e mon, pran mon, kour e mon.
+YC: Si se dan OLD FOLKS HOME, kour e mon SOMEWHERE.
+JL: Uhuh.
+YC: Mo pa <VERB>ka</VERB> rèste la mo tou-sel.
+TK: E, ekan vou mari mouri?
+YC: <DET>Mo mari</DET> mouri dan SEVENTY-, ONE, NINETEEN SEVENTY-ONE.
+YC: E mo sonyè li osi.
+TK: Mhm.
+TK: Li te malad?
+YC: Wè li te malad
+JL: Wè li te malad, te gen en STROKE.
+YC: li rèste, li rèste si senmenn dan lopital e mo rèste si senmen-ye andan-la.
+JL: Uhuh, wè.
+JL: YUP.
+TK: Li sè te en Kreyòl?
+YC: Wi sè te, wi
+JL: O wè.
+YC: sè te en STOMP DOWN Kreyòl.
+JL: STOMP DOWN Kreyòl.
+YC: (Mè) sè te en bon nonm, do.
+JL: Ten en bon nonm e li te gen di sa dan kreyòl.
+JL: Wè.
+YC: A!
+YC: Sè ten en bon nonm astè, mo mon---, mo, mo
+TK: Se bon pou---
+YC: monke kè-ki-chò men, sèt--- li s te ki-chò Bondjeu (sa-fe), Bondjè pran li.
+JL: Wè, THAT'S TRUE.
+JL: Uhuh, wè.
+YC: E mo pe e marye ave en lòt.
+TK: E vou te konne fe pate?
+YC: Wè.
+JL: Mhm.
+TK: Me kòmon vou fe sa?
+YC: Aben mo fe <DET>mo lapat dipen</DET> epi mo <VERB>pran</VERB> <DET>mo lavyann</DET>, mo <VERB>moule</VERB> <DET>mo lavyann</DET> epi mo, mo <VERB>pase</VERB> li e, (...) en pe, e la mo <VERB>mèt</VERB> li ant e la mo, <VERB>BAKE</VERB> li.
+YC: Mo fou(re) li dan STOVE.
+TK: Kòmon vou fe la pat?
+TK: Uh, wi, la, la pat dipen?
+TK: Kòmon vou fe sa?
+YC: Aben, mo, mo <VERB>mèt</VERB> <DET>mo iskek</DET>, mo <VERB>mèt</VERB> <DET>mo dolo</DET>, mo <VERB>mèt</VERB> <DET>mo disel</DET>, e la mo <VERB>pran</VERB> <DET>mo farin</DET> mo, mo fe li vini di e mo farin.
+TK: E, e, e, e iskek, vou te, vou te konne ajèt ou vou te konne fe sa vou-menm?
+YC: Aben, mo, mo te konnen achte iskek.
+YC: Men mo te konnen kòmon pou fe iskek.
+YC: To <VERB>pran</VERB> iskek e <VERB>mèt</VERB> li e <DET>to farin mai</DET> e <DET>to dolo</DET> to <VERB>ka</VERB> fe iskek.
+YC: E si nou se kouri en bal,
+JL: Wè
+YC: momon-la te gen vini.
+JL: THAT'S RIGHT.
+JL: Monmon te gen CHAPERON.
+YC: Monmon te gen vini li osit.
+TK: E vou te kone kouri bal?
+YC: OH LORD!
+JL: Wè!
+JL: O wè!
+JL: Wè ye dans.
+JL: Se bæbtis ki dans pa.
+YC: Wè, me se pou sa mo pran katolik se paski bæbtis te, se---
+JL: Bæbtis dans pa.
+TK: A, e vou t ole, vou te ole danse!
+JL: Li t ole dans--- li t ole dans---
+YC: Mo t ole danse, men si m--- si---
+JL: (men kan li te) katolik
+YC: si mo se kou pran bæbtis, mo se (pa ka) danse.
+JL: li te pa ka donse.
+TK: Aaa!
+TK: Se pou sa vou te rès katolik (...)
+YC: E, e la, e la
+JL: Wè, wè.
+YC: se pou sa mo kou pran katolik an prenmyen.
+YC: La ka, la ka mo marye aben, mo stil se pa ka donse kòm mo t ole pas(k)eu <DET>mon mari</DET> se p--- mo se ich ka donse e li, mo se pa ka donse ave lezòt.
+YC: Sa-fe THE BEST OF ALL, se myè mo te kou pran mo, se myè mo te kou pran la lijyon bæbtis.
+JL: Bæbtis.
+YC: Se sa mo t ole ANYWAY.
+TK: Li li te bæbtis ou li te katolik.
+YC: Li te bæbtis.
+JL: Bæbtis.
+YC: Li BAPTIZE.
+TK: Vou, vou, vou te marye dan ki legliz?
+JL: Katolik, li marye katolik.
+YC: Laba, katolik, katolik, an--- an---
+TK: Legliz katolik?
+TK: Li te katolik anvon ou li te bæbtis anvon vou marye?
+YC: Li te, li te, li te
+TK: Li toujou bæbtis?
+YC: Non, li te katolik.
+YC: Paseu li te batize katolik.
+JL: Uhuh.
+JL: Batize katolik.
+YC: E la li te, aben, par marye, aben nou marye, aben mo di li, 'To pa <VERB>ka</VERB> rèste konm sa.'
+JL: Uhuh.
+YC: Sa-fe li te gen kouri BAPTIZE konm mon.
+JL: YEH, uhuh, YEH.
+YC: Sa-fe li kouri BAPTIZE.
+TK: Aou vou te konne kouri bal?
+TK: Ki kote?
+YC: Kote ROSENWAL.
+JL: Men wè.
+YC: (Men) Kote,
+TK: Ye te gen bal kote ROSENWAL?
+YC: kote, kote SAINT JOSEPH on, dan, andan Chmen Nèf.
+TK: E sè te kan ROSENWAL sèt--- te on Lil, se sa?
+YC: Wè.
+JL: Uhuh.
+TK: E ye te gen bal laba?
+JL: Wi, te kòne fe bal.
+YC: A wè t ena bal, nou, nou te va, mwen e <DET>mo sè</DET>.
+JL: Ye te konnen fe bal dan la kou.
+YC: Wè (...)
+JL: Kote la mezon.
+JL: (...)
+YC: O mo te lenm bal.
+YC: Mo te lenm bal.
+JL: Nou te konnen fe la kou-- uh, bal kote le mezon.
+YC: (Men) la dèpi, dèpi mo BAPTIZE mo janmen danse!
+YC: O mo te p ole danse, mo di mo te ja danse ase kan mo te gen en lòt lalijyon-la, e mo di lalijyon-sa-a sè te pa pou danse mo ich pa donse, mo te pa, (e dèn ...) mo te pa ka danse.
+TK: Sa ye te konne fe pou bal, dan bal, komon sè te?
+YC: Jwe la muzik e (...) donse.
+TK: Ki kalite lamizik?
+YC: O, mo te konnen danse (...)
+JL: JAZZ MUSIC.
+YC: JAZZ MUSIC e (te), AW SHUCK!
+YC: Mo te, mo te va kote bal le sonmdi, le dimonch, e ye te konnen (...) lendi.
+JL: Mhm!
+YC: O mon s tè en gro dansè!
+TK: E ye te konnen fe---
+YC: Dan le--- dan legliz kan nou <VERB>gen</VERB>, kan nou <VERB>gen</VERB> <DET>nou lames</DET>, mon sen en gro, (SHOUT FOR JOY) osi.
+YC: Mo, mo <VERB>mont</VERB> on planche-le e mo <VERB>SHOUT</VERB>.
+JL: Mhm.
+TK: Astèr-la?
+JL: Wè, mhm.
+YC: O wè!
+YC: E mo <VERB>ka</VERB> SHOUT osi.
+JL: Mhm, wè.
+TK: (...)
+YC: Ha!
+YC: THAT'S RIGHT.
+TK: Mo krwa vou!
+JL: Wè, se vre!
+YC: Se vre sa me e di li!
+JL: Se vre sa le e di vou!
+YC: Se vre.
+TK: Vou ja tande pale pou en zafè 'fe sosyete'?
+JL: La sosyète?
+JL: (...)
+YC: La sosyète?
+YC: (Men) sosyète, ben wè!
+YC: (Gen) la sosyete, sen en lasosyete.
+JL: Nou andan la sosyete.
+JL: Mhm.
+TK: Se, se ki zafè?
+JL: Se kan to, se kan to po--- to <VERB>tanm</VERB> malad.
+YC: E ka to <VERB>mouri</VERB>.
+JL: E kan to <VERB>mouri</VERB>, e <DET>to lasosyete</DET> se li ki, k <VERB>antær</VERB> twa, la, li <VERB>gen</VERB> larjan pou antère twa.
+YC: Se en BENEVOLENT SOCIETY.
+TK: E, ènave, ènave plen sosyete isi, ou ...
+JL: Wè, nou stil <VERB>gen</VERB> la sosyète.
+JL: Nou stil <VERB>gen</VERB> plen la sosyete.
+JL: Nou <VERB>gen</VERB> enn ki <VERB>pel</VERB> SONS AND DAUGHTER, nou <VERB>gen</VERB> enn ki <VERB>pel</VERB> YOUNG MAN.
+JL: E nou <VERB>gen</VERB> enn to <VERB>pel</VERB> YOUNG VIDALIA, e nou <VERB>gen</VERB> enn to <VERB>pel</VERB>, uh---
+TK: E tou-moun ye, ye, ye pey en pè larjan (...)
+JL: Wè nou gen peyè.
+YC: Wè.
+TK: (...) mouri, kan li malad.
+JL: Ye <VERB>dòn</VERB> ye doktè e medikòmon.
+TK: E se jis moun nwa ki gen sa o èna, moun blan-ye gen sosyete osi?
+JL: Aben mo pa konnen, ina, m pa konnen, uh, bokou blan ki <VERB>gen</VERB> sa.
+TK: Se, se jis en zafè (nwar).
+JL: Se jus zafèr nwar <VERB>gen</VERB>, uhuh, wè.
+JL: Moun nwar, yeh.
+YC: Mhm.
+JL: Paske ye <VERB>gen</VERB> la, blan-ye <VERB>gen</VERB> lasirons.
+TK: Mhm.
+JL: Ye <VERB>gen</VERB> lasirons.
+JL: Uhuh.
+TK: E vou te konne travay dan dezè?
+YC: Wè.
+YC: Mo pa travay tou sa, apre mo mariye pase <DET>mo mari</DET> te, gro travayan.
+TK: Li se gro travayan?
+YC: Sè tè en gro travayan.
+JL: O wè.
+YC: Mo ramase koton, mo piyoche.
+JL: Mhm.
+YC: Mè mo pa, mo pa kase mai e mo pa koupe dikonn.
+JL: Koupe dikonn o aryen konm sa.
+TK: Vou te koup pa?
+JL: Non.
+YC: (Mo pròch) pa ka koupe.
+JL: Hmhm non.
+TK: Vou te tro piti?
+YC: Mo <VERB>kwa</VERB> sè te tro du.
+JL: Uhuh.
+JL: <DET>So mari</DET> te veu pa li koupe dikann.
+TK: Vou te gen en bon mari (...).
+JL: Li te gen en bon mari, wi, te gen en bon mari.
+YC: (...) travay, i te travay, i te travay, i te pa konnen <DET>so lafòs</DET>.
+JL: O l te konnen travay, <DET>so mari</DET>, te gen en bon mari.
+TK: O.
+TK: E, vou, vou, vou kòne sa sa min en kolonm?
+JL: Kolonm sen en nonm ki---
+YC: Sen en BOSS MAN.
+JL: Se en, sen en nonm ki on en chval e (OVER) de travayon.
+YC: (...) THAT'S RIGHT.
+TK: A, li on en chèval?
+JL: Sa ye <VERB>pel</VERB> en kolòm.
+JL: Pou di ye sa to po fe, sa t(e) pa po fe.
+JL: Mhm.
+TK: E sa vou te konne fe kote la mezon pou travay.
+TK: Travay vou te kone fe dan la mezon?
+YC: Tou <DET>mo nouvraj</DET>, lave, kwi.
+YC: A, <DET>mo mari</DET> te monj plen monje astè!
+YC: (Li) te toujou gen gen monje-la uh, uh, READY.
+JL: Kwi.
+YC: Monje te gen èt kwi paseu i te travay byen men li te
+JL: te lenm <DET>so monje</DET>.
+YC: monj <DET>so monje</DET>.
+TK: Men en gro travayan, li, li, li, li beuzon en gro (...)
+JL: En gro MEAL, en gro monjè.
+YC: O wè, THAT'S RIGHT, THAT'S RIGHT.
+YC: E nou i trwa piti.
+TK: Ki kalite zafè vou te kòne fe pou manje?
+YC: Aben!
+YC: Kwi zariko, kwi la vyonn.
+YC: E tou kalite ki-chò kòm se.
+YC: Dan s tan-sa nou te konnen tchwe kochon.
+JL: Gòmbo fevi, e---
+YC: Gonbo fèvi, nou se fe gonmbo e n se fe la (...)
+JL: Defev, kwi defev.
+YC: e tou kalite monje.
+JL: Nou te fe tou sa-la, e kwi la moutad.
+YC: Nou te konnen kwi astè!
+YC: YEH.
+YC: TIME BACK sè te en ROUGH TIME.
+JL: Mhm, o wè.
+YC: La se bon astè, se mye ke, mye ke tan BACK.
+JL: Wè, se bon, se mye ke se te.
+TK: Vou kwa?
+YC: Wè.
+JL: Wè, se myè d en kote.
+YC: Den en kote se myeu.
+TK: Den en kote.
+YC: Wè, wè.
+JL: Kan, kan no te BACK YONDER la, en ki-chò nou te pa g--- nou dò--- nave pa DOPE don ton-sa-la.
+JL: Nou te pa don donje kòm nou ye astèr-la.
+TK: Wè.
+TK: E vouzòt, vouzòt te fe en bon lavi (...)
+JL: Te fe en bon lavi, wè
+YC: Wè, wè, o wè.
+JL: te fen en bon lavi on Lil.
+JL: O wè.
+JL: Nou te elev tou kalite ki-cho, kochon, poul, kana, zwa, tou-ki-chò pou nou monje.
+YC: Nou elev tou sa.
+JL: Mhm, wè.
+JL: YEH.
+JL: Te gen enn vach pou (te) trèr pou gen duleu.
+YC: Wè.
+JL: Mhm, wè.
