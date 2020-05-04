@@ -548,7 +548,7 @@ NF: <DET>Mo frè</DET> mouri, (nou) kouri veye li.
 NF: O wè.
 TK: (...) te konnen rèste tout la nwit?
 NF: La motchye la nwit.
-NF: Kan to <VERB>va</VERB> kote UNDERTAKER SHOP, ye <VERB>dòn</VERB> twa la chans pou veye ichka diz-è, apre diz-è, ye <VERB>frenm</VEB> li.
+NF: Kan to <VERB>va</VERB> kote UNDERTAKER SHOP, ye <VERB>dòn</VERB> twa la chans pou veye ichka diz-è, apre diz-è, ye <VERB>frenm</VERB> li.
 TK: Moun te konne chante?
 NF: Wè, chante tou kalte chanchon.
 TK: Ènave moun ki te konnen chante an kreyòl?
