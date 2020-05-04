@@ -5,7 +5,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 ### Creole Forms (2020 w/Dr Chamorro)
 * creoles01: Discussion of Lefebvre (2001)
 * creoles02: Summary of Heine \& Kuteva (2003)
-* creoles03: Project proposal
+* creoles03: Project proposal -> Project
 * creoles04: Summary of Myers-Scotton (2001) and Sánchez (2006)
 * creoles05: Summary of Aboh \& deGraff (2017)
 
@@ -17,7 +17,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 * race_ethnicity01: Ethnolinguistic autobiography
 * race_ethnicity02: Presentation of Dubois \& Horvath (2003)
 * race_ethnicity03: Reflection on ethnolects in LA
-* race_ethnicity04: Project proposal
+* race_ethnicity04: Project proposal -> Project
 
 ### Phonetics and Phonology (2019 w/Dr Renwick)
 * phon_phon_homework01: Consonants
