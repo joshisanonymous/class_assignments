@@ -318,11 +318,11 @@ MP: Sa-fe kan ye a di li sa, li gen pou PROBABLY sote dan <DET>so SEAT</DET>!
 MP: Li sa si tèlman èksite.
 TK: To pal kreyòl ankò ave le mòn?
 MP: Wè wè!
-MP: Mo <VERB>gen</VERB kouzen ki <VERB>res</VERB> ora mon, nou <VERB>rès</VERB> ora.
+MP: Mo <VERB>gen</VERB> kouzen ki <VERB>res</VERB> ora mon, nou <VERB>rès</VERB> ora.
 MP: E nou <VERB>pal</VERB> kreyòl tou-l-tan.
 MP: Na dumòn ki di, 'Kofè ouzòt <VERB>parl</VERB> kreyòl, ouzòt e pale an mon?'
 MP: Nou <VERB>abitue</VERB> kòm sa.
-MP: E, mo <VERB>gen</VERB en kouzen, <DET>sotchenn frær</DET>, ki <VERB>res</VERB> ora <DET>ma fiy</DET>, ki <VERB>res</VERB> on Lil.
+MP: E, mo <VERB>gen</VERB> en kouzen, <DET>sotchenn frær</DET>, ki <VERB>res</VERB> ora <DET>ma fiy</DET>, ki <VERB>res</VERB> on Lil.
 MP: E le deu fanmiy-sa-a, nou tou <VERB>parl</VERB> kreyòl.
 MP: Nouzòt nou tou <VERB>parl</VERB> kreyòl.
 MP: Nou <VERB>parl</VERB> kreyòl tou-l-tan.
@@ -370,7 +370,7 @@ MP: Me kòm mo di twa, nenpòt-eou nou <VERB>va</VERB>, nou <VERB>parl</VERB> kr
 MP: Se FROM labitud, to wa, nou <VERB>abitue</VERB> pale avek enn-enn-òt, kreyòl.
 MP: Nou a kouri NURSING HOME, e, dèpi n a kòmanse parle, se kreyòl, nou pa <VERB>abitue</VERB> pale langle avèk œnn-a-lòt.
 MP: Nou zus pa <VERB>abitue</VERB> sa.
-MP: Mo pèd œnn deu <DET>me frær</DET>, mo <VERB>gen</VERB zus deu ki <VERB>rès</VERB>.
+MP: Mo pèd œnn deu <DET>me frær</DET>, mo <VERB>gen</VERB> zus deu ki <VERB>rès</VERB>.
 MP: E li li pèrd en frær, anden en, en en en rek, e li, œnn deu <DET>se piti</DET>, <DET>so plu jœ̀n piti</DET>, i te gen vent-siz an--- vent-katr an.
 MP: Li li ète tue ON THANKSGIVING, an jour d THANKSGIVING.
 MP: Kèkœnn frape li, li te e SPEED, li frape li THANKSGIVING DAY.
