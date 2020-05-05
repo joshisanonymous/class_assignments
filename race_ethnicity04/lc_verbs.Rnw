@@ -5,11 +5,13 @@
   \usepackage{setspace}
   \usepackage[style=apa, backend=biber]{biblatex}
     \addbibresource{References.bib}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true, allcolors=blue}
   % \usepackage{graphicx}
   %   \graphicspath{{figures/}}
 
   % Document information
-  \title{Verb forms used to express the habitual present by Louisiana Creole speakers}
+  \title{Verb forms used to express the habitual present by Louisiana Creole speakers\footnote{Data and code available at \url{https://github.com/joshisanonymous/class_assignments/tree/master/race_ethnicity04}}}
   \author{Joshua McNeill}
   \date{\today}
 
@@ -41,7 +43,7 @@
   <<get_demographics>>=
   @
   \maketitle
-  % \doublespacing
+  \doublespacing
   \section{Introduction}
     The parish\footnote{Parishes in Louisiana are equivalent to counties in other US states.} of Pointe Coupee, Louisiana is situated along the Mississippi River northwest of Baton Rouge.
     It is a rural area whose population in 1990 was 22,540 and in 2000 was 22,763 \parencite{us_census_bureau_census_2001}.
@@ -82,6 +84,7 @@
     \end{enumerate}
   \section{Methodology}
     \subsection{Corpus}
+      \label{subsec:corpus}
       The corpus for this study came from \citeauthor{klingler_if_2003}'s (\citeyear{klingler_if_2003}) study.
       In his book, he provided lengthy extracts from the interviews he conducted during his own research, along with both descriptions and demographic details about the interviewees.
       Out of the interviews provided, two are with White speakers, two are with Creole speakers, and the rest are with Black speakers.
@@ -269,7 +272,7 @@
       \caption{Frequency of long and short verb forms by race and speaker}
       \label{fig:freq_race_speaker}
       \centering
-      <<freq_race_speaker, fig.height = 6, fig.width = 8>>=
+      <<freq_race_speaker, fig.height = 12, fig.width = 10>>=
       @
     \end{figure}
 
@@ -319,27 +322,55 @@
     \end{figure}
 
   \section{Discussion}
-    
-    % first question: do races differ in their speech
-      % they do, with caveats
-        % whites prefer short forms, but almost all from one speaker
-        % creoles prefer long forms, but almost all from one speaker
-        % blacks seem to have no pattern
-      % why aren't the results more conclusive?
-        % not enough speakers in each category, but that's the smaller issue
-        % perhaps the categories were not salient enough here
-          % several speakers described growing up spending time with other races
-            % gives quotes
-          % milroy showed long ago the importance of who we interact with
-      % why did klingler conclude that there was a race difference?
-        % it's not clear, but perhaps he was expecting to find it
-          % long forms certainly were more common with blacks, even if they weren't to the exclusion of short forms
-          % fact that he saw these long forms being used by black and none by whites may have led him to overlook that black also use short forms regularly
-          % no reason to believe that there was any intention to reify racializations, but even careful researchers can be prone to this in a racialized society
+    The first question I set out to answer in this study was whether the speech of different races in Pointe Coupee Parish differs according to race in terms of the verb forms used when expressing the habitual present.
+    The results suggest superficially suggest that race is an important factor, but there are caveats.
+    While white speakers, as Klingler suggested, do lean heavily towards short form verbs to express the habitual present, there was really only one white speaker represented well in the data.
+    Similarly, while Creoles appeared to lean towards long form verbs, there was really only one Creole who constituted all of the ``Creole'' tokens.
+    Perhaps even more damning for the idea that race is an important factor is the fact that black speakers did not follow any obvious pattern.
+    While a couple Blacks showed preferences one way or the other, they did not do so in a way that approached excluding the dispreferred verb form.
+    Furthermore, their preferences were not all the same: some Blacks preferred long forms and some short.
+
+    An obvious reason for the inconclusiveness of the results is that there simply were not enough speakers in each racial cateogry.
+    However, it should not be assumed that adding more speakers to each category would lead to race being unveiled as the factor that explains the variation in short and long form verbs.
+    For one, it is possible that the three chosen cateogries, Black, White, and Creole, are not the racial categories that the interviewees have in their minds.
+    As described in Section \ref{subsec:corpus}, speakers used a number of terms for races: \lexi{Mulatto}, \lexi{White}, \lexi{Colored}, \lexi{Negro}, \lexi{Black}, \lexi{Cajun}.
+
+    Additionally, speakers described regularly spending time with those of other races.
+    Example \ref{ex:together} shows LD, a Black man, describing how Blacks and Whites were lived nearby, were both relatively poor, and worked and ate together.
+    Of course, he says this somewhat begrudgingly, literally stating that he ``hates to say it.''
+    Naturally, segregation existed in Louisiana when these speakers were growing up, so this is not to say that Whites and Blacks were equals, but the picture is perhaps more complicated than a simple view of these communities as completely segregated would suggest.
+    Indeed, the fact that ``Mulattos'', as described by NF in Example \ref{ex:race_categories_nf}, existed at all suggests a complex racial social system.
+    While they were unequal and segregated in many ways, then, they also interacted to a significant degree, and \textcite{milroy_social_2013} long ago showed how much of an impact that the people with whom speakers interact can have on their speech.
+
+    \begin{enumerate}
+      \item \label{ex:together}LD: Ni nwa ni blon (... te pa) gen la ou nouzòt nou te, (on chòz), sè te tou pare, paseu mo te gen (de) vwazen le blon te gen en chak kote. Sa nou fe, mo HATE pou di sa mè nou viv ansanm, nou te èlve kochon, poul, zwa, kana, tou zafè.
+      \item[] \gloss{Neither Blacks nor Whites had anything where we were, we were all the same, because I had neighbors, whites on either side. Whatever we did, I hate to say it, but we lived together, we raised pigs, chickens, geese, ducks, everything.}
+    \end{enumerate}
+
+
+
+    This inconclusiveness about the importance of race in explaining long versus short verb forms raises the question of why Klingler concluded that race was the important factor to begin with.
+    While it is not clear, this was perhaps something that he was expecting to find and so found it.
+    Long forms certainly were more common among Blacks when expressing the habitual present, and long forms were avoided almost entirely by the primary White speaker in the corpus, but the Black speakers did not use long forms to the exclusion of short forms.
+    In such cases, living in a racialized society, it might be easy to recognize the first two facts and overlook the third, leading to the conclusion that this is a racial difference.
+    That is not to say that Klingler was not diligent nor that he aimed to reify racial ideology, but researchers are not immune to the influences that the societies in which they live exert on them.
+
+    The second research question in this study asked what the results here meant for race relations in Pointe Coupee Parish.
+    As has been already touched upon above, they may simply be more complicated than expected given the general binarity of race in the United States.
+    Despite the relatively wide range of terms used by the interviewees to refer to racial groups, only three were ultimately used to classify the interviewees themselves.
+    At least one speaker also described Cajuns as being darker skinned than Creoles, a view that differs from the idea that Cajun has become short for White and Creole for Black \parencite{landry_creole_2016}, suggesting a potential incongruence between the views of the interviewees on what constitutes membership in a racial group and the views of researchers.
+
+    It is still quite possible that racial categories have collapsed into a Black-White binary in Louisiana, but the results here do not support that conclusion and instead point to a more complex racial landscape.
+    More research and more data are still needed.
+    For instance, a binary racial segregation may be present that is not expressed in the forms chosen for the habitual present or possibly for any linguistic variable at all.
+    This is just one of many possible variables, and if it is expressed through the habitual present, it may not have been apparent in the data with the very limited sample of White speakers in particular.
+
+    It is also important to keep in mind the ages of these speakers.
+    The youngest two were born in 1938, meaning they were well into their adult years by the 1970s.
+    This is arguably when Louisiana truly was becoming Americanized, as rural parts of the state were thought to be fairly isolated up until the 1970s \parencite[p.~268]{gold_french_1979}, and \textcite{johnson_louisiana_1976} has claimed that ``Cajuns'', in this case meaning rural Louisianians, were not only economically isolated during the late 19th century and into the early 20th century, but they were also culturally isolated, leading to the continued predominance of French in this communities even while New Orleans was well on its way to becoming anglophone (p.~28).
+    The people interviewed in Pointe Coupee Parish, some of whom were born as early as 1903, might simply retain a view of race in Louisiana that is archaic from the vantage of the early 21st century, meaning they still had in mind a plurality of indigenous races even as most of the state had already begun to view race in Louisiana through the same binary lense as most of the population of the United States.
+    This study does not clarify which possibility is correct, but only that there is something beyond a basic tertiary racial system constraining the speech of speakers of Louisiana Creole in Pointe Coupee Parish.
     % second question: what does this mean about race relations in pointe coupee?
-      % they may simply be more complicated than was expected
-        % there were several categories described and terms used but only 3 classifications
-        % even the idea of cajun as white was contradicted by (someone) saying they were darker skinned than creoles
       % LA has clearly had race problems, but they're maybe not expressed in a fully segregated way, making them less salient
         % speakers described different races being excluded from events and school, but only events and school
           % examples
