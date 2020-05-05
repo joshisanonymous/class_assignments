@@ -1,8 +1,8 @@
-Verb,Short,Speaker,Sentence,Origin,BirthYear,Gender,Race
-kwa,Yes,LD,Koman vou <VERB>kwa</VERB>? ...,False_River,1938,Male,Black
-ole,No,LD,"Se kòm sa nou te (...) nouzòt, m <VERB>ole</VERB> di vou.",False_River,1938,Male,Black
-konpran,Yes,LD,"Chnal, se la lve, vou frape leu Fleuv la lve an en kote e lòt kote la Rivyè se Rougon e Glin, vou <VERB>konpran</VERB>?",False_River,1938,Male,Black
-rès,Yes,LD,"Mo momon te kònen di mo, 'Ga, rès dan pl--- aou to <VERB>rès</VERB>,' li di, 'To konnen, to kouri---' men wi men--- ... en moun <VERB>ka</VERB> aprann.",False_River,1938,Male,Black
-konpran,Yes,LD,"Mo p ole gen en plas si li p ole mo la, vou <VERB>konpran</VERB>?",False_River,1938,Male,Black
-konprann,No,LD,Vou <VERB>konprann</VERB> sa?,False_River,1938,Male,Black
-konpran,Yes,LD,To <VERB>konpran</VERB>?,False_River,1938,Male,Black
+Verb,Short,Stative,Speaker,Sentence,Origin,BirthYear,Gender,Race,Citation
+kwa,Yes,Yes,LD,Koman vou <VERB>kwa</VERB>? ...,False_River,1938,Male,Black,krwaye
+ole,No,Yes,LD,"Se kòm sa nou te (...) nouzòt, m <VERB>ole</VERB> di vou.",False_River,1938,Male,Black,ole
+konpran,Yes,Yes,LD,"Chnal, se la lve, vou frape leu Fleuv la lve an en kote e lòt kote la Rivyè se Rougon e Glin, vou <VERB>konpran</VERB>?",False_River,1938,Male,Black,konprann
+rès,Yes,Yes,LD,"Mo momon te kònen di mo, 'Ga, rès dan pl--- aou to <VERB>rès</VERB>,' li di, 'To konnen, to kouri---' men wi men--- ... en moun <VERB>ka</VERB> aprann.",False_River,1938,Male,Black,reste
+konpran,Yes,Yes,LD,"Mo p ole gen en plas si li p ole mo la, vou <VERB>konpran</VERB>?",False_River,1938,Male,Black,konprann
+konprann,No,Yes,LD,Vou <VERB>konprann</VERB> sa?,False_River,1938,Male,Black,konprann
+konpran,Yes,Yes,LD,To <VERB>konpran</VERB>?,False_River,1938,Male,Black,konprann

@@ -1,7 +1,7 @@
-Verb,Short,Speaker,Sentence,Origin,BirthYear,Gender,Race
-apèl,Yes,RD,"Èna plen de piti ki jamen ... kòman t <VERB>apèl</VERB> sa, GROW UP, o ... se de piti toujou ... se de zanfan. ...",False_River,1925,Male,White
-veu,Yes,RD,"Wè, ti-boug-la, li deside i se kouri, sa-fe li, li ale o bal, li di, 'Jeu <VERB>veu</VERB> war sa.'",False_River,1925,Male,White
-tann,Yes,RD,"I di, 'Se la bonn muzik,' i di, 'mo <VERB>tann</VERB> zafè-sa-l,' i di, 'mo pa kònè sa-ki e fe li,' to kònen.",False_River,1925,Male,White
-veu,Yes,RD,"Men li di, 'Mo <VERB>veu</VERB> wa,' i te kiriyeu.",False_River,1925,Male,White
-ote,No,RD,"Sa-fe ti-boug-leu kouri kote la mezon lan, e li monte ann la garli, e li garde par la fnet, dan la gran chanm deuvan, to konnen, ye te ote tou le, ye <VERB>ote</VERB> tou le li l anndan e ye se mè sa daeryè la.",False_River,1925,Male,White
-farouch,Yes,RD,"'Mè,' i di, '<DET>mo garson</DET>,' i di, 'sa to wa, sa to wa kòm sa? (Poukè) to <VERB>farouch</VERB> kom sa?'",False_River,1925,Male,White
+Verb,Short,Stative,Speaker,Sentence,Origin,BirthYear,Gender,Race,Citation
+apèl,Yes,No,RD,"Èna plen de piti ki jamen ... kòman t <VERB>apèl</VERB> sa, GROW UP, o ... se de piti toujou ... se de zanfan. ...",False_River,1925,Male,White,pele
+veu,Yes,Yes,RD,"Wè, ti-boug-la, li deside i se kouri, sa-fe li, li ale o bal, li di, 'Jeu <VERB>veu</VERB> war sa.'",False_River,1925,Male,White,ole
+tann,Yes,Yes,RD,"I di, 'Se la bonn muzik,' i di, 'mo <VERB>tann</VERB> zafè-sa-l,' i di, 'mo pa kònè sa-ki e fe li,' to kònen.",False_River,1925,Male,White,tann
+veu,Yes,Yes,RD,"Men li di, 'Mo <VERB>veu</VERB> wa,' i te kiriyeu.",False_River,1925,Male,White,ole
+ote,No,No,RD,"Sa-fe ti-boug-leu kouri kote la mezon lan, e li monte ann la garli, e li garde par la fnet, dan la gran chanm deuvan, to konnen, ye te ote tou le, ye <VERB>ote</VERB> tou le li l anndan e ye se mè sa daeryè la.",False_River,1925,Male,White,ote
+farouch,Yes,Yes,RD,"'Mè,' i di, '<DET>mo garson</DET>,' i di, 'sa to wa, sa to wa kòm sa? (Poukè) to <VERB>farouch</VERB> kom sa?'",False_River,1925,Male,White,farouche

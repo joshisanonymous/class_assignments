@@ -1,24 +1,24 @@
-Verb,Short,Speaker,Sentence,Origin,BirthYear,Gender,Race
-pons,Yes,ME,"Mo <VERB>pons</VERB> <DET>mo momon</DET> te pale ongle (e) mwen, pou fe mo konmpronn, men tou-ki-cho dan la mezon sè te kreyòl.",Chenal,1921,Female,Creole_of_color
-gen,No,ME,Mo <VERB>gen</VERB> de frè.,Chenal,1921,Female,Creole_of_color
-kanprann,No,ME,"Na <DET>mo plu vye piti</DET>, sa-ka Kalifounni a, li pe e pale kreyòl, men li <VERB>kanprann</VERB> tou-ki-choz, koum mwen.",Chenal,1921,Female,Creole_of_color
-kòmprann,No,ME,Li <VERB>kòmprann</VERB> tou-ki-choz.,Chenal,1921,Female,Creole_of_color
-konmprann,No,ME,Li <VERB>konmprann</VERB> tou-ki-choz. ...,Chenal,1921,Female,Creole_of_color
-parl,Yes,ME,"E si li wa en F--- en zami ki <VERB>parl</VERB> jus kreyòl, ye a parle.",Chenal,1921,Female,Creole_of_color
-parl,Yes,ME,"L a di en mo koum sa men li <VERB>parl</VERB> pa, pa konm mwen.",Chenal,1921,Female,Creole_of_color
-pele,No,ME,"Men no gen, sa ye <VERB>pele</VERB> Kadjen, on Lil, ki plu bren kè nouzòt.",Chenal,1921,Female,Creole_of_color
-raple,No,ME,"Pa <VERB>raple</VERB> men mo te, peutet SEVENTH GRADE, kon li mouri.",Chenal,1921,Female,Creole_of_color
-vonn,No,ME,"To wa, moun-ye <VERB>vonn</VERB> dekonn-la e <VERB>peye</VERB>, (...) en pe.",Chenal,1921,Female,Creole_of_color
-peye,No,ME,"To wa, moun-ye <VERB>vonn</VERB> dekonn-la e <VERB>peye</VERB>, (...) en pe.",Chenal,1921,Female,Creole_of_color
-voye,No,ME,Men gouvèrnemon <VERB>voye</VERB> ye en tchek apre sa.,Chenal,1921,Female,Creole_of_color
-gen,No,ME,"Konmen arpon ye e kou plonte ..., ye <VERB>gen</VERB> tou sa dan NEW ROAD.",Chenal,1921,Female,Creole_of_color
-kapab,No,ME,Ye pa <VERB>kapab</VERB> jus fe sa y <VERB>ole</VERB> ankò.,Chenal,1921,Female,Creole_of_color
-ole,No,ME,Ye pa <VERB>kapab</VERB> jus fe sa y <VERB>ole</VERB> ankò.,Chenal,1921,Female,Creole_of_color
-raple,No,ME,Pa <VERB>raple</VERB>.,Chenal,1921,Female,Creole_of_color
-raple,No,ME,M pa <VERB>raple</VERB> ye.,Chenal,1921,Female,Creole_of_color
-kouri,No,ME,"E lòt-la te res, to <VERB>kouri</VERB> on GLYNN, e to <VERB>vire</VERB> petet de mil.",Chenal,1921,Female,Creole_of_color
-vire,No,ME,"E lòt-la te res, to <VERB>kouri</VERB> on GLYNN, e to <VERB>vire</VERB> petet de mil.",Chenal,1921,Female,Creole_of_color
-gen,No,ME,"Mo, li <VERB>gen</VERB> en biznis, te AN ACCOUNTANT.",Chenal,1921,Female,Creole_of_color
-Mènen,No,ME,<VERB>Mènen</VERB> moun e li konnen--- li pa <VERB>kapab</VERB> ronje taks.,Chenal,1921,Female,Creole_of_color
-kapab,No,ME,<VERB>Mènen</VERB> moun e li konnen--- li pa <VERB>kapab</VERB> ronje taks.,Chenal,1921,Female,Creole_of_color
-kapa,No,ME,"Aben <DET>mo fiy</DET> pa <VERB>kapa</VERB> fe sa, men tou-lòt-ki-chò-la dan lofis-la---",Chenal,1921,Female,Creole_of_color
+Verb,Short,Stative,Speaker,Sentence,Origin,BirthYear,Gender,Race,Citation
+pons,Yes,No,ME,"Mo <VERB>pons</VERB> <DET>mo momon</DET> te pale ongle (e) mwen, pou fe mo konmpronn, men tou-ki-cho dan la mezon sè te kreyòl.",Chenal,1921,Female,Creole_of_color,ponse
+gen,No,Yes,ME,Mo <VERB>gen</VERB> de frè.,Chenal,1921,Female,Creole_of_color,gen
+kanprann,No,Yes,ME,"Na <DET>mo plu vye piti</DET>, sa-ka Kalifounni a, li pe e pale kreyòl, men li <VERB>kanprann</VERB> tou-ki-choz, koum mwen.",Chenal,1921,Female,Creole_of_color,konprann
+kòmprann,No,Yes,ME,Li <VERB>kòmprann</VERB> tou-ki-choz.,Chenal,1921,Female,Creole_of_color,konprann
+konmprann,No,Yes,ME,Li <VERB>konmprann</VERB> tou-ki-choz. ...,Chenal,1921,Female,Creole_of_color,konprann
+parl,Yes,No,ME,"E si li wa en F--- en zami ki <VERB>parl</VERB> jus kreyòl, ye a parle.",Chenal,1921,Female,Creole_of_color,parle
+parl,Yes,No,ME,"L a di en mo koum sa men li <VERB>parl</VERB> pa, pa konm mwen.",Chenal,1921,Female,Creole_of_color,parle
+pele,No,No,ME,"Men no gen, sa ye <VERB>pele</VERB> Kadjen, on Lil, ki plu bren kè nouzòt.",Chenal,1921,Female,Creole_of_color,pele
+raple,No,No,ME,"Pa <VERB>raple</VERB> men mo te, peutet SEVENTH GRADE, kon li mouri.",Chenal,1921,Female,Creole_of_color,rapele
+vonn,No,No,ME,"To wa, moun-ye <VERB>vonn</VERB> dekonn-la e <VERB>peye</VERB>, (...) en pe.",Chenal,1921,Female,Creole_of_color,vonn
+peye,No,No,ME,"To wa, moun-ye <VERB>vonn</VERB> dekonn-la e <VERB>peye</VERB>, (...) en pe.",Chenal,1921,Female,Creole_of_color,peye
+voye,No,No,ME,Men gouvèrnemon <VERB>voye</VERB> ye en tchek apre sa.,Chenal,1921,Female,Creole_of_color,voye
+gen,No,Yes,ME,"Konmen arpon ye e kou plonte ..., ye <VERB>gen</VERB> tou sa dan NEW ROAD.",Chenal,1921,Female,Creole_of_color,gen
+kapab,No,Yes,ME,Ye pa <VERB>kapab</VERB> jus fe sa y <VERB>ole</VERB> ankò.,Chenal,1921,Female,Creole_of_color,kapab
+ole,No,Yes,ME,Ye pa <VERB>kapab</VERB> jus fe sa y <VERB>ole</VERB> ankò.,Chenal,1921,Female,Creole_of_color,ole
+raple,No,No,ME,Pa <VERB>raple</VERB>.,Chenal,1921,Female,Creole_of_color,rapele
+raple,No,No,ME,M pa <VERB>raple</VERB> ye.,Chenal,1921,Female,Creole_of_color,rapele
+kouri,No,No,ME,"E lòt-la te res, to <VERB>kouri</VERB> on GLYNN, e to <VERB>vire</VERB> petet de mil.",Chenal,1921,Female,Creole_of_color,kouri
+vire,No,No,ME,"E lòt-la te res, to <VERB>kouri</VERB> on GLYNN, e to <VERB>vire</VERB> petet de mil.",Chenal,1921,Female,Creole_of_color,vire
+gen,No,Yes,ME,"Mo, li <VERB>gen</VERB> en biznis, te AN ACCOUNTANT.",Chenal,1921,Female,Creole_of_color,gen
+Mènen,No,No,ME,<VERB>Mènen</VERB> moun e li konnen--- li pa <VERB>kapab</VERB> ronje taks.,Chenal,1921,Female,Creole_of_color,menne
+kapab,No,Yes,ME,<VERB>Mènen</VERB> moun e li konnen--- li pa <VERB>kapab</VERB> ronje taks.,Chenal,1921,Female,Creole_of_color,kapab
+kapa,No,Yes,ME,"Aben <DET>mo fiy</DET> pa <VERB>kapa</VERB> fe sa, men tou-lòt-ki-chò-la dan lofis-la---",Chenal,1921,Female,Creole_of_color,kapab
