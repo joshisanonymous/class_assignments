@@ -1,0 +1,354 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{setspace}
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{References.bib}
+  % \usepackage{graphicx}
+  %   \graphicspath{{figures/}}
+
+  % Document information
+  \title{Verb forms used to express the habitual present by Louisiana Creole speakers}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\gloss}[1]{`#1'}
+  \newcommand{\image}[1]{
+    \begin{tabular}[t]{c}
+      \\
+      \includegraphics[scale=0.7]{#1}
+    \end{tabular}
+  }
+
+\begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis",
+                 fig.height = 3,
+                 fig.width = 3.5)
+  @
+  <<load_data_libraries>>=
+  @
+  <<clean_data>>=
+  @
+  <<get_demographics>>=
+  @
+  \maketitle
+  % \doublespacing
+  \section{Introduction}
+    The parish\footnote{Parishes in Louisiana are equivalent to counties in other US states.} of Pointe Coupee, Louisiana is situated along the Mississippi River northwest of Baton Rouge.
+    It is a rural area whose population in 1990 was 22,540 and in 2000 was 22,763 \parencite{us_census_bureau_census_2001}.
+    That is to say, it is not an area that expands or contracts much, which has been true over much of its history.
+    In the 19th century, \textcite{klingler_if_2003} claims that it was so insular that marriage between cousins was not exceptional (p.~109).
+    Although much of South Louisiana was relatively isolated until up through the first half of the 20th century (\citeauthor{gold_french_1979}, \citeyear{gold_french_1979}; \citeauthor{johnson_louisiana_1976}, \citeyear{johnson_louisiana_1976}, p.~28), Pointe Coupee perhaps stands out even from other parishes.
+
+    In Pointe Coupee, a variety of Louisiana Creole is spoken.
+    Another major variety is spoken in St Martin Parish \parencite{neumann_creole_1985}, though the one spoken in Pointe Coupee stands out as St Martin is much less isolated than Pointe Coupee, both geographically and culturally as it is part of the Lafayette metropolitan area where Louisiana French is also spoken.
+    Louisiana Creole itself is a French lexifier creole that has many of the features commonly associated with other French lexifier creoles such as preverbal markers for tense, aspect and mood, post-nominal definite articles, and copula absence \parencite[p.~63]{klingler_if_2003}.
+    It also has much the same origin, being born out of French plantation society and specifically slavery.
+
+    There are three racial distinctions that the people of Pointe Coupee make: White, Black, and Creole of color, meaning those of mixed race \parencite[p.~xxv]{klingler_if_2003}.
+    Despite this tertiary division -- as opposed to the typical binary division in most of the United States -- people of color in Pointe Coupee have experienced much of the same racial issues as Blacks generally in other parts of the country.
+    For instance, there was not a high school that people of color could go to in Pointe Coupee until 1950, before which there was sometimes violent opposition to such initiatives \parencite[p.~122]{klingler_if_2003}.
+    A surprising fact, given Louisiana Creole's roots in slavery, is that the variety spoken in Pointe Coupee is spoken by more White people than Black or Creole people, which \textcite{klingler_if_2003} believes to be the result of Americans imported English-speaking slaves in the 19th century and so providing slaves with more exposure to English than slave owners even (p.~108).
+
+    One variable feature in Louisiana Creole is the expression of the habitual present, which may be done using an uninflected bare verb or an inflected verb, in both cases without tense, mood, or aspect markers \parencite[pp.~237]{klingler_if_2003}.
+    For instance, the verb \lexi{parle} [paɾle] \gloss{to speak} may express the habitual present either as in
+
+    \begin{tabular}{l r l}
+      1. & Uninflected & Li parle \gloss{He speaks} \\
+      2. & Inflected   & Li parl \gloss{He speaks}
+    \end{tabular}
+
+    For stative verbs, the so-called long form (i.e., inflected with the \emph{-e} suffix) can also express the perfective past, so that (1) may also mean \gloss{he spoke} \textcite[p.~252]{klingler_if_2003}.
+
+    Though he provides no quantitative analysis, \textcite{klingler_if_2003} claims that the use of uninflected versus inflected forms of verbs to express the habitual present is socially constrained: Whites prefer the inflected version and Blacks the uninflected (p.~117).
+    As it happens, the inflected forms are also often identical to their counterparts in Louisiana French (e.g., \lexi{il parle} [paɾl] \gloss{he speaks}), which is considered more prestigious than Louisiana Creole at least among Creole speakers in St Martin Parish \parencite[pp.~23-25]{neumann_creole_1985}.
+    My goal with this study is to carry out a quantitative analysis of Klingler's data to confirm or refute Klinger's claim that this variation is racially constrained.
+    As such, my first research question is the following:
+    \begin{enumerate}
+      \item[Q1] Do Black, White, and Creole speakers of Louisiana Creole differ in their preference for uninflected versus inflected verbs when expressing the habitual present?
+    \end{enumerate}
+    As this may have implications for racial identities in the parish, I will also ask the following qualitative research question:
+    \begin{enumerate}
+      \item[Q2] What do the differences or similarities between the forms chosen for the habitual present in Louisiana Creole mean for how different races in Pointe Coupee Parish identify themselves and their relations to each other?
+    \end{enumerate}
+  \section{Methodology}
+    \subsection{Corpus}
+      The corpus for this study came from \citeauthor{klingler_if_2003}'s (\citeyear{klingler_if_2003}) study.
+      In his book, he provided lengthy extracts from the interviews he conducted during his own research, along with both descriptions and demographic details about the interviewees.
+      Out of the interviews provided, two are with White speakers, two are with Creole speakers, and the rest are with Black speakers.
+      It is important to note here that Klingler did not make it clear whether he classified his speakers or whether they self-identified, though it may be safe to assume the latter as it is hard to imagine how he would have identified any of the speakers as Creole instead of Black without asking.
+      However, the content of the interviews suggest that Klingler took some liberties with the racial terms used.
+      NF, an interviewee described as a black man, described the tertiary racial segmentation of the area in Example \ref{ex:race_categories_nf}, but did not use the term \lexi{Creole}.
+      He instead used the terms \lexi{blan} \lexi{white}, \lexi{koulè} \gloss{colored}, \lexi{nwa} \gloss{black}, and \lexi{milat} \gloss{mulatto}.
+      He also used the difficult to translate term: \lexi{neg}.
+      This word comes from French \lexi{nègre} and is used as a reference to skin color and sometimes as a harsh insult somewhat equivalent to English \lexi{nigger}, but it is also a common term of endearment in Louisiana that one might use for a friend or a son even, typically with a possessive determiner: \lexi{mon nègre} \gloss{my guy}.
+      For these reasons, I gloss it here simply as \lexi{negro} to keep the negative connotations but to not be as harsh as the other possible direct translation.
+
+      \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item \label{ex:race_categories_nf}NF: (Wa) le \emph{milat} COME FROM le \emph{nwa}, le \emph{neg}. En fonm, en nòm \emph{blan} mele avè en fonm \emph{koulè}, sa mennen en \emph{milat}.
+        \item[] \gloss{You see, \emph{mulattos} come from \emph{blacks}, \emph{negros}. A woman, a \emph{white} man mixed with a \emph{colored} woman, that makes a \emph{mulatto}.}
+        \item \label{ex:race_categories_me}ME: Men no gen, sa ye pele \emph{Kadjen}, on Lil, ki plu bren kè nouzòt.
+        \item[] \gloss{But we had what you would call \emph{Cajuns}, on the Island, who were browner than us.}
+        \item[] TK: E tou-moun-sa-ye, ye marye ave lòt \emph{Kreyòl}, ou enan ki
+        \item[] \gloss{And all those people, they married other \emph{Creoles}, or there were some who}
+        \item[] ME: Ave \emph{Kreyòl}!
+        \item[] \gloss{\emph{Creoles}!}
+        \item[] TK: pase--- ye pa pase pou \emph{blon}? ...
+        \item[] \gloss{passed--- they didn't pass for \emph{white}?}
+        \item[] ME: Pa isit, non.
+        \item[] \gloss{Not here, no.}
+      \end{enumerate}
+
+      The term \lexi{Creole} is used quite a bit in the interviews, though almost always as a reference to the language, not as a reference to a group of people.
+      In fact, only one interviewee, ME, explicitly used the term \lexi{Creole}, but Klingler (i.e., TK) may have primed this usage, as can be seen in Example \ref{ex:race_categories_me}.
+      ME, described as a Creole woman, also brings up another racial category in the same exchange: Cajun.
+      She describes Cajuns as being darker skinned than Creoles, even though it has been argued that Cajun has become a euphemism for White and Creole for Black \parencite[e.g.,]{landry_creole_2016}.
+
+      Ultimately, the corpus contains utterances of several racial terms that Klingler collapsed into three.
+      Some of these terms came along with some indications of what the interviewees used to establish membership in a racial category.
+      ME not only relied on skin color, for instance, she also spoke about hair color.
+      The resulting classifications, along with other demographic data, can be found in Table \ref{tab:demographics}.
+      It will be important to keep in mind these caveats about the racial terms chosen used when interpreting the results of this study.
+
+      \begin{table}[tbhp]
+        \caption{Demographics of the interviewees in the corpus}
+        \label{tab:demographics}
+        \centering
+        \Sexpr{kable(demographics, format = "latex")}
+      \end{table}
+
+      Each interview in the corpus involves roughly 300 utterances by the interviewees.
+      All of the interviews were carried out in the early 1990s.
+      Though this is not ideal for what the situation may be today, this is some of the only data available on these speakers, and it is quite possible that no speakers are left as an interviewee being 52 years old was considered ``younger'' at the time \parencite[p.~381]{klingler_if_2003}.
+
+    \subsection{Data collection and coding}
+      Tokens of verbs were extracted from the corpus and coded manually.
+      Some verbs in Louisiana Creole have one invariant form, such as \lexi{di} \gloss{to say} \parencite[p.~247]{klingler_if_2003}.
+      These verbs were disregarded in this analysis.
+      Those that have two forms were spelled as such by Klingler.
+      He used a relatively phonetic orthography that was based on the Haitian Creole writing system.
+      The two most regular verbs are those that end in \emph{-e}, as in \lexi{parle} in (1-2), and those that end in \emph{-n}, such as \lexi{konprann} [kɔ̃pɾɑ̃n] \gloss{to understand}.
+      In both cases, the inflected forms simply leave off the final segment so that \lexi{parle} becomes \orth{parl} [paɾl] and \lexi{konprann} becomes \orth{konpran} [kɔ̃pɾɑ̃] \parencite[p.~244-246]{klingler_if_2003}.
+
+      This means that inflections are easy to identify for coding, but also that I had to trust spellings to accurately represent which sounds were actually produced.
+      In the case of words like \lexi{parle}, the only times when the final segment [e] may have been present but not transcribed in the corpus was when the next word also began with [e], a situation that does not come about very often.
+      For words such as \lexi{konprann}, the issue is not a small one.
+      Any non-native French or Creole speaker who may have been involved in transcribing these interviews, which is a category that Klingler fits into himself, could have easily perceived a final [n] as a sort of phonemic restoration effect, even if there was no final [n], as there are no English varieties that allow word-final nasalized vowels to the best of my knowledge.
+      However, there is little reason to doubt that Klingler recognized this issue and applied due diligence to avoid any misinterpretations.
+      After all, one of his major objectives was to outline the morphosyntax of this variety of Louisiana Creole.
+
+      As the goal is to find out what exactly is influencing the realizations of these verbs as uninflected or inflected, each token was coded for the gender, age, and place of origin of the speaker, in addition to race.
+      It is also possible that verb types play a role, as stative and non-stative verbs have indiosyncracies in other aspects of the grammar \parencite[pp.~252-253]{klingler_if_2003}.
+      As such, tokens were also coded for whether they were stative or non-stative.
+
+      Care was taken to ensure that only tokens that truly express the habitual present were kept.
+      Several general approaches were taken to achieve this.
+      Klingler's own translations, for one, were referenced when the tense and aspect were not particularly clear from the context, otherwise, context and the verb itself were relied on.
+      Temporal adverbs were clear indicators for tense and sometimes for aspect.
+      Aktionsart was also quite useful for some verbs, such as \lexi{mouri} \gloss{to die}: if the experiencer is a known individual, there is no question that \lexi{mouri} expresses a perfective aspect, but if the experiencer is indeterminant or plural, it is more likely that \lexi{mouri} is expressing the habitual aspect.
+
+      Often interviewees recount stories in the interviews.
+      \textcite{klingler_if_2003} notes Rickford's (1987) finding that the historical present is common in Guyanese Creole and so may be in Louisiana Creole (pp.~251-252), which makes including and excluding tokens particularly troublesome as the historical present would look exactly the same as the present habitual but express a subtly different tense.
+      In such cases, where a story is being recounted, tokens that otherwise give the impression of being in the present habitual, perhaps due to having the same form as other tokens that clearly are the present habitual, were excluded.
+
+      Coding the status of verbs as stative or non-stative presented some difficulty as copulas can be absent with ``nonverbal predicates'' \parencite[p.~299]{klingler_if_2003}.
+      Example \ref{ex:stative_or_adjective} contains the lexical item \lexi{marye}, which could be \gloss{to marry} or \gloss{married} without the copula \lexi{se}.
+      Both tokens in this utterance could be translated either way without affecting the general meaning.
+      Furthermore, the glossary that Klingler provides gives both parts of speech (p.~574).
+      The end result was that these lexical items were almost always excluded as there was no objective diagnostic to distinguish between stative verbs that could also be adjectives.
+
+      \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item \label{ex:stative_or_adjective}ME: Si ye te pòkò \emph{marye}, ye tou \emph{marye} e blan.
+        \item[] \gloss{If they weren't married yet, they got married to a White.}
+      \end{enumerate}
+
+      Three clause types were also excluded due to the difficulty inherent in distinguishing which tense, aspect, and mood speakers may be expressing despite the form of the verbs: causatives, subordinate clauses that might take the subjunctive or infinitive in French or English, and \lexi{if-then} constructions.
+      Causative construction like the one in Example \ref{ex:causative} suggest on the surface that the verb \lexi{parle} is finite as it was pronounced [paɾl] (i.e., without the final segment).
+      However, this only seems like an obvious conclusion under the assumption that short forms are uninflected and long forms are inflected.
+      In English, such a construction would take an infinitive, but in French, both an infinitive or a subordinate clause are possible.
+      The former would take the form \lexi{nous fait pas parler}, with the infinitive \lexi{parler}, and the latter would be \lexi{fait que nous parlons pas}, where \lexi{parler} is inflected into the present indicative matching the subject \lexi{nous} \gloss{we}.
+      This latter construction might be translated into English as something like \lexi{dictates that we don't speak}.
+      Because developing a reliable diagnostic for distinguishing which tense and aspect, if any, is being expressed in these construction, causatives were excluded from the analysis.
+
+      \begin{enumerate}
+        \setcounter{enumi}{5}
+        \item \label{ex:causative}ME ... se sa-ki \emph{fe nou parl} pa kreyòl.
+        \item[] \gloss{That's what \emph{makes us} not \emph{speak} Creole.}
+        \item \label{ex:subordinate}YC: Ye p \emph{ole to touche} y paseu (se si se sa) traka.
+        \item[] \gloss{The don't \emph{want you to touch} them because it will bother them.}
+        \item \label{ex:if_then}YC: Si m \emph{ole} fe ...
+        \item[] \gloss{If I \emph{wanted} to do}
+      \end{enumerate}
+
+      Subordinate clauses in general present the same issues, particularly in cases where French might make use of the subjunctive.
+      Example \ref{ex:subordinate} is just such a case.
+      The English gloss would be with an infinitive \lexi{to touch}, even with the explicit subject \lexi{you}.
+      In French, this same expression would take the form \lexi{veulent pas que tu touches}, where a complementizer \lexi{que} is used followed by the subject \lexi{tu} \gloss{you} and the verb \lexi{touches} \gloss{touch}, inflected to agree with the subject and to be in the subjunctive mood.
+      The same construction in Louisiana Creole does not offer any clues about which tense, aspect, and mood is being expressed, and so such cases were excluded from analysis.
+
+      Again, \lexi{if-then} constructions like the one in Example \ref{ex:if_then} created uncertainty about the intended tense, mood, and aspect, as well.
+      In both English and French, these constructions are variable in these features in both clauses, depending on the meaning.
+      For instance, \lexi{If I wanted to do it, I would do it} and \lexi{If I want to do it, I do it} and \lexi{If I want to do it, do it} are all \lexi{if-then} constructions with the same lexical content that are understood differently purely because of the tense, aspect, and mood used in each.
+      These combinations are not universal nor necessarily distinguishable, so these constructions were excluded from analysis.
+
+      Finally, several other items were excluded from analysis for fairly obvious reasons.
+      Some of the interviews included translation tasks where Klingler would provide phrases in English for the interviewees to translate.
+      These sections were skipped over completely as the influence of English on what they produce would likely be rather strong.
+      Indeed, even in normal speech, there are numerous cases of English verbs and code-switching into English.
+      There is even a token of \lexi{bin} in GL's interview, which is a typical preverbal marker in English-based creoles expressing the perfect aspect, which comes from English \lexi{been}.
+
+      There are also transcription chunks of which the transcriber was unsure marked woth parentheses.
+      Example \ref{ex:parentheses} shows one case with the verb \lexi{pele} \gloss{to call}.
+      Similarly, verbs were left out if only the content on either side of it was uncertainly transcribed in cases where those uncertain transcriptions would have an impact on how the verb itself is to be understood, such as have the past marker \lexi{te} or not.
+
+      \begin{enumerate}
+        \setcounter{enumi}{8}
+        \item \label{ex:parentheses}MP: ... ye toujou (pele mon) pou ede.
+        \item[] \gloss{They have always called me to help.}
+      \end{enumerate}
+
+      Several verbs received special attention, as well. The lexical item \lexi{kapab} \gloss{habilitative} was treated as a verb, following Klingler's own analysis.
+      This was supported by the fact that individual speakers would produced both the short form \lexi{ka} as well as the long form \lexi{kapab} at different times, whereas preverbal markers are invariant.
+      The copula, as well as all auxiliary verbs, was excluded from analysis.
+      For all auxiliaries, it is not obvious that they would behave the same as lexical verbs, but for the copula in particular, which can take the forms \lexi{se}, \lexi{ye}, \lexi{e}, and \lexi{et}, it was not even clear which form would be the short form and which the long.
+      Finally, verbs such as \lexi{konne} \gloss{to know} were excluded due to being invariant in form.
+      \textcite{klingler_if_2003} includes \lexi{travaye} \gloss{to work} in this group of invariant verbs for this particular corpus as he only attested this long form version three times and no among the speakers included in the exerpts (p.~249), but I included the verb in my analysis as that does indicate that a long form is possible, even if rare.
+      Some verbs that have no short forms \emph{per se} were also included, such as \lexi{gen} \gloss{to have}, namely because there is a much different form used at time in Louisiana Creole that is identical to the French equivalent of \gloss{to have}: \lexi{avoir}.
+
+    \subsection{Statistical analysis}
+      The quantitative analysis carried out here will be relegated to descriptive statistics as a result of the small number of interviewees.
+      Even dividing up the speakers into only two groups, as with gender, results in 6 males and 5 females, hardly enough from which to develop a robust model.
+      However, simple proportions do provide indications of what sort avenue of future research would be fruitful as some possibilities can easily be ruled out using such simple statistics even when strong associations cannot be established with them.
+
+  \section{Results}
+    The tokens totalled to \Sexpr{nrow(tokens)}.
+    The general distribution of long forms, short forms, and invariant verbs (i.e., ``NA'') can be seen in Figure \ref{fig:freq_overall}.
+    What is immediately clear is that both short and long forms are used frequently to express the habitual present.
+    The central task of this study, though, is to determine what constrains the use of the short form or the long form, be it a linguistic factor or a social factor.
+    It is clear that the linguistic factor of tense, aspect, and mood do not constrain the realization of this variable, otherwise the overall distribution would favor either long or short forms.
+
+    \begin{figure}[tbhp]
+      \caption{Overall frequency of long and short verb forms}
+      \label{fig:freq_overall}
+      \centering
+      <<freq_overall>>=
+      @
+    \end{figure}
+
+    \textcite{klingler_if_2003} claimed that whites preferred short form verbs for the habitual present and blacks long form (p.~117).
+    Figure \ref{fig:freq_race} show the distribution of long and short form verbs by race.
+    Just through visualizing descriptive statistics as in this bar chart, Klingler's claim appears to have proven true for whites: they did indeed produce exponentialy more short forms than long forms.
+    However, the converse was not true for blacks, though it was for Creoles, whom Klingler did not include when he suggested the tendencies of different racial groups.
+    One issue may be that there were more black speakers than speakers from any other racial group, so it is possible that the Creole and White speakers just happened to produce more long and short forms respectively because those were the tendencies of those individuals, not of the groups into which they were classified.
+
+    \begin{figure}[tbhp]
+      \caption{Frequency of long and short verb forms by race}
+      \label{fig:freq_race}
+      \centering
+      <<freq_race>>=
+      @
+    \end{figure}
+
+    Figure \ref{fig:freq_race_speaker} subdivides by individual speakers within each race category.
+    Indeed, despite there being two speakers in each of the White and Creole categories, they were both dominated by tokens from one speaker each, and those speakers appeared to have tendencies towards short and long forms, respectively.
+    The picture for Blacks is not any clearer here, though: GL leans towards long forms, NF and YC towards short forms, and the rest do not appear to have any preference.
+    Even for the three who have preferences, those preferences are not very strong at all.
+
+    \begin{figure}[tbhp]
+      \caption{Frequency of long and short verb forms by race and speaker}
+      \label{fig:freq_race_speaker}
+      \centering
+      <<freq_race_speaker, fig.height = 6, fig.width = 8>>=
+      @
+    \end{figure}
+
+    It is also possible that Klingler's claim that there is a racial divide among speakers in terms of short versus long forms was not a racial divide at all.
+    Other social factors could of course be constraining which form is used.
+    Figures \ref{fig:freq_gender} and \ref{fig:freq_origin} show the distribution of verb forms according to gender and place of origin, respectively.
+    For gender, females and males appear to have near identical proportions.
+    It is hard to imagine that this is a meaningful factor, surprisingly considering how often gender is a factor in language variation.
+    There do appear to be some tendencies by place of origin, however: those from Jarreau and perhaps those from False River have a preference for short forms, and those from Chenal have a preference for long forms.
+    While only MP was from Jarreau and only ME was from Chenal, conflating these two origins with simple variation between individuals, KS, LD, and RD were all from False River.
+    All are men, but the first two were classified as Black and the last one as White.
+    These men all produced similar counts of verbs in the habitual present, as well: \Sexpr{nrow(tokens[tokens$Speaker == "KS",])}, \Sexpr{nrow(tokens[tokens$Speaker == "LD",])}, and \Sexpr{nrow(tokens[tokens$Speaker == "RD",])}, respectively.
+    This is perhaps the first hint of what might be behind the variation found in long and short forms for the habitual present.
+    Perhaps this is not a case of racial variation but a case of place variation.
+    Several interviewees did speak about interacting regularly with those from other races, so it may be that those social networks influenced their speech more than racial ties or ideas of race.
+
+    \begin{figure}[tbhp]
+      \caption{Frequency of long and short verb forms by gender}
+      \label{fig:freq_gender}
+      \centering
+      <<freq_gender>>=
+      @
+    \end{figure}
+
+    \begin{figure}[tbhp]
+      \caption{Frequency of long and short verb forms by origin}
+      \label{fig:freq_origin}
+      \centering
+      <<freq_origin, fig.width = 5.5>>=
+      @
+    \end{figure}
+
+    Finally, one linguistic factor that was coded for here was whether the verb was stative or non-stative.
+    While, according to Figure \ref{fig:freq_verb}, there was a tendency to use short forms for non-stative verbs, the converse was not found for stative verbs, as one might expect if this was a meaningful factor.
+    This is also another case where what might be behind the result is the influence of a small number of verbs.
+    Zipf's law suggests that the most frequent words in any corpus will be exponentially more frequent then even those words that are slowly worse ranked in frequency, which proves true in Klingler's corpus.
+    Out of the \Sexpr{length(levels(tokens$Citation))} different verbs in this corpus, \lexi{gen} appears \Sexpr{nrow(tokens[tokens$Citation == "gen",])} times, followed by \lexi{kapab} at \Sexpr{nrow(tokens[tokens$Citation == "kapab",])} times, \lexi{ole} at \Sexpr{nrow(tokens[tokens$Citation == "ole",])} times, and \lexi{krwaye} at \Sexpr{nrow(tokens[tokens$Citation == "krwaye",])} times.
+    The frequencies drop even more dramatically as one moves down the line with the result that most of the verbs appear only one to three times in the corpus.
+    Needless to say, this result is not much more useful for identifying the constraints on long versus short form verbs for the habitual present.
+
+    \begin{figure}[tbhp]
+      \caption{Frequency of long and short verb forms by status as stative or non-stative verb}
+      \label{fig:freq_verb}
+      \centering
+      <<freq_verb>>=
+      @
+    \end{figure}
+
+  \section{Discussion}
+    
+    % first question: do races differ in their speech
+      % they do, with caveats
+        % whites prefer short forms, but almost all from one speaker
+        % creoles prefer long forms, but almost all from one speaker
+        % blacks seem to have no pattern
+      % why aren't the results more conclusive?
+        % not enough speakers in each category, but that's the smaller issue
+        % perhaps the categories were not salient enough here
+          % several speakers described growing up spending time with other races
+            % gives quotes
+          % milroy showed long ago the importance of who we interact with
+      % why did klingler conclude that there was a race difference?
+        % it's not clear, but perhaps he was expecting to find it
+          % long forms certainly were more common with blacks, even if they weren't to the exclusion of short forms
+          % fact that he saw these long forms being used by black and none by whites may have led him to overlook that black also use short forms regularly
+          % no reason to believe that there was any intention to reify racializations, but even careful researchers can be prone to this in a racialized society
+    % second question: what does this mean about race relations in pointe coupee?
+      % they may simply be more complicated than was expected
+        % there were several categories described and terms used but only 3 classifications
+        % even the idea of cajun as white was contradicted by (someone) saying they were darker skinned than creoles
+      % LA has clearly had race problems, but they're maybe not expressed in a fully segregated way, making them less salient
+        % speakers described different races being excluded from events and school, but only events and school
+          % examples
+        % otherwise, they all appeared to be similarly poor
+          % relate couch story
+        % none of the speakers spoke with animosity, even if some painted rosery pictures and others pictures of rough life
+          % the mèm kreyòl lady seemed to not recognize a divide at all
+          % someone has said that things are much better now
+      % final conclusion: despite efforts to squeeze louisiana into a binary race system, there's evidence that this hasn't fully happened
+        % caveat: these speakers were OLD, so maybe it has happened SINCE their times
+    \printbibliography
+\end{document}
