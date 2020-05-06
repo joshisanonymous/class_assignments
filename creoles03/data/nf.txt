@@ -1,0 +1,567 @@
+<META>
+  <PARTICIPANT ID="1">
+    <NAME>NF</NAME>
+    <ORIGIN>Parlange Plantation</ORIGIN>
+    <BIRTHYEAR>1905</BIRTHYEAR>
+    <GENDER>Male</GENDER>
+    <RACE>Black</RACE>
+  </PARTICIPANT>
+  <PARTICIPANT ID="2">
+    <NAME>ST</NAME>
+    <ORIGIN>Unknown</ORIGIN>
+    <BIRTHYEAR>Unknown</BIRTHYEAR>
+    <GENDER>Unknown</GENDER>
+    <RACE>Unknown</RACE>
+  </PARTICIPANT>
+  <INTERVIEWYEAR>1993</INTERVIEWYEAR>
+</META>
+NF: Ki laj to <VERB>gen</VERB>?
+TK: Mo gen trant-trwa-z-an.
+NF: Trant-trwa-z-an, mhm!
+TK: Wè.
+NF: To jenn ankò.
+TK: To krwa?
+NF: To jis dan to PRIME.
+NF: Wè.
+NF: E mo mo <VERB>gen</VERB>, katre-ven, katre-ven-yuit, <VERB>kouri</VERB> on katre-ven-nèf.
+NF: E B. li li <VERB>gen</VERB> katrè-ven-e-kèk lannen.
+TK: Katreu-ven-dis li di mon.
+NF: Wè, uhuh.
+NF: YES SIR.
+TK: E vouzòt elve ansanm?
+NF: Wè.
+NF: (Li) ète en pe plu vye ke mon men nou tou elve ansanm, mhm.
+NF: Te konnen kouri bal.
+NF: To <VERB>va</VERB> le bal?
+NF: <VERB>Lenm</VERB> la muzik?
+TK: Mo lèm sa, wè.
+NF: Wè.
+NF: <DET>Mo vye popa</DET> te konnen jwe vyelon.
+TK: Wè?
+NF: (...) VIOLIN.
+NF: E <DET>mo vye nonk</DET> te konnen jwè en l--- en BASS LI--- en BASS VIOLIN.
+NF: En gro zafè, se en BASS.
+NF: Se sa li te konnen jouwe.
+TK: E to te konne kouri bal-ye?
+NF: O wè, te va bal tou tan.
+NF: Te lenm sa.
+NF: Te konnen danse.
+TK: Sa vouzòt te konnen danse?
+NF: O (...) danse s TWO STEP, valse.
+TK: E kòmon sè te, bal-ye?
+NF: Sè te FINE.
+TK: Sa mounn-ye te fe?
+NF: Ye te fe de bal pou fe larjan.
+NF: Nou te gen p kouri kote--- (...) nou te gen kou trit le fiy.
+NF: Se kòm sa ye te pey le muzisyen.
+NF: Se pou sa ye te donn de bal.
+NF: M pa konnen si ouzò fe sa dan <DET>ouzokenn pei</DET>?
+NF: Ka zo va---
+TK: Non, non, mo jame fe sa.
+NF: Non?
+NF: Me zòt te pey pou kouri andan le òl, en?
+TK: A wi, wi, wi.
+TK: Me vouzòt te kouri trit le fiy?
+NF: Wè.
+TK: Sa sa min?
+NF: Sa min (ye ... te) gen de fri pou vann.
+NF: Sa-fe (...) to <VERB>pran</VERB> defig (onm) banann.
+NF: Ouben, deponm ki-cho konm sa.
+NF: E ye te pran sa, e ye te mèn de BAG, ye te me <DET>ye FRUIT</DET> andan-l.
+NF: Mèt <DET>ye fri</DET> andan-l.
+TK: E ènave de moun ki se bat tan z an tan?
+NF: Tan z an tan, mè pa gran-choz.
+NF: Ouzòt te konnen bat tan zo te va bal?
+TK: Non.
+NF: Non?
+TK: Non, (mo te) pa konne fe sa.
+TK: Eou ye te, bal-ye?
+NF: N te kone kouri bal dan NEW ROAD.
+NF: Wè.
+TK: Ye te gen en hòl pou sa?
+NF: O wè, te gen en hòl, wè.
+NF: YES SIR.
+TK: Ènave jis moun koulè, o ènave tou-moun?
+NF: Non, s--- tou-ki-chò te, te SEGREGATION.
+NF: (...) nouzòt te pa ka kouri dan bal blan-ye.
+NF: Te pa ka kouri dan bal le milat non plu.
+NF: Ye te klase ye-menm.
+TK: Ye te klase ye-mèm?
+NF: Wè.
+NF: (Wa) le milat COME FROM le nwa, le neg.
+NF: En fonm, en nòm blan mele avè en fonm koulè, sa <VERB>mennen</VERB> en milat.
+NF: La, milat-la, li li <VERB>va</VERB> li <VERB>marye</VERB> avè en lòt milatres, sa sa <VERB>mennen</VERB> en nasyon, nasyon de mulat.
+NF: Ye <VERB>mel</VERB> pa ave nouzo.
+NF: Mo m <VERB>pe</VERB> pa kouri ave ye.
+NF: M <VERB>peu</VERB> pa kour wa <DET>ye fiy</DET> selman.
+NF: Enan sa laba?
+NF: Èna sa dan INDIANA?
+TK: Pa tèlman.
+NF: Non, èna pa bokou de milat laba.
+NF: E B. la li tou-sel, li pa <VERB>pran</VERB> ankò lòt madanm, en?
+TK: Non.
+NF: Li pæd <DET>so de fonm</DET>.
+TK: Se sa li di mon.
+NF: Wè.
+NF: La li <VERB>res</VERB> li tou-sel.
+TK: Mm, wè, wè, wè.
+NF: Mhm.
+NF: Se pa bon rète li tou-sel konm sa, malad <VERB>kapab</VERB> pran dan la nwit, ou dan la journen.
+NF: Kan-se li <VERB>gen</VERB> en telefòn li petèt, <VERB>pe</VERB> pa kouri kote <DET>so telefòn</DET> pou fonm so g--- li <VERB>gen</VERB> en garson ki <VERB>res</VERB> dan NEW ROAD.
+TK: Li gen en garson dan NEW ROADS?
+NF: Wè.
+NF: Se la li <VERB>res</VERB>.
+NF: Li te gen de garson men ennen enn andan l trouve tchwe den en WRECK.
+NF: Galope AUTOMOBILE si vit, tanmbe li tchwe li-menm.
+NF: Te mal, en?
+<TRANSLATING>
+TK: M a di twa diferan ki-choz an meriken e mo se lème si to di mo komon (...) di sa an kreyòl.
+NF: Mhm.
+TK: An meriken mo di, ANYONE CAN LEARN TO READ.
+NF: Nenpòt-ki-moun ka aprann pou lir.
+TK: ANYONE CAN LEARN TO SWIM.
+NF: Nenpòt-ki-moun ka aprann pou naje.
+TK: Mhm, mhm. ...
+TK: I'LL SELL MY CAR TO ANYONE WHO HAS ENOUGH MONEY TO BUY IT.
+NF: Mo kapab vann mo cha ave nenpòt-ki-moun ki gen ase larjan pou peye mon.
+TK: ... HE'LL TALK TO ANYONE WHO WILL LISTEN.
+NF: Mo kapab pale e nenpòt-ki sa-k ole tannde.
+TK: Mhm, mhm, OKAY, OKAY.
+TK: THEY ATE SO MUCH THEY COULD HARDLY STAND UP.
+NF: Li monje tro iska li pa ka debout.
+NF: THAT'S SOMETHING, HUH?
+TK: HOW 'BOUT, COULD YOU SAY 'Ye monje sitan'?
+NF: Li monje tro.
+TK: Ye monje tro, mhm.
+TK: YOU WOULDN'T SAY 'sitan' THERE.
+NF: Se sa, li monje tro bokou.
+TK: Tro bokou, OKAY.
+NF: Tro bokou.
+TK: OKAY.
+TK: Uhm, HE WON'T LET ME DRIVE HIS CAR.
+NF: Li pa b--- li p ole mo draiv [draiv] so cha.
+TK: OKAY, OKAY.
+TK: UH, DID YOU LET HER COME WITH YOU?
+NF: Mo p ole li vini ave mon.
+TK: UHUH, OKAY, OKAY.
+TK: DID YOU LEAVE THE DOG AT HOME?
+NF: Mo l--- mo kite mo chyen kote mo lamezon.
+TK: UHUH, OKAY, OKAY.
+TK: CAN YOU SAY 'Mo lese mo chyen'?
+NF: Mo kite mo chyen la mezon.
+TK: Mo, mo kite, YOU WOULDN'T SAY 'Mo lèse mo chyen kote la mezon'?
+NF: Non.
+NF: To kapab di li manyè-sa-la osi.
+TK: O, wè?
+NF: Wè, o wè.
+TK: To lèse?
+TK: Se bon?
+NF: Se bon.
+TK: To lèse to chyen---
+NF: Mo, mo lèse mo chyen kote mo lamezon.
+</TRANSLATING>
+TK: To te konne pèche?
+NF: Wè!
+NF: Te kòne peche, konnen trape pwason.
+TK: Kòmon to te konne fe sa?
+NF: Te gen en lalign.
+NF: La nou te fouy devè, e mèt on le lonmson, e la nou te vway dan dolo-la pwason-ye te vini mòrd an-o-lœ.
+NF: B. te konnen peche osi.
+NF: YES SIR, mhm!
+TK: E to te konne jis pèche kòm sa o to te konne pèche lòt monyè osi?
+NF: Non.
+NF: Enan de fwa, nave de nespes kanal dan le bwa.
+NF: E ènave de choupik.
+NF: (...) en pwason ye te pel li choupik.
+NF: Nou te gen de bari e n te va trap sa.
+TK: Ave de bari?
+NF: Ave de bari.
+NF: Uhuh.
+NF: Sa se, se lantan pase, sa.
+NF: E la, le bouldou dja, bouldou tou le bwa, e ye bouche tou le kanal.
+NF: Na pi sa astè.
+NF: Se dròl, en?
+TK: Wè, wè.
+NF: Uhuh, YES SIR.
+TK: To janme sèrvi en karle?
+NF: Wè.
+NF: (...) va trape le kribis.
+NF: Ouzò te konnen trape kribis laba?
+TK: Non.
+NF: Non?
+TK: Non.
+TK: Ye monj pa sa dan INDIANA.
+NF: Non?
+NF: Zò <VERB>monj</VERB> pa kribis?
+TK: Non.
+NF: Non?
+TK: M pa konne kofè.
+NF: Se <DET>to lalijyon</DET> ki di twa pa pou monje kribis?
+TK: Non, non.
+TK: Moun-ye jich, i jich pa fe sa, pa konne kofè.
+NF: Ye jus p <VERB>ole</VERB> monje sa.
+TK: Ye jus p ole monje sa.
+NF: Uhuh.
+NF: E le CRAB.
+NF: Zò <VERB>monj</VERB> sa?
+TK: Nouzòt pa gen sa.
+NF: (Zò) <VERB>gen</VERB> pa sa laba.
+TK: Non.
+NF: Non.
+NF: Uhuh.
+NF: Me ... <DET>to popa e moman</DET> <VERB>rète</VERB> dan en vilaj o dan la konpony?
+NF: Dan COUNTRY.
+TK: Se dan la konmpony.
+NF: Dan la konpon?
+NF: Zò <VERB>èleve</VERB> de poul?
+TK: Non aryen.
+NF: (...) <VERB>èlev</VERB> pa nu de kochon aryen dtou?
+TK: Non.
+NF: Pa <VERB>gen</VERB> d vach, aryen kòm sa.
+TK: Non.
+TK: Me tourantour, ènave sa.
+NF: O wè, (ao) dan direksyon ouzò zo te res nave pa sa.
+TK: Nave pa sa.
+TK: Me mo gro-popa e mo gro-momon-ye te konne èlve poul, kochon.
+NF: Wè, le vach.
+TK: Vach, wè.
+NF: Zòt <VERB>gen</VERB> <DET>zòtchenn plas</DET>, <DET>zo OWN plas</DET> dan INDIANA?
+TK: Mo popa e mo momon ye gen sa, wi, mhm.
+NF: O wè, uhuh.
+NF: (...) gen <DET>zo OWN HOME</DET>.
+TK: Wè.
+NF: Se bon.
+NF: Kòman kòman mil enan fròm isi INDIANA?
+NF: Jolimon lwen.
+TK: Petèt sèt-san-senkant mil.
+NF: Houwa!
+NF: THAT'S A LONG WAYS.
+TK: Wè, se lwon.
+NF: YES SIR, se lwen lwen.
+NF: Se en gran vilaj?
+TK: Non, se en ti vilaj.
+NF: Wè?
+NF: Pa gran konm la Vil Òrleyon?
+TK: Non!
+TK: Non.
+NF: O non?
+TK: Se pròch kòm Chèmen Nèf.
+NF: Wè?
+TK: Wè.
+TK: Vouzòt te konne pran en zafè ki sanm en fourchèt pou tchwe pwason-ye?
+NF: Wè.
+NF: En da.
+TK: En da?
+NF: Uhuh.
+NF: Te vòy, te gen en lakord, nou te gen en pol, an-o le da, la nou te vòy li, pou darde pwason.
+NF: YES SIR, uhuh.
+NF: Ouzò zo te gen sa laba ouzò te pa gen sa?
+TK: Non, nouzòt te pa gen sa, non.
+NF: E (ou)zò pa <VERB>gen</VERB> de larivyè, ou de ponn pou kou peche, aryen dtou konm sa?
+TK: Ènave rivyè e de pon pou kou peche, wè èna moun ki fe sa, mon mo jame fe sa, fen, en ti bren kan mo te piti mo (...)
+NF: O wè, me dipi to vini gran, to arète tou zafè-sa-y.
+TK: Wè, mo pa gen tan, mo pa gen tan pou sa.
+NF: THAT'S RIGHT, THAT'S RIGHT.
+NF: Uhuh, uhuh.
+NF: YES SIR.
+NF: Mhm.
+NF: E to <VERB>gen</VERB> plen de zanmi laba en?
+TK: Wè, wè.
+TK: Sa se vre.
+TK: Mhm.
+NF: E ouzò <VERB>gen</VERB> en legliz ao zo <VERB>va</VERB>?
+NF: Zo <VERB>gen</VERB> en PREACHER o en pret, kèk-chòj pou di ouzò la lijyon e tou?
+NF: Preche la lijyon?
+TK: Wè, wè, èna sa, wè, mhm, mhm.
+NF: Ouzò <VERB>kwa</VERB> kan ouzò <VERB>mouri</VERB> zo <VERB>gen</VERB> en nanm dan <DET>zo kò</DET> pou sòti pou kouri an lè?
+NF: Zò <VERB>BELIEVE</VERB> dan sa?
+NF: Zò <VERB>krwa</VERB> dan sa?
+TK: Sa mo pa konne.
+NF: Wa nouzò, le Bæbtis, (ye) tou <VERB>kwa</VERB>, ye <VERB>gen</VERB> pret ou en PREACHER, ki <VERB>PREACH</VERB> pou di ye, fe de priyè pou kouri dan le bon plas e fe sa-ki ben, pa fe aryen ki mal.
+NF: Ouzò z---
+TK: Wè, wè, ye te konne di nouzòt sa osi, wè.
+TK: Wè.
+NF: Uhuh.
+NF: O wè.
+NF: E ouzò <VERB>gen</VERB> en legliz?
+TK: Wè, wè, wè.
+NF: Mhm.
+NF: Sa <VERB>gen</VERB> plen de MEMBER?
+TK: Mhm, mhm.
+NF: Zo <VERB>pey</VERB> SO MUCH pou--- ki-moun zò <VERB>pey</VERB> pou, tchòmbo legliz-la?
+NF: Zo <VERB>gen</VERB> en pret ou en PREACH---
+TK: Wè, èna PREACHER, wè, mhm, mhm.
+NF: Uhuh.
+NF: Se kòm sa nouzòt nou (ye).
+NF: Isi nou <VERB>gen</VERB> en pret.
+NF: (Vou wa) li fe la mes, nou fe la ket.
+NF: La ket sa <VERB>min</VERB> pou donn larjan dan la ket-la, pou ède li pou fe <DET>so lavi</DET>.
+NF: Paski li li fe pa--- (pe) pa travay ditou.
+NF: Li jis gen preche la lijyon.
+NF: (...) parey ave vouzo, en?
+TK: Mhm.
+NF: I FIGURE THAT.
+TK: Mèm ki-chòz.
+TK: Kote SAINT MARY ènave tou kalite moun la ou jis moun koulè?
+NF: Dan gro legliz-la, la Chèmen Nef?
+TK: Mhm.
+NF: WELL, tou-mounn te koulè, blan te, tou te va la.
+NF: Me dèpi ye monte en legliz dèryè dan NEW ROAD, se tou koulè ki (...) la.
+NF: Blan-ye tou <VERB>va</VERB> ye tou-sel, e koulè-ye <VERB>va</VERB> ye tou-sel.
+NF: Men dan Leklenn, koulè e blan tou <VERB>va</VERB> ansanm paski ye <VERB>gen</VERB> j en legliz la.
+NF: Me dan NEW ROAD èna de.
+NF: Èna enn pou koulè enn pou blan.
+TK: E a Leklenn, moun-ye, moun koulè e moun blan, ye asit ansanm?
+NF: Me ye, ye tou--- o wè.
+NF: Ye tou <VERB>asi</VERB> asanm.
+NF: Padan en tan (nou) te pe pa kou achi ansanm e blan-ye.
+NF: Nou te gen asi nou tou-sel.
+NF: Me la ye kase sa.
+TK: To rapel sa, kon ènave sa tou-partou isi?
+NF: O wè, mo <VERB>rapèl</VERB> kan nou te peu, pe pa kouri asi ave blan-ye.
+NF: Nou te gen asi separe n te gen (de) bon, a nou asi separe.
+NF: Mhm.
+NF: Men s--- jòrdi, tou-moun se parey.
+NF: Ka ye te konnen donn ye fè, le milat te konnen donn ye fè, nouzò n te pe pa kouri la.
+NF: Sa se la motchye blan e la motchye neg.
+NF: Men jòrdi, pret-la di tou-mounn se mounn.
+NF: Kan-se li nwa o kan-se li blan, se tou parey. ...
+NF: Tou (...) mounn asanm.
+NF: Fe de fèr, tou-mounn <VERB>va</VERB> la.
+NF: Pa le seksyon, pa MIX UP ditou.
+NF: Zo parey dan (... zo) HOME?
+TK: Wè, me èna pa plen moun koulè la.
+NF: Non?
+TK: Èna pròch jis moun blan.
+NF: Wè?
+TK: Paskeu se la konpangn.
+TK: E dan l Nòr, èna pròch pa moun nwar, moun koulè, dan la konpagn.
+NF: Wè?
+TK: Ye tou kouri la vil pou trouve travay.
+NF: O wè.
+TK: Wè, wè.
+TK: Me ye toujou ka asit ansanm, kouri ansanm.
+NF: Wè, wè.
+TK: Me avan sè te janme kòm sa isit, mo krwa.
+NF: Non, janmen isi. ...
+NF: Ka mo mo te e vini latan pase kan mo te va lekòl, nou te pa gen pase trwa mwa lekòl.
+NF: Jodi le nwa <VERB>gen</VERB> nèf mwa lekòl parey konm de blan.
+NF: Nou te pa gen oken SCHOOL BUS, e le blan te gen en wagon ave de mile ale de piti kote lekòl, nouzòt n te pa kapab--- n te pa gen sa.
+NF: Te gen mache kat sen mil.
+NF: Na de fwa n te pa leson ditou, se sa-ki te pli ho kè nouzo, ki te gen ede le metres-d-ekòl, dòn nouzò en leson.
+NF: Na de fwa pa leson ditou.
+NF: Sè te mal dan l ton, en?
+TK: Mhm, mhm.
+NF: Tou-mounn asanm jòrdi.
+NF: Le nwar <VERB>gen</VERB> nèf mwa lekòl le blan <VERB>gen</VERB> nèf mwa.
+NF: E ye tou <VERB>va</VERB> ansanm dan mèm lekòl.
+NF: Dan INDIANA sa parey?
+TK: Wè, se parey.
+NF: Tou-moun parey.
+TK: Mhm, mhm.
+TK: Me, to popò e to momon, ye sòrti isit osi?
+NF: O wè se <DET>ye HOME</DET> dan la parwas la Pwent Koupe.
+NF: Sa se ye ne elve la.
+TK: E to gro-momon e to gro-popò osi, to konnen?
+NF: WELL, <DET>mo gran-popa</DET>, so gran-m--- <DET>so moman</DET> te sorti dan Lafrik ka le blan te pran le koulè e vann ye konm le chval ave le mile.
+NF: Se konm sa, se konm sa nou, nou vye GREAT GREAT (GRAND ...).
+NF: Te vann ye pare konm mile e chval.
+NF: E, si inave en gro nonm ave en gro fonm, ye te met ye asanm pou gen en gro nonm e en gro fanm.
+NF: S te kè-ki-cho, en?
+TK: Mhm, mhm.
+NF: YES SIR, YES SIR.
+TK: To di se to gro-popa ki sòr Lafrik?
+TK: Ki sòrti Lafrik?
+NF: GREAT GREAT GRANDPA.
+TK: To te pa konnen li?
+NF: O non, mo te pa konnen li, non.
+NF: Se la ye ye sòrti, dan Lafrik.
+NF: E ye achte ye on lo kote dan lan--- dan lo kote la mè, te blofe ye mèt ye den en, den en bato, den en SHIP, den en bato, e ye menen ye isi, e le blan isi ye ye va achte ye.
+NF: Te vann ye pare konm ye te vann zalimo.
+NF: Se ki-cho, en?
+TK: Wè.
+TK: Ye blofe ye?
+NF: Wè.
+NF: Ye te pa konnen mye, le mounn dan Lafrik te pa konnen aryen, mè jòrdi, Lafriken, byen endike ye konnen ki-cho.
+NF: Men dan l tan-sa-la, le moun te pa konnè aryen.
+NF: E le koulè te janmen gen mòtch lendikasyon.
+NF: (...) le blan ki te gen lendikasyon.
+NF: Men jòrdi le koulè (z|l)avoka, e ye konnen la lwa e ye <VERB>vòt</VERB>, tou-ki-cho.
+NF: Nouzò n te peu pa vòt andan isi la.
+NF: Ka ye pase vòt (...) pou vote, se la nou te kapab kou vote, n te pa ka vote p pèrsonn.
+NF: Mè la nou ka vote pou sa nou ole.
+NF: Sa twa to gen la, uh, REPUbliken o en demokrat?
+TK: Mo pa demokrat mo pa republiken, me ka mo vòt, mo vòt toujour demokrat.
+NF: O wè, to <VERB>lèm</VERB> dèmokrat.
+TK: Mo pa lèm dèmokrat me mo pito demokrat ke republiken.
+NF: Sa to <VERB>kwa</VERB> pou le prezidan nou <VERB>gen</VERB> astè, ki kalite boug, to <VERB>kwa</VERB> sè en bon boug, sa?
+NF: Pa tou sa, huh?
+TK: Mo kwa li tro fèb.
+TK: Li di plen ki-chòz li ole fe me, pi li pa fe li, li pa seye ase pou pouse sa li ole fe.
+NF: WELL li <VERB>dòn</VERB> tro bokou le promès.
+TK: Wè.
+NF: E li pa <VERB>kapab</VERB> FILL li promes.
+NF: Li pa <VERB>kapab</VERB> donn le promes sa li di le mounn ki li te gen pou fe.
+NF: E en nonm <VERB>pe</VERB> pa fe la lwa li tou-sel, sa gen kouri THROUGH le kongres.
+NF: Si ye tou AGREE pou sa l a pase, li ka SIGN le BILL, men si le moun p ole sa li pe pa SIGN le BILL.
+NF: E, (i) va vito le BILL.
+NF: Sa se pli gro traka.
+TK: Sa se we.
+NF: THAT'S RIGHT.
+NF: La li <VERB>donn</VERB> en BILL, li <VERB>siyen</VERB> en BILL ki li <VERB>donn</VERB> pa konnen (...) milyon pyas, pou galope le UNITED STATES.
+NF: E la li di ki li te gen pou donn le pòv malere djòb tou sa, men li <VERB>pe</VERB> pa fe zafè-sa-y.
+NF: Si mo mo gen en kontrasyon, e mo, mo p ole gaje nonm-sa i pe pa fe mo gaje li.
+NF: Se la l traka ye.
+NF: Li di l a dòn pa konnen kòman le djòb dan le UNITED STATE, men kan-se le djòb <VERB>va</VERB> dan UNITED STATE, e sa-ki e galope le djòb, si li p ole gaje le nonm, i stil pa ka fe li--- pa ka fe nonm-la gaje le mounn ki li p <VERB>ole</VERB>.
+NF: Sa se traka-la.
+NF: E le mounn ki <VERB>vòt</VERB> ye <VERB>konpran</VERB> pa sa.
+NF: En nonm va di nenpòt-ki (...) dan la politik pou li ka antre dan lofis.
+NF: L a di nenpòt-ki.
+NF: A apre kan l a antr andan-an, li pa <VERB>ka</VERB> fe sa li di.
+NF: La motchye ki-chò <VERB>pe</VERB> pa (te fe).
+NF: (...) sèrten ki-cho li <VERB>ka</VERB> fe men pa la majorite.
+NF: Se la ki traka ave la politik!
+TK: Se toujou plu fasil pou fè promès-ye ke, ke pou---
+NF: Pou FULFILL ye.
+TK: Wè, wè.
+NF: Se la o traka ye.
+NF: BUSH te ALL RIGHT men plen ki-cho li te ka fe li janmen fe li.
+NF: E boug-sa-la, li ALL RIGHT den en monyè men, tou le gro boug li met dan lofis se blan konm li-mèm, li janmen mèt le nwa.
+TK: Ki?
+NF: Uh, uh, CLINTON, kòman to <VERB>pel</VERB> li la?
+TK: CLINTON?
+TK: Me li seye, li seye mèt mounn koulè me, me Republiken-la ye, ye kont sa.
+NF: Li t ole met en ATTORNEY GENERAL, fanm koulè dan lofis.
+NF: Li di li te QUALIFY, apre sa li chonje di fanm-la te pa QUALIFY, li mèt en blan andan(-l).
+TK: Wè.
+NF: Se pa vre?
+TK: Se vre!
+TK: Se vre.
+NF: Dwat la, l a fe katr an dan lofis men apre katr an, le koulè pe e (pou|kou) vote pou li.
+TK: Mhm, to krwa?
+NF: O non.
+NF: Li p <VERB>ole</VERB> ede le koulè, li p <VERB>ole</VERB> met ye den en HIGHER OFFICE li p <VERB>ole</VERB> met ye den en gro lofis.
+NF: Li di fanm-sa-a te QUALIFY, li te en FIRST-CLASS SCHOOL TEACHER.
+NF: Li te QUALIFY li di te pa kapab mèt li paski li te pa QUALIFY.
+NF: Men menm fanm-sa-la va vote pou li.
+NF: Fanm-la vote pou li, do.
+NF: Se la traka ye.
+NF: Sa-fe, zafè la politik sa se jis en zafè larjon.
+NF: Ka mète l dan lofis-la, l a pran nenpòt sa l <VERB>ole</VERB> andan-n, e l a fe sa l <VERB>ole</VERB>, e l a fe so, <DET>so SALARY</DET>, sa le e fe SO MUCH A MONTH, e dèn li <VERB>ka</VERB> pran sa l <VERB>ole</VERB> andan-l.
+NF: To pe e konnen.
+NF: Sa se la politik.
+TK: Sa se la politik.
+NF: Pa vre?
+TK: Jisteman.
+NF: YES SIR.
+NF: Me t wa le mounn nwa, sè te <DET>ye PARTY</DET> la b--- uh, rèpoubliken.
+NF: <DET>Mo vye paran</DET> sè te la, uh, rèpoubliken.
+TK: Wè?
+NF: Sa sè te <DET>yetenn PARTY</DET>.
+NF: E ka mo mo ne e elve, mo pran dèmokrat.
+TK: Kofè?
+NF: WELL, ye di ke demokrat te meyè ke rèpòbliken paskè le di rèpoubliken te mennen DEPRESSION.
+NF: Ka (ye) te gen zafè ye te pel le WPA.
+NF: Sa sè le de--- sè te, DEPRESSION.
+NF: Travay enn pyas e dmi par jou, e te pe pa travay tou le jou.
+NF: Te telman mounn ki te pa gen en nouvraj, ye te gen pou dòn tou-mounn en ti bren nouvraj.
+NF: Sa-fe, le demokrat, ye pa fe sa.
+NF: (Se) sa ki traka (...) e (...) rèpòbliken.
+NF: Ye di ye rete douz an dan lofis ye di ye pa fa--- pa ase sa-fe ye met demokrat-la bæk andan.
+NF: Pa vre?
+TK: Se vre.
+NF: Wè.
+NF: To <VERB>vòt</VERB>?
+TK: Mo pa vote dèrnyen fwa-la paskè mo te jis demènaje dan la Louzyàn, e mo te pa REGISTERED.
+NF: (Te) pa--- to te pa QUALIFY, to gen rete si mwa den en plas pou èt QUALIFY pou to ka, (...) pou vote.
+TK: Mhm wè, mo te pa REGISTERED.
+TK: Me, fwa ki vyen la, m a vote.
+TK: M a vote, mo krwa.
+NF: To dja rete ase lantan dan INDIANA.
+TK: Wè.
+NF: Uhuh.
+NF: To te pen en CITIZEN andan pou en--- wè to te en CITIZEN den en WAY, me pen en CITIZEN pou vote.
+TK: Mo t--- mo te ka vote me mo te pa kone eou pou kouri pou anrèjistre.
+NF: Men nouzo avon n te pa vote dan la parwas la Pwent Koupe.
+NF: E la ye pase en lalwa di ki n te ka vote.
+NF: La nou kwon-la (yuch te) se la nou te ka vote, te pe e vote avon.
+NF: Te pa kapa.
+TK: To te toujou vote, twa?
+NF: ... Apre ye pase pou mo te ka vote, men mo te ja vini vyè nonm (pou) mo te ka vote, tou-tan mo te jenn nonm mo te peu pa vote.
+NF: Se la l traka ye.
+NF: To te konnen tande le pritcha sa ye <VERB>pel</VERB>, uh, gro pritcha ki--- kòman ye <VERB>pel</VERB> li ankò?
+NF: Li sòr laba an-o dan l Nò li <VERB>va</VERB> ALL OVER UNITED STATE.
+NF: BILLY GRAHAM.
+TK: Mo ja tande pale pou li, mo ja wa li an TV-la.
+NF: Wè, to tande li parle, en?
+TK: En ti bren.
+TK: En ti bren.
+NF: Se en smat boug sa, boug-sa.
+TK: Mè wè, li smat, wè.
+NF: Li <VERB>va</VERB> tou-partou on lo kote, ... dan Alman dan JUMAICA dan FRANCE li <VERB>va</VERB> tou-partou.
+NF: ALL OVER THE WORLD.
+NF: Se en GREAT MAN, THAT MAN'S SMART.
+TK: To konne, uh, POPE-la, li gen vini.
+NF: Li la astè-la!
+TK: Li la astè-la?
+NF: Mo <VERB>kwa</VERB> li la astè.
+ST: THAT'S THE HIGHEST THING YOU GOT.
+NF: O wè.
+NF: Se li ki <VERB>donn</VERB> nouzò tou de pret. ...
+NF: Kan ye <VERB>ORDAIN</VERB> en pret, li gen kouri lekòl m pa konnen kòmon zannen s--- en pret se en SMART nonm.
+NF: E si li fe kek-chòj ki mal, ye FIRE li, ye ote li. ...
+NF: Men en PREACHER se pa parey, kan-se li fe sa-ki mal ye <VERB>gad</VERB> li la men en pret se pa parey.
+NF: YES SIR, OH YEH.
+NF: Tou la lijyon bon.
+NF: Nou tou e priye pou menm bondje-l.
+NF: Tou la lijyon bon.
+NF: Mo te gen èn dan mo sè-y ki te en Katolik, li kite Katolik li pren en lòt lalijyon.
+NF: Nou te p ole li fe sa men li, se sa l t ole.
+TK: Sa li pran?
+NF: Li pren en lòt kalte la lijyon.
+TK: To pa konne nekèl?
+NF: M pa konnen k--- <DET>so non</DET>, la lijyon, men li pran en lòt.
+NF: Nou te p ole zafè-sa, paski li te ne elve Katolik.
+NF: Ena plen de lalijyon ki <VERB>vyen</VERB> isi, ki <VERB>mann</VERB> mon si m <VERB>ole</VERB> JOIN ye, mo di m pa <VERB>kapab</VERB>.
+NF: Mo di, dèpi mo ne mo te en Katolik, e ka m a mouri mo en Katolik parey.
+NF: M pa <VERB>kapab</VERB>.
+NF: Mo di, <DET>to lalijyon</DET> osi bon kè mokenn, mokenn osi bon ke totchenn.
+NF: Men mo <VERB>peu</VERB> pa kite motchenn pou pran totchenn.
+NF: Mo tro lantan en Katolik pou kite li.
+TK: Wè, mo konmpran sa.
+NF: E ina tou kal--- ina, m pa konnen kanman NOMINATION ina dan moun-sa-l.
+NF: Èna tou kalte lalijyon.
+TK: Wè, èna plen, èna plen astè.
+NF: Èna de lalijyon, ka to <VERB>mouri</VERB>, ye <VERB>bril</VERB> twa.
+NF: Ka kèlkenn <VERB>mouri</VERB> dan <DET>zo lalijyon</DET>, zo <VERB>vey</VERB> li?
+NF: Ou zo jiz <VERB>va</VERB> tere li?
+TK: Nouzo jiz va tere li.
+NF: (Z)o <VERB>vey</VERB> pa li?
+TK: Non.
+NF: Wa nouzò, ka kèkenn <VERB>mouri</VERB>, nou <VERB>vey</VERB> li.
+NF: Fe de priyè, e le pret, ou le PREACHER, <VERB>prèch</VERB> on ye.
+TK: To te konnen kouri veye?
+NF: Wè!
+NF: O wè.
+NF: <DET>Mo moman</DET> mouri, <DET>mo popa</DET> mouri, nou veye ye.
+NF: <DET>Mo frè</DET> mouri, (nou) kouri veye li.
+NF: O wè.
+TK: (...) te konnen rèste tout la nwit?
+NF: La motchye la nwit.
+NF: Kan to <VERB>va</VERB> kote UNDERTAKER SHOP, ye <VERB>dòn</VERB> twa la chans pou veye ichka diz-è, apre diz-è, ye <VERB>frenm</VERB> li.
+TK: Moun te konne chante?
+NF: Wè, chante tou kalte chanchon.
+TK: Ènave moun ki te konnen chante an kreyòl?
+NF: O wè.
+NF: Men mon mo janmen te konnen.
+NF: Mo janmen aprann sa.
+TK: To pa rapèl sa ye te konne chante?
+NF: Non, m pa <VERB>rapel</VERB>.
+NF: Way, le Katolik fe la priyè an fronse, an kreyòl.
+NF: Men mon mo janma aprann sa, <DET>mo vye manman</DET> montre mon meriken.
+NF: <DET>Tokenn lalijyon</DET> to fe <DET>to lapriyè</DET> (a) meriken o an franse?
+TK: Meriken.
+NF: Meriken.
+NF: Mhm.
+NF: Ji OUR FATHER pare konm nouzò?
+TK: Wè wè wè wè wè.

@@ -1,0 +1,55 @@
+<META>
+  <PARTICIPANT ID="1">
+    <NAME>RD</NAME>
+    <ORIGIN>False_River</ORIGIN>
+    <BIRTHYEAR>1925</BIRTHYEAR>
+    <GENDER>Male</GENDER>
+    <RACE>White</RACE>
+  </PARTICIPANT>
+  <INTERVIEWYEAR>1990</INTERVIEWYEAR>
+</META>
+RD: Èna plen de piti ki jamen ... kòman t <VERB>apèl</VERB> sa, GROW UP, o ... se de piti toujou ... se de zanfan. ...
+RD: Se pare kòm ti-boug-la ..., l a jamè kouri o bal. ...
+RD: I di, 'M e tann la mizik la pròch tou le sanmdi swar.'
+RD: Sa-fe <DET>so mòman</DET> di, '<DET>Mon garson</DET>,' i di, 'va war, e' i di, 'kan t a vini bæk t a rakonte mon sa to wa.'
+RD: 'Oke, Mam.'
+RD: Sa-fe li parti.
+RD: E dan tan-sa(-ye) ye te, ye se dòn le bal dan le mezon.
+TK: Le bar se ... dan le mezon.
+RD: Wè, le bal, le bal, ye se---
+TK: A!
+TK: Le bal, a!
+TK: Mo te konpran BAR.
+RD: Non non, le bal. ...
+RD: Wè non, mè dan jou-sa-ye, dan tan-sa-ye, ye te pa gen sa, sè te tou BOOTLEG, e ye se fe <DET>lœrtchèn wiski</DET>, se (de) zafær kòm sa.
+RD: La ye se, tou lez òm se, ye se vini ye se prann <DET>lœr kouto</DET> ye se kale <DET>lœr kouto</DET> dan (l) miray-la. ...
+RD: E la ye se mèt <DET>lœr chapo</DET> on <DET>lœr kouto</DET>, e (ye di), kan la batay se prann, 'Trap <DET>to chapo</DET> e trap <DET>to kouto</DET>!'
+RD: Wè, ti-boug-la, li deside i se kouri, sa-fe li, li ale o bal, li di, 'Jeu <VERB>veu</VERB> war sa.'
+RD: I di, 'Se la bonn muzik,' i di, 'mo <VERB>tann</VERB> zafè-sa-l,' i di, 'mo pa kònè sa-ki e fe li,' to kònen.
+RD: Men li di, 'Mo <VERB>veu</VERB> wa,' i te kiriyeu.
+RD: To kònè kiriyeu, se kòm sa m a di kòm ... <DET>mon vyeu padna</DET> èn (de) boug-la isi, i di 'kiriyè.'
+RD: To kònè (se), se pa di (...) 'kuryeu' (i se) 'kiriyè.'
+RD: Wè li te kiriyeu.
+RD: Sa-fe ti-boug-leu kouri kote la mezon lan, e li monte ann la garli, e li garde par la fnet, dan la gran chanm deuvan, to konnen, ye te ote tou le, ye <VERB>ote</VERB> tou le li l anndan e ye se mè sa daeryè la.
+RD: Ye mèt de cheuch la tou otour la miray dan la mezon lan.
+RD: E la dan en kwon, ènavè en nonm ki te asit andan la, to kònen, li ote <DET>so chapo</DET>, li mèt li partèr, li te gen so, <DET>so vielon</DET>.
+RD: (La li) trape <DET>so violon</DET> li ouvri la bwat l e i trape vielon e li komanse, e li se tòrd, e li se tòrd, tò kònen---
+TK: E lise tòrd?
+RD: E li se tòrd le zorey, t kònen se sa ti boug-la (...), li se tchoun, li te e tchoun li UP, to kònè. ...
+RD: Sa-fe, tou-d-en-kou, boug li komanse jwe la muzik la.
+RD: E la tou-l-monn lèvè to kònè le nonm e le fòm ye, ye vini dan, dan milyeu la chanm ye kòmanse danse.
+RD: Ti-boug-la (a vu) sa boug.
+RD: I a sote (parti) il a galope kòm en lapen, boug-l.
+RD: Kon li frape sa mezan li tonbe dan la chanm-la to konnen.
+RD: 'Mè,' i di, '<DET>mo garson</DET>,' li di, 'sa ena, sa ena?'
+RD: 'Hò!' li di, 'Mòm!'
+RD: I di, 'M a jonmè vu ki-chòw konm sa dan ma vi.'
+RD: 'Mè,' i di, '<DET>mo garson</DET>,' i di, 'sa to wa, sa to wa kòm sa? (Poukè) to <VERB>farouch</VERB> kom sa?'
+RD: 'Mam,' i di, 'mo kouri (laba). He!' i di boug, 'Mo te on--- mo t on la gardi, mo te gade pa la fnet (nen).'
+RD: I di, 'Tou-l-monn te asit (ora), otour la miray,'
+RD: I di, 'Ènavè en nonm,' i di, 'gen en kapo, e en chapo nwa, e li te asit don en tit chèj, e li te gen en tit bwat.'
+RD: I di, 'Mam, li ouvri la tit bwat, e li trape la tit bètay-la, par <DET>son kou</DET>.'
+RD: I di, 'Li kòmanse tòr <DET>se zorey</DET> e frote li onba <DET>so vant</DET>.'
+RD: I di, 'Mam, zafè-sa-la kòmanse fe de kri.'
+RD: I di, 'Le nonm e le fonm, ye lève, ye jwonn dan milyeu la chanm.'
+RD: I di, 'Ye kòmanse bat. Mè si, si sa kontinu uzska minui ina pa aryen k a rèste don la mezon (lan)!'

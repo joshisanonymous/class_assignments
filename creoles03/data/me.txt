@@ -1,0 +1,862 @@
+<META>
+  <PARTICIPANT ID="1">
+    <NAME>ME</NAME>
+    <ORIGIN>Chenal</ORIGIN>
+    <BIRTHYEAR>1921</BIRTHYEAR>
+    <GENDER>Female</GENDER>
+    <RACE>Creole_of_color</RACE>
+  </PARTICIPANT>
+  <PARTICIPANT ID="2">
+    <NAME>KE</NAME>
+    <ORIGIN>Unknown</ORIGIN>
+    <BIRTHYEAR>Unknown</BIRTHYEAR>
+    <GENDER>Male</GENDER>
+    <RACE>Unknown</RACE>
+  </PARTICIPANT>
+  <PARTICIPANT ID="1">
+    <NAME>CS</NAME>
+    <ORIGIN>Unknown</ORIGIN>
+    <BIRTHYEAR>Unknown</BIRTHYEAR>
+    <GENDER>Unknown</GENDER>
+    <RACE>Creole_of_color</RACE>
+  </PARTICIPANT>
+  <INTERVIEWYEAR>1996</INTERVIEWYEAR>
+</META>
+TK: Ekan to komonse pale kreyòl?
+ME: Dèpi mo komonse pale.
+ME: <DET>Mo momon-ye</DET>, te tou la ye te pale, se kreyòl.
+ME: Dan la mezon, dan la kanpony, tou-ki-chò te kreyòl.
+ME: Tou <DET>mo tont-ye</DET>, <DET>mo nonk</DET>, tou-ki-choz te kreyòl, sa-fe mo te gen pale kriyòl.
+ME: E mo te gen kanprann li.
+ME: Kan mo konmonse lekòl, la, mo te kòne langle.
+ME: Men, se kan mo komonse lekòl ke mo pale (...) kreyòl.
+ME: E mo komonse yus ongle.
+TK: Ki longaj vou aprann an prèmye?
+TK: Vou aprann pou pale kreyòl avan vou aprann pou pale langle?
+ME: Onsonm.
+ME: Mo <VERB>pons</VERB> <DET>mo momon</DET> te pale ongle (e) mwen, pou fe mo konmpronn, men tou-ki-cho dan la mezon sè te kreyòl.
+ME: Sa-fe mo jus te kone li.
+ME: Tou-moun te kònen kreyòl.
+ME: Se tou la ye te konnen.
+ME: Kan <DET>mo gran-momon</DET> te kouri kote doktè, mo te va e li, e, doktè-a se di mwen sa l ole, e mo te gen di (pou) <DET>mo gran-momon</DET>.
+TK: Paskè li te pa konprann---
+ME: Li pa konprann sa, sa doktè-a te di.
+TK: E li, doktè-la te pa pale kreyòl?
+ME: Huhuh.
+TK: Sè te en Meriken.
+ME: Uhuh.
+TK: E to gen de frè e de sè?
+ME: Mo <VERB>gen</VERB> de frè.
+ME: Na, plu vye-a, li trwaz on apre mwen.
+ME: L a konprann kreyòl, me li (gen plu) pale li konm mwen.
+ME: E plu jenn-la, li swasann-de.
+ME: Li pa selman konprann kreyòl.
+TK: E ki lanne vou ne?
+ME: NINETEEN TWENTY-ONE.
+TK: NINETEEN TWENTY-ONE, OKAY.
+TK: Se twa plu laje, plu vye dan la fonmiy?
+ME: Mhm.
+TK: E se jus twa ki pal kreyòl reèlman?
+ME: Mhm.
+ME: Na <DET>mo plu vye piti</DET>, sa-ka Kalifounni a, li pe e pale kreyòl, men li <VERB>kanprann</VERB> tou-ki-choz, koum mwen.
+ME: Paskè no STILL te e pale kreyòl dan la mezon.
+ME: E <DET>mo momon</DET> te e parle kreyòl, e <DET>mo vwazen</DET> tou-ki-choz t e pale kreyòl kan li ne, SO, sa-fe, li konprann kriyòl.
+ME: Plu vye-a.
+ME: Me lòt-ye, hmhm.
+TK: Komyen piti vou gen?
+ME: Kat.
+TK: Kat piti.
+TK: E se jis pli vye-la ki pal kreyòl, en ti bren?
+ME: Mhm.
+ME: Li <VERB>kòmprann</VERB> tou-ki-choz.
+TK: Li konpran tou-ki-chò.
+ME: Mhm.
+TK: Mhm, mhm.
+TK: E li aprann fròm twa, o---
+ME: Jus dan la mezon.
+ME: Na, <DET>mo mari</DET>, l a konprann kreyòl men li pa konne pale.
+ME: Hmhm.
+TK: Li sòti isi?
+ME: Li sòrti Rakousi.
+TK: Rakousi.
+ME: E se tou la ye te pale la!
+ME: Men li li te en ti bren, peutèt de mil pou---
+TK: Pli lwen, pou?
+ME: Plu lwen.
+ME: De mil plu lwen.
+ME: Sa-fe li te pa don la konpony, SO, li pa konne pale li.
+ME: <DET>So momon</DET> e <DET>so popa</DET> parle li, men li li pa konnen.
+ME: M pa kònen komon.
+ME: Li <VERB>konmprann</VERB> tou-ki-choz. ...
+ME: E si li wa en F--- en zami ki <VERB>parl</VERB> jus kreyòl, ye a parle.
+ME: Men li li pa konen.
+ME: L a di en mo koum sa men li <VERB>parl</VERB> pa, pa konm mwen.
+TK: Ènave plen moun kreyòl dan Rakousi?
+ME: Ye tou!
+ME: Koum ousi!
+ME: Men---
+TK: Se kòm isi?
+ME: Koum isi.
+ME: Men <DET>sokèn famiy-ye</DET> te koum de mil, uh, m pa konnè koumon ye pa, ye pa menm.
+ME: Ye zus pa menm.
+TK: Me, so popo e so momo te pale kreyòl?
+ME: O wè.
+TK: Me li li pa apròn---
+ME: Huhuh.
+ME: Hmhm.
+TK: Mhm, mhm.
+TK: E èna ankò jodi èna plen moun ki pal kreyòl kote Rakousi, ou èskè ye tou demenaje?
+ME: Na pa moun Rakousi ankò.
+TK: A wi, se tou nwaye.
+ME: Mhm.
+TK: Se tou (neye) astè.
+ME: Mhm, mhm.
+ME: Na pa moun.
+TK: Eou ye kouri?
+ME: Moun ki reste la avan.
+ME: O, ye kouri la Vil, ye kouri Kalifourni.
+ME: Enan ki kouri MISSOURI.
+ME: ST. LOUIS?
+ME: Li gen so, pa zami, <DET>so paron</DET>.
+ME: Li gen paron, (...) MISSOURI.
+ME: Preumyè kouzen.
+TK: E li se en C.?
+ME: Mhm.
+TK: E Rakousi sè te pròch tou kreyòl.
+ME: Tou kreyòl!
+ME: Se tou la ye te parle.
+ME: Koum isi.
+ME: E ye te sanm nouzòt, tou-ki-choz.
+ME: Tou-moun Rakousi-l, te blon, blon, blon.
+ME: Enan nouzòt, koum te gen monyè bren ave cheve nwa.
+ME: Me Rakousi te plis blonn.
+ME: Cheve rouj.
+ME: Tou <DET>so prèmyè kouzin-ye</DET>, e kouzen, tou gen cheve rouj.
+ME: <DET>Mo mari</DET>.
+TK: Sè te moun plis blan
+ME: Mhm!
+TK: ke (le) moun isit.
+ME: Ye te pa gen, LIKE, koum nouzòt nou te gen èn ou de k monyè bren, avek cheve nwa.
+ME: Mo krwa sè te BECAU--- paske ye te gen, chovaz isi.
+ME: Se mwen ki e di sa.
+ME: Man mo konne ye te gen chovaz ki res isi.
+ME: E mwa me e di se sa-ki fe ye te gen enn ou de ki sorti mwanyè bren ave cheve nwa.
+ME: Men no gen, sa ye <VERB>pele</VERB> Kadjen, on Lil, ki plu bren kè nouzòt.
+TK: E tou-moun-sa-ye, ye marye ave lòt Kreyòl, ou enan ki
+ME: Ave Kreyòl!
+TK: pase--- ye pa pase pou blon?
+TK: Pa isit.
+ME: Pa isit, non.
+ME: Hmhm.
+TK: Ye petèt kouri dan Kalifourni.
+ME: Kouri Kalfourni oben la Vil.
+ME: Paskè tou sa-ki te Rakoursi e kour la Vil, ye tou marye e blon.
+ME: Si ye te pòkò marye, ye tou marye e blan.
+TK: E blan-ye te kone ki-moun sè te?
+ME: Mo pa konnen.
+ME: M pa konnen.
+ME: Pètèt kekenn te konen me pa ye tou.
+ME: Paskè mo wa enn dan <DET>mo gran-nonk</DET>, frè <DET>mo gran-popa</DET>.
+ME: Li te res la Vil.
+ME: E, kan <DET>mo gran-popa</DET> te malad e mouri, li vini, isit pou res e nouzòt.
+ME: Padan <DET>mo gran-popa</DET> te malad.
+ME: E petèt li res, mo pa konnen, en mwa o petet plis.
+ME: E kon li te la, enan dan <DET>nou zami</DET> ki vini wa <DET>mo gran-popa</DET>.
+ME: E kon ye rontre, ye wa <DET>mon nonk</DET>---
+TK: Ki te monyè bren, ou (...)
+ME: Non non!
+ME: Li te res la Vil.
+TK: Wi.
+ME: E ye di nouzòt, ye di nouzòt, 'Men ki-moun se ye?'
+ME: Men mo di, 'Se---' <DET>mo gran-momon</DET> di, 'Aben se <DET>mo bo-frè</DET>, se frè ave <DET>mo mari</DET>.'
+ME: Li di, 'Aben, mo konnen nonm-sa-a dèpi mo te en piti. Me mo toujou konne li te en nom blan.'
+TK: Li te kone li on Vil?
+ME: Uhuh.
+ME: Te kònen li an Vil.
+ME: E li wa li isi.
+TK: Me lanmi-sa-la sè te en moun blan ou en moun kreyòl?
+ME: Kreyòl.
+TK: O, me li te krwa---
+ME: Li te krwa sa---
+TK: Lòt-la---
+ME: Paskè se tou la li te e toujou konne.
+TK: Sa-fe, li te vi kòm en blan.
+ME: Mhm.
+TK: Li te viv kòm en blan (an Vil).
+ME: O wè, o wè, ye tou.
+ME: E tou <DET>so piti-ye</DET> e tou <DET>so gran-peuti-ye</DET> e tou-ki-chòz.
+ME: Mo ja wa ye, me ye te supoze pou BE blan.
+TK: Mhm.
+TK: E le moun isit te konnen vizite ye an Vil?
+ME: Mhm, mhm.
+ME: Paskè moun isit te sonm blon.
+TK: Me tou to fanmiy, ye sòrti isit?
+TK: To momo e to popo, e (...) gro-momon e (...) gro-popo, ye sòrti isit, ou---?
+ME: Wè.
+ME: Men ye, gran-gran-gran sòrti an Frons.
+TK: Èskè to kone ekan ye vini isit fròm la Frans, ki-moun vini la Frans?
+ME: Mo konen mo, pa <DET>mo gran-momon</DET>, momon <DET>mo gran-mamon</DET>.
+ME: Mo konnè li.
+ME: Li mouri---
+TK: To kone li?
+TK: To te---
+ME: M konnen li, wi.
+ME: Li mouri---
+TK: Li te toujou e viv kan vou te piti?
+ME: Mo te, mo te e kou lekòl deja, kon li mouri.
+ME: Pa <VERB>raple</VERB> men mo te, peutet SEVENTH GRADE, kon li mouri.
+ME: Sa-fe mo konnen li byen. ...
+ME: Tou <DET>sokenn moun</DET> sòrti (l)a Frons.
+TK: Na, li li ne isit?
+ME: Mo pa kone.
+TK: Li petèt ne la Frons.
+ME: Petèt li ne la Frons paskè kan li vini isi, ye te stil gen, è--- èsklavaj.
+ME: Paskè li di mwen.
+ME: Li raple kan <DET>so popa</DET> te gen èsklavaj, e li di li jame te e fe aryen ye gen èsklavaj pou fe tou-ki-choz.
+ME: Sa-fe mo pa konnen si li ne isi o an Frons.
+ME: M pa konen.
+TK: Me li te gen èsklav kon li te la?
+TK: Kon li te piti.
+ME: Isit.
+ME: Li di li te sez on kon, kon ye,
+TK: Arète èsklavaj.
+ME: arète esklavaj, wè.
+ME: Li te sez on.
+ME: Paskè li (di) mwen te pa konnen koumon pou fe aryen, li jame te gen ouvraj, tou èsklavaj (...) fe tou la--- louvraj-la.
+TK: Sè te en fanm blan o sè te Kreyòl?
+TK: O to pa konè?
+ME: Te sipoze pou--- to wa kon ye tou vini isi ... tou <DET>no paran</DET> ... ye seye wa o no sorti.
+ME: E pli ye wa, pli blon ye te.
+ME: Sa-fe kon ye vini koum dènyen-a, tè te blon.
+ME: Sa-fe ... ènan de tan no monde ye, 'Ben koumon nouzòt se koulè dèn?'
+ME: Ye pa konnen.
+TK: Ye jame kapab trouve moun koulè dan fanmiy-la.
+ME: Non.
+ME: Ye pa kapab.
+TK: E tou-moun to te konne te pale kreyòl ou èsk ènave moun ki parle franse osi?
+ME: Mhmh.
+TK: Ki te pale franse?
+ME: Na <DET>mo gran-momon</DET> te pale fronse, e l te ekri fronse.
+TK: Li kouri lekòl pou aprann sa?
+ME: M pa konnen.
+ME: Mo te pa konnen ase pou monnde tou kwèstchyon.
+ME: Si mo se koum astèr-la, mo se monnde.
+ME: Men, a ton-sa-a, moun te pa--- to wa se sa-ki fe nou parl pa kreyòl.
+ME: Vye moun-ye te seye fe ye piti bliye kreyòl.
+ME: Ye te p ole pale kreyòl.
+TK: Kofè?
+ME: M pa kònen.
+ME: Bet!
+TK: Ènave pa lekòl isit pou moun?
+ME: Ye te gen--- non.
+ME: Pa pou koulè.
+ME: E te gen, on prèmyè, ye te gen ti lekòl pou Kadjen.
+ME: On preumye.
+ME: Mè tou Kreyòl te kouri--- si enn te konnen, li te montre lot.
+TK: Me kote Rougon, ènave pa en lekòl pou Kreyòl?
+ME: Hmhm.
+TK: Non?
+TK: (Ènave) pa sa?
+ME: Hmhm.
+ME: Prèmyè lekòl ye te gen, tou Kreyòl nonm-ye met ansonm e ye bati li.
+ME: E ye peye en TEACHER.
+ME: Mwa mo te metres-d-ekòl pou diz-uit on.
+ME: Mo montre piti-ye, A-B-C, pou NINTH GRADE.
+ME: E ye kite e ye kou HIGH SCHOOL.
+ME: Baton Rouj oben, la Vil o Kalifourni.
+ME: Me ye te pa gen HIGH SCHOOL.
+TK: Antour isit ye te pa gen en HIGH SCHOOL pou moun koulè.
+ME: Hmhm.
+TK: Mhm, mhm.
+TK: Me, eou vou kouri lekòl?
+ME: Batan Rouj.
+TK: Batan Rouj.
+TK: E sè te en lekòl pou moun koulè?
+ME: Mhm.
+ME: Men, sè te en lekòl--- o <DET>mo prèmye</DET> kouri, sè te en lekòl katolik.
+ME: Sa-fe, pròch tou-moun te kreyòl dan lekòl-la. ...
+ME: On lèskalye to kouri anwo, se te lekòl-la.
+ME: Onba, se te en gran hòl, jus pou donn donse e tou-ki-choz. ...
+ME: E kon no donn bal, nwa te pa pa rontre.
+ME: Ye te gen moun kote le pòt, la pòt-la, si to nwa to te pò pa kouri bal-la.
+ME: Se te jis Kreyòl.
+TK: Me, nwa te kouri lekòl pou aprann?
+ME: Wè, e---
+TK: Me ye te pa kapab rantre pou bal(-la).
+ME: Non!
+ME: Huhuh!
+ME: Sa nou te donn pou lamizmon, NO nwa!
+ME: Hmhm.
+TK: Me, la journè ye te la pou aprann.
+ME: Wi.
+ME: Men, ye te pa gen plen, paskè moun nwa te pa katolik don ton-sa-a.
+ME: Petèt en---
+TK: Sè te en lekòl katolik?
+ME: Wè.
+TK: E ènave nwa la, me ye te pa katolik, nwa sa-ye ki te, ki te aprann (la)---
+ME: Ènan jus en famiy ki te katolik, te, mwa mo konnen.
+ME: Me i te gen lòt.
+TK: Me ènave plen nwa katolik antour la Fòs Rivyèr, non?
+ME: Mhm.
+TK: Me Baton Rouj sè te protèstan, sè te babtis.
+ME: Hmhm.
+ME: E to wa, <DET>no legliz</DET>, ye te gen nwa, te vyen <DET>no legliz</DET>, me ye (peu te) pa pa asit.
+TK: Ye te pa asi dutou.
+ME: Nuhuh!
+TK: Ye te rèste debout.
+ME: Debout dèryè.
+ME: To te peye pou to asit.
+ME: Tou lez an to te peye senk pyas.
+ME: To wa, tou lez an to te peye e to te asit dan menm bon-la.
+ME: Se koum sa te.
+ME: To peye pou <DET>to bon</DET>, e to asit.
+ME: Tou lez on to peye kon se ton.
+ME: Sa-fe pær-la te vonn, pa konnè konmen bon, kote Kreyòl.
+ME: Sa li te bezwen, li te vonn Kreyòl.
+ME: Me li te pe e vonn ave nwa-ye.
+ME: Sa-fe---
+TK: Mèm si ye te gen larjan, li pa vonn (li)?
+ME: Huhuh!
+ME: Sa-fe ye te pa ka asit.
+ME: Se koum sa UNTIL, uska pèr-la mouri.
+TK: Ekan sè te, kon li mouri?
+ME: Kan, pèr-la mouri, men li batize <DET>mo prèmye piti</DET>.
+ME: E <DET>mo prèmye piti</DET> karont-nèf.
+ME: Petèt li te dez on, kon li mouri.
+TK: Wè.
+TK: Sa-fe, sa pa chanje avon petèt mil-nef-san-senkant ou kèk-chòz kòm sa?
+ME: Mhm.
+ME: Pa chonje.
+TK: Ènave blan dan legliz-la?
+ME: Wè, blon-ye, te asit, ye peye <DET>ye bon</DET>.
+ME: E Kreyòl peye <DET>ye bon</DET>.
+ME: Men nwa, hmhm.
+TK: E, pèr-la, sè te en Franse?
+ME: O!
+ME: Li sòrti on Frons!
+TK: Kòmon ye te pèle li?
+ME: Pèr Savoure.
+TK: Savoure.
+ME: Li te pa kapab pale ongle pròch!
+ME: To te gen traka konpronn li, si to pa konnen frons.
+ME: Mhm.
+TK: E li te fe la mès an fronse?
+ME: En dimonch on fronse, lòt dimonch-la ann ongle.
+TK: Me pa an laten?
+ME: Huhuh.
+TK: Li te pa fe sa an laten.
+ME: Men ye fe laten--- la mes-la te laten.
+ME: Men so, so, <DET>so prèche</DET>, li prèche en dimonch angle, en dimonch an fronse.
+ME: Paskè tou legliz-la te fronse!
+TK: E le moun te kapab konmpronn pasè, franse li te pale sè te franse la Frans?
+ME: Li te pale kreyòl, mo sipoz.
+ME: Hmhm, me no te kò--- no, no konpronn li.
+TK: E tou-moun antour isit ki konpron kreyòl, ye te konpron franse-la li te pale?
+ME: Mhm, mhm.
+ME: Li li te pa pale angle ditou.
+ME: Òmen li te parle ave en piti.
+ME: Tou-ki-chòz te frons. Fronse.
+ME: Mhm.
+TK: E, èskè vou apran pou lir ou ekri franse a lekòl?
+ME: Hmhm.
+TK: Non, vou janme etidye franse?
+ME: Hmhm.
+ME: Mo te gen de lannen, uh, LATIN.
+TK: Me franse se jus kreyòl vou aprann isit e franse vou tande kote legliz?
+ME: Mhm.
+TK: Mhm.
+TK: Ènave plen moun isit ki pale franse la Frans osi, o se te---
+ME: Ye te gen kekenn.
+TK: Vou, vou gro-moman, vou di.
+ME: Mhm.
+TK: Vou mòman te pa pale--- vou mòman (...)
+ME: Hmhm.
+ME: Se pa <DET>mo gran-momon</DET>.
+ME: Gran-momon <DET>mo moman</DET>.
+TK: A wi, gran-moman vou mòman.
+ME: Se, se li.
+TK: Li te pale franse, e li te pale kreyòl osi?
+ME: Mhm.
+TK: E sa vou fanmiy te konne fe?
+TK: Dan la vi, ye te fe rekòl, ou---
+ME: Tou-ki-chòz te rekòt.
+ME: Se tou.
+ME: Se tou la ye te gen isi.
+ME: Rekòt.
+ME: E vye te fe tou sa ye bezwen.
+ME: Pèsòn te ven pa--- te pa kouri, uh, dan, uh, THE STORE.
+TK: Ye te pa kouri magazen achte zafè?
+ME: Mo jame wa <DET>mo momon</DET> fe GROCERY don en magazen.
+ME: Jame wa sa.
+ME: Apre li te vye koum mwen, mo te kouri e li, men pou <DET>sokenn lamezon</DET>, li jame fe sa.
+ME: <DET>Mo popa</DET> te gen tou sa (no) bizwen.
+ME: Kon li te vonn <DET>so rekòt</DET>, li te kouri pron <DET>so larjon</DET>, e achte savon ave diri e ki-chòz koum sa, e met la, pou tou lanen.
+TK: Pou tou lannen?
+ME: Uhuh.
+ME: Se koum sa (ne to) fe sa.
+ME: Tou-moun lan antou!
+TK: E vou popa te fe rekòt?
+ME: Mhm.
+TK: Mhm.
+TK: Li te pa--- inave osi moun ki te charpontye, ki te mason, e (zafè kòm sa)?
+ME: Ye te konnen en pe, wi.
+ME: Ye se fe sa a lontour, ye te pa fe sa pou en lavi.
+TK: Pou en lavi sè te rekòt?
+ME: Mhm.
+TK: E vou te konne travay dan dezè, dan klo kon vou te piti?
+ME: Mwen?!
+ME: Mwen?!
+TK: Wè.
+ME: Kan <DET>mo popa</DET> mouri, NINETEEN FORTY-FOUR, li te gen rekòt, me li mouri dan jen.
+ME: Rekòt-la te tou fe.
+ME: Mwen e <DET>mo de fre-ye</DET> mete tou rekòt-la ondon.
+ME: Mo ramas koton, mo tou-sel!
+ME: Ye te, I DON'T KNOW HOW YOU SAY GIN.
+TK: Moulen.
+ME: Moule--- ye te moule trwa bal kon mo to gen moun pou ède mwa.
+ME: Trwa bal mo ramas mo tou-sel!
+ME: Mo tou-sel!
+ME: No fe trez bal koton, e de san CANE.
+ME: De san tann dekonn.
+ME: E tou mayi e, zonyon e patat, tou-ki-chò no rontre li tou nou, jis nou trwa.
+TK: E, vou fe sa tou a la men?
+ME: Mhm.
+TK: Koupe dekann a la men?
+TK: Wow!
+ME: Tou-ki-chòz.
+TK: Sè te en travay dur, en?
+ME: Mhm!
+ME: Se la, <DET>mo frè</DET> kouri Batan Rouj pou aponn chapontye.
+ME: Plu vye-a.
+ME: Apre sa.
+ME: Apre <DET>mo popa</DET> mouri.
+ME: E li apronn la chontpi, uh, la chanp---
+TK: La charpant?
+ME: La charpon.
+ME: Me li te STILL gen so rekòt.
+ME: Te e fe tou le de.
+ME: La, (...) ye kite fe koton isi.
+ME: Tou-moun kite fe koton.
+ME: Te pa bon pou fe koton isi.
+ME: Sa-fe ye fe jus dekonn.
+ME: To wa ènan jus dekonn ave SOYBEAN isi.
+ME: Astèr-la.
+TK: Ye arète koton paskeu ye te pi kapab vonn koton-la, o koton te pa bon?
+ME: ... Se don ton-sa-a gouvèrnemon ... di moun sa-ki te meyè.
+ME: E y te peye ye pou fe dekonn, fe plu dekonn, fe SOYBEAN, e gouvèrnemon di, koton te pa, uh, reisi isit, bon.
+ME: Sa-fe ye kite.
+ME: To wa, gouvèrnemon e stil peye moun pou fe dekonn.
+TK: Ye pa kapab fe plen larjan si ye fe sa jis ye-mèm, se gouvèrnœman ki gen pou peye pou (...)
+ME: Mhm.
+ME: To wa, moun-ye <VERB>vonn</VERB> dekonn-la e <VERB>peye</VERB>, (...) en pe.
+ME: Men gouvèrnemon <VERB>voye</VERB> ye en tchek apre sa.
+ME: E ye gen kouri a NEW ROAD e di konmen ye e kou fe, konmen tonn ye e kou fe, konmen ACRES.
+TK: Mo bliye komon ye di s--- arpan mo krwa---
+ME: Arpon!
+ME: Konmen arpon ye e kou plonte ..., ye <VERB>gen</VERB> tou sa dan NEW ROAD.
+ME: To wa?
+ME: Ye pa <VERB>kapab</VERB> jus fe sa y <VERB>ole</VERB> ankò.
+ME: Men ye koumonse monte koton ankò.
+TK: Eou moun kreyòl, ye rèste antour isit, ènave Rakoursi, ènave Chnal, ènave lòt plas antour la Fòs Rivyè ou don la Pwent Koupe, eou ènave moun kreyòl?
+ME: Mhm.
+ME: O ye res?
+TK: Wè.
+ME: WELL, jenn-ye, tou-partou ye tou va lekòl.
+ME: To wa, kan gouvèrneman di to te gen kou lekòl, ye kite.
+ME: Tou jenn-ye kite ye kou lekòl.
+ME: E ye kouri menm la Vil, Kalifourni tou-pa.
+TK: Me dan tan pase, kan vou te piti ou petèt mem avan, ènave diferan plas kòm Chnal eou ènave pròch jus Kreyòl ou--- moun kreyòl ye te tou-partou antour la Fòs Rivyè ou ye te dan diferan plas CONCENTRATED kòm?
+ME: Ye te jus èn ou de lamezon.
+ME: Kreyòl.
+ME: Èn ou de lamezon.
+ME: Men Kreyòl-sa-ye pa mele e nouzòt, paske <DET>nokenn moun</DET> te p e mele ave ye paske ye te sa ye pele 'bata.'
+ME: Ye te gen en paran ki te blon e enn ki te nwa.
+ME: Sa-fe ye te sonm Kreyòl, men nouzòt, <DET>nokenn Kreyòl</DET> te pe e mele e ye paskè ye di ye te pa ase--- moun-sa-ye te bas klas.
+ME: YOU UNDER-STAND WHAT I'M SAYIN'?
+TK: Mhm, mhm, bas klas, wè, wè.
+ME: Sa-fe, moun kreyòl, <DET>vouzòt moun kreyòl</DET> sè te jis Chnal, Rougon, antour isit ...?
+ME: Aben, ye te gen koum plas, mo (byen si), sè te jus Kreyòl.
+ME: Ye te gen kote OPELOUSA, ye te gen Lafayet, ye te gen o fonm, G. sòrti (...).
+ME: Ye te gen Kreyòl koum sa.
+ME: Men nouzòt nou te pa vizite paskè pèsòn te pa gen oto.
+ME: Ye te pa gen HOW DO YOU SAY IT, I KNOW THE WORD
+TK: Cha?
+ME: Ye te pa gen cha, ye te pa gen labarkasyon.
+ME: Le te pa g---
+TK: La---?
+ME: Labarkasyon.
+TK: Lanbarkasyon!
+ME: Mhm.
+ME: Pou vizite.
+TK: Lanbarkasyon se TRANSPORTATION?
+TK: Se sa?
+ME: YES.
+ME: Mhm.
+ME: Ye te pa gen sa.
+ME: Sa-fe, to te pa kouri vizite men to konne y te la.
+TK: Wè.
+TK: Ye te fe gran, gro piknik isi?
+ME: Mhm.
+ME: Me se koum sa no te konnen ye.
+ME: Kon ye te gen piknik tou-moun kreyòl te vini a piknik pou m--- tou---
+TK: Me pa moun bas klas?
+ME: O non!
+ME: O non!
+ME: E pa moun nwa!
+ME: Na piknik-la te pour legliz.
+ME: Te pour legliz, men NO nwa!
+ME: Hmhm.
+TK: Jus moun kreyòl.
+ME: Mhm.
+ME: E blan-ye te vini!
+ME: Blan, blan te vini.
+ME: Men ye te pa kapab donse.
+ME: Se jus Kreyòl.
+ME: Paskè moun blan-(ye) t ole donse, <DET>nokenn fiy-ye</DET> te plu joli ke yekenn!
+ME: E t ole danse, men non!
+ME: Jus Kreyòl. ...
+TK: E tou-moun kreyòl tou lantour te vini pou piknik-ye?
+ME: Mhm.
+TK: E, pou bal-ye, ki kalite la muzik ye te konne gen?
+ME: Li te gen gro benn.
+ME: Ye te jwe plu joli ke astèr-la.
+ME: E ye te gen--- nou te gaje benn blan, tou blan, o nou te gaje benn tou nwa, e ne ja gaje benn jus Kreyòl.
+TK: Me jame melanje?
+TK: Jame mele?
+ME: Si ye te e jwe ansanm ALL RIGHT.
+ME: Me ye te gen benn kreyòl.
+TK: O!
+TK: Eyou ye te sòrti, benn-la?
+ME: Sè te moun isit ou sè te moun la Vil (...)?
+ME: Moun la Vil, ye te gen sa ye pèle CLAIBORNE WILLIAM.
+ME: Na pa en benn ki te jwe myè ke ye.
+ME: E ye te tou Kreyòl.
+TK: Ki kalite lamuzik ye te konne jwe?
+ME: Sè te JAZZ, sè te---
+ME: Koum, to konnen, gro benn-ye, ye, ye j--- ye mantre an TV, (HARRY JAMES), GLENN MILLER?
+TK: Wè.
+ME: Ye te jwe koum sa.
+TK: O sè te kom sa.
+ME: Mhm.
+TK: E sè te chak onne, tou lez an?
+TK: Tou lez an ye---
+ME: Tou lez on.
+TK: Ye te fe piknik-la.
+ME: Piknik-la.
+ME: E nou te konne gen bal tou ton.
+ME: No donse on en PLATFORM.
+TK: E piknik-la sè te pou legliz?
+ME: Mhm.
+TK: Huh.
+TK: Se legliz ki te fe sa?
+ME: Non!
+ME: Nouzòt nou--- Kreyòl te fe li!
+ME: Mè se, se pou sa no te fe li, nou dòn pret-la--- se sa nouzòt nou te fe pou legliz.
+TK: OKAY.
+TK: Uhuh.
+TK: E, ye te vann diferan zafè pou manje, pou bwa?
+ME: Mhm.
+TK: Uhuh, uhuh.
+TK: Sa ye te gen pou manje?
+ME: O, tou-ki-chòz.
+ME: Men tou-moun te fe dinen, no te donn dinen pou aryen.
+TK: Ye te fe gonbo, ye te fe---?
+ME: No te vonn gòmbo-a.
+TK: E nom te kòne bat?
+ME: Ou!
+ME: <DET>So popa</DET>!
+TK: Se sa mo tande di.
+ME: <DET>So popa</DET> te konnen--- mo pa konnen, si s te pa en move nonm.
+ME: Men li te toujou ole bat! (...)
+ME: Ye te jus koumonse e ye te arète ye.
+ME: Men to te gen gete li.
+ME: Pa konen, koumon.
+ME: Mhm.
+ME: Men ye te arète ye la e tou-ki-chòz te ALL RIGHT.
+CS: YOU REMEMBER WHEN THEY TIED HIM TO A TREE?
+ME: NO, DON'T REMEMBER THAT.
+CS: MY MAMA TOLD ME THAT.
+CS: THEY TIED HIM TO THE TREE.
+ME: HE ALWAYS WAS PICKIN'.
+ME: YOU KNOW.
+ME: HE ENJOYED---
+TK: Me sè te jame aryen deu mal.
+CS: (S)HE SAID THEY PICKED ON HIM.
+ME: Huhuh!
+ME: Huhuh!
+ME: Jame aryen mal.
+ME: Hmhm.
+CS: THEY PICKED ON HIM, HE DIDN'T PICK ON THEM.
+CS: DID THEY PLAY ZYDECO AT THOSE THINGS?
+ME: Hm?
+CS: THEY DIDN'T PLAY ZYDECO (...).
+ME: Hmhm.
+ME: THEY PLAY IT NOW.
+CS: YEH, BUT THEY DIDN'T PLAY IT AT THE OLD PICNICS.
+ME: Hmhm.
+TK: SHE WAS SAYIN' IT WAS BIG BAND MUSIC.
+CS: I HEARD THAT, YEH.
+TK: GLENN MILLER AND STUFF.
+CS: LIKE, LIKE GLENN MILLER AND STUFF.
+ME: Hmhm, hmhm.
+CS: I TOLD YOU I NEVER HEARD ZYDECO UNTIL LATER, I DIDN'T KNOW WHAT ZYDECO WAS, I DON'T REMEMBER THAT FROM OUT HERE.
+TK: Me ye te mène benn OPELOUSAS?
+TK: O sè te toujou la Vil?
+ME: Pa <VERB>raple</VERB>.
+ME: La Vil, o Baton Rouj o kè--- ye te gen bon benn.
+ME: Baton Rouj, to konnen.
+ME: O nou ka---
+TK: Ènave moun isit ki te kone jwe la muzik?
+ME: Wè!
+ME: Men se avon <DET>mo ton</DET>.
+ME: Ye te gen en benn, tou-moun kreyòl-la, te met ansanm e y te gen en gro benn e ye te jwe pou <DET>ye ladons</DET> ye-mèm.
+ME: Men sè te anvon <DET>mo ton</DET>.
+ME: M pa <VERB>raple</VERB> ye.
+TK: Èskeu vou konnen ki kalite la muzik ye te konnen jwe?
+ME: Tou-ki-chò.
+ME: Koum benn-ye, koum GLENN MILLER tou gro benn-ye.
+ME: Nonm-la la te (p) jwe kòrnet, e te jwe, SAXOPHONE, tou-ki-chòz.
+ME: Gro benn.
+TK: Ènave moun ki te kòne jwe vyolon isit?
+ME: Ou!
+ME: Pròch tou-moun te kònen jwe vielon.
+TK: E ki kalite la muzik ye te kone jwe avek sa, paskè gro benn-ye, GLENN MILLER-ye, mo krwa ye pa gen sa.
+ME: Men ye te gen denn.
+ME: Paskè mwa mo gen en--- kouzen <DET>mo popa</DET>.
+ME: Te jwe vielon.
+ME: Jame fe en lot koum sa.
+ME: Li se jwe vielon koum--- i ja pa konnen enn not la muzik.
+ME: E li te jwe dan Baton Rouj i te jwe on rediyo, tou-ki-chòz.
+TK: E ki kalite la muzik li te kone jwe?
+ME: Vielon.
+ME: E li li te gen en gro benn.
+ME: E li te jwe vielon.
+TK: Me sè te pa kòm la muzik kadjèn o la muzik zaydeko.
+ME: Huhuh!
+ME: Te--- huhuh, te règ--- uh, benn.
+ME: La muzik benn.
+ME: Me li te jwe VI--- VIlon.
+ME: M--- kan mo te e kou lekòl Baton Rouj, mo te--- to konnen s te pa koum astèr-la, moun te pa fe to aryen.
+ME: Mo te kouche don la chonm devon, e te gen, la fenet koum sa, e pèrsòn te pa gen AIR CONDITION, sa-fe to te met <DET>to lafenet</DET> e, mo te dòrmi.
+ME: E mo tannde kè-ki-choz.
+ME: E kan mo rèveye, mo tannde sè te la muzik.
+ME: E mo garde (dan) la finet, nou te gen en lagaldri devon.
+ME: E li li te asit onn <DET>no lagaldri</DET>, e jouwe vielon, a dèz-èr leu maten.
+ME: Li jwe, li jwe, li jwe, e la li desann li kou laba.
+TK: Sa reveye tou-moun (...)?
+ME: No us mwa.
+TK: Ènave moun jwe lakòrdeyon?
+ME: O wè!
+ME: Kote o li li sòrti, Rakousi, sè te lakòrdeyon, ave vielon.
+KE: (...) GUITAR.
+ME: Gita.
+ME: E ye te gen <DET>ye OWN benn</DET>, ye te fe ye OWN ladons, e y te gen <DET>ye OWN benn Rakoursi</DET>.
+ME: E tou nonm-ye te jwe sa yo t ole.
+ME: Pèsòn pa montre ye.
+ME: Ye us te konnen.
+ME: Men moun te ENJOY ye-menm, ye te pa jongle tou-ki-chòz koum astèr-la.
+ME: Ye te kanton kouri ENJOY tou le dimonch o swa ye te gen bal.
+TK: Vou te ne dan lopital?
+ME: Hmhm!
+ME: Pèsòn te va pa lopital.
+ME: Dan <DET>mokenn ton</DET> kon mo te gen <DET>mo piti-ye</DET>, se prèmyè moun ki te kouri lopital.
+ME: Onvon sa---
+TK: Vou piti te tou ne dan lopital?
+ME: YEH, onvon sa tou-moun te gen piti dan lamezon.
+TK: Dan la mezon?
+TK: Avek en chas-fanm?
+TK: Ènave chas-fonm?
+ME: Ènan moun ki te gen ch--- uh, fonm.
+ME: Men nouzòt, tou Kreyòl(-la) to te gen en doktè.
+TK: O, ènave doktè ki te vini la mezon.
+ME: Mhm, mhm.
+TK: Sa-fe sè te pa avek en chas-fonm, (...)
+ME: Hmhm, hmhm.
+ME: Na o li li sòrti, ye te gen fonm-ye.
+ME: O li li sòrti.
+TK: Wè?
+TK: Ènave chas-fanm kote Rakousi?
+ME: Uhuh.
+ME: Men nouzòt no te gen de doktè ki res isi.
+TK: Kòmon ye te pel li, vou rapel so non?
+ME: Enn sè te doktè (Sen Duzye), AND lòt-la sè te, mo konnen men mo bliye <DET>so non</DET>.
+TK: Me li te rèste Chnal ou Chmen Nef?
+ME: Ènon enn ki te res, NEXT DOOR N.-ye.
+ME: E lòt-la te res, to <VERB>kouri</VERB> on GLYNN, e to <VERB>vire</VERB> petet de mil.
+ME: Men li te gen en lofis ..., <DET>so lofis</DET> kote <DET>no legliz</DET>.
+ME: O kote <DET>no legliz</DET>.
+ME: Sa-fe li te vini la e ret tou la journen.
+TK: Sè te doktè ki jis te pale meriken, pa kreyòl?
+ME: Wè li te pale kreyòl!
+TK: O li te pale kreyòl osi?
+ME: O wè!
+ME: Kan mo te e vini pou marye, (... te) <DET>nokenn doktè</DET>, li te pase, kouri kote <DET>so lofis</DET>, e lapre-midi li pase kouri BACK kote <DET>so lamezon</DET>.
+ME: E si t ole wa doktè, to met en pol ave en mòso ræg on la.
+ME: Si li wa sa devon <DET>to lapòt</DET>, li arete.
+TK: Mo ja tande pale pou sa. ...
+ME: E kan <DET>mo popa</DET> mouri, dan jen, e mwa mo marye, fèbri--- fèvriye, apre sa.
+ME: E kan <DET>mo popa</DET> mouri, li te konnen rete tou le jou e wa nouzòt, e pale e nouzòt.
+ME: Pou apre de mwa.
+ME: Li rete tou lè jou.
+ME: E li te e pale e nouzòt en ti pe la li kour(i) la mezon.
+TK: Se te en doktè blan?
+ME: Mhm!
+ME: Mhm.
+TK: Nave pa Kreyòl antour isit ki te doktè?
+ME: Hmhm.
+ME: Lè mo wa.
+ME: Pa res isi.
+ME: Hmhm.
+ME: Pa res isi.
+ME: Hmhm.
+ME: To wa Kreyòl te pa kou lekòl.
+ME: Li te pa gen lekòl e ye te pe e kouri--- ye te pa kapa kouri lekòl blon, e ye te pe e kouri lekòl nwa, sa-fe ye te pa kouri lekòl.
+TK: Sa-fe ènave plus nwa ki kouri lekòl ke Kreyòl ki kouri lekòl (...).
+ME: Men y te gen (PLACE) ye pele (en) lekòl, to wa (anbwa) don en ti legliz, sa-fe s---
+TK: Mhm.
+TK: Me ènave pa lekòl katolik pou Kreyòl?
+ME: Hmhm.
+ME: Kreyòl-ye astè, ye tou (e) mèle ave nwa.
+ME: M pa <DET>mokenn famiy</DET>.
+TK: Pa vokèn fanmiy.
+ME: Hmhm.
+TK: Non, ye jus marye Kreyòl ou blan.
+ME: O blon (...), blon. ...
+ME: To wa mo jonn se en nwa--- en blon, mo di twa.
+ME: Mari <DET>mo fiy</DET>. (...) res Batan Rouj la.
+TK: Se en blan?
+ME: Se en blan, wè.
+ME: Men, li konnen.
+ME: Li konnen nouzòt se Kreyòl.
+TK: Mhm.
+TK: E sa pa fe li aryen?
+ME: Hmhm, hmhm, hmhm.
+TK: Mhm, se bon, se bon.
+ME: Mo, li <VERB>gen</VERB> en biznis, te AN ACCOUNTANT.
+ME: E dèpi mo--- <DET>mo fiy</DET> e travay e li dèpi ye marye.
+ME: Me li komonse travay e li anvon ye marye.
+ME: Se sa ye konnen.
+ME: <DET>So biznis</DET> se trwa fwa sa li te fan anvon.
+ME: Dèpi <DET>mo fiy</DET> e, e---
+TK: Kofè, sa li fe?
+TK: Li mènè moun?
+ME: <VERB>Mènen</VERB> moun e li konnen--- li pa <VERB>kapab</VERB> ronje taks.
+ME: Mè tou-lòt-ki-chò-la li konnen myè kè <DET>so mari</DET>.
+ME: Tou machin-ye, tou COMPUTERS, tou-ki-chòz!
+TK: Li kouri lekòl pou sa ou li apronn sa li-mèm?
+ME: ... Li kour lekòl LSU.
+ME: Me apre sa, li kou travay pou gouvèrnèmon.
+ME: E ye montre li.
+ME: Ye dèpi vòye li WASHINGTON pou apronn machin-ye e tou sa pou fe.
+ME: Sa-fe li li di, li di sa li konnen se <DET>mo fiy</DET> ki montre li.
+ME: Li li konnen kalkule taks.
+ME: Se sa li apronn.
+ME: Aben <DET>mo fiy</DET> pa <VERB>kapa</VERB> fe sa, men tou-lòt-ki-chò-la dan lofis-la---
+TK: Vou gen petèt voye L.-ye laba paskè mo krwa ye pa konne komon fe ave ye larjan, ye gen en moun dan Batan Rouj ki fe tou sa pou ye me, mo pa konnen si (se en moun) onèt ou non.
+ME: Men <DET>mo jonn-la</DET>--- (paskè) jonn se SON-IN-LAW.
+ME: Li, se en bon bon katolik.
+ME: E li l pe e vole moun, li pa konton fe sa.
+ME: Paskè li fe ki-chòz ki jis, to konnen.
+ME: Li fe ki-chò pou ede moun.
+ME: E li konnen le lwa, la lwa.
+ME: Pasè li kouri lekòl pou sa osi.
+ME: Li pa gen <DET>so DEGREE</DET> dan la lwa, me li pròch.
+ME: Sa-fe li konnen tou sa.
+<TRANSLATION>
+TK: M ole petet monde twa komon pou di kek zafè an kreyòl.
+ME: M a dòn twa diferan zafè an meriken, pou TRANSLATE, an kreyòl.
+ME: Si mo kapab!
+TK: Wi, si vou kapab me se pa difisil.
+ME: Se pa difisil.
+ME: Kòmon to di an kreyòl 'WE'RE EATING RIGHT NOW.'
+ME: Ne e monje, astèr-la.
+TK: OKAY, OKAY. HOW WOULD YOU SAY---
+ME: Astèr-la MEANS RIGHT NOW.
+TK: OKAY.
+TK: HOW 'BOUT 'WE EAT LUNCH EVERY DAY AT NOON.'
+ME: No monj lontch tou le jou a midi.
+TK: UHUH, OKAY.
+TK: AND HOW WOULD YOU SAY---
+ME: LIKE LUNCH, CREOLES WOULD USE THE SAME WORD.
+TK: OKAY.
+TK: HOW WOULD YOU SAY, (LET'S) SAY IT'S ABOUT, IT'S IN THE AFTERNOON NOW AND YOU SAY 'OH WE ATE LUNCH AT TWELVE O'CLOCK TODAY.'
+ME: O, no monje no, no lontch a midi jòrdi-l.
+TK: OKAY, se bon, se bon.
+TK: HOW WOULD YOU SAY, IF YOU'RE A, A LITTLE CHILD THINKING ABOUT WHAT YOU WERE GONNA DO IN THE FUTURE AND YOU'D SAY 'I'M GOING TO BE A DOCTOR WHEN I GROW UP.'
+ME: O.
+ME: M e jangle fe en medsen, fe mo-menm en medsen, en medsen kon m a, uh,
+TK: WHEN I GROW UP, kon m a ...
+ME: I KNOW IT, I'LL, I HAVE TO THINK.
+ME: Kon m a vini vye.
+TK: OKAY.
+TK: Kan m a vini vye.
+TK: Uh, HOW WOULD YOU SAY 'I'LL BE FIFTY NEXT WEEK'?
+ME: M a fe senkont, la smenn--- m a fe senkont don en smenn.
+TK: OKAY.
+TK: HOW 'BOUT, 'WE'LL BE THERE AT SIX O'CLOCK.'
+ME: N a vini pou siz-è.
+TK: OKAY.
+TK: N a vini pou siz-è.
+TK: Uh, HOW 'BOUT, 'IF YOU EAT THAT, YOU'LL GET SICK.'
+ME: Si to monje sa, t a vini malad.
+TK: T a vini malad, OKAY.
+TK: DO YOU EVER USE THE WORD 'sa' IN THE FUTURE, LIKE 'to sa malad,' o---
+ME: NO.
+TK: NO?
+TK: 'CAUSE I'VE HEARD THAT A FEW TIMES, AND ONE THING
+ME: NO.
+TK: I'M ALWAYS TRYING TO FIGURE OUT IS THE DIFFERENCE BE-TWEEN 'a,' LIKE 't a, t a vini malad' AND 'sa.'
+ME: NO.
+ME: THERE WAS SOMETHING I WAS THINKIN' I WANTED TO TELL YOU, THE DIFFERENCE.
+TK: WELL, YOU WERE TELLIN' ME THE DIFFERENCE BETWEEN WHAT THE CAJUNS SAY AND WHAT THE CREOLES SAY, LIKE YOU HAD GIVEN ME, ONE OF THE, THE WORDS WAS 'gro--- gran-moman' AND
+ME: Gran-men.
+TK: gran-mè.
+ME: 'Kouman vou ye?'
+ME: Fronse toujou di 'Koumon vou ye?'
+ME: Kreyòl, 'Koumon to ye?'
+ME: 'Komon to ye?' Kreyòl a di.
+ME: A jamen di Vou.'
+ME: Anmæ se en moun k konnen fronse.
+TK: 'Anmè' se en mou--- kòmon to di (sa)?
+ME: UNLESS IT'S---
+TK: UNLESS, HOW WOULD YOU SAY 'UNLESS' IN CREOLE?
+ME: CREOLE?
+TK: YEH, YOU JUST SAID, I, I UNDERSTOOD THAT YOU MEANT 'UNLESS,' BUT I DIDN'T QUITE CATCH THE WORD, 'anmè'?
+TK: 'anmwen'?
+ME: An--- onmèr.
+ME: THAT'S THE WAY---
+TK: Anmèr?!
+ME: THEY ALWAYS SAID 'anmèr se,' YOU KNOW 'INSTEAD OF' OR 'UNLESS.'
+ME: THAT'S THE WAY I'VE ALWAYS SAID THAT.
+TK: I'VE NEVER HEARD THAT BEFORE.
+TK: 'Anmèr se en moun kreyòl'?
+ME: YEH.
+TK: Ou 'anmèr se en moun (ki kone) fronse.'
+ME: Anmèr, THAT'S THE WORD WE USE TO MEAN 'UNLESS.'
+TK: I'VE NEVER HEARD THAT BEFORE (...).
+ME: To wa, kan to vini ..., o se di, 'Zo ja vini? Lon--- rontre.
+ME: Rontre.
+ME: E, fronse se 'ontre.'
+TK: A wi, mhm.
+TK: Sa se vre.
+ME: Se ontre.
+ME: Men Kreyòl a di, rontre.'
+TK: Kan vou di 'Fronse,' vou min moun la Frans?
+ME: Mhm.
+TK: A wi, mhm.
+ME: Mo-la.
+ME: Se 'ontre.'
+ME: Me Kreyòl di, 'rontre.'
+TK: Mhm, mhm.
+TK: E Kreyòl, ye di pa 'vou,' ye di jis 'to'?
+ME: Wi.
+TK: 'To,' OKAY.
+TK: Me m a di 'to.'
+ME: E kon se en vyè moun ye a di, koman no jus di?
+ME: Mo-la?
+TK: 'Vou?'
+ME: 'Vou. Vou!'
+ME: Na, si en Kreyòl e pale ave en vyè moun, ye a di 'vou.'
+TK: Wè, èna moun ki di mwen sa, mhm.
+TK: Men si se en jœ̀n moun ye di 'to,' men si se en vyè moun ye di 'vou.'
+</TRANSLATION>

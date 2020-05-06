@@ -1,0 +1,198 @@
+<META>
+  <PARTICIPANT ID="1">
+    <NAME>AS</NAME>
+    <ORIGIN>Parlange</ORIGIN>
+    <BIRTHYEAR>1903</BIRTHYEAR> # 86 at the time
+    <GENDER>Male</GENDER>
+    <RACE>Black</RACE>
+  </PARTICIPANT>
+  <PARTICIPANT ID="2">
+    <NAME>KN</NAME>
+    <ORIGIN>False_River</ORIGIN>
+    <BIRTHYEAR>1931</BIRTHYEAR>
+    <GENDER>Male</GENDER>
+    <RACE>White</RACE>
+  </PARTICIPANT>
+  <PARTICIPANT ID="3">
+    <NAME>DG</NAME>
+    <ORIGIN>New_Roads</ORIGIN>
+    <BIRTHYEAR>1925</BIRTHYEAR>
+    <GENDER>Male</GENDER>
+    <RACE>Creole_of_color</RACE>
+  </PARTICIPANT>
+  <INTERVIEWYEAR>Unknown</INTERVIEWYEAR>
+</META>
+AS: Vye mounn lezòt fwa, ye te va dan souloun TWENTY-FOUR HOUR, tou la nwit tou la journè ... e bwa.
+AS: I te e bwa bon medikòman!
+AS: Dan tan-la, YOU GOT TO BE TWENTY-ONE, vent-i-en, pou ka ret dan souloun.
+AS: Pa fanm ditou anndan-la, jus nonm.
+AS: Mè nouzòt te konen bwa en ti bren wiski, (te va la) n te pa fouti rantre dan souloun-lan. ...
+AS: E tou le vyeu moun-ye te fe rekòt e ye te va pou charche wiski.
+AS: Wiski te vyen dan bari e tou-ki-chò.
+AS: Ye gen en gro djòg a kote (...).
+AS: Ye vyen la, ye a kou kachye l, dan l tan s te vye mezon-on laplanch laj ye, te kou va kachye l on griyen o anba lèskalye.
+AS: Lèskalye tou te (BOX), to <VERB>konpron</VERB>.
+AS: O mete li dan magazen.
+AS: E nouzòt ti-boug-ye ne e garde pou wiski n pa fouti trouve li.
+AS: E mo di, 'Men, petèt kouri mete l dan l magazen mayi.'
+AS: Deja kase l mayi (li) magazen-la, la motche mayi.
+AS: Mo ouv la pòt, mo garde mo wa mayi-la monyen SCATTERED la, a!
+AS: Jèn ti-boug, wè, ABOUT TEN OR NINE YEARS, e mo garde sa wè, mo ajounou, e mo paye mayi-la.
+AS: A!
+AS: Mo trouve gaya wè, en galon, anmba la.
+AS: Li fou mo en KNOCKOUT.
+AS: Mo leve to konnen, te gen en bouchon (ki va IN) anndan-lan.
+AS: Debouche li mo bwa 'goulou goulou goulou.'
+AS: Hwou!
+AS: Wiski-sa-la bon, OH GOD DOGGONE!
+AS: (Mo) di 'Lès mo poze en ti bren.'
+AS: Lève djòg-lan ankò mo bwa 'goulou goulou.' ...
+AS: Mo ouvre en trou mo met li bæk anndan mo krouvi.
+AS: Ka mo vini pou lève mo tonbon on plen <DET>mo do</DET> dan mayi.
+AS: Mile, chval, tou e manje dan magazen.
+AS: Mon mo kouche la.
+AS: E!
+AS: <DET>Mo momon</DET> e, ye vini charche mon.
+AS: Se sa ye di twa, ka te e bwa bon wiski HE AIN'T GONNA MAKE--- (to) pe e fe to malad.
+AS: Li soule mo li KNOCK mo OUT.
+AS: Men, (...) mo t ALL RIGHT.
+AS: Ye lave <DET>mo figi</DET> ave dolo fre e donn mon en tas kafe san disuk.
+AS: Mo kou dòrmi ka mo reveye mo te BRAND NEW!
+KN: Se vye boug-la ki trape twa?
+AS: Wè.
+AS: Ye trape mwa dan---
+KN: Li pa fe aryen, pa jire?
+AS: Li pa (...), li di 'DOGGONE, pa <VERB>fouti</VERB> kache mo wiski si ye <VERB>pe</VERB> trouve li!' ...
+AS: E, NOW, THAT'S THE TRUTH.
+AS: THEY DRINK WHISKEY THREE TIMES A DAY, trwa fwa par jou.
+AS: Le maten, le midi, e le swa.
+AS: THAT WHY THEY BOUGHT--- BY GALLON, (ye) achte li par galon. ...
+AS: E dan tan-la, ye te kit ye fanm dan kabonn kouri bwa e rete tou la nwit.
+AS: Vini anvan l jou vini tou-ki-chò kouri travay wi, pa kou kouche (non).
+AS: Trape mule, chval e kouri laboure.
+AS: E, ye fanm di, 'GOD DOGGONE, zòt p <VERB>ole</VERB>--- zo <VERB>ret</VERB> dan souloun e tou-ki-cho.'
+AS: Fanm te pa kouri anndan la to konnen.
+AS: Sa-fe, ye fè èleksyon.
+AS: Pou vote.
+AS: Pou ote wiski.
+AS: E fam-ye bat nonm-ye.
+AS: Wè.
+AS: Ye chinen pou ote wiski.
+AS: Se sa-ki fe ye te e fe ... BOOTLEG. ...
+AS: Ye ote tou (ki) zafè-sa-la.
+AS: E la, fanm-ye di, 'Astè-la zo pa <VERB>ka</VERB> kouri.'
+AS: Mo di, mè sa to ka a fe ave nonm-ye?
+AS: Nonm-ye fe zafè-sa.
+AS: Ka to fini konne i kanmanse fe BOOTLEG WHISKEY.
+AS: Tou la mezon te e fe wiski. ...
+AS: E tou boug-ye te e fe wiski, ènan ki te e charje trant pyas pou--- to pran konm O., te e fe pou M., to <VERB>konmpran</VERB>?
+AS: Ki e peye li si èskalen par galon.
+DG: <DET>Mo popa</DET> di, keken di M. (...) n fwa.
+DG: Li te o bout la manch-la ou li te res.
+DG: Te pa ka gen wiski e i te lenm bwa.
+DG: Li di, 'Hè M., en bon file!'
+DG: Li di, 'Se malere pou sèvre en vye vo!'
+DG: La, ennan enn fwa, ye di ye te gen K. dan prizon.
+DG: Vou <VERB>rapel</VERB> vyeu prizon dèryè la?
+DG: Ti batis an brik la?
+AS: Wè, wè.
+DG: Ye te gen K. dan prizon p te fe wiski.
+AS: Uhuh, mo <VERB>rapel</VERB> sa.
+DG: E Tan L., <DET>so vyè mòman</DET> kouri la i di 'He K., <DET>mo piti</DET>!'
+DG: Li di, 'Pe, Mòm!'
+DG: Li di, 'Mè o to mète djòg wiski-l?'
+DG: Li di, 'Pe Mòm, to pa wa blan-ye gen mon dan prizon pou fe wiski?'
+DG: Li di, 'Pe Mam!'
+DG: Li di, Tan L. i di 'La mærd on F. e B., sa to fe avè djòg wiski-la, K., m <VERB>ole</VERB> en file!'
+AS: E., si en sèrpan mòrde twa, o to foule to janm e tou-ki-chò, sa se sa---
+DG: THAT'S RIGHT, THAT'S RIGHT, se en doktè.
+KN: Sa sè te en tretè.
+DG: En tretè.
+AS: S tè en tretè.
+AS: Wè.
+AS: E si to koupe <DET>to janm</DET> o <DET>to bra</DET> e disan è segnen, to pa ka rète li, jis kouri la.
+TK: E sa li se fe?
+AS: Jich park on li fe en lapriyè.
+AS: Te rete li.
+AS: L. -- vou kònè L. -- aben li te gen ti moulen dan la manch Parlanj la.
+AS: Te gen en chval, li BACK on SCRAPER-la, li koupe <DET>so pat</DET>.
+AS: Ye te pa fouti rete disan-la.
+AS: E E. te ret drat dèryèr la.
+AS: Li vini da <DET>so MODEL T</DET> pou charche E., BE DOGGONE si li pa rete disan-lan.
+DG: RIGHT NOW.
+AS: RIGHT NOW.
+AS: E la la mo te gen--- nou te ramas la mous NINETEEN venn-set.
+AS: TWENTY-SEVEN WHEN THE HIGH WATER--- kan dolo ho-la vini.
+KN: PICKIN'UP MOSS.
+AS: PICKIN' MOSS.
+AS: Pou vann.
+TK: Kofè?
+AS: Pou vann.
+AS: A mizi dolo-a te e BACK, nouzòt te e vonson on li, e t e ramas la mous.
+AS: Moun-ye te særv la mous pou tou-ki-cho.
+DG: Met dan matla.
+AS: Met dan matla e met tou-ki-cho.
+AS: E, mo te gen en mule te pel PAT.
+AS: Mo wa <DET>son nepòl gòch</DET> gonfle, e le e bwate.
+AS: Mo di, 'Mè GOD DOGGONE, sa mile-sa-la gen?'
+AS: E. te la n te gen pase devan E.
+AS: E te pèl li en ti-non 'Lebo.'
+AS: È l te (...) plen.
+AS: O wè, li te konnè, pa kònen lir, pa kònen aryen.
+AS: HE'LL STOP IT.
+AS: E, '(...) Lebo!' mo di, 'Mile-l e bwate m pa konnen si sè en sèrpan ki mòrd lo o ki.
+AS: I di 'GODDAMN!' li di, 'To anbetan!'
+AS: Li vini la, li di, 'Wè se en sèrpan.'
+AS: Li fou <DET>so pous</DET> dan lepòl mile-la li fe sa.
+KN: Fe (en) krwa.
+AS: Wè.
+AS: E li tchonmbo la li fe en lapriyè mon m pe e tannde.
+AS: I SWEAR THE LIVING GOD m p ole leve la, vivan (si) se pa vre.
+AS: Ovon nou rive kote danmbwa, mile-a te marche drwat, e le e degonfle ALL THE TIME.
+DG: Men nou te konen foule nou, <DET>nou pye</DET> de fwa, vyeu boug-la te menn nouzòt kote D., D. te fe sa, la li se ale li.
+AS: O wè.
+AS: THAT'S GONE.
+AS: (La te gen enn.)
+AS: Bon mile.
+AS: Le e bwate on pat dèryè, se danjerè.
+AS: Kouri (char li, li) pa fouti (...) gote, li grate <DET>so sabo</DET> wa si s te en deklou k t anndan-l to konnen.
+AS: Pa aryen ditou.
+AS: Mo di li, 'Aret,' mo di, 'M e kouri chærch Lebo.'
+AS: Te ret dan la manch Rougon.
+AS: Kouri (mo chærche).
+AS: Li di, 'Ha! Fou mile-la partè!'
+AS: Èna mounn ki pe e krwa sa.
+AS: Fou mile-la partè, gade li, li met <DET>so sabo</DET> patè on la tè, e li pran <DET>so kouto</DET> li koupe li ALL AROUND.
+AS: Koupe la tè-la ALL AROUND.
+AS: Epi li tournen la tè-la an lanvè li mèt li an trou-a, i lache mile-la.
+AS: (La mèm mile-a) te e marche ouchka li mouri.
+AS: BE DOGGONE si mo mo konprann sa.
+DG: Li li te konpran l.
+AS: Li tournen la tèr-la an lanvè.
+AS: E li te anmbwat dæryè.
+AS: AND WHAT I MEAN, mo seye gen li pou montre mon, pou parle on sèrpan e tou-ki-chò.
+AS: Li di, 'To <VERB>vo</VERB> pè en foud.' ...
+AS: Pa bon ditou.
+AS: Li di mo pa bon. ...
+AS: E!
+AS: A. -- to konnen A.?
+DG: O wi mo t konnen A. (...).
+AS: Te ret drwat la la.
+DG: Te lenm pa bwa, li.
+AS: O wè.
+AS: Ye, kase mayi.
+AS: Te gen en mile nwa.
+AS: En sonnet mòrde li.
+AS: Li fou mile-la ret partè.
+AS: Ye te gen pou tchobo mile-la pou mènè li devan.
+AS: (...) tou gonfle, sonèt-la mòrd li. ...
+AS: Li di, 'Kouri chærche E.'
+AS: E. vini la, li parlon on mile, mile-a te tou gonfle li te pa ka leve.
+AS: (Vlen)-la te si fòr.
+AS: CAN'T GET UP.
+AS: Sa-fe, li parlon on li e tou-ki-cho.
+AS: Li di, 'L a leve talè.'
+AS: La li fini, i di, 'To <VERB>ka</VERB> donn li monje ka l a leve. To ka (...) li dèmen.'
+AS: Jus parlon on li fe la priyè.
+AS: Tou gonfle-la gonn.
+AS: Degonfle.
