@@ -73,6 +73,14 @@ ggplot(tokens,
   labs(y = axis_count) +
   geom_bar(position = position_dodge(preserve = "single"))
 
+## ---- freq_possessor ----
+ggplot(tokens,
+       aes(x = `Possessor Features`,
+           fill = Agreement)) +
+  theme_bw() +
+  labs(y = axis_count) +
+  geom_bar(position = position_dodge(preserve = "single"))
+
 ## ---- freq_race_speaker ----
 ggplot(tokens,
        aes(x = Speaker,
