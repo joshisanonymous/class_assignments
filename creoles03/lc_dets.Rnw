@@ -3,22 +3,40 @@
   \usepackage{fontspec}
     \setmainfont{Charis SIL}
   \usepackage{setspace}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=TRUE, allcolors=blue}
   \usepackage[style=apa, backend=biber]{biblatex}
     \addbibresource{References.bib}
   % \usepackage{graphicx}
   %   \graphicspath{{figures/}}
 
   % Document information
-  \title{Possessive determiners in Louisiana Creole}
+  \title{Possessive determiners in Louisiana Creole\footnote{Data and code can be found at \url{https://github.com/joshisanonymous/class_assignments/tree/master/creoles03}.}}
   \author{Joshua McNeill}
   \date{\today}
 
-  % New commands
+  % Custom commands
   \newcommand{\orth}[1]{$\langle$#1$\rangle$}
   \newcommand{\lexi}[1]{\textit{#1}}
   \newcommand{\gloss}[1]{`#1'}
+  \newcommand{\feat}[1]{\textsc{#1}}
 
 \begin{document}
+  <<settings_load_scripts, echo = FALSE>>=
+  read_chunk("analysis.R")
+  opts_chunk$set(echo = FALSE,
+                 warning = FALSE,
+                 message = FALSE,
+                 results = "asis",
+                 fig.height = 3,
+                 fig.width = 3.5)
+  @
+  <<load_data_libraries>>=
+  @
+  <<clean_data>>=
+  @
+  <<get_demographics>>=
+  @
   \maketitle
   \onehalfspacing
   \section{Introduction}
@@ -30,15 +48,38 @@
     While Louisiana has lost much of its status as a francophone state, the language still holds a valued symbolic position there as it is not difficult to find younger Louisianians whose grandparents speak French.
 
     Besides French, the state is also known to have its own French-based creole, which is commonly mixed up with Louisiana French.
-    Indeed, this is one of the potential problems with the 1970 census as one of the possible mothertongues was ``LOUISIANA CREOLE'', which had a count of ...........
+    Indeed, in their 2010 survey of languages spoken in Louisiana, \textcite{mla_louisiana_nodate} gave respondents the options ``French'', ``Cajun'', and ``French Creole'', even though the first two are often used interchangeably, the last rarely ever by actual speakers, and when ``Creole'' is used, it's often interchangeable with ``Cajun''.
+    Nonetheless, the survey found that 6,021 people in Louisiana still claimed to speak Louisiana Creole, up from their 2000 number of 4,465.
+
     Louisiana Creole is often, though not always, considered distinct by those who speak it.
     \textcite{klingler_if_2003} carried out a thorough grammatical description of the variety of Louisiana Creole spoken in Pointe Coupee Parish\footnote{Parishes are Louisiana's version of other stats' counties.} using data the he collected from interviews he conducted in the 1990s.
     His participants would sometimes describe their language as ``créole'' [Creole], but also as ``français'' [French] or ``cadien'' [Cajun], this last term being a common way to refer to Louisiana French, that is, as Cajun French.
     However, even those who described their language as French recognized that it was not quite like the French spoken in other parts of Louisiana let alone outside of Louisiana \parencite[p.~128]{klingler_if_2003}.
 
-    The variety of Louisiana Creole spoken in Pointe Coupee shares the same features as many of the Atlantic creoles. % Give example sentences from the corpus for this stuff later
-    It has a system of of preverbal markers that indicate tense, mood, and aspect; the copula is often omitted, definite and demonstrative determiners are postnominal, while indefinite determiners are prenominal; and the third person plural subject pronoun doubles as a plural marker for nouns \parencite[p.~63]{klingler_if_2003}.
+    The variety of Louisiana Creole spoken in Pointe Coupee shares the same features as many of the Atlantic creoles.
+    It has a system of of preverbal markers that indicate tense, mood, and aspect, as can be seen in Example \ref{ex:preverbal_markers}, and definite and demonstrative determiners are postnominal, while indefinite determiners are prenominal, as in Example \ref{ex:determiners}.
+    Also, the copula is often omitted, and the third person plural subject pronoun doubles as a plural marker for nouns \parencite[p.~63]{klingler_if_2003}.
     There are enough similarities to Haitian Creole that it has sometimes been argued that those who came to Louisiana from Haiti after the revolution must have at least influenced Louisiana Creole if not created it, but \textcite{klingler_if_2003} argues that textual records suggest that the Louisiana Creole already existed before the revolution occurred (pp.~25-29).
+
+    \begin{enumerate}
+      \item \label{ex:preverbal_markers}
+        \begin{tabular}[t]{l l l l l l l l}
+          ME: & Paskè   & no  & STILL & te          & e           & pale  & kreyòl \\
+              & dan     & la  & mezon.&             &             &       & \\
+              & Because & we  & still & \feat{PAST} & \feat{PROG} & speak & Creole \\
+              & in      & the & house &             &             &       & \\
+              & \multicolumn{7}{l}{\gloss{Because we were still speaking Creole in the house.}}
+        \end{tabular}
+      \item \label{ex:determiners}
+        \begin{tabular}[t]{l l l l l l l l l l}
+          GL: & sa     & ote    & SLIME   & -la & byen & andan  & mete & en \\
+              & ti     & bren   & vineg   &     &      &        &      &    \\
+              & that   & remove & slime   & the & well & inside & put  & a \\
+              & little & bit    & vinegar &     &      &        &      & \\
+              & \multicolumn{8}{l}{`That removes the slime inside real good, put a little bit of} \\
+              & \multicolumn{8}{l}{vinegar in it.'}
+        \end{tabular}
+    \end{enumerate}
 
     Perhaps one of the reasons that Louisiana Creole speakers sometimes suggest that they speak French is because these languages are in close contact in much of the state, though less so in relatively isolated Pointe Coupee Parish.
     As such, it is possible to find the influence of French in the speech of various speakers of the language.
@@ -46,7 +87,33 @@
     In French, grammatical gender plays a role in possessive determiners in that they must inflect for the gender of the noun to which they attach.
     They must also inflect for the number of that noun. % Add example sentences
     This is not so in the most so-called basilectal varieties of Louisiana Creole.
-    In such varieties, the possessive determiners are invariant, always terminating in [o]. % add paradigm table
+    In such varieties, the possessive determiners are invariant, always terminating in [o].
+    The difference is shown in Example \ref{ex:det_compare}, and the full paradigm of possessive determiners in Louisiana Creole can be seen in Table \ref{tab:det_paradigm} \parencite[p.~186]{klingler_if_2003}.
+
+    \begin{enumerate}
+      \setcounter{enumi}{2}
+      \item \label{ex:det_compare}
+        \begin{tabular}[t]{l l l l l l}
+          Creole, & AS: & li & koupe   & so                       & pat \\
+          French  &     & il & a coupé & son                      & plate \\
+                  &     & he & cut     & \feat{DET-POSS-3SG-MASC} & hoof \\
+                  &     & \multicolumn{4}{l}{\gloss{He cut its hoof.}}
+        \end{tabular}
+    \end{enumerate}
+
+    \begin{table}[tbhp]
+      \caption{Paradigm of possessive determiners in Louisiana Creole}
+      \label{tab:det_paradigm}
+      \center
+      \begin{tabular}{r | l l}
+        Person & Singular    & Plural \\
+        \hline
+        1st    & mo, mon     & nou, no, nouzòt \\
+        2nd    & to, vou, vo & vouzòt, ouzò, zo \\
+        3rd    & so          & ye
+      \end{tabular}
+    \end{table}
+
     However, some speakers of Louisiana Creole vary between invariant and inflected possessive determiners.
     While \textcite{klingler_if_2003} did not provide a quantitative analysis of the language, he did make the observation that White speakers in his corpus used inflected possessive determiners more frequently than Black speakers (p.~116). % It might be worthwhile to get deeper into his observations here, also go into the prestige of Fr vs Cr and the history of Whites speaking Creole more than Blacks
     The goal of the present study, then, is to investigate the variation in this linguistic form among speakers of Louisiana Creole as spoken in Pointe Coupee Parish.
@@ -57,23 +124,179 @@
     \end{itemize}
 
   \section{Methodology}
-    The data for this study comes from Klingler's own study.
+    \label{sec:methodology}
+    The data for this study came from Klingler's own study.
     In his book, he provides exerpts from a number of interviews that he conducted.
     Two interviews were conducted with speakers who were identified as White and two with those who were identified as Creole, but the majority were with those who were identified as Black.
-    There is also a mix of males and females as well as ages, though speakers in their 50s are considered ``young'' in this context.
+    There was also a mix of males and females as well as ages, though speakers in their 50s were considered ``young'' in this context.
+    Details about the speakers can be seen in Table \ref{tab:demographics}.
 
-    The content of the transcripts were retranscribed into plain text format for easier manipulation.
-    Each line represents one sentence, allowing for the use of regular expressions to automatically extract sentences that contain potential tokens.
-    The sentences will be read through manually to confirm that they are tokens and then coded for social and linguistic factors.
+    \begin{table}[tbhp]
+      \caption{Demographics of the interviewees in the corpus}
+      \label{tab:demographics}
+      \centering
+      \Sexpr{kable(demographics, format = "latex")}
+    \end{table}
 
-    Quantitative analysis will be carried out to the extent that it can be.
-    Because of the small sample size for each social category, full statistical analyses cannot be carried out, but some indications of the validity of Klingler's claims as well as possible social constraints that he did not mention can be obtained through basic counts and proportions.
-    To that end, each tokens will be coded for race, gender, and age.
-    They will also be coded for linguistic factors, that is to say features of the nouns, such as whether they are animate or inanimate.
-    The linguistic factors can then have full statistical analyses applied as the category limitation is not relevant for these.
+    The content of the transcripts were retranscribed into plain text format where each line contains one sentence for easier manipulation.
+    The entire corpus was used save for several sections where Klingler gave the interviewees translation tasks from English to Creole as these were considered a different sort of speech that would naturally have a high propensity for being influenced by the structure of the English phrases being translated.
+    Tokens of possessive determiners were then manually tagged in the corpus and extracted into a CSV file for manual coding.
+    Each token was coded for whether it showed agreement or not, the grammatical features of the possessor (i.e., person and number), and the number of the possessee.
+    While social factors were the primary concern here, this study was somewhat exploratory, and the idea that linguistic factors could constrain agreement or the lack thereof was not ruled out.
 
-    % To add
-      % 3rd person plural excluded because it would often look invariant either way when "ye"
-      % Translation tasks excluded
+    In general, coding the linguistic features of each token was straight forward, with some exceptions.
+    Gender and number were taken to be expressed in possessive determiners when they did so in the way that French does, as this was Klingler's observation of what actually occurs.
+    \citeauthor{klingler_if_2003}'s (\citeyear{klingler_if_2003}) orthography is based on that of Haitian Creole and is quite phonetic (p.~144), so I assumed that was was written was an accurate representation of exactly what was said.
+    Orthographic \orth{o} would be promounced [o] \orth{ou} [u], which are the vowels used when a possessive determiner is uninflected, as can be seen in Table \ref{tab:det_paradigm}.
+    In French, the vowels are also the key to identifying the gender and number being expressed.
+    For the masculine singular, [ɔ̃] is used and for feminine singular, [a] is used.
+    The masculine obviously very similar to that used in Louisiana Creole except for the lack of nasalization.
+    What makes this more difficult to distinguish is that Klingler listed \orth{mon} as a variant of the first person singular, where \orth{on} represents the vowel [ɔ̃], making this variant identical to the French version.
+    In these cases, the tokens were coded as having gender agreement.
+
+    Number is typically expressed using the vowel [e] in French, regardless of gender.
+    This was easily identifiable in the Louisiana Creole corpus as Klingler represented this vowel with \orth{e} in the possessive determiners in which it occurred.
+    However, Louisiana Creole's third person plural possessive determiner is \lexi{ye}, which would always appear to be agreeing with a plural noun even when that is not actually the case.
+    These tokens were somewhat arbitrarily coded as not agreeing with the noun, which was justified by their relative scarcity in the corpus anyway: \Sexpr{nrow(tokens[tokens$Determiner == "ye",])} tokens out of \Sexpr{nrow(tokens)} total tokens.
+    Similarly, in French, plurality for the first and second person plural possessive determiners is expressed not with a change in the vowel -- the vowel is always [ɔ] -- but with the presence or absence of the following cluster [tr], the former indicating singular and the latter plural.
+    This makes the typical \lexi{no} and \lexi{vo} forms in Louisiana Creole identical to the plural form in French.
+    In these cases, tokens were coded as not agreeing as these were also rare occurrences: \Sexpr{nrow(tokens[tokens$Determiner == "no",])} tokens of the former and only  \Sexpr{nrow(tokens[tokens$Determiner == "vo",])} token of the latter.
+
+    A final difficulty in determining whether a possessive determiner was expressed with agreement for gender and number was the determiner \lexi{lœr}, which is identical to the French third person plural determiner.
+    In French, gender and number agreement are never expressed overtly with this determiner, and so the use of this form by speakers of Louisiana Creole would similarly not show overt agreement.
+    However, the use of agreement for gender and number could naturally be a result of contact with French.
+    Indeed, \textcite{neumann_creole_1985} had hinted at exactly that possibility in her sketch of the variety of Louisiana Creole spoken in Breaux Bridge in the center of south Louisiana (p.~58).
+    It was thus tempting to code \lexi{lœr} as agreeing as agreement is conceptualized here as movement towards French, just as the use of this possessive determiner would be, but these cases were coded as not agreeing for lack of objective evidence of agreement.
+
+    This study is meant to be quantitative, but was necessarily limited.
+    Because of the small sample size for each social category, full statistical analyses could not be carried out, but some indications of the validity of Klingler's claims were obtained through basic counts and proportions.
+    To that end, each tokens was also coded for race, gender, and age, despite these limitations.
+
+  \section{Results}
+    Figure \ref{fig:freq_overall} shows the overall frequency of possessive determiners that showed overt agreement for gender and number versus those that did not show agreement.
+    It is immediately clear from this figure that agreement is rare for possessive determiners in this variety of Louisiana Creole, though it does occur.
+    To determine where it occurs or who uses it, the data was subset in various ways.
+
+    \begin{figure}[tbhp]
+      \caption{Overall frequency of possessive determiners showing agreement to those not showing agreement}
+      \label{fig:freq_overall}
+      \centering
+      <<freq_overall>>=
+      @
+    \end{figure}
+
+    Figure \ref{fig:possessor} divides the data up according to features of the possessor, specifically by person and number.
+    This graph does not indicate a great deal: for those person and number combinations that had higher total counts, there were also higher counts of agreement.
+    However, it is also apparent that there is no agreement shown for any plural possessor.
+    This is quite likely a consequence of the difficulties inherent in detecting agreement on the surface for plural possessors that were discussed in Section \ref{sec:methodology}.
+    When these categories are disregarded, it appears that person and number provide no more help in understanding what constrains the agreement of possessive determiners than simply examining the overall frequencies.
+
+    \begin{figure}[tbhp]
+      \caption{Overall frequency of possessive determiner agreement by grammatical features of the possessor}
+      \label{fig:freq_possessor}
+      \centering
+      <<freq_possessor>>=
+      @
+    \end{figure}
+
+    The number of the noun was the other linguistic factor examined.
+    Specifically, the idea was to see if singular or plural nouns led to more agreement.
+    Figure \ref{fig:freq_number} in fact offers some clues, as it is clear that there were possessive determiners that agreed in number with plural nouns.
+    Indeed, the proportion of determiners that agreed with plural nouns was much higher than those that agreed with singular nouns, \Sexpr{100*((nrow(tokens[tokens$Number == "pl" & tokens$Agreement == "Yes",]))/(nrow(tokens[tokens$Number == "pl",])))}\% to be exact.
+    It is tempting to think that this might have been the result of the singular masculine [o] in Louisiana Creole being nearly identical to the singular masculine [ɔ̃] in French, though it is not obvious that there would be more masculine nouns to agree with than feminine, and the feminine [a] is easy to identify.
+
+    \begin{figure}[tbhp]
+      \caption{Overall frequency of possessive determiner agreement by the nouns number feature}
+      \label{fig:freq_number}
+      \centering
+      <<freq_number>>=
+      @
+    \end{figure}
+
+    Plural nouns bring another lexical item into the mix, as well: the postposed plural marker \lexi{ye}.
+    Effectively, plurality is always expressed whether through agreement in the possessive determiner or through the addition of the plural marker.
+    Example \ref{ex:pl_noagree} shows the latter whereas Example \ref{ex:pl_agree} shows the former.
+    This places these two systems fairly far apart as there is not simply a change in vowel but the addition or deletion of an entire morpheme which is presumably salient to listeners.
+
+    \begin{enumerate}
+      \setcounter{enumi}{3}
+      \item \label{ex:pl_noagree}
+        \begin{tabular}{l l l l l l l}
+          KS: & ye   & gen & ache    & to                  & zorte & -ye \\
+              & they & have & extract & \feat{DET-POSS-2SG} & toe   & \feat{PL} \\
+              & \multicolumn{6}{l}{\gloss{They have to pull out your toes.}}
+        \end{tabular}
+      \item \label{ex:pl_agree}
+        \begin{tabular}{l l l l l l}
+          RD: & li & kòmanse & tòr   & se                     & zorey \\
+              & he & begin   & twist & \feat{DET-POSS-3SG-PL} & ear \\
+              & \multicolumn{5}{l}{\gloss{He began to twist its ears.}}
+        \end{tabular}
+    \end{enumerate}
+
+    For social factors, gender offers little explanation for the variation in agreement or the lack thereof in possessive determiners.
+    As can be seen in Figure \ref{fig:freq_gender}, the proportion of determiners with agreement is roughly the same for both groups.
+    However, place of origin is much more enlightening, as can be seen in Figure \ref{fig:freq_origin}.
+    Those from the town of Jarreau have by far the most tokens of possessive determiners with overt agreement.
+    Unfortunately, only one interviewee, MP, was from Jarreau, meaning she singlehandedly accounted for all of those tokens.
+    Some tokens did come from False River, too, though.
+
+    \begin{figure}[tbhp]
+      \caption{Overall frequency of possessive determiner agreement by gender}
+      \label{fig:freq_gender}
+      \centering
+      <<freq_gender>>=
+      @
+    \end{figure}
+
+    \begin{figure}[tbhp]
+      \caption{Overall frequency of possessive determiner agreement by place of origin}
+      \label{fig:freq_origin}
+      \centering
+      <<freq_origin, fig.width = 6>>=
+      @
+    \end{figure}
+
+    Three interviewees came from False River: KS, LD, and RD.
+    Of these three, only KS and RD produced possessive determiners that agreed with the nouns that followed them, and KS only produced one such token.
+    This token was \lexi{mon popa} \gloss{my dad}, which has the nasalized vowel [ɔ̃] that would be used in French to indicate a singular masculine noun.
+    This is of course the case described in Section \ref{sec:methodology} that is somewhat ambiguous because the uninflected Louisiana Creole version of this determiner simply has a non-nasalized [o].
+    To make this token even more questionable, progressive nasalization is common among speakers in phonological contexts where a vowel is preceded by a nasal consonant \parencite[p.~152]{klingler_if_2003}, as is the case here.
+
+    This leaves only RD, a white male from False River, and MP, a white male from Jarreau, as the only somewhat consistent users of possessive determiners that agree with their nouns.
+    As can be seen in Figure \ref{fig:freq_race_speaker}, they were also the only white speakers in the corpus.
+    This evidence strongly supports Klingler's claim that white speakers more commonly have agreement in gender and number in their determiners than black speakers.
+
+    \begin{figure}[tbhp]
+      \caption{Overall frequency of possessive determiner agreement by race and speaker}
+      \label{fig:freq_race_speaker}
+      \centering
+      <<freq_race_speaker, fig.height = 14, fig.width = 10>>=
+      @
+    \end{figure}
+
+  \section{Discussion}
+    \citeauthor{klingler_if_2003}'s (\citeyear{klingler_if_2003}) explanation for the variation in possessive determiners being realized with agreement and without was that this was linked to race (p.~116), and the analysis here supports this conclusion.
+    White speakers not only have more overt agreement for gender and number in their determiners, but are the only speakers to have it at all in this corpus.
+    This of course comes with the caveat that there were only two white speakers recorded to begin with, which hardly makes for a representative sample.
+    Likewise, though there were more black speakers, a sample of seven speakers producing \Sexpr{nrow(tokens[tokens$Race == "Black",])} tokens is still not enough to perform robust statistical analyses that might allow for stronger conclusions to be drawn.
+    Certainly race appears to be a factor, but more research is still needed.
+
+    It is also notable that it is white speakers who are more likely to show agreement in their determiners as Louisiana Creole speakers are also more likely to be white.
+    \textcite{klingler_if_2003} explained this fact as having to do with the influx of slaves from America soon after the Louisiana Purchase (p.~108).
+    Before this time, slaves came from the Caribbean and were likely to also speak some sort of creole.
+    Likewise, Louisiana was a French-speaking area, so the linguistic input for everyone in Pointe Coupee Parish had always been French or Creole.
+    When the English-speaking slaves began coming from America, though, the slaves in Pointe Coupee were more likely to interact with them and so were more likely to learn English, whereas the slave owners could continue to speak French or Creole without concern.
+
+    On the one hand, the continued use of Louisiana Creole by whites up to the time of Klingler's study is out of step with the inherent privilege that whites would have in general as this language does not carry with it overt prestige, even less so than Louisiana French, or at least \textcite{johnson_louisiana_1976} claimed as much even as far back as the 1970s (p.~25).
+    Perhaps the language does carry covert prestige for whites though, and their use of more French-like determiner agreement patterns is their way to balance the lack of overt prestige in Louisiana Creole.
+
+    Additionally, plural nouns were more likely to come with inflected possessive determiners than singular nouns, a linguistic factor that Klingler did not report.
+    While this may be the result of ambiguity between [o] and nasalized [ɔ̃] in singular masculine contexts, that would not explain feminine contexts: [a] would not likely sound ambiguous along side of [o].
+    It is not clear why plural nouns would take agreement more often, but perhaps the plural marker that would be called for otherwise, \lexi{ye}, is a very salient indicator of a general low prestige language and so is avoided.
+    Indeed, \textcite{neumann_creole_1985} reported that her informants in Breaux Bridge found the use of \lexi{ye} to be old fashioned nearly a decade before Klinger recorded his speakers (p.~57).
+
+    There is evidence here that white speakers of Louisiana Creole in Pointe Coupee Parish were attempting to balance their need to represent their local identities while also expressing their inherent privilege.
+    However, possessive determiners alone cannot be used to draw a strong conclusion in this regard, nor can a fairly small corpus.
     \printbibliography
 \end{document}
