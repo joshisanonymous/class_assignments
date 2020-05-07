@@ -1,15 +1,15 @@
 Determiner,Agreement,Possessor Features,Number,Speaker,Sentence,Origin,BirthYear,Gender,Race
-so mòman,No,3sg,sg,RD,"Sa-fe <DET>so mòman</DET> di, '<DET>Mon garson</DET>,' i di, 'va war, e' i di, 'kan t a vini bæk t a rakonte mon sa to wa.'",False_River,1925,Male,White
-lœrtchèn wiski,No,3pl,sg,RD,"Wè non, mè dan jou-sa-ye, dan tan-sa-ye, ye te pa gen sa, sè te tou BOOTLEG, e ye se fe <DET>lœrtchèn wiski</DET>, se (de) zafær kòm sa.",False_River,1925,Male,White
-lœr kouto,No,3pl,sg,RD,"La ye se, tou lez òm se, ye se vini ye se prann <DET>lœr kouto</DET> ye se kale <DET>lœr kouto</DET> dan (l) miray-la. ...",False_River,1925,Male,White
-lœr kouto,No,3pl,sg,RD,"La ye se, tou lez òm se, ye se vini ye se prann <DET>lœr kouto</DET> ye se kale <DET>lœr kouto</DET> dan (l) miray-la. ...",False_River,1925,Male,White
-lœr chapo,No,3pl,sg,RD,"E la ye se mèt <DET>lœr chapo</DET> on <DET>lœr kouto</DET>, e (ye di), kan la batay se prann, 'Trap <DET>to chapo</DET> e trap <DET>to kouto</DET>!'",False_River,1925,Male,White
-lœr kouto,No,3pl,sg,RD,"E la ye se mèt <DET>lœr chapo</DET> on <DET>lœr kouto</DET>, e (ye di), kan la batay se prann, 'Trap <DET>to chapo</DET> e trap <DET>to kouto</DET>!'",False_River,1925,Male,White
-mon vyeu padna,Yes,1sg,sg,RD,"To kònè kiriyeu, se kòm sa m a di kòm ... <DET>mon vyeu padna</DET> èn (de) boug-la isi, i di 'kiriyè.'",False_River,1925,Male,White
-so chapo,No,3sg,sg,RD,"E la dan en kwon, ènavè en nonm ki te asit andan la, to kònen, li ote <DET>so chapo</DET>, li mèt li partèr, li te gen so, <DET>so vielon</DET>.",False_River,1925,Male,White
-so violon,No,3sg,sg,RD,"(La li) trape <DET>so violon</DET> li ouvri la bwat l e i trape vielon e li komanse, e li se tòrd, e li se tòrd, tò kònen---",False_River,1925,Male,White
-mo garson,No,1sg,sg,RD,"'Mè,' i di, '<DET>mo garson</DET>,' li di, 'sa ena, sa ena?'",False_River,1925,Male,White
-mo garson,No,1sg,sg,RD,"'Mè,' i di, '<DET>mo garson</DET>,' i di, 'sa to wa, sa to wa kòm sa? (Poukè) to <VERB>farouch</VERB> kom sa?'",False_River,1925,Male,White
-son kou,Yes,3sg,sg,RD,"I di, 'Mam, li ouvri la tit bwat, e li trape la tit bètay-la, par <DET>son kou</DET>.'",False_River,1925,Male,White
-se zorey,Yes,3sg,pl,RD,"I di, 'Li kòmanse tòr <DET>se zorey</DET> e frote li onba <DET>so vant</DET>.'",False_River,1925,Male,White
-so vant,No,3sg,sg,RD,"I di, 'Li kòmanse tòr <DET>se zorey</DET> e frote li onba <DET>so vant</DET>.'",False_River,1925,Male,White
+so,No,3sg,sg,RD,"Sa-fe <DET>so mòman</DET> di, '<DET>Mon garson</DET>,' i di, 'va war, e' i di, 'kan t a vini bæk t a rakonte mon sa to wa.'",False_River,1925,Male,White
+lœurkenn,No,3pl,sg,RD,"Wè non, mè dan jou-sa-ye, dan tan-sa-ye, ye te pa gen sa, sè te tou BOOTLEG, e ye se fe <DET>lœrtchèn wiski</DET>, se (de) zafær kòm sa.",False_River,1925,Male,White
+lœr,No,3pl,sg,RD,"La ye se, tou lez òm se, ye se vini ye se prann <DET>lœr kouto</DET> ye se kale <DET>lœr kouto</DET> dan (l) miray-la. ...",False_River,1925,Male,White
+lœr,No,3pl,sg,RD,"La ye se, tou lez òm se, ye se vini ye se prann <DET>lœr kouto</DET> ye se kale <DET>lœr kouto</DET> dan (l) miray-la. ...",False_River,1925,Male,White
+lœr,No,3pl,sg,RD,"E la ye se mèt <DET>lœr chapo</DET> on <DET>lœr kouto</DET>, e (ye di), kan la batay se prann, 'Trap <DET>to chapo</DET> e trap <DET>to kouto</DET>!'",False_River,1925,Male,White
+lœr,No,3pl,sg,RD,"E la ye se mèt <DET>lœr chapo</DET> on <DET>lœr kouto</DET>, e (ye di), kan la batay se prann, 'Trap <DET>to chapo</DET> e trap <DET>to kouto</DET>!'",False_River,1925,Male,White
+mon,Yes,1sg,sg,RD,"To kònè kiriyeu, se kòm sa m a di kòm ... <DET>mon vyeu padna</DET> èn (de) boug-la isi, i di 'kiriyè.'",False_River,1925,Male,White
+so,No,3sg,sg,RD,"E la dan en kwon, ènavè en nonm ki te asit andan la, to kònen, li ote <DET>so chapo</DET>, li mèt li partèr, li te gen so, <DET>so vielon</DET>.",False_River,1925,Male,White
+so,No,3sg,sg,RD,"(La li) trape <DET>so violon</DET> li ouvri la bwat l e i trape vielon e li komanse, e li se tòrd, e li se tòrd, tò kònen---",False_River,1925,Male,White
+mo,No,1sg,sg,RD,"'Mè,' i di, '<DET>mo garson</DET>,' li di, 'sa ena, sa ena?'",False_River,1925,Male,White
+mo,No,1sg,sg,RD,"'Mè,' i di, '<DET>mo garson</DET>,' i di, 'sa to wa, sa to wa kòm sa? (Poukè) to <VERB>farouch</VERB> kom sa?'",False_River,1925,Male,White
+son,Yes,3sg,sg,RD,"I di, 'Mam, li ouvri la tit bwat, e li trape la tit bètay-la, par <DET>son kou</DET>.'",False_River,1925,Male,White
+se,Yes,3sg,pl,RD,"I di, 'Li kòmanse tòr <DET>se zorey</DET> e frote li onba <DET>so vant</DET>.'",False_River,1925,Male,White
+so,No,3sg,sg,RD,"I di, 'Li kòmanse tòr <DET>se zorey</DET> e frote li onba <DET>so vant</DET>.'",False_River,1925,Male,White
