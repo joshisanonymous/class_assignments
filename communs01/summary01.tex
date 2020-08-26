@@ -1,0 +1,29 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{References.bib}
+
+  % Document information
+  \title{Summary of Mills (1959) Chapter 5}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\lexi}[1]{\textit{#1}}
+  \newcommand{\gloss}[1]{`#1'}
+  \newcommand{\image}[1]{
+    \begin{tabular}[t]{c}
+      \\
+      \includegraphics[scale=0.7]{#1}
+    \end{tabular}
+  }
+
+\begin{document}
+  \maketitle
+  \fullcitebib{mills_sociological_2000}
+  \section{Some Section}
+    Some text. \parencite{mills_sociological_2000}
+\end{document}

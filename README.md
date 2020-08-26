@@ -2,6 +2,9 @@
 
 Each folder here represents an assignment I've done for a class and so would be compiled separately. They include the following:
 
+### Sociolinguistics (2020 w/Dr Forrest)
+* communs01: Summary of chapter 5 of Mills (1959)
+
 ### Creole Forms (2020 w/Dr Chamorro)
 * creoles01: Discussion of Lefebvre (2001)
 * creoles02: Summary of Heine \& Kuteva (2003)
