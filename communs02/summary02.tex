@@ -1,0 +1,77 @@
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[margin=1.0in]{geometry}
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{References.bib}
+
+  % Document information
+  \title{Summary of Sankoff \& Laberge (1978)}
+  \author{Joshua McNeill}
+  \date{\today}
+
+  % New commands
+  \newcommand{\orth}[1]{$\langle$#1$\rangle$}
+  \newcommand{\lexi}[1]{\textit{#1}}
+
+\begin{document}
+  \maketitle
+  \fullcitebib{sankoff_linguistic_1978}
+  \section{The Linguistic Market}
+    Objective: To develop a measure of social class based on a speaker's use of the ``legitimized language'', following Bourdieu, which is essential the standard language of a society.
+
+    {\noindent
+    Rationale: The way that speakers are placed into socioeconomic classes up to that time was not particularly motivated in Sankoff \& Laberge's view.
+    }
+    \begin{itemize}
+      \item Often, speakers with similar wages were grouped together, though Sankoff \& Laberge argue that teachers and receptionists, for example, probably speak a more standard variety than others with whom they are grouped due to the environment in which they typically find themselves
+    \end{itemize}
+
+    In particular, Sankoff \& Laberge chose not to focus on occupations for social class.
+    They provided several reasons for this.
+    \begin{itemize}
+      \item They were interested in individuals, many of whom did not even have occupations.
+      \item Occupation classification is static, not easily showing behavior over time.
+      \item Ranking the occupations would be arbitrary and subjective.
+      \item Occupations do not allow for cross-cultural comparisons.
+    \end{itemize}
+
+  \section{The Judgements and Construction of the Index}
+    Sankoff \& Laberge decided to use life histories as an indicator of social class instead of the typical socioeconomic factors.
+    Speakers' life histories were written on pieces of paper that were then given to peers who were unacquainted with the speakers.
+    These were peers in the sense that they were part of the same broader community.
+    The task of these peers was to read the life histories and judge how important the legitimized language would be in the life of said person.
+    The peers would then group the speakers, putting together those who seemed to have a similar legitimized language importance.
+    They could come up with as many groups as they wanted as these groupings were later standardized on a scale from 0 to 1 where 0 represented those for whom the legitimized language was least important and 1 represented those for whom it was the most important.
+
+    Sankoff \& Laberge then validated the resulting index using a dissimilarity matrix.
+    Two different measures were used.
+    \begin{itemize}
+      \item The ratio of disagreements by pairs of judges of a speaker to total pairs
+      \item The ratio of disagreements for a speaker to all disagreements
+    \end{itemize}
+    Both resulted in very low values, indicated the validity of their index.
+
+  \section{The Index and Linguistic Behavior}
+    The data for this study came from a corpus of Montreal French.
+    Sankoff \& Laberge analyzed three lexical linguistic variables:
+    \begin{itemize}
+      \item \lexi{avoir} vs \lexi{être} in passé composé constructions
+      \item \lexi{ce que} vs \lexi{qu'est-ce que} as relative pronouns without antecedents
+      \item \lexi{on} vs \lexi{ils} for impersonal subject pronouns
+    \end{itemize}
+
+    Besides the linguistic market index, they looked at statistical associations with education, gender, and age, as well.
+    These served as comparisons against the results of the index.
+    For all three variables, the linguistic market index was easily the greatest predictor of variant use.
+    Specifically, as a speaker's place in the index goes up, their usage on the standard variants goes up, those being \lexi{être}, \lexi{ce que}, and \lexi{on}, respectively.
+    Sankoff \& Laberge took this to be very good evidence of the superiority of their linguistic market index to previously used measures of socioeconomic class.
+
+  \section{Discussion}
+    \begin{enumerate}
+      \item Why are life histories so important?
+      \item Would this index be usable in every society?
+      \item To what extent are peers of a speaker still peers when they are unacquainted with a speaker?
+    \end{enumerate}
+\end{document}
