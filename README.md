@@ -2,6 +2,9 @@
 
 Each folder here represents an assignment I've done for a class and so would be compiled separately. They include the following:
 
+### Computational Linguistics (2020 w/Dr Hale)
+* comp_ling01: Slides for summary of Eisenstein and Rehurek \& Kolkus (2009)
+
 ### Sociolinguistics (2020 w/Dr Forrest)
 * communs01: Summary of chapter 5 of Mills (1959)
 * communs02: Summary of Sankoff \& Laberge (1978)
