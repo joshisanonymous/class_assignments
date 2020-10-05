@@ -41,14 +41,123 @@
   }
 
   \section{Language Models}
-    \subsection{What are they?}
-      \begin{frame}
+    \newcommand{\subone}{What are they?}
+    \subsection{\subone}
+      \begin{frame}{\subone}
         \begin{block}{The probability of a document given some tokens}
           \begin{itemize}
             \item $p(w_1, w_2, \ldots, w_m)$
             \item $w_m \in V$
             \item $V = \{ \text{aardvark}, \text{abacus}, \ldots, \text{zither} \}$
           \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subone}
+        \begin{block}{What good is this?}
+          Lets us generate strings
+          {\small
+            \begin{itemize}
+              \item $p ( \text{coffee} | \text{I love dark} )$
+            \end{itemize}
+          }
+          Lets us compare strings
+          {\small
+            \begin{itemize}
+              \item $p ( \text{the coffee black me pleases much} ) < p ( \text{I love dark coffee} )$
+            \end{itemize}
+          }
+        \end{block}
+      \end{frame}
+
+    \newcommand{\subtwo}{$n$-gram models}
+    \subsection{\subtwo}
+      \begin{frame}{\subtwo}
+        \begin{block}{A relative frequency approach}
+          $p ( \text{Computers are useless, they only give you answers} )$
+          \begin{itemize}
+            \item[=] $\frac{count(\text{Computers are useless, they only give you answers})}
+                        {count(\text{all sentences ever spoken})} $
+          \end{itemize}
+        \end{block}
+        \begin{alertblock}{}
+          Impossible to give the latter count
+        \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\subtwo}
+        \begin{block}{The chain rule}
+          {\small
+            \begin{itemize}
+              \item[] $p ( \text{string} )$
+              \item[] $= p ( w_1, w_2, \ldots, w_m )$
+              \item[] $= p ( w_1 ) \times p ( w_2 | w_1 ) \times p ( w_3 | w_2, w_1 ) \times \ldots \times p ( w_m | w_{m-1}, \ldots, w_1 )$
+            \end{itemize}
+          }
+        \end{block}
+
+        \begin{block}{Simplified into an $n$-gram model}
+          {\small
+            \begin{itemize}
+              \item[] $\prod_m^M{ p ( w_m | w_{m-1}, \ldots, w_{m-n+1} ) }$
+            \end{itemize}
+          }
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subtwo}
+        \begin{block}{Bigram for ``I like black coffee''}
+          {\small
+            \begin{itemize}
+              \item[] $p ( \text{I} | \# ) \times p ( \text{like} | \text{I} ) \times p ( \text{black} | \text{like} ) \times p ( \text{coffee} | \text{black} )$
+            \end{itemize}
+          }
+        \end{block}
+
+        \begin{block}{}
+          Each bigram's individual probability is estimated from the relative frequency in some text
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subtwo}
+        \begin{block}{$n$-gram sizes}
+          Too small:
+          \begin{itemize}
+            \item Long distance dependencies are lost
+            \item ``\alert{Gorillas} always like to groom \alert{their} friends''
+          \end{itemize}
+          Too big:
+          \begin{itemize}
+            \item Data is too sparse to get meaningful counts
+            \item How many times does the gorilla 7-gram show up?
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \newcommand{\subthree}{Smoothing}
+    \subsection{\subthree}
+      \begin{frame}{\subthree}
+        \begin{block}{A solution to sparse data}
+          Laplace smoothing: Add an imaginary count of 1 to all counts
+          \begin{itemize}
+            \item e.g., bigrams
+            \item[] $p_{\text{smooth}} ( w_m | w_{m-1} )$
+            \item[=] $\frac{count ( w_{m-1}, w_m ) + 1}
+                           {\sum_{w' \in V}{count ( w_{m-1}, w' ) + 1}}$
+          \end{itemize}
+        \end{block}
+
+        \begin{block}{}
+          Add a different imaginary count to get a different type of smoothing
+          \begin{itemize}
+            \item Jeffreys-Perks law: 0.5
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subthree}
+        \begin{block}{Discounting}
+          
         \end{block}
       \end{frame}
 
