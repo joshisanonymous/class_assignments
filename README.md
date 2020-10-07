@@ -9,6 +9,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 * communs01: Summary of chapter 5 of Mills (1959)
 * communs02: Summary of Sankoff \& Laberge (1978)
 * communs03: Summary of Eckert \& McConnell-Ginet (1992)
+* communs03: Project proposal
 
 ### Creole Forms (2020 w/Dr Chamorro)
 * creoles01: Discussion of Lefebvre (2001)
