@@ -5,11 +5,12 @@ Each folder here represents an assignment I've done for a class and so would be 
 ### Computational Linguistics (2020 w/Dr Hale)
 * comp_ling01: Slides for summary of Eisenstein and Rehurek \& Kolkus (2009)
 
-### Sociolinguistics (2020 w/Dr Forrest)
+### Sociolinguistics Seminar: Communities (2020 w/Dr Forrest)
 * communs01: Summary of chapter 5 of Mills (1959)
 * communs02: Summary of Sankoff \& Laberge (1978)
 * communs03: Summary of Eckert \& McConnell-Ginet (1992)
-* communs03: Project proposal
+* communs04: Project proposal
+* communs05: Summary of Johnstone et al. (2006)
 
 ### Creole Forms (2020 w/Dr Chamorro)
 * creoles01: Discussion of Lefebvre (2001)
