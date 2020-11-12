@@ -12,6 +12,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 * communs04: Project proposal
 * communs05: Summary of Johnstone et al. (2006)
 * communs06: Summary of Podesva (2007)
+* communs07: Summary of Wright (2015) Chapter 2
 
 ### Creole Forms (2020 w/Dr Chamorro)
 * creoles01: Discussion of Lefebvre (2001)
