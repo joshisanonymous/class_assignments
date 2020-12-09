@@ -4,6 +4,7 @@ Each folder here represents an assignment I've done for a class and so would be 
 
 ### Computational Linguistics (2020 w/Dr Hale)
 * comp_ling01: Slides for summary of Eisenstein and Rehurek \& Kolkus (2009)
+* comp_ling02: Literature review of low-resource language identification
 
 ### Sociolinguistics Seminar: Communities (2020 w/Dr Forrest)
 * communs01: Summary of chapter 5 of Mills (1959)
