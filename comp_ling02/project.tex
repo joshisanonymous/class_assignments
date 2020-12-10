@@ -21,5 +21,65 @@
   \newcommand{\gloss}[1]{`#1'}
 
 \begin{document}
-
+  % Issue
+    % Distinction between language varieties from a sociolinguistic perspective is much finer than what is often dealt with in other fields
+      % This finer distinction leads to the low-resource language issue
+    % Languages on social media
+      % 51% of Twitter was in English (Hong et al. 2011:519)
+        % next closest was Japanese at 19.1%, drops quickly after that (Hong et al. 2011:519)
+      % Brings up the problem is classifying very short texts, as well
+        % In the case of Duvenhage (2019), a short text that we'd want to classify may be 15-20 characters long (1)
+    % Code-switching online
+      % While not specifically about low-resource languages, heavy code-switching, particularly intrasententially, leads to similar issues
+        % Heavy intra-sentential switching isn't always present, Hidayat (2012) found a prevalence of inter-sentential switching on Facebook (as cited in Barman et al. 2014:14),
+        % but intra-sentential switching has been found prevalent in other mediums such as blogs written by Chinese-English bilinguals (San 2009:12)
+        % Barman et al. (2014) argue that it's important to be able to identify languages even when there's switching from word to word in order to facilitate further processing (13)
+          % From a socio standpoint, though, it is also desirable to identify mixed langauges as indeed languages on their own
+      % Ho (2006) found this common in English-Chinese bilinguals on ICQ
+      % Cárdenas-Claros & Isharyanti (2009) found this to be common in constructed chat rooms for English-Spanish and English-Indonesian bilinguals
+    % Orthographies
+      % In particular, writing systems for different languages can vary greatly in norms and scripts
+      % Juahiainen et al. (2019) use this idea for two of their points about what makes language identification different from other classification problems (678):
+        % Written representations of words differ from one language to another
+        % Multiple orthographies may be used for one language
+      % For multiple orthographies, Barman et al. (2014) offer examples in Hindi and Bengali might be written using the Roman alphabet for convenience when regular mixing with English is present (13)
+        % However, they also exclude anything written in non-Roman script in their work (Barman et al. 2014:15)
+          % This is not uncommon for various scripts and even different encodings, as Jauhiainen et al. (2019) acknowledge (682-683)
+      % Where multiple spellings are possible, these can be normalized
+        % Barman et al. (2014) used the Lexical Normalization List (LexNormList) (Han et al. 2012) to do this (17)
+  % Languages considered low-resource
+    % Qi et al. (2019) suggest Indonesian, Kazakh, and Tibetan as examples, but don't say why (1897)
+    % Duvenhage (2019) implies that some South African languages are considered low-resource based on the percentage of native speakers (1)
+  % Languages consider very similar
+    % Malmasi & Dras (2015) give several examples that have been worked on: Malay-Indonesian, Farsi-Dari, Croatian-Serbian-Slovene, Portuguese varieties, Spanish varieties, Chinese varieties (35)
+  % History of language identification
+    % Has been worked on since at least 1960s (Gold 1967)
+    % Code-switching has been worked on since at least the 1980s (Joshi 1982), but not so much in terms of language identification
+      % This was only shortly after Poplack's work on code-switching in sociolinguistics
+  % Approaches to low-resource or similar language identification problems
+    % Barman et al (2014) look at code-mixing among 20-30 year old Indians who speak English, Bengali, and Hindi on Facebook (14)
+    % Annotations and corpora used
+      % The Discriminating between Similar Languages (DSL) dataset was part of a competition Zampieri et al. (2017)
+        % 14 languages, 22,000 news texts for each (Zampieri et al. 2017:3)
+      % WordNet is an English lexicon linking words through synonymy, useful for text augmentation approaches (Miller 1995)
+      % Barman et al (2014) annotate sentences as monolingual or mixed, then for mixed, annotate where the language changed (15)
+    % Dictionary approach
+      % Barman et al. (2014) achieved 93.12% accuracy using training data and LexNormList as dictionaries (19)
+    % Character n-gram approach
+      % Barman et al. (2014) achieved 94.62% accuracy with character n-grams alone, and this when very slightly up when included other context-free features as well (19)
+        % These also went up roughly another 1% when adding context by using Conditional Random Fields (Barman et al. 2014:20)
+    % Ensembles of classifiers
+      % Multiple classifiers can be run in parallel on some input with their individual results then aggregated (Malmasi & Dras 2015:36-37)
+        % A common way to generate multiple classifiers is through bagging, which is bootstrapping new training sets by sampling from one training set with replacement (Breiman 1996), after which different classifiers can be trained from each set (Malmasi & Dras 2015:37)
+        % The results of classifiers can be combined in various ways to lead to a decision
+      % Malmasi & Dras (2015) achieved 95.54% accuracy on DSL '15 with this using character 2-, 4-, and 6-grams and word 1- and 2-grams as classifiers (40)
+      % Duvenhage (2019) achieved very high accuracy -- 98.7% on DSL '17 -- by using a naive Bayes classifier to identify the language family and then a lexicon-based classifier to identify languages int aht family
+    % Data augmentation
+      % This is something Duvenhage (2019) suggested may improve his results further (4)
+      % Marivate & Sefara (2020) suggest two types: augmentation on text source and augmentation on text representation (387)
+        % Source: Provide more linguistic information on the training text, mainly semantics such as sense relations, but this can also involve round-trip translation (388-389)
+      % Catch 22: Augmentation requires rules written by linguists (Marivate & Sefara 2020:387), with low-resource languages, there aren't likely to be rules, yet these are the languages you'd need to use augmentation with
+        % For example, Marivate & Sefara (2020) used NLTK to add part-of-speech tags to text so that they could used WordNet to replace words with particular parts-of-speech (391)
+      % Additionally, Marivate & Sefara's (2020) results for round trip translation augmentation led to very good results for news classification but comparitively poor results for hate speech classification, which relied on social media texts
+        % They argued that translation may not work well on social media texts (394)
 \end{document}
