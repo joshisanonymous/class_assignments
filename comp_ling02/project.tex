@@ -24,6 +24,7 @@
   % Issue
     % Distinction between language varieties from a sociolinguistic perspective is much finer than what is often dealt with in other fields
       % This finer distinction leads to the low-resource language issue
+      % If solving this means doing better than humans, that has already been achieved (Maier & Gómez-Rodriguez 2014:32), but there's still plenty of room for improvement to before approaching 100% accuracy
     % Languages on social media
       % 51% of Twitter was in English (Hong et al. 2011:519)
         % next closest was Japanese at 19.1%, drops quickly after that (Hong et al. 2011:519)
@@ -56,6 +57,7 @@
     % Has been worked on since at least 1960s (Gold 1967)
     % Code-switching has been worked on since at least the 1980s (Joshi 1982), but not so much in terms of language identification
       % This was only shortly after Poplack's work on code-switching in sociolinguistics
+    % Cavnar & Trenkle (1994) for the character n-gram approach
   % Approaches to low-resource or similar language identification problems
     % Barman et al (2014) look at code-mixing among 20-30 year old Indians who speak English, Bengali, and Hindi on Facebook (14)
     % Annotations and corpora used
@@ -68,7 +70,21 @@
     % Character n-gram approach
       % Barman et al. (2014) achieved 94.62% accuracy with character n-grams alone, and this when very slightly up when included other context-free features as well (19)
         % These also went up roughly another 1% when adding context by using Conditional Random Fields (Barman et al. 2014:20)
+      % Maier & Gómez-Rodriguez (2014), using the TextCat implementation of Canar & Trenkle (1994), saw very poor results for the five varieties of Spanish they looked at on Twitter with F1 of 43.93 for Argentina being the highest (20% is chance) and the overall F1 being 34.08 (28)
+        % Maier & Gómez-Rodriguez (2014) believe this is due to short tweets resulting in a lack of n-grams to match (28)
+          % This is supported when they look at F1 scores as a function of tweet length and find the longer the tweet, the better the F1 (Maier & Gómez-Rodriguez 2014:29)
+        % ALso, with absolute discounting starting at 6-grams, overall F1 of 66.96 (Maier & Gómez-Rodriguez 2014:29)
+    % Syllable n-gram approach
+      % Maier & Gómez-Rodriguez (2014) used the TIP syllabifier (Spanish Academy-based) to perform syllabification (30)
+        % F1 reached 57.88 overall with 4-grams and discounting (30)
+    % Compression approach
+      % Bush (2014) used LZW compression (Welch 1984) to achieve between 60% and 100% accuracy on a standard langauge identification task (2)
+        % General idea is that where there is less entropy, it's easier to compress data, but Bush's (2014) work was only exploratory
+      % Maier & Gómez-Rodriguez's (2014) implementation for Spanish tweets of different varieties resulted in results that only bested a plain frequency character n-gram model but otherwise performed worse than character n-gram models with discounting and syllable models (31)
+        % This also had the problem of very short tweets achieving the same exact compression rates in many instances (Maier & Gómez-Rodriguez 2014:31)
     % Ensembles of classifiers
+      % Put to use by Maier & Gómez-Rodriguez (2014) but referred to as "voting", achieving 67.72 F1 overall for their Spanish varieties on Twitter task (31)
+        % This is higher than what they achieved through individual classifiers alone.
       % Multiple classifiers can be run in parallel on some input with their individual results then aggregated (Malmasi & Dras 2015:36-37)
         % A common way to generate multiple classifiers is through bagging, which is bootstrapping new training sets by sampling from one training set with replacement (Breiman 1996), after which different classifiers can be trained from each set (Malmasi & Dras 2015:37)
         % The results of classifiers can be combined in various ways to lead to a decision
