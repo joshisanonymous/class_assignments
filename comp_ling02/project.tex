@@ -53,6 +53,9 @@
     % Duvenhage (2019) implies that some South African languages are considered low-resource based on the percentage of native speakers (1)
   % Languages consider very similar
     % Malmasi & Dras (2015) give several examples that have been worked on: Malay-Indonesian, Farsi-Dari, Croatian-Serbian-Slovene, Portuguese varieties, Spanish varieties, Chinese varieties (35)
+    % Rangel et al. (2018) and Maier & Gómez-Rodriguez (2014) work on national varieties of Spanish
+    % Lui & Cook (2013) work on national varieties of English
+    % Bouamor et al. (2019) put together a competition for varieties of Arabic, but importantly for identifying varieties at the city level as opposed to the national level (199-200).
   % History of language identification
     % Has been worked on since at least 1960s (Gold 1967)
     % Code-switching has been worked on since at least the 1980s (Joshi 1982), but not so much in terms of language identification
@@ -61,9 +64,19 @@
   % Approaches to low-resource or similar language identification problems
     % Barman et al (2014) look at code-mixing among 20-30 year old Indians who speak English, Bengali, and Hindi on Facebook (14)
     % Annotations and corpora used
+      % Twitter
+        % Used for one task in Bouamor et al.'s (2019) Arabic competition
+          % Constructed by search for users who used hashtags for the desired countries (in English apparently) (201)
+      % MADAR Travel Domain Corpus is a parallel corpus for Arabic from different cities (Bouamor et al. 2019:201)
       % The Discriminating between Similar Languages (DSL) dataset was part of a competition Zampieri et al. (2017)
         % 14 languages, 22,000 news texts for each (Zampieri et al. 2017:3)
       % WordNet is an English lexicon linking words through synonymy, useful for text augmentation approaches (Miller 1995)
+      % Lui & Cook (2013) didn't have a good corpus option for Australian English and so built one from the web focusing on .au domain names (9)
+        % Specifically, they took frequent words from the BNC and used BootCaT to generate 3-tuples that were then used to send search engine queries. They saved and processing the resulting pages (9)
+        % They also did this to expand their British and Canadian corpora and to obtain government pages from each country (9)
+      % Maier & Gómez-Rodriguez (2014) constructed their own corpus from Twitter for Spanish varieties (25-27)
+        % Franco-Salvador et al. (2015) used the HispaBlogs dataset instead
+        % By Rangel et al.'s (2018) work, they also had access to HispaBlog for a similar dataset (160)
       % Barman et al (2014) annotate sentences as monolingual or mixed, then for mixed, annotate where the language changed (15)
     % Dictionary approach
       % Barman et al. (2014) achieved 93.12% accuracy using training data and LexNormList as dictionaries (19)
@@ -77,6 +90,14 @@
     % Syllable n-gram approach
       % Maier & Gómez-Rodriguez (2014) used the TIP syllabifier (Spanish Academy-based) to perform syllabification (30)
         % F1 reached 57.88 overall with 4-grams and discounting (30)
+    % Word-based approaches
+      % Using linear SVM, Lui & Cook (2013) found this to outperform other methods (i.e., bag-of- function -words, part-of-speech + function words, byte sequences, spelling variant pairs) (11)
+        % They tried different types of corpora, and Twitter data was by far the hardest to classify (11)
+      % Word Skip-grams were used by Franco-Salvador et al. (2015) for Spanish language variety identification and resulted in 0.722 accuracy (10)
+      % Rangel et al. (2018) focus on words but develop low dimensionality representation (LDR) to filter out most words and arrive at the 6 key words thought to be representative of each variety
+        % The process: Perform a series of weight calculations, starting with TF-IDF (158-159)
+        % with only 30 features, they outperformed weighted word bigrams and character 4-grams with .711 accuracy (164)
+          % Just below results for skip-gram approach with 300 features, though the difference wasn't statistically significant
     % Compression approach
       % Bush (2014) used LZW compression (Welch 1984) to achieve between 60% and 100% accuracy on a standard langauge identification task (2)
         % General idea is that where there is less entropy, it's easier to compress data, but Bush's (2014) work was only exploratory
@@ -90,6 +111,8 @@
         % The results of classifiers can be combined in various ways to lead to a decision
       % Malmasi & Dras (2015) achieved 95.54% accuracy on DSL '15 with this using character 2-, 4-, and 6-grams and word 1- and 2-grams as classifiers (40)
       % Duvenhage (2019) achieved very high accuracy -- 98.7% on DSL '17 -- by using a naive Bayes classifier to identify the language family and then a lexicon-based classifier to identify languages int aht family
+      % Ragab et al. (2019) used an ensemble for fine-grained city-level Arabic variety identification, achieving 67.2 F1 on the MADAR task from Bouamor et al. (2018) (247).
+        % Their features were word uni- and bi-grams and character n-grams from 1 to 5, all TF-IDF weighted (245)
     % Data augmentation
       % This is something Duvenhage (2019) suggested may improve his results further (4)
       % Marivate & Sefara (2020) suggest two types: augmentation on text source and augmentation on text representation (387)
