@@ -11,7 +11,7 @@
   % \usepackage[group-minimum-digits=4, group-separator={,}]{siunitx}
 
   % Document information
-  \title{Review of low-resource language identification}
+  \title{Review of language variety identification}
   \author{Joshua McNeill}
   \date{\today}
 
@@ -21,6 +21,17 @@
   \newcommand{\gloss}[1]{`#1'}
 
 \begin{document}
+  \section{Introduction}
+    A task that has received a lot of attention in natural language processing is language identification.
+    This task involves classifying documents according to their language.
+    As such, language identification is also a document classification task, though there are some features that are particular to this task.
+    \textcite{jauhiainen_automatic_2019} explain, whereas in other classification tasks one can tokenize into words under a single, reliable scheme, in language identification one is working with various languages which may not represent word boundaries in the same way in writing.
+    Language identification is also more likely to require domain independent solutions than, for instance, classifying news articles where the sort of documents being classified is relatively consistent even if the topics are not.
+    By contrast, language identification may involve documents as diverse as tweets on Twitter to blog posts to books.
+    Relatedly, a single language may even be written using multiple orthographies when used in various domains.
+    Where one may write \orth{u} in a tweet, the standard \orth{you} spelling is expected in formal documents, or where Roman-based pinyin may be acceptable in some contexts for Chinese writing, Chinese characters are likely required in others.
+    Finally, whereas a single news article, for instance, may be given two separate classes at once, the classes for language identification are necessarily mutually exclusive \parencite[p.~678]{jauhiainen_automatic_2019}.
+    Certainly, there are cases of code-switching in writing, where one can argue that two separate languages are being used simultaneously, but the goal in these cases would be either to split the document up into sub-documents by language or to simply treat the resulting mixed code as its own distinct language.
   % Issue
     % Distinction between language varieties from a sociolinguistic perspective is much finer than what is often dealt with in other fields
       % This finer distinction leads to the low-resource language issue
