@@ -21,8 +21,9 @@
   \newcommand{\gloss}[1]{`#1'}
 
 \begin{document}
+  \maketitle
   \section{Introduction}
-    A task that has received a lot of attention in natural language processing is language identification.
+    A task that has received significant attention in natural language processing is language identification.
     This task involves classifying documents according to their language.
     As such, language identification is also a document classification task, though there are some features that are particular to this task.
     \textcite{jauhiainen_automatic_2019} explain, whereas in other classification tasks one can tokenize into words under a single, reliable scheme, in language identification one is working with various languages which may not represent word boundaries in the same way in writing.
@@ -32,48 +33,78 @@
     Where one may write \orth{u} in a tweet, the standard \orth{you} spelling is expected in formal documents, or where Roman-based pinyin may be acceptable in some contexts for Chinese writing, Chinese characters are likely required in others.
     Finally, whereas a single news article, for instance, may be given two separate classes at once, the classes for language identification are necessarily mutually exclusive \parencite[p.~678]{jauhiainen_automatic_2019}.
     Certainly, there are cases of code-switching in writing, where one can argue that two separate languages are being used simultaneously, but the goal in these cases would be either to split the document up into sub-documents by language or to simply treat the resulting mixed code as its own distinct language.
-  % Issue
-    % Distinction between language varieties from a sociolinguistic perspective is much finer than what is often dealt with in other fields
-      % This finer distinction leads to the low-resource language issue
-      % If solving this means doing better than humans, that has already been achieved (Maier & Gómez-Rodriguez 2014:32), but there's still plenty of room for improvement to before approaching 100% accuracy
-    % Languages on social media
-      % 51% of Twitter was in English (Hong et al. 2011:519)
-        % next closest was Japanese at 19.1%, drops quickly after that (Hong et al. 2011:519)
-      % Brings up the problem is classifying very short texts, as well
-        % In the case of Duvenhage (2019), a short text that we'd want to classify may be 15-20 characters long (1)
-    % Code-switching online
-      % While not specifically about low-resource languages, heavy code-switching, particularly intrasententially, leads to similar issues
-        % Heavy intra-sentential switching isn't always present, Hidayat (2012) found a prevalence of inter-sentential switching on Facebook (as cited in Barman et al. 2014:14),
-        % but intra-sentential switching has been found prevalent in other mediums such as blogs written by Chinese-English bilinguals (San 2009:12)
-        % Barman et al. (2014) argue that it's important to be able to identify languages even when there's switching from word to word in order to facilitate further processing (13)
-          % From a socio standpoint, though, it is also desirable to identify mixed langauges as indeed languages on their own
-      % Ho (2006) found this common in English-Chinese bilinguals on ICQ
-      % Cárdenas-Claros & Isharyanti (2009) found this to be common in constructed chat rooms for English-Spanish and English-Indonesian bilinguals
-    % Orthographies
-      % In particular, writing systems for different languages can vary greatly in norms and scripts
-      % Juahiainen et al. (2019) use this idea for two of their points about what makes language identification different from other classification problems (678):
-        % Written representations of words differ from one language to another
-        % Multiple orthographies may be used for one language
-      % For multiple orthographies, Barman et al. (2014) offer examples in Hindi and Bengali might be written using the Roman alphabet for convenience when regular mixing with English is present (13)
-        % However, they also exclude anything written in non-Roman script in their work (Barman et al. 2014:15)
-          % This is not uncommon for various scripts and even different encodings, as Jauhiainen et al. (2019) acknowledge (682-683)
+
+    Language identification has been worked on as far back as the 1960s with \textcite{gold_language_1967} and Mustonen \parencite[1965, as cited in][]{jauhiainen_automatic_2019}, the latter of which involved using a dictionary language model to classify individual words as English, Swedish or Finnish, which yielded an accuracy of 76\% (p.~679).
+    Later, Rau (1974) introduced the idea of using the relative frequencies of unigrams and bigrams in a language to construct a language model that could be used to identify a document as being in either English or Spanish, achieving an accuracy of 89\% at the time \parencite[as cited in][p.~680]{jauhiainen_automatic_2019}.
+    By the 1990s, \citeauthor{cavnar_n-gram-based_1994} (\citeyear{cavnar_n-gram-based_1994}) approach to using $n$-grams for language identification became popular as their method yielded 99.8\% accuracy when distinguishing between eight languages.
+    In sum, the history of work on this task has been long and led to results that suggest that the problem has been solved, though there is more work to be done still.
+
+    Part of what makes language identification important today is the breadth of languages used on the internet.
+    For instance, although 51\% of the tweets on the social media platform Twitter are in English, the other 49\% are in a large variety of other languages.
+    Indeed, Japanese makes up 19.1\% of the remainder, the second highest amount, but there is a drastic drop in the percentage that any single language makes up as one continues down the list \parencite[p.~519]{hong_language_2011}.
+
+    Being able to automatically classify texts online into one language or another can advance understanding of how the internet is used and even shed light on social issues, but there is also practical reasons for taking on this challenge.
+    In general, language identification is a first step to be taken before many other types of natural language processing can happen.
+    For example, if one wishes to develop a part-of-speech tagger for Spanish, it is important to identify documents that are indeed in Spanish.
+    Online texts are also a rich source for constructing corpora, particularly for low-resource languages.
+    Where they may not be a literary tradition for a language, there may still be informal writing in the form of tweets, blogs, and web pages.
+    Forming corpora from these resources is far easier when their presence can be detected automatically with language identification techniques.
+
+    % Brings up the problem is classifying very short texts, as well
+      % In the case of Duvenhage (2019), a short text that we'd want to classify may be 15-20 characters long (1)
+
+    An issue that is not as often addressed in work on language identification, however, is how languages are defined to begin with.
+    In general when working on this task, researchers rely on well known labels for social constructs such as ``English'' or ``Spanish'', rarely taking a critical look at this aspect of their work.
+    This lack of critique is understandable given goals that are often very practical as opposed to philosophical.
+    However, from a sociolinguistic point of view, just what counts as a language is a much bigger question.
+    One may work under the assumption that ``English'' is a language, but this raises the question of to what extent the English of a New Yorker is the same language as the English of a South African or a Scotsman or, to take it even further, an English-based creole like Gullah along the southeast coast of the United States or Jamaican Creole.
+    There is mutual intelligibility in many cases, but that does not always coincide with language delineations.
+    A common example is that Swedish and Norwegian are considered two separate languages while being generally mutually intelligible, but there are many ``dialects'' of Chinese that are not mutually intelligible at all.
+
+    For the broad task of language identification, these issues are not addressed and instead form a set of assumptions underlying researchers' work, but they are in fact taken up to a degree in work on language variety identification.
+    Language variety identification narrows the task by focusing on classifying different varieties of a single language.
+    ``Variety'' in this case is often taken at a national level.
+    One might work on distinguishing between British, Canadian, and Australian English \parencite{lui_classifying_2013} or Argentinian, Chilean, Colombian, Mexican, and Spain Spanish \parencite{maier_language_2014,rangel_low_2018}.
+    Notably, the Discriminating Similar Languages (DSL) competition involved mostly pairs of national varieties along these lines, which included distinguishing between Malay and Indonesian, Brazilian and European Portuguese, national Spanish varieties, Farsi and Dari, and Croatian, Serbian and Slovene \parencite[p.~35]{malmasi_language_2015}.
+    This work does get more fine-grained, however.
+    For example, \textcite{ragab_mawdoo3_2019} worked on the problem of correctly identifying 26 different dialects of Arabic, each associated with a particular city, and \textcite{malmasi_german_2017} and \parencite{ciobanu_german_2018} worked on distinguishing between four varieties of Swiss German, also each associated with a particular city.
+
+    \subsection{Related Issues}
+      The language variety identification task heightens several already difficulties that exist with language identification in general.
+      One of those is the problem of low-resource langauges.
+      As mentioned above, good language identification systems can be used to collect documents that can then be formed into corpora for low-resource languages that might not have formal literary traditions, but in a catch-22, it is difficult to develop a classifier for such languages without collected documents to begin with.
+      Naturally, the low-resource language problem is more common when one is working with a narrower set of varieties.
+      Whereas \textcite{qi_study_2019} suggsted Indonesian, Kazakh, and Tibetan as examples of low-resource languages (p.~1897), and \textcite{duvenhage_short_2019} suggested some South African languages (p.~1), one can expect effectively all varieties more fine-grained than national varieties to be low-resource in language variety identification.
+      The degree to which there is a literary tradition for Punjabi-influenced West London English \parencite{sharma_style_2011} or Californian nerd girl English \parencite{bucholtz_why_1999} is unarguably limited.
+
+      Additionally, there is perhaps more of a need to deal with code-switching when working with language variety identification than with general language identification.
+      Code-switching does of course occur with language varieties at any level of abstraction -- one can speak of English-Spanish code-switching as a common phenomenon, for example \parencite{toribio_spanish-english_2002} -- though there is an argument to be made that documents containing heavy code-switching may in fact be composed of a single language variety, particularly when the switching is intra-sentential, occurring within a single sentence, whereas in more general language identification, the task here would naturally be to isolate chunks of a document as one language or another.
+      Indeed, varieties such as Chiac, originating from a heavy mixture of English and French, are generally considered to be language varieties in their own right \parencite{king_chiac_2008}.
+      For example, \textcite{barman_code_2014} worked on language identification in Facebook posts by multilinguals where Bengali, Hindi, and English were present (p.~14).
+      As they were starting from a broad conceptualization of what a language is, they described their task as separating out the languages of any given post even when the code-switching occurs from word to word (p.~13), a situation that is difficult to distinguish from borrowings of individual words into a language.\footnote{
+        See \textcite{deuchar_english-origin_2016} for a relatively recent overview of the arguments in sociolinguistics.
+      }
+
+      In particular, when working with language identification, it is common to apply these systems to internet domains where code-switching is also common.
+      English-Chinese bilinguals have been documented regularly code-switching as far back as when ICQ, a relatively archaic instant messenger by today's standards, was still widely used \parencite{ho_functional_2006}.
+      The practice also occurs even in independent chat rooms deployed for experiments, as \textcite{cardenas-claros_code-switching_2009} found in their work with English-Spanish and English-In\-do\-ne\-sian bilinguals.
+      This code-switching can take the form of inter-sentential switching as Hidayat (2012) found on Facebook \parencite[as cited in][p.~14]{barman_code_2014}, where adjacent sentences are in different languages, but intra-sentential switching can also be prevalent, as \textcite{san_chinese-english_2009} found in blogs written by Chinese-English bilinguals in Macao, China (p.~12).
+
+      The presence of code-switching at times can exacerbate language variety identification even further.
+      As already mentioned, having to work with multiple orthographies and writing norms is a particular issue for this task over other classification tasks.
+      \textcite{barman_code_2014} found a special case of this where their participants would sometimes write Bengali and Hindi using the Roman alphabet, where they would normally be written in other scripts, to facilitate typing where English was also present (p.~13).
+      Their solution to this was to exclude anything not written this way so as to avoid dealing with multiple scripts \parencite[p.~15]{barman_code_2014}.
+      This solution is not ideal but perhaps helps when dealing with multiple scripts.
+      More such solutions and approaches to language variety identification will be covered in the next section.
+
+      % Orthographies
+        % This is not uncommon for various scripts and even different encodings, as Jauhiainen et al. (2019) acknowledge (682-683)
       % Where multiple spellings are possible, these can be normalized
         % Barman et al. (2014) used the Lexical Normalization List (LexNormList) (Han et al. 2012) to do this (17)
-  % Languages considered low-resource
-    % Qi et al. (2019) suggest Indonesian, Kazakh, and Tibetan as examples, but don't say why (1897)
-    % Duvenhage (2019) implies that some South African languages are considered low-resource based on the percentage of native speakers (1)
-  % Languages consider very similar
-    % Malmasi & Dras (2015) give several examples that have been worked on: Malay-Indonesian, Farsi-Dari, Croatian-Serbian-Slovene, Portuguese varieties, Spanish varieties, Chinese varieties (35)
-    % Rangel et al. (2018) and Maier & Gómez-Rodriguez (2014) work on national varieties of Spanish
-    % Lui & Cook (2013) work on national varieties of English
-    % Bouamor et al. (2019) put together a competition for varieties of Arabic, but importantly for identifying varieties at the city level as opposed to the national level (199-200).
-  % History of language identification
-    % Has been worked on since at least 1960s (Gold 1967)
-    % Code-switching has been worked on since at least the 1980s (Joshi 1982), but not so much in terms of language identification
-      % This was only shortly after Poplack's work on code-switching in sociolinguistics
-    % Cavnar & Trenkle (1994) for the character n-gram approach
-  % Approaches to low-resource or similar language identification problems
-    % Barman et al (2014) look at code-mixing among 20-30 year old Indians who speak English, Bengali, and Hindi on Facebook (14)
+
+  \section{Approaches}
+  % Approaches to similar language identification problems
+    \subsection{Corpora}
     % Annotations and corpora used
       % Twitter
         % Used for one task in Bouamor et al.'s (2019) Arabic competition
@@ -89,6 +120,8 @@
         % Franco-Salvador et al. (2015) used the HispaBlogs dataset instead
         % By Rangel et al.'s (2018) work, they also had access to HispaBlog for a similar dataset (160)
       % Barman et al (2014) annotate sentences as monolingual or mixed, then for mixed, annotate where the language changed (15)
+
+    \subsection{Language Models}
     % Dictionary approach
       % Barman et al. (2014) achieved 93.12% accuracy using training data and LexNormList as dictionaries (19)
     % Character n-gram approach
@@ -132,4 +165,6 @@
         % For example, Marivate & Sefara (2020) used NLTK to add part-of-speech tags to text so that they could used WordNet to replace words with particular parts-of-speech (391)
       % Additionally, Marivate & Sefara's (2020) results for round trip translation augmentation led to very good results for news classification but comparitively poor results for hate speech classification, which relied on social media texts
         % They argued that translation may not work well on social media texts (394)
+    \subsection{Classifier Algorithms}
+  \printbibliography
 \end{document}
