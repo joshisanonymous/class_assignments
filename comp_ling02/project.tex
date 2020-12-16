@@ -8,7 +8,6 @@
   \usepackage[style=apa, backend=biber]{biblatex}
     \addbibresource{References.bib}
   \usepackage{hyperref}
-  % \usepackage[group-minimum-digits=4, group-separator={,}]{siunitx}
 
   % Document information
   \title{Review of language variety identification}
@@ -103,68 +102,177 @@
         % Barman et al. (2014) used the Lexical Normalization List (LexNormList) (Han et al. 2012) to do this (17)
 
   \section{Approaches}
-  % Approaches to similar language identification problems
+    To some degree, language identification is a task that has been solved.
+    After all, \textcite{cavnar_n-gram-based_1994} long ago achieved an accuracy of 99.8\% with their approach.
+    However, it must be remembered that their test involved one domain, Usenet group messages from soc.culture (i.e., one topic from a sort of precursor to online forums), and perhaps more importantly, their system could identify eight fairly distinct languages \parencite[pp.~6-7]{cavnar_n-gram-based_1994}.
+    That is not to say that this was not a great achievement, but language variety identification is an inherently more difficult task as the varieties being distinguished are inherently similar to each other.
+    As such, this section will cover the corpora used to both train and test language variety identification systems, the types of language models employed, and the classifier algorithms used to make the final classification decisions.
+
     \subsection{Corpora}
-    % Annotations and corpora used
-      % Twitter
-        % Used for one task in Bouamor et al.'s (2019) Arabic competition
-          % Constructed by search for users who used hashtags for the desired countries (in English apparently) (201)
-      % MADAR Travel Domain Corpus is a parallel corpus for Arabic from different cities (Bouamor et al. 2019:201)
-      % The Discriminating between Similar Languages (DSL) dataset was part of a competition Zampieri et al. (2017)
-        % 14 languages, 22,000 news texts for each (Zampieri et al. 2017:3)
-      % WordNet is an English lexicon linking words through synonymy, useful for text augmentation approaches (Miller 1995)
-      % Lui & Cook (2013) didn't have a good corpus option for Australian English and so built one from the web focusing on .au domain names (9)
-        % Specifically, they took frequent words from the BNC and used BootCaT to generate 3-tuples that were then used to send search engine queries. They saved and processing the resulting pages (9)
-        % They also did this to expand their British and Canadian corpora and to obtain government pages from each country (9)
-      % Maier & Gómez-Rodriguez (2014) constructed their own corpus from Twitter for Spanish varieties (25-27)
-        % Franco-Salvador et al. (2015) used the HispaBlogs dataset instead
-        % By Rangel et al.'s (2018) work, they also had access to HispaBlog for a similar dataset (160)
-      % Barman et al (2014) annotate sentences as monolingual or mixed, then for mixed, annotate where the language changed (15)
+      The corpora used to train language variety identification systems are key elements given that the goals for this task often include out-of-domain functionality.
+      As \textcite{lui_classifying_2013} demonstrated, training their system on balanced national corpora can lead to very bad results when the system is applied to an unincluded domain such as Twitter (pp.~11-12), despite the large size of these corpora.
+      As such, researchers employ various types of corpora.
+
+      Constructing large-scale corpora has traditional been a labor intensive and expensive job.
+      \textcite{lui_classifying_2013}, as mentioned, made use of balanced national corpora in their work on English varieties (p.~8): the British Natioal Corpus (BNC) for the United Kingdom \parencite{bnc_consortium_british_2007} and the Strathy Corpus for Canada \parencite{noauthor_strathy_nodate}.
+      Both the BNC and the Strathy Corpus were constructed without the internet as a resource in mind, so while each includes enough domains to be considered balanced, they do not translate well for tasks that involve internet documents.
+      Each includes written documents from fiction, magazines, news articles, and academic texts, as well as some spoken language transcriptions.
+      Not all of these large-scale corpora are so balanced, though.
+      Corpora like WordNet, a dictionary of English lexical items where those in sense relations are linked includes 166,000 such items \parencite{miller_wordnet_1995}.
+      Dictionaries such as this can be used as language models just as well as balanced corpora of documents.
+
+      While the aforementioned corpora were intially large, complex projects in and of themselves, they were all constructed and made available to later researchers.
+      This greatly lowers the cost for training and testing new language models, but some flexibility is also lost.
+      Others have instead built large, expensive corpora specifically for the task of language variety identification and often made them available to other researchers through competitions.
+      For example, \textcite{bouamor_madar_2019} held a recent competition for identifying varieties of Arabic.
+      They build the MADAR Travel Domain Corpus for said competition, which is a translation of the Basic Travel Expression Corpus (BTEC) which is a parallel corpus for common expressions in English, Japanese, and Chinese \parencite{takezawa_multilingual_2007}.
+      The MADAR Travel Domain Corpus involved translating these expressions into 26 dialects of Arabic, each associated with a city except for Modern Standard Arabic.
+      This limits the corpus to one domain but with a breadth of varieties that does not exist for those working with other languages.
+
+      Similarly, \textcite{zampieri_findings_2017} constructed the Discriminating between Similar Languages (DSL) corpus that included 22,000 short news articles each for 14 different languages that form pairs of similar varieties.
+      They then employed the corpus in a language variety identification competition, in fact not the first of which they conducted in only a few short years.
+      This corpus was actually an extension of previous corpora used for the same task.
+      While the DSL does not have the size of corpora like the BNC nor the breadth of related varieties like the MADAR Travel Domain Corpus, it is an important corpus for its specific focus on language variety identification.
+
+      Others have constructed their own corpora for the language variety identification task but by using internet resources.
+      Despite the noisiness of internet data, this approach has two benefits: Large corpora can be constructed with relative ease, and training on internet documents translates into more effective systems for identifying language varieties in internet domains than traditional corpora.
+      In particular, Twitter has been repeatedly utilized this way.
+      \textcite{bouamor_madar_2019}, for instance, not only used their MADAR Travel Domain Corpus for their Arabic competition but also a Twitter corpus for a second portion of the competition: the MADAR Twitter User Dialect Identification corpus.
+      To construct this corpus, they identified relevant Twitter users by their use of hashtags naming countries where Arabic is spoken, such as \#Egypt.
+      They do not note the fact that they searched for Arabic speakers using English hashtags, though it is possible that hashtags do not function with Arabic script.
+      Otherwise, it would be reasonable to assume these are all bilinguals, as well.
+      Users were then annotated manually for their city and the most recent 100 tweets from each of those residing in the 25 analyzed cities were saved to form the corpus.
+
+      Likewise, \textcite{maier_language_2014} also used Twitter as a resource for constructing a corpus in their work on identifying varieties of Spanish.
+      In their case, they used tweets that were geotagged to ensure that they originated in countries of interest.
+      Two issues arose in their work.
+      Geotagged tweets are both rare and not a guarantee that the speaker is from the place from which they are currently tweeting, which form some caveats for their corpus.
+      Additionally, not all of the tweets collected were in Spanish.
+      They decided to keep these non-Spanish tweets, explaining that any tweet ``in a certain country captures the variant of Spanish that is spoken'' (p.~27), suggesting that they conceptualized code-switching as leading to a distinct variety in and of itself.
+      Their corpus ultimately resulted in 100,000 tweets from each of 5 countries: Argentina, Chile, Colombia, Mexico, and Spain.
+
+      \textcite{franco-salvador_language_2015} and \textcite{rangel_low_2018} both worked on Spanish using the four of the five countries that \textcite{maier_language_2014} used, only switching out Colombia for Peru.
+      Instead of Twitter, however, they constructed a corpus from blogs that they called HispaBlogs.
+      While they identified blogs manually by looking for prominent bloggers in each country, the collection and processing of the texts could be done automatically, making this another relatively easier way to construct a corpus than that which was done for a corpus like the BNC.
+      This corpus has the benefit of still being based on internet documents but including documents that are much longer than tweets.
+      Indeed, very short documents are exceedingly difficult to classify.
+      \textcite{maier_language_2014}, for example, showed a general trend towards higher $F_1$ scores as the length of the tweet being classified increases (p.~29).
+
+      Finally, some have sought to cover as many domains as possible by combining several types of corpora, as as \textcite{lui_classifying_2013} in their work on English varieties.
+      As already mentioned, they made use of the BNC and the Strathy Corpus, but they augmented these corpora by mining the web for documents as well as Twitter.
+      For the web, they used BootCaT, a bootstrapping package, to generate 3-tuples from frequent words used in the BNC which they could then use as search queries.
+      They specifically limited their queries to URLs that ended in .au, .ca, and .uk, representing Australian, Canadian, and British web sites, respectively.
+      They also used the added .gov to each (i.e., .gov.au, .gov.ca, and .gov.uk) to obtain government documents specifically.
+      These documents thus formed the web and government web sections of their corpus.
+      Additionally, they used geotagged tweets to collect data from Twitter from each country.
+      The end result was a quite large yet relatively easily created corpus that can presumably handle traditional documents as well as the range of documents types that might be found on the internet.
 
     \subsection{Language Models}
-    % Dictionary approach
-      % Barman et al. (2014) achieved 93.12% accuracy using training data and LexNormList as dictionaries (19)
-    % Character n-gram approach
-      % Barman et al. (2014) achieved 94.62% accuracy with character n-grams alone, and this when very slightly up when included other context-free features as well (19)
-        % These also went up roughly another 1% when adding context by using Conditional Random Fields (Barman et al. 2014:20)
-      % Maier & Gómez-Rodriguez (2014), using the TextCat implementation of Canar & Trenkle (1994), saw very poor results for the five varieties of Spanish they looked at on Twitter with F1 of 43.93 for Argentina being the highest (20% is chance) and the overall F1 being 34.08 (28)
-        % Maier & Gómez-Rodriguez (2014) believe this is due to short tweets resulting in a lack of n-grams to match (28)
-          % This is supported when they look at F1 scores as a function of tweet length and find the longer the tweet, the better the F1 (Maier & Gómez-Rodriguez 2014:29)
-        % ALso, with absolute discounting starting at 6-grams, overall F1 of 66.96 (Maier & Gómez-Rodriguez 2014:29)
-    % Syllable n-gram approach
-      % Maier & Gómez-Rodriguez (2014) used the TIP syllabifier (Spanish Academy-based) to perform syllabification (30)
-        % F1 reached 57.88 overall with 4-grams and discounting (30)
-    % Word-based approaches
-      % Using linear SVM, Lui & Cook (2013) found this to outperform other methods (i.e., bag-of- function -words, part-of-speech + function words, byte sequences, spelling variant pairs) (11)
-        % They tried different types of corpora, and Twitter data was by far the hardest to classify (11)
-      % Word Skip-grams were used by Franco-Salvador et al. (2015) for Spanish language variety identification and resulted in 0.722 accuracy (10)
-      % Rangel et al. (2018) focus on words but develop low dimensionality representation (LDR) to filter out most words and arrive at the 6 key words thought to be representative of each variety
-        % The process: Perform a series of weight calculations, starting with TF-IDF (158-159)
-        % with only 30 features, they outperformed weighted word bigrams and character 4-grams with .711 accuracy (164)
-          % Just below results for skip-gram approach with 300 features, though the difference wasn't statistically significant
-    % Compression approach
-      % Bush (2014) used LZW compression (Welch 1984) to achieve between 60% and 100% accuracy on a standard langauge identification task (2)
-        % General idea is that where there is less entropy, it's easier to compress data, but Bush's (2014) work was only exploratory
-      % Maier & Gómez-Rodriguez's (2014) implementation for Spanish tweets of different varieties resulted in results that only bested a plain frequency character n-gram model but otherwise performed worse than character n-gram models with discounting and syllable models (31)
-        % This also had the problem of very short tweets achieving the same exact compression rates in many instances (Maier & Gómez-Rodriguez 2014:31)
-    % Ensembles of classifiers
-      % Put to use by Maier & Gómez-Rodriguez (2014) but referred to as "voting", achieving 67.72 F1 overall for their Spanish varieties on Twitter task (31)
-        % This is higher than what they achieved through individual classifiers alone.
-      % Multiple classifiers can be run in parallel on some input with their individual results then aggregated (Malmasi & Dras 2015:36-37)
-        % A common way to generate multiple classifiers is through bagging, which is bootstrapping new training sets by sampling from one training set with replacement (Breiman 1996), after which different classifiers can be trained from each set (Malmasi & Dras 2015:37)
-        % The results of classifiers can be combined in various ways to lead to a decision
-      % Malmasi & Dras (2015) achieved 95.54% accuracy on DSL '15 with this using character 2-, 4-, and 6-grams and word 1- and 2-grams as classifiers (40)
-      % Duvenhage (2019) achieved very high accuracy -- 98.7% on DSL '17 -- by using a naive Bayes classifier to identify the language family and then a lexicon-based classifier to identify languages int aht family
-      % Ragab et al. (2019) used an ensemble for fine-grained city-level Arabic variety identification, achieving 67.2 F1 on the MADAR task from Bouamor et al. (2018) (247).
-        % Their features were word uni- and bi-grams and character n-grams from 1 to 5, all TF-IDF weighted (245)
-    % Data augmentation
-      % This is something Duvenhage (2019) suggested may improve his results further (4)
-      % Marivate & Sefara (2020) suggest two types: augmentation on text source and augmentation on text representation (387)
-        % Source: Provide more linguistic information on the training text, mainly semantics such as sense relations, but this can also involve round-trip translation (388-389)
-      % Catch 22: Augmentation requires rules written by linguists (Marivate & Sefara 2020:387), with low-resource languages, there aren't likely to be rules, yet these are the languages you'd need to use augmentation with
-        % For example, Marivate & Sefara (2020) used NLTK to add part-of-speech tags to text so that they could used WordNet to replace words with particular parts-of-speech (391)
-      % Additionally, Marivate & Sefara's (2020) results for round trip translation augmentation led to very good results for news classification but comparitively poor results for hate speech classification, which relied on social media texts
-        % They argued that translation may not work well on social media texts (394)
+      With corpora available for training language variety identification systems, various language models can now be employed.
+      In general, language models for this task are sets of types and, typically, the token frequencies for those types collected from some corpus or corpora.
+      What counts as a type, however, can vary, and difference approaches can lead to different results for the classifier.
+
+      A rather successful approach to the broader task of language identification involved building character $n$-gram language models \parencite{cavnar_n-gram-based_1994}, so a natural way to approach language variety identification is to do the same thing.
+      This formed one of the approaches that \textcite{maier_language_2014} tested.
+      In fact, they used TextCat for one of those tests, which is a popular implementation of \citeauthor{cavnar_n-gram-based_1994}'s (\citeyear{cavnar_n-gram-based_1994}) model.
+      The idea behind this model is to take every combination of $n$ characters in the training set as types, though \textcite{maier_language_2014} do not state what their $n$ was.
+      In their case, they used a simple frequency distribution as the language model, counting up how often each type showed up in the training set.
+      The overal $F_1$ using this model was only 34.08, so they also tested another character $n$-gram model using absolute discounting in order to deal with types that had counts of zero.
+      They compared models from unigram to 6-gram, finding the best results with the 6-gram model: an $F_1$ of 66.96.
+      This was clearly better than using a frequency distribution alone, but left much room for improvement.
+
+
+      % Character n-gram approach
+        % Barman et al. (2014) achieved 94.62% accuracy with character n-grams alone, and this when very slightly up when included other context-free features as well (19)
+          % These also went up roughly another 1% when adding context by using Conditional Random Fields (Barman et al. 2014:20)
+
+      In an attempt improve this system further, \textcite{maier_language_2014} also tested a syllable $n$-gram language model.
+      Syllabification, the process of splitting words up into syllables, is not an easy task itself, particularly when working with casual online writing where standard orthographic norms may not be followed such as using diacritics, an issue that \textcite{maier_language_2014} noted.
+      Nonetheless, they utilized the TIP syllabifier for this task, which is based on the phonotactic rules set out by the Royal Spanish Academy of Language.
+      Their rationale for this step was that ``the errors originated by unaccented words will follow a uniform pattern'' (p.~30).
+      The results they achieved using this language model with absolute discounting again did not match the results with the character $n$-gram approach, reaching an $F_1$ of 57.88 overall with syllable 4-grams.
+
+      Similar to character $n$-gram models are byte $n$-gram models as used by \textcite{lui_classifying_2013} and, once again, \textcite{maier_language_2014}.
+      Characters are in fact read by computers as sequences of bytes.
+      Depending on the character encoding used, a two characters that look identical to the human eye may in fact be represented by different byte sequences and, as a result, treated as two different things by a computer.
+      In essence, then, byte $n$-gram models are simply more precise versions of character $n$-gram models.
+      \textcite{lui_classifying_2013} achieved a reasonable $F_1$ of 0.772 with this model when applied to traditional documents, but this number dropped off drastically when applied to web documents (0.538) and especially Twitter (0.043).
+      For \textcite{maier_language_2014}, this yielded very poor results, though this may be due to the use of compression to decide on a classification, which will be discussed in the next section.
+
+      A natural progression from characters and syllables is to move to the next larger linguistic units: words.
+      In this case, researchers are still using $n$-gram models, but the types are words.
+      \textcite{lui_classifying_2013} tested two versions of word-based models: one that included all words from the training set and one that included only function words.
+      The function word model in fact had some of the worst performance out of any models they attempted, only achieving an $F_1$ of 0.502 even with traditional documents.
+      In contrast, the model that included all words resulted in the highest performance across the board: an $F_1$ of 0.911 for traditional documents, 0.656 for web documents, and 0.447 for Twitter.
+      The difference seems to suggest that function words are not a common place of variation between national varieties of English.
+
+      \textcite{franco-salvador_language_2015}, working national varieties of Spanish, also used a word-based model, though the $n$-grams they used were instead Skip-grams.
+      A Skip-gram attempts to capture long distance dependencies in a sentence better than standard $n$-grams by making each type a sequence of words that skips $X$ words.
+      In other words, a the Skip-grams generated by a sentence like ``the dog ate her food'' when taking two words and one skip would be ``the ate'', ``dog her'', and ``ate food''.
+      This approach resulted in an accuracy of 0.722, better than the comparable domain of web documents used in \textcite{lui_classifying_2013} where $F_1$ was 0.656.
+      However, while web documents may include blogs as used in \textcite{franco-salvador_language_2015}, blogs will not include web documents that may be more difficult to classify.
+
+      Also working on Spanish, \textcite{rangel_low_2018} aimed to achieve high accuracy while also greatly reducing the feature space.
+      Their process involved using word $n$-grams but filtering down the set of types to only 6 key words through a process they call low dimensionality representation (LDR).
+      This involves a series of weight calculations where low weight words are removed between every calculation.
+      Compared to a Skip-gram approach that they also attempted, this yielded a model with only 30 types as opposed to the Skip-gram model with 300 types.
+      Accuracy was also highly comparable at 0.711, suggesting that at least for Spanish, important vocabulary items are indeed major distinguishing features for national varieties.
+
+      % Dictionary approach
+        % Barman et al. (2014) achieved 93.12% accuracy using training data and LexNormList as dictionaries (19)
+
+      As opposed to relying on a single language model, it is also possible to employ multiple models at the same time as part of a classifier ensemble.
+      As \textcite{malmasi_language_2015} explain, this involves aggregating the results of multiple classifiers that are all run in parallel then having a final classifier algorithm for choosing how to interpret the aggregated results and make a classification decision.
+      Each classifier may use a different type of language model and/or the same type of language model on a different training set.
+      A common way to generate related training sets, then, is through a process called bagging in which each set is bootstrapped from the original by sampling from the original with replacement \parencite{breiman_bagging_1996}.
+
+      \textcite{maier_language_2014} in fact employed this method in their work on Spanish on Twitter but referred to it simply as ``voting'', which describes how the final decision is made where each classifier's decision counts as a vote.
+      They use only character 5-grams and character 6-grams in their system, which leads to their best results: an overall $F_1$ of 67.72.
+      \textcite{malmasi_language_2015} themselves achieved a very high accuracy of 95.54\% on the 2015 DSL competition using a classifier ensemble.
+      They implemented many more models than \textcite{maier_language_2014}, however.
+      For character models, they used bigrams, 4-grams, and 6-grams, and for word models, they used unigrams and bigrams.
+      Similarly, \textcite{duvenhage_short_2019} achieved very good results for the 2017 DSL competition.
+      His system made use of character bigrams, 4-grams, and 6-grams, as well as word unigrams and bigrams, ultimately leading to an accuracy of 98.7\%.
+      Finally, \textcite{ragab_mawdoo3_2019} won \citeauthor{bouamor_madar_2019}'s (\citeyear{bouamor_madar_2019}) Arabic competition by achieving an $F_1$ of 67.2 using character $n$-grams from unigrams to 5-grams as well as word unigrams and bigrams.
+
+      % Data augmentation
+        % This is something Duvenhage (2019) suggested may improve his results further (4)
+        % Marivate & Sefara (2020) suggest two types: augmentation on text source and augmentation on text representation (387)
+          % Source: Provide more linguistic information on the training text, mainly semantics such as sense relations, but this can also involve round-trip translation (388-389)
+        % Catch 22: Augmentation requires rules written by linguists (Marivate & Sefara 2020:387), with low-resource languages, there aren't likely to be rules, yet these are the languages you'd need to use augmentation with
+          % For example, Marivate & Sefara (2020) used NLTK to add part-of-speech tags to text so that they could used WordNet to replace words with particular parts-of-speech (391)
+        % Additionally, Marivate & Sefara's (2020) results for round trip translation augmentation led to very good results for news classification but comparitively poor results for hate speech classification, which relied on social media texts
+          % They argued that translation may not work well on social media texts (394)
     \subsection{Classifier Algorithms}
+      A language model is used to compare what one finds in a new document to what one has seen in previous documents, though this in itself does not produce a decision about how to classify a document according to its language variety.
+      The decision lies with the classifier algorithm used.
+      For instance, the rather unique algorithm used by \textcite{maier_language_2014} in conjunction with their byte $n$-gram model involved Lempel-Ziv-Welch (LZW) compression.
+      The idea assumes that compressing the byte sequence types for different language varieties will yield different amounts of compression given different levels of entropy for each variety.
+      As such, the compression in the model is compared to the compression of the new document to decide if the fit is good.
+      In \citeauthor{maier_language_2014}'s (\citeyear{maier_language_2014}) case, this produced poor results, however.
+
+      Another much more common way to decide on a classification is by using Bayes' Theorem to predict the probability of a classification given a document.
+      This method assumes strong independence of features, but can yield good results nonetheless.
+      \textcite{duvenhage_short_2019}, for instance, used this for part of his classifier ensemble for the 2017 DSL competition.
+
+      While Bayes' classifiers have been used for text classification since the 1960s \parencite{mosteller_inference_1963}, a more recent development is linear support vector machines (SVMs) \parencite{cortes_support-vector_1995}.
+      Linear SVMs aim to decide where a threshold between two categories should lie using soft margins.
+      A natural approach might be to take observations that are known to fit into either category and then draw a threshold that is equally distant between the observations from each category that are closest to each other.
+      However, this would be highly susceptible to changing due to outlier observations.
+      Soft margins instead are those created by drawing a threshold that is equadistant between observations that are not at the edges of each category so as to not be impacted by outliers.
+      The best soft margins to use are determined using cross-validation.
+
+      Linear SVMs have repeatedly shown good performance for classification tasks, including for language variety identification.
+      Indeed, \citeauthor{lui_classifying_2013}'s (\citeyear{lui_classifying_2013}) best results in their work on English involved not just word $n$-gram model but one that used a linear SVM to decide on the classification.
+      Similarly, \textcite{rangel_low_2018} also achieved their best results by employing SVMs.
+      In fact, \textcite{malmasi_language_2015} expected good enough results from SVMs that they tested no other algorithms for their submission to the 2015 DSL competition.
+
+  \section{Conclusion}
+      While it appears that perhaps the upper bounds of performance on the decision making side of the language variety identification is being reached with SVMs, there is still clearly more work to do.
+      For limited domains -- and especially for traditional texts -- almost perfect accuracy has been achieved, but performance drops much lower when these systems are applied to across domains.
+      Likewise, classifying very short documents still provides very real challenges for this task.
+      Additionally, while it appears that researchers are interested in working on language variety identification, their goals are almost exclusively limited to identifying national varieties.
+      Work on Arabic has certainly been more fine-grained by focusing on individual cities, yet from a sociolinguistic standpoint, it is known that multiple related varieties can exist in a single town where residents may be stratified by class or ethnicity or other factors.
+      Effectively applying a language variety identifier to these contexts appears to be far off if not impossible. 
   \printbibliography
 \end{document}
